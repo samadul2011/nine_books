@@ -13,17 +13,21 @@ import {
   HelpCircle,
   CheckCircle2,
   Info,
-  Quote
+  Quote,
+  ClipboardCheck,
+  FileText
 } from 'lucide-react'
 import { ttsService } from '../services/ttsService'
 import { getSmartExplanation } from '../data/grammarExplanations'
+import PassageExamViewer from './PassageExamViewer'
+import { getPassagesForTopic } from '../data/passageTestData'
 
 export default function GrammarSectionViewer({ 
   lesson, 
   chapter,
   onJumpToQuiz
 }) {
-  const [activeSection, setActiveSection] = useState('rules') // 'rules' | 'examples' | 'practice' | 'all'
+  const [activeSection, setActiveSection] = useState('rules') // 'rules' | 'examples' | 'practice' | 'passage' | 'all'
   const [revealedPractice, setRevealedPractice] = useState({})
   const [speakingIndex, setSpeakingIndex] = useState(null)
   const [expandedRules, setExpandedRules] = useState({})
@@ -31,6 +35,8 @@ export default function GrammarSectionViewer({
   const rules = lesson?.rules || []
   const examples = lesson?.examples || []
   const practice = lesson?.practice || []
+  const topicName = chapter?.topic_name || chapter?.title_en || ''
+  const passages = getPassagesForTopic(topicName, chapter?.class_level || '')
 
   const handleSpeak = async (text, idKey) => {
     try {
@@ -145,6 +151,23 @@ export default function GrammarSectionViewer({
             activeSection === 'practice' ? 'bg-slate-950/20 text-slate-900 font-bold' : 'bg-slate-800 text-slate-400'
           }`}>
             {practice.length}
+          </span>
+        </button>
+
+        <button
+          onClick={() => setActiveSection('passage')}
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition ${
+            activeSection === 'passage'
+              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+              : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+          }`}
+        >
+          <ClipboardCheck className="w-4 h-4" />
+          <span>প্যাসেজ টেস্ট (Board Exam)</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full ${
+            activeSection === 'passage' ? 'bg-slate-950/20 text-slate-900 font-bold' : 'bg-slate-800 text-slate-400'
+          }`}>
+            {passages.length}
           </span>
         </button>
 
@@ -397,6 +420,26 @@ export default function GrammarSectionViewer({
               )
             })}
           </div>
+        </div>
+      )}
+
+      {/* SECTION 4: AUTHENTIC BOARD PASSAGE TEST */}
+      {(activeSection === 'passage' || activeSection === 'all') && (
+        <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-slate-800">
+            <h3 className="text-base font-bold text-teal-300 flex items-center gap-2">
+              <FileText className="w-4 h-4 text-teal-400" />
+              <span>৪. বোর্ড স্ট্যান্ডার্ড প্যাসেজ টেস্ট (NCTB Board Exam Passage Test)</span>
+            </h3>
+            <span className="text-xs text-slate-400">
+              বোর্ড পরীক্ষার অনুকরণে প্যাসেজের শূন্যস্থানগুলো (a) থেকে (e) পূরণ করুন এবং সাথে সাথে নম্বর ও সমাধান দেখুন
+            </span>
+          </div>
+
+          <PassageExamViewer 
+            passages={passages} 
+            topicName={topicName} 
+          />
         </div>
       )}
 
