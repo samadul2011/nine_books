@@ -28,7 +28,10 @@ import {
   Type,
   Eye,
   EyeOff,
-  RotateCcw
+  RotateCcw,
+  BookOpenCheck,
+  ListOrdered,
+  BarChart3
 } from 'lucide-react'
 import LessonAudioPlayer from './components/LessonAudioPlayer'
 import TextSelectionToolbar from './components/TextSelectionToolbar'
@@ -42,6 +45,7 @@ import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('curriculum') // 'curriculum' | 'progress'
+  const [mobileView, setMobileView] = useState('subjects') // 'subjects'|'chapters'|'read'|'quiz'|'progress'
   const [isSidebarOpen, setIsSidebarOpen] = useState(true) // Collapsible sidebar for expansive reading
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
@@ -431,7 +435,7 @@ export default function App() {
       </header>
 
       {/* Main Content Area - Full Page Width */}
-      <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 py-5">
+      <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 py-5 pb-24 lg:pb-5">
         {error && (
           <div className="mb-6 p-4 rounded-xl bg-red-950/50 border border-red-800 text-red-300 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-red-400" />
@@ -452,10 +456,14 @@ export default function App() {
           </div>
         ) : activeTab === 'curriculum' ? (
           <div className="flex flex-col lg:flex-row gap-6 items-start w-full">
-            {/* Left Sidebar: Subjects & Chapters List (Moved far left, compact & sticky) */}
+            {/* Left Sidebar: Subjects & Chapters List — hidden on mobile, controlled by bottom nav */}
             {isSidebarOpen && (
-              <aside className="w-full lg:w-72 xl:w-80 flex-shrink-0 space-y-4 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto custom-scrollbar pr-0.5 animate-in fade-in slide-in-from-left-2 duration-150">
-                {/* Subjects Picker */}
+              <aside className={`w-full lg:w-72 xl:w-80 flex-shrink-0 space-y-4 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto custom-scrollbar pr-0.5 animate-in fade-in slide-in-from-left-2 duration-150
+                ${ /* desktop: always visible when sidebar open; mobile: only show when mobileView is 'subjects' or 'chapters' */
+                  mobileView === 'subjects' || mobileView === 'chapters' ? 'block' : 'hidden lg:block'
+                }`}>
+                {/* Mobile: show Subjects panel OR Chapters panel based on mobileView */}
+                <div className={mobileView === 'chapters' ? 'block lg:block' : 'block'}>
                 <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-3.5 shadow-sm">
                   <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                     <BookMarked className="w-3.5 h-3.5 text-teal-400" />
@@ -468,6 +476,7 @@ export default function App() {
                         onClick={() => {
                           setSelectedSubject(sub)
                           fetchChapters(sub.id, sub)
+                          setMobileView('chapters') // auto-advance on mobile
                         }}
                         className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between border ${
                           selectedSubject?.id === sub.id
@@ -485,10 +494,13 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                </div>
+                </div>{/* end subjects card */}
+                </div>{/* end mobile subjects/chapters switch */}
 
                 {/* Chapters List */}
-                <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-3.5 shadow-sm">
+                <div className={`bg-slate-900/60 border border-slate-800 rounded-2xl p-3.5 shadow-sm ${
+                  mobileView === 'chapters' ? 'block' : 'hidden lg:block'
+                }`}>
                   <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
                     <span className="flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-teal-400" />
@@ -503,6 +515,7 @@ export default function App() {
                         onClick={() => {
                           setSelectedChapter(ch)
                           fetchChapterDetails(ch.id, selectedSubject, ch)
+                          setMobileView('read') // auto-advance on mobile
                         }}
                         className={`w-full text-left px-2.5 py-2 rounded-xl text-xs transition flex items-center gap-2.5 border ${
                           selectedChapter?.id === ch.id
@@ -525,8 +538,10 @@ export default function App() {
               </aside>
             )}
 
-            {/* Right Pane: Lesson Content & Exam Questions (Expansive Full Width!) */}
-            <div className="flex-1 min-w-0 space-y-6 w-full">
+            {/* Right Pane: Lesson Content & Exam Questions — hidden on mobile unless mobileView is 'read' or 'quiz' */}
+            <div className={`flex-1 min-w-0 space-y-6 w-full ${
+              mobileView === 'read' || mobileView === 'quiz' ? 'block' : 'hidden lg:block'
+            }`}>
               {!isSidebarOpen && (
                 <div className="flex items-center gap-2 mb-2">
                   <button
@@ -647,7 +662,10 @@ export default function App() {
                   </div>
 
                   {/* Exam Questions Section (Interactive Self-Test Quiz) */}
-                  <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
+                  <div id="quiz-section" className={`bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl ${
+                    // On mobile, highlight the quiz section when mobileView === 'quiz'
+                    mobileView === 'quiz' ? 'ring-2 ring-teal-500/40' : ''
+                  }`}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800/80">
                       <div>
                         <h3 className="text-lg font-bold text-white flex items-center gap-2">
@@ -903,6 +921,81 @@ export default function App() {
           </div>
         )}
       </main>
+
+      {/* ===== MOBILE BOTTOM NAVIGATION BAR ===== */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-800 flex items-center justify-around px-1 py-1 safe-area-pb">
+        {/* বিষয় - Subjects */}
+        <button
+          onClick={() => { setActiveTab('curriculum'); setMobileView('subjects') }}
+          className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all min-w-[56px] ${
+            activeTab === 'curriculum' && mobileView === 'subjects'
+              ? 'text-teal-400 bg-teal-500/10'
+              : 'text-slate-500 hover:text-slate-300'
+          }`}
+        >
+          <BookMarked className="w-5 h-5" />
+          <span className="text-[10px] font-semibold">বিষয়</span>
+        </button>
+
+        {/* অধ্যায় - Chapters */}
+        <button
+          onClick={() => { setActiveTab('curriculum'); setMobileView('chapters') }}
+          className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all min-w-[56px] ${
+            activeTab === 'curriculum' && mobileView === 'chapters'
+              ? 'text-teal-400 bg-teal-500/10'
+              : 'text-slate-500 hover:text-slate-300'
+          }`}
+        >
+          <Layers className="w-5 h-5" />
+          <span className="text-[10px] font-semibold">অধ্যায়</span>
+        </button>
+
+        {/* পড়া - Read (center, highlighted) */}
+        <button
+          onClick={() => { setActiveTab('curriculum'); setMobileView('read') }}
+          className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all min-w-[56px] ${
+            activeTab === 'curriculum' && mobileView === 'read'
+              ? 'text-teal-400 bg-teal-500/10'
+              : 'text-slate-500 hover:text-slate-300'
+          }`}
+        >
+          <BookOpen className="w-5 h-5" />
+          <span className="text-[10px] font-semibold">পড়া</span>
+        </button>
+
+        {/* কুইজ - Quiz */}
+        <button
+          onClick={() => {
+            setActiveTab('curriculum')
+            setMobileView('quiz')
+            // Scroll to quiz section after a short delay
+            setTimeout(() => {
+              document.getElementById('quiz-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }, 100)
+          }}
+          className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all min-w-[56px] ${
+            activeTab === 'curriculum' && mobileView === 'quiz'
+              ? 'text-emerald-400 bg-emerald-500/10'
+              : 'text-slate-500 hover:text-slate-300'
+          }`}
+        >
+          <HelpCircle className="w-5 h-5" />
+          <span className="text-[10px] font-semibold">কুইজ</span>
+        </button>
+
+        {/* প্রগতি - Progress */}
+        <button
+          onClick={() => { setActiveTab('progress'); fetchProgress() }}
+          className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-all min-w-[56px] ${
+            activeTab === 'progress'
+              ? 'text-amber-400 bg-amber-500/10'
+              : 'text-slate-500 hover:text-slate-300'
+          }`}
+        >
+          <TrendingUp className="w-5 h-5" />
+          <span className="text-[10px] font-semibold">প্রগতি</span>
+        </button>
+      </nav>
 
       {/* Floating Text Selection Toolbar (Translate, Speak, Highlight, Save) */}
       <TextSelectionToolbar

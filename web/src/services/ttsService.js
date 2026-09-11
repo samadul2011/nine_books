@@ -255,21 +255,38 @@ export class TTSService {
 
       const encoded = encodeURIComponent(text)
 
-      // Use Google TTS directly — works on GitHub Pages and localhost
-      // (same endpoint the local Vite proxy was forwarding to)
+      // Google TTS direct URL — works locally; on GitHub Pages Google may block
+      // due to missing spoofed Referer header (the Vite proxy handled that locally).
+      // We use a 2.5s timeout to detect silent failures and fall back to device voice.
       const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`
 
       const audio = new Audio(url)
       audio.playbackRate = this.speed
       this.audioElement = audio
 
+      // --- Timeout fallback: if audio hasn't started in 2.5s, use device voice ---
+      let didStart = false
+      const fallbackTimer = setTimeout(() => {
+        if (!didStart && this.isPlaying && this.audioElement === audio) {
+          console.warn('Neural TTS timed out (likely blocked by Google on this domain), falling back to device voice.')
+          audio.pause()
+          this.audioElement = null
+          this.playDeviceChunk(text, index)
+        }
+      }, 2500)
+
+      audio.oncanplay = () => { didStart = true; clearTimeout(fallbackTimer) }
+
       audio.onended = () => {
+        didStart = true
+        clearTimeout(fallbackTimer)
         if (this.isPlaying && !this.isPaused) {
           this.playChunk(index + 1)
         }
       }
 
       audio.onerror = (e) => {
+        clearTimeout(fallbackTimer)
         console.warn('Neural audio chunk error, falling back to device TTS for this chunk:', e)
         this.playDeviceChunk(text, index)
       }
@@ -277,6 +294,7 @@ export class TTSService {
       const playPromise = audio.play()
       if (playPromise !== undefined) {
         playPromise.catch(err => {
+          clearTimeout(fallbackTimer)
           console.warn('Audio play prevented by browser, falling back to device TTS:', err)
           this.playDeviceChunk(text, index)
         })
