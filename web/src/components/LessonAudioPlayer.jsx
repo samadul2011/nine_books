@@ -112,7 +112,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
   }
 
   return (
-    <div className="relative bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white rounded-2xl p-4 md:p-5 shadow-2xl border border-emerald-500/30 mb-6 backdrop-blur-md">
+    <div className="sticky top-16 z-40 bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white rounded-2xl p-3 md:p-4 shadow-2xl border border-emerald-500/30 mb-4 backdrop-blur-md">
       {/* Top Row: Title & Dual Mode Toggle */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
         <div className="flex items-center gap-2.5">
