@@ -21,6 +21,7 @@ import { ttsService } from '../services/ttsService'
 import { getSmartExplanation } from '../data/grammarExplanations'
 import PassageExamViewer from './PassageExamViewer'
 import { getPassagesForTopic } from '../data/passageTestData'
+import { getPracticeSolution, TOPIC_EXTRA_PRACTICE } from '../data/grammarPracticeData'
 
 export default function GrammarSectionViewer({ 
   lesson, 
@@ -29,14 +30,37 @@ export default function GrammarSectionViewer({
 }) {
   const [activeSection, setActiveSection] = useState('rules') // 'rules' | 'examples' | 'practice' | 'passage' | 'all'
   const [revealedPractice, setRevealedPractice] = useState({})
+  const [practiceAnswers, setPracticeAnswers] = useState({})
   const [speakingIndex, setSpeakingIndex] = useState(null)
   const [expandedRules, setExpandedRules] = useState({})
 
   const rules = lesson?.rules || []
   const examples = lesson?.examples || []
-  const practice = lesson?.practice || []
+  const rawPractice = lesson?.practice || []
   const topicName = chapter?.topic_name || chapter?.title_en || ''
   const passages = getPassagesForTopic(topicName, chapter?.class_level || '')
+
+  // Resolve category for extra practice questions
+  const getCategory = (name = '') => {
+    const l = name.toLowerCase()
+    if (l.includes('article') || l.includes('determiner')) return 'Articles'
+    if (l.includes('preposition')) return 'Prepositions'
+    if (l.includes('tense') || l.includes('verb') || l.includes('right form')) return 'Tense'
+    if (l.includes('voice')) return 'Voice'
+    if (l.includes('narration') || l.includes('speech')) return 'Narration'
+    if (l.includes('modifier')) return 'Modifiers'
+    if (l.includes('punctuation')) return 'Punctuation'
+    if (l.includes('agreement') || l.includes('subject')) return 'Subject-Verb Agreement'
+    if (l.includes('part of speech') || l.includes('suffix') || l.includes('prefix') || l.includes('word form')) return 'Parts of Speech'
+    if (l.includes('sentence') || l.includes('changing') || l.includes('transformation') || l.includes('connector')) return 'Sentences'
+    return 'Articles'
+  }
+
+  const extraPractice = TOPIC_EXTRA_PRACTICE[getCategory(topicName)] || []
+  const practice = [
+    ...rawPractice,
+    ...extraPractice.filter(ex => !rawPractice.includes(ex))
+  ]
 
   const handleSpeak = async (text, idKey) => {
     try {
@@ -371,37 +395,39 @@ export default function GrammarSectionViewer({
           <div className="space-y-3">
             {practice.map((prText, idx) => {
               const isRevealed = revealedPractice[idx]
+              const sol = getPracticeSolution(prText, topicName, idx)
+              const userVal = (practiceAnswers[idx] || '').trim()
+
               return (
                 <div 
                   key={idx}
-                  className="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5"
+                  className="bg-slate-950/70 border border-slate-800 hover:border-sky-500/40 rounded-2xl p-4 sm:p-5 transition shadow-sm space-y-3"
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-start gap-3 flex-1">
-                      <span className="w-6 h-6 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-300 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
-                        {idx + 1}
-                      </span>
-                      <div className="space-y-2 flex-1">
-                        <p className="text-slate-100 text-sm sm:text-base font-medium">
-                          {prText}
-                        </p>
-                        {isRevealed && (
-                          <div className="p-3.5 rounded-xl bg-sky-950/30 border border-sky-800/40 text-sky-200 text-xs sm:text-sm animate-in fade-in duration-150 space-y-1">
-                            <div className="font-semibold text-sky-300 flex items-center gap-1.5">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                              <span>সমাধান ও সহায়ক ইঙ্গিত:</span>
-                            </div>
-                            <p className="text-slate-300">
-                              উপরে উল্লেখিত সংশ্লিষ্ট নিয়ম ও বাস্তব উদাহরণের সাথে মিলিয়ে বাক্যটি সম্পূর্ণ করুন। শব্দের উচ্চারণ ও অর্থ যাচাই করতে শব্দ সিলেক্ট করুন।
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-7 h-7 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-300 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                      #{idx + 1}
+                    </span>
+                    <div className="flex-1 space-y-1">
+                      <p className="text-slate-100 text-sm sm:text-base font-medium leading-relaxed">
+                        {prText}
+                      </p>
                     </div>
+                  </div>
+
+                  {/* Student Input Box & Action Button */}
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1 pl-0 sm:pl-10">
+                    <input
+                      type="text"
+                      placeholder="এখানে আপনার উত্তর লিখে চেষ্টা করুন..."
+                      value={practiceAnswers[idx] || ''}
+                      onChange={(e) => setPracticeAnswers(prev => ({ ...prev, [idx]: e.target.value }))}
+                      className="flex-1 text-xs sm:text-sm px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-700/90 text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400/30 transition"
+                    />
 
                     <button
+                      type="button"
                       onClick={() => togglePracticeReveal(idx)}
-                      className="px-3 py-1.5 rounded-xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-700 text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1.5 flex-shrink-0"
+                      className="px-4 py-2 rounded-xl border border-sky-500/50 bg-sky-950/70 hover:bg-sky-900/80 text-xs font-bold text-sky-200 hover:text-white transition flex items-center justify-center gap-1.5 flex-shrink-0 shadow-sm active:scale-95"
                     >
                       {isRevealed ? (
                         <>
@@ -410,12 +436,46 @@ export default function GrammarSectionViewer({
                         </>
                       ) : (
                         <>
-                          <Eye className="w-3.5 h-3.5 text-sky-400" />
-                          <span>সমাধান ইঙ্গিত</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
+                          <span>সঠিক উত্তর ও কারণ দেখুন</span>
                         </>
                       )}
                     </button>
                   </div>
+
+                  {/* Revealed Solution Card with Reason */}
+                  {isRevealed && (
+                    <div className="ml-0 sm:ml-10 p-4 rounded-xl bg-gradient-to-r from-sky-950/70 via-slate-900 to-teal-950/50 border border-sky-500/40 text-xs sm:text-sm animate-in fade-in duration-200 space-y-2.5">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-800/80">
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-400 font-semibold">সঠিক উত্তর (Correct Answer):</span>
+                          <span className="font-bold text-emerald-300 bg-emerald-950/90 border border-emerald-500/70 px-2.5 py-0.5 rounded-lg text-xs sm:text-sm shadow-sm">
+                            {sol.answer}
+                          </span>
+                        </div>
+
+                        {userVal && (
+                          <div className="text-[11px] text-slate-400 flex items-center gap-1.5">
+                            <span>আপনার লেখা:</span>
+                            <span className="font-semibold text-sky-200 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">
+                              {userVal}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Reason & Grammar Rule Explanation */}
+                      <div className="space-y-1">
+                        <div className="font-bold text-sky-300 flex items-center gap-1.5">
+                          <Sparkles className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
+                          <span>ব্যাকরণিক কারণ ও নিয়ম (Reason & Explanation):</span>
+                        </div>
+                        <p className="text-slate-200 leading-relaxed pl-5 font-sans">
+                          {sol.reason}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )
             })}

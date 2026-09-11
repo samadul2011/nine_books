@@ -205,7 +205,7 @@ export default function PassageExamViewer({ passages = [], topicName = '' }) {
         </div>
 
         {/* Action icons & Passage switcher */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 flex-shrink-0 flex-wrap">
           <button
             onClick={handleSpeakPassage}
             disabled={isSpeaking}
@@ -226,9 +226,19 @@ export default function PassageExamViewer({ passages = [], topicName = '' }) {
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <span className="text-xs font-bold text-teal-300 px-2">
-                {currentIndex + 1} / {passages.length}
-              </span>
+
+              <select
+                value={currentIndex}
+                onChange={(e) => setCurrentIndex(Number(e.target.value))}
+                className="bg-slate-950 text-teal-300 font-bold text-xs px-2 py-1 rounded-lg border border-slate-700 focus:outline-none focus:border-teal-400 cursor-pointer"
+              >
+                {passages.map((_, pIdx) => (
+                  <option key={pIdx} value={pIdx} className="bg-slate-900 text-white">
+                    প্যাসেজ #{pIdx + 1} / {passages.length}
+                  </option>
+                ))}
+              </select>
+
               <button
                 disabled={currentIndex === passages.length - 1}
                 onClick={() => setCurrentIndex(prev => prev + 1)}
@@ -241,6 +251,29 @@ export default function PassageExamViewer({ passages = [], topicName = '' }) {
           )}
         </div>
       </div>
+
+      {/* Horizontal Quick Jump Pills (1 to 20) */}
+      {passages.length > 1 && (
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-thin scrollbar-thumb-slate-800">
+          <span className="text-xs font-semibold text-slate-400 flex-shrink-0 mr-1">
+            প্যাসেজ দ্রুত বাছাই:
+          </span>
+          {passages.map((_, pIdx) => (
+            <button
+              key={pIdx}
+              type="button"
+              onClick={() => setCurrentIndex(pIdx)}
+              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition flex-shrink-0 ${
+                currentIndex === pIdx
+                  ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-sm'
+                  : 'bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800'
+              }`}
+            >
+              #{pIdx + 1}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Clue Box / Word Bank (Words from Box) */}
       {clues.length > 0 && (
