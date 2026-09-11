@@ -254,8 +254,11 @@ export class TTSService {
       const lang = engCount >= bnCount && engCount > 0 ? 'en' : 'bn'
 
       const encoded = encodeURIComponent(text)
-      const url = `/api/tts?text=${encoded}&lang=${lang}`
-      
+
+      // Use Google TTS directly — works on GitHub Pages and localhost
+      // (same endpoint the local Vite proxy was forwarding to)
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`
+
       const audio = new Audio(url)
       audio.playbackRate = this.speed
       this.audioElement = audio
