@@ -322,6 +322,19 @@ export const GRAMMAR_CHAPTERS = [
     "tests_count": 40
   },
   {
+    "id": "grammar-class-9-10-14-tag-questions",
+    "subject_id": "grammar-subject-id",
+    "title_bn": "Tag Questions (ট্যাগ কোশ্চেন)",
+    "title_en": "Tag Questions (Class 9-10)",
+    "class_level": "Class 9-10",
+    "topic_name": "Tag Questions",
+    "order_index": 25,
+    "rules_count": 10,
+    "examples_count": 10,
+    "practice_count": 55,
+    "tests_count": 20
+  },
+  {
     "id": "grammar-class-11-12-1-advanced-grammar-composition",
     "subject_id": "grammar-subject-id",
     "title_bn": "Advanced Grammar & Composition (উচ্চতর ব্যাকরণ ও কম্পোজিশন)",
@@ -454,6 +467,50 @@ export const GRAMMAR_CHAPTERS = [
 ];
 
 export const GRAMMAR_LESSONS_MAP = {
+  "grammar-class-9-10-14-tag-questions": [
+    {
+      "id": "lesson-grammar-class-9-10-14-tag-questions",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "order_index": 1,
+      "content_text": "# Tag Questions (Class 9-10)\n\n**Level**: Class 9-10 (SSC) | **Topic**: Tag Questions (ট্যাগ কোশ্চেন)\n\n## 1. 📖 Rules & Explanations (নিয়মাবলী ও সহজ ব্যাখ্যা)\n\n- **Rule 1 (Basic Principle):** Affirmative Statement takes Negative Tag; Negative Statement takes Affirmative Tag.\n- **Rule 2 (No Auxiliary):** Present Simple takes don't/doesn't; Past Simple takes didn't.\n- **Rule 3 (Negative Words):** Hardly, seldom, scarcely, few, little, never make statements negative and take an affirmative tag.\n- **Rule 4 (People Pronouns):** Everybody, everyone, somebody, nobody, no one take 'they' in the tag.\n- **Rule 5 (Thing Pronouns):** Everything, something, nothing, anything take 'it' in the tag.\n- **Rule 6 (I am exception):** 'I am' takes 'aren't I?' or 'am I not?'.\n- **Rule 7 (Let's proposal):** Proposals starting with 'Let's' (Let us) take 'shall we?'.\n- **Rule 8 (Imperative Request/Order):** Imperative orders and requests take 'will you?' or 'won't you?'.\n- **Rule 9 (Negative Imperative):** Negative commands starting with 'Don't' take 'will you?'.\n- **Rule 10 (There):** Sentences starting with introductory 'there' keep 'there' as the tag subject.\n\n## 2. 💡 Practical Examples (বাস্তব উদাহরণ)\n\n1. He is an honest man, isn't he?\n2. She sings sweetly, doesn't she?\n3. Barking dogs seldom bite, do they?\n4. Everybody loves flowers, don't they?\n5. Nothing is impossible, is it?\n6. I am right, aren't I?\n7. Let's arrange a picnic, shall we?\n8. Please close the door, will you?\n9. Don't be late, will you?\n10. There is a school in our village, isn't there?",
+      "rules": [
+        "Basic Principle: Affirmative Statement takes Negative Tag; Negative Statement takes Affirmative Tag. Example: He is here, isn't he? / He is not here, is he?",
+        "No Auxiliary Verb: Present Simple takes don't/doesn't; Past Simple takes didn't. Example: He plays, doesn't he? / They went, didn't they?",
+        "Negative Words: Hardly, seldom, scarcely, rarely, few, little, neither, never take an affirmative tag. Example: He seldom comes, does he?",
+        "Indefinite Pronouns (People): Everybody, everyone, somebody, nobody, no one take 'they' as tag pronoun with plural verb. Example: Nobody called, did they?",
+        "Indefinite Pronouns (Things): Everything, something, nothing, anything take 'it' as tag pronoun. Example: Nothing happened, did it?",
+        "First Person Exception: 'I am' takes 'aren't I?' or 'am I not?'. 'I am not' takes 'am I?'. Example: I am early, aren't I?",
+        "Proposal with 'Let\'s': 'Let\'s' (Let us) always takes 'shall we?'. Example: Let's have tea, shall we?",
+        "Imperative Order/Request: Positive imperative takes 'will you?' or 'won't you?'. Example: Help me, will you?",
+        "Negative Imperative: Sentences starting with 'Don\'t' take 'will you?'. Example: Don't forget, will you?",
+        "Introductory 'There': Sentences with 'there is/are/was/were' keep 'there' in the tag. Example: There is hope, isn't there?"
+      ],
+      "examples": [
+        "He is an honest man, isn't he?",
+        "She sings sweetly, doesn't she?",
+        "Barking dogs seldom bite, do they?",
+        "Everybody loves flowers, don't they?",
+        "Nothing is impossible, is it?",
+        "I am right, aren't I?",
+        "Let's arrange a picnic, shall we?",
+        "Please close the door, will you?",
+        "Don't be late, will you?",
+        "There is a school in our village, isn't there?"
+      ],
+      "practice": [
+        "Add tag: He is a brilliant student, ___?",
+        "Add tag: She doesn't like spicy food, ___?",
+        "Add tag: A barking dog seldom bites, ___?",
+        "Add tag: Everybody wishes to be successful, ___?",
+        "Add tag: Nothing can stop us now, ___?",
+        "Add tag: I am invited to the ceremony, ___?",
+        "Add tag: Let's plant more trees in our school, ___?",
+        "Add tag: Please lend me your pen, ___?",
+        "Add tag: Don't tell a lie, ___?",
+        "Add tag: There are many problems in our society, ___?"
+      ]
+    }
+  ],
   "grammar-class-8-1-parts-of-speech-basic": [
     {
       "id": "lesson-grammar-class-8-1-parts-of-speech-basic",
@@ -1822,6 +1879,53 @@ export const GRAMMAR_LESSONS_MAP = {
 };
 
 export const GRAMMAR_MCQS_MAP = {
+  "grammar-class-9-10-14-tag-questions": [
+    {
+      "id": "tag-mcq-1",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "question_en": "Choose the correct tag: 'Everybody loves flowers, ___?'",
+      "question_bn": "সঠিক Tag Question নির্বাচন করুন: 'Everybody loves flowers, ___?'",
+      "options": ["don't they?", "doesn't he?", "doesn't they?", "do they?"],
+      "correct_answer": "don't they?",
+      "explanation_bn": "'Everybody' এর পরিবর্তে Tag-এ Pronoun হিসেবে 'they' এবং Plural Verb হিসেবে 'don't' বসে।"
+    },
+    {
+      "id": "tag-mcq-2",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "question_en": "Choose the correct tag: 'Let\'s arrange a party, ___?'",
+      "question_bn": "সঠিক Tag Question কোনটি: 'Let\'s arrange a party, ___?'",
+      "options": ["shall we?", "will you?", "won't we?", "can we?"],
+      "correct_answer": "shall we?",
+      "explanation_bn": "'Let\'s' (Let us) দিয়ে প্রস্তাব বোঝালে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "tag-mcq-3",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "question_en": "Choose the correct tag: 'Barking dogs seldom bite, ___?'",
+      "question_bn": "সঠিক Tag Question কোনটি: 'Barking dogs seldom bite, ___?'",
+      "options": ["do they?", "don't they?", "does it?", "doesn't it?"],
+      "correct_answer": "do they?",
+      "explanation_bn": "'seldom' একটি নেতিবাচক শব্দ এবং 'Barking dogs' বহুবচন, তাই Tag হবে Affirmative: 'do they?'।"
+    },
+    {
+      "id": "tag-mcq-4",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "question_en": "Choose the correct tag: 'I am your true friend, ___?'",
+      "question_bn": "সঠিক Tag Question নির্বাচন করুন: 'I am your true friend, ___?'",
+      "options": ["aren't I?", "amn't I?", "am I?", "isn't I?"],
+      "correct_answer": "aren't I?",
+      "explanation_bn": "'I am' এর Negative Tag হিসেবে প্রচলিত ব্যাকরণে 'aren't I?' বা 'am I not?' বসে।"
+    },
+    {
+      "id": "tag-mcq-5",
+      "chapter_id": "grammar-class-9-10-14-tag-questions",
+      "question_en": "Choose the correct tag: 'Nothing is certain, ___?'",
+      "question_bn": "সঠিক Tag Question নির্বাচন করুন: 'Nothing is certain, ___?'",
+      "options": ["is it?", "isn't it?", "are they?", "aren't they?"],
+      "correct_answer": "is it?",
+      "explanation_bn": "'Nothing' নেতিবাচক শব্দ এবং এর জন্য Pronoun হিসেবে 'it' বসে। তাই Tag হবে 'is it?'।"
+    }
+  ],
   "grammar-class-8-1-parts-of-speech-basic": [
     {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-1",

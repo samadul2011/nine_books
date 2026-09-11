@@ -43,6 +43,8 @@ export default function GrammarSectionViewer({
   // Resolve category for extra practice questions
   const getCategory = (name = '') => {
     const l = name.toLowerCase()
+    if (l.includes('tag')) return 'Tag Questions'
+    if (l.includes('transformation') || l.includes('changing')) return 'Transformation of Sentences'
     if (l.includes('article') || l.includes('determiner')) return 'Articles'
     if (l.includes('preposition')) return 'Prepositions'
     if (l.includes('tense') || l.includes('verb') || l.includes('right form')) return 'Tense'
@@ -52,7 +54,7 @@ export default function GrammarSectionViewer({
     if (l.includes('punctuation')) return 'Punctuation'
     if (l.includes('agreement') || l.includes('subject')) return 'Subject-Verb Agreement'
     if (l.includes('part of speech') || l.includes('suffix') || l.includes('prefix') || l.includes('word form')) return 'Parts of Speech'
-    if (l.includes('sentence') || l.includes('changing') || l.includes('transformation') || l.includes('connector')) return 'Sentences'
+    if (l.includes('sentence') || l.includes('connector')) return 'Sentences'
     return 'Articles'
   }
 

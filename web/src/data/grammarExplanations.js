@@ -510,6 +510,17 @@ export function getSmartExplanation(ruleText, topicName = "") {
     }
   }
 
+  // 13. TAG QUESTIONS
+  if (top.includes("tag")) {
+    return {
+      bn_name: "ট্যাগ কোশ্চেন (Tag Questions)",
+      bn_expl: "কথোপকথনের সময় শ্রোতার সমর্থন বা সম্মতি নিশ্চিত করতে মূল বক্তব্যের শেষে যে সংক্ষিপ্ত প্রশ্ন জুড়ে দেওয়া হয় তাকে Tag Question বলে। বাক্য Affirmative হলে Tag হবে Negative (Auxiliary + n't + Pronoun?), আর বাক্য Negative হলে Tag হবে Affirmative (Auxiliary + Pronoun?)।",
+      structure: "Statement +, + Auxiliary Verb + (n't) + Pronoun + ?",
+      example_breakdown: "He is a student, isn't he? / She doesn't like tea, does she? / Let's go out, shall we?",
+      tips: "নিয়ম: বাক্য Affirmative হলে Tag-এ n't যুক্ত হবে; বাক্য Negative বা নেতিবাচক শব্দ (seldom, hardly, never, few) থাকলে Tag-এ Not বসবে না। Subject সর্বদা Personal Pronoun (he, she, it, they) হবে।"
+    }
+  }
+
   // Fallback: Smart parsing based on text structure without cross-topic keywords
   let title = "ব্যাকরণগত নিয়ম ও গঠন"
   let body = ruleText
