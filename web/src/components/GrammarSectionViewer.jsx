@@ -71,18 +71,21 @@ export default function GrammarSectionViewer({
 
     if (body.includes(':')) {
       const colParts = body.split(':')
-      title = colParts[0].trim()
+      const cand = colParts[0].trim()
+      if (!cand.toLowerCase().includes('more examples')) {
+        title = cand
+      }
       body = colParts.slice(1).join(':').trim()
     }
 
-    // Get enriched explanation
-    const smart = getSmartExplanation(text, chapter?.topic_name || '')
+    const topicName = chapter?.topic_name || chapter?.title_en || chapter?.title_bn || ''
+    const smart = getSmartExplanation(text, topicName)
 
-    // Match with topic example if available
-    const topicExample = examples[idx] || inlineExample || smart.example_breakdown
+    const displayTitle = title || smart.bn_name || `নিয়ম #${idx + 1}`
+    const topicExample = inlineExample || smart.example_breakdown || examples[idx]
 
     return { 
-      title: title || smart.bn_name, 
+      title: displayTitle, 
       body: body || text, 
       structure: structure || smart.structure,
       example: topicExample,
