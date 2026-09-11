@@ -43,12 +43,15 @@ import SmartSearch from './components/SmartSearch'
 import { studyStorageService } from './services/studyStorageService'
 import { MATH_FALLBACK_CHAPTERS, MATH_CH1_FALLBACK_LESSON, MATH_CH3_FALLBACK_LESSON, MATH_CH4_FALLBACK_LESSON, MATH_CH1_FALLBACK_MCQS } from './data/mathFallbackData'
 import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from './data/financeBankingData'
+import { GRAMMAR_SUBJECT, GRAMMAR_CHAPTERS, GRAMMAR_LESSONS_MAP, GRAMMAR_MCQS_MAP } from './data/grammarData'
+import GrammarSectionViewer from './components/GrammarSectionViewer'
 
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('curriculum') // 'curriculum' | 'progress'
   const [mobileView, setMobileView] = useState('subjects') // 'subjects'|'chapters'|'read'|'quiz'|'progress'
   const [isSidebarOpen, setIsSidebarOpen] = useState(true) // Collapsible sidebar for expansive reading
+  const [grammarClassFilter, setGrammarClassFilter] = useState('All') // 'All' | 'Class 8' | 'Class 9-10' | 'Class 11-12'
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
     return saved ? parseInt(saved, 10) : 125 // Default to 125% for grand, comfortable reading
@@ -168,6 +171,9 @@ export default function App() {
           icon_url: 'https://img.icons8.com/color/96/bank-building.png'
         })
       }
+      if (!allSubs.some((s) => s.id === 'grammar-subject-id' || s.name_bn === 'ইংরেজি ব্যাকরণ' || (s.name_en || '').toLowerCase().includes('grammar'))) {
+        allSubs.push(GRAMMAR_SUBJECT)
+      }
       setSubjects(allSubs)
       if (allSubs && allSubs.length > 0) {
         setSelectedSubject(allSubs[0])
@@ -184,11 +190,30 @@ export default function App() {
     }
   }
 
-  async function fetchChapters(subjectId, targetSub = null) {
+  async function fetchChapters(subjectId, targetSub = null, classFilter = null) {
     try {
       const activeSub = targetSub || selectedSubject
+      const isGrammar = subjectId === 'grammar-subject-id' || activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar')
       const isMath = subjectId === 'math-preview-subject-id' || activeSub?.name_bn === 'গণিত'
       const isFinance = subjectId === 'finance-preview-subject-id' || activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance')
+      
+      if (isGrammar) {
+        const filter = classFilter !== null ? classFilter : grammarClassFilter
+        const chaps = filter === 'All'
+          ? GRAMMAR_CHAPTERS
+          : GRAMMAR_CHAPTERS.filter(c => c.class_level === filter)
+        setChapters(chaps)
+        if (chaps && chaps.length > 0) {
+          setSelectedChapter(chaps[0])
+          fetchChapterDetails(chaps[0].id, activeSub, chaps[0])
+        } else {
+          setSelectedChapter(null)
+          setLessons([])
+          setQuestions([])
+        }
+        return
+      }
+
       const { data, error } = await supabase
         .from('chapters')
         .select('*')
@@ -217,8 +242,18 @@ export default function App() {
       const activeSub = targetSub || selectedSubject
       const activeChap = targetChapter || selectedChapter || chapters.find(c => c.id === chapterId)
       const chapOrder = activeChap?.order_index || (typeof chapterId === 'string' && chapterId.match(/\d+/)?.[0])
+      const isGrammar = activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar') || (chapterId && String(chapterId).startsWith('grammar-'))
       const isMath = activeSub?.name_bn === 'গণিত' || (chapterId && String(chapterId).startsWith('math-')) || (activeChap?.title_bn && activeChap.title_bn.includes('অধ্যায়') && activeSub?.name_bn === 'গণিত')
       const isFinance = activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance') || (chapterId && String(chapterId).startsWith('finance-'))
+
+      if (isGrammar) {
+        const gramLessons = GRAMMAR_LESSONS_MAP[chapterId] || []
+        setLessons(gramLessons)
+        const gramMcqs = GRAMMAR_MCQS_MAP[chapterId] || []
+        setQuestions(gramMcqs)
+        return
+      }
+
       // Fetch Lessons
       const { data: lessonData } = await supabase
         .from('lessons')
@@ -517,10 +552,42 @@ export default function App() {
                   <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
                     <span className="flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-teal-400" />
-                      Chapters (অধ্যায়সমূহ)
+                      {selectedSubject?.id === 'grammar-subject-id' ? 'Topics (টপিকসমূহ)' : 'Chapters (অধ্যায়সমূহ)'}
                     </span>
-                    <span className="text-[11px] font-normal text-slate-500">{chapters.length}টি অধ্যায়</span>
+                    <span className="text-[11px] font-normal text-slate-500">
+                      {chapters.length}টি {selectedSubject?.id === 'grammar-subject-id' ? 'টপিক' : 'অধ্যায়'}
+                    </span>
                   </h2>
+
+                  {/* Grammar Class Filter Tabs */}
+                  {(selectedSubject?.id === 'grammar-subject-id' || (selectedSubject?.name_en || '').toLowerCase().includes('grammar')) && (
+                    <div className="grid grid-cols-2 gap-1.5 mb-3 pb-3 border-b border-slate-800/80">
+                      {[
+                        { id: 'All', label: 'সব লেভেল', count: '৩৪' },
+                        { id: 'Class 9-10', label: 'SSC (৯-১০)', count: '১৩' },
+                        { id: 'Class 8', label: '৮ম শ্রেণি', count: '১১' },
+                        { id: 'Class 11-12', label: 'HSC (১১-১২)', count: '১০' }
+                      ].map((lvl) => (
+                        <button
+                          key={lvl.id}
+                          type="button"
+                          onClick={() => {
+                            setGrammarClassFilter(lvl.id)
+                            fetchChapters('grammar-subject-id', selectedSubject, lvl.id)
+                          }}
+                          className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-between transition border ${
+                            grammarClassFilter === lvl.id
+                              ? 'bg-teal-500/20 border-teal-500/60 text-teal-300 font-bold shadow-sm'
+                              : 'bg-slate-800/40 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                          }`}
+                        >
+                          <span>{lvl.label}</span>
+                          <span className="text-[10px] opacity-75">{lvl.count}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="space-y-1 max-h-[calc(100vh-22rem)] overflow-y-auto pr-1 custom-scrollbar">
                     {chapters.map((ch) => (
                       <button
@@ -542,7 +609,14 @@ export default function App() {
                         </span>
                         <div className="truncate flex-1">
                           <div className="truncate font-medium">{ch.title_bn}</div>
-                          <div className="text-[10px] text-slate-500 truncate">{ch.title_en}</div>
+                          <div className="text-[10px] text-slate-500 truncate flex items-center gap-1.5">
+                            {ch.class_level && (
+                              <span className="text-[9px] px-1 rounded bg-slate-800/90 text-teal-400 font-medium">
+                                {ch.class_level}
+                              </span>
+                            )}
+                            <span className="truncate">{ch.title_en}</span>
+                          </div>
                         </div>
                       </button>
                     ))}
@@ -570,23 +644,50 @@ export default function App() {
                 <>
                   {/* Chapter Header */}
                   <div className="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-slate-800 rounded-2xl p-6">
-                    <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1">
+                    <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1 flex-wrap">
                       <span>{selectedSubject?.name_bn}</span>
                       <span>•</span>
-                      <span>অধ্যায় {selectedChapter.order_index}</span>
+                      <span>{selectedSubject?.id === 'grammar-subject-id' ? `টপিক ${selectedChapter.order_index}` : `অধ্যায় ${selectedChapter.order_index}`}</span>
+                      {selectedChapter.class_level && (
+                        <>
+                          <span>•</span>
+                          <span className="px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
+                            {selectedChapter.class_level}
+                          </span>
+                        </>
+                      )}
                     </div>
                     <h1 className="text-2xl font-bold text-white">{selectedChapter.title_bn}</h1>
                     <p className="text-sm text-slate-400 mt-1">{selectedChapter.title_en}</p>
 
-                    <div className="flex items-center gap-4 mt-4 text-xs text-slate-400 pt-4 border-t border-slate-800">
-                      <span className="flex items-center gap-1.5">
-                        <FileText className="w-4 h-4 text-teal-400" />
-                        {lessons.length} পাঠ (Lessons)
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <HelpCircle className="w-4 h-4 text-emerald-400" />
-                        {questions.length} কুইজ প্রশ্ন (Questions)
-                      </span>
+                    <div className="flex items-center gap-4 mt-4 text-xs text-slate-400 pt-4 border-t border-slate-800 flex-wrap">
+                      {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
+                        <>
+                          <span className="flex items-center gap-1.5 text-teal-300 font-medium">
+                            <BookOpen className="w-4 h-4 text-teal-400" />
+                            {selectedChapter.rules_count || lessons[0]?.rules?.length || 0}টি নিয়ম (Rules)
+                          </span>
+                          <span className="flex items-center gap-1.5 text-amber-300 font-medium">
+                            <Sparkles className="w-4 h-4 text-amber-400" />
+                            {selectedChapter.examples_count || lessons[0]?.examples?.length || 0}টি উদাহরণ (Examples)
+                          </span>
+                          <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
+                            <HelpCircle className="w-4 h-4 text-emerald-400" />
+                            {questions.length}টি কুইজ প্রশ্ন (MCQ Tests)
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="flex items-center gap-1.5">
+                            <FileText className="w-4 h-4 text-teal-400" />
+                            {lessons.length} পাঠ (Lessons)
+                          </span>
+                          <span className="flex items-center gap-1.5">
+                            <HelpCircle className="w-4 h-4 text-emerald-400" />
+                            {questions.length} কুইজ প্রশ্ন (Questions)
+                          </span>
+                        </>
+                      )}
                     </div>
                   </div>
 
@@ -607,7 +708,11 @@ export default function App() {
                     <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800">
                       <h3 className="text-lg font-bold text-white flex items-center gap-2">
                         <FileText className="w-5 h-5 text-teal-400" />
-                        <span>পড়ার বিষয়বস্তু (Reading Material)</span>
+                        <span>
+                          {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-'))
+                            ? 'ব্যাকরণের নিয়ম ও পাঠ (Grammar Rules & Lessons)'
+                            : 'পড়ার বিষয়বস্তু (Reading Material)'}
+                        </span>
                       </h3>
 
                       {/* Text Zoom Pill Toolbar */}
@@ -661,13 +766,24 @@ export default function App() {
                                 <span>পাঠ ক্রম #{lesson.order_index}</span>
                               </div>
                             )}
-                            <InteractiveLessonViewer
-                              content={lesson.content_text || ''}
-                              userHighlights={userHighlights}
-                              activePlayingChunk={activePlayingChunk}
-                              chapter={selectedChapter}
-                              subject={selectedSubject}
-                            />
+                            {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
+                              <GrammarSectionViewer
+                                lesson={lesson}
+                                chapter={selectedChapter}
+                                onJumpToQuiz={() => {
+                                  const qEl = document.getElementById('quiz-section')
+                                  if (qEl) qEl.scrollIntoView({ behavior: 'smooth' })
+                                }}
+                              />
+                            ) : (
+                              <InteractiveLessonViewer
+                                content={lesson.content_text || ''}
+                                userHighlights={userHighlights}
+                                activePlayingChunk={activePlayingChunk}
+                                chapter={selectedChapter}
+                                subject={selectedSubject}
+                              />
+                            )}
                           </div>
                         ))}
                       </div>
