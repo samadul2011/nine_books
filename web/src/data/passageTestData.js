@@ -5408,7 +5408,2707 @@ export const PASSAGE_TESTS = [
       { id: 'd', answer: 'has', accepted: ['has'], explanation: '‘Each of’ এর পর Plural Noun থাকলেও Verb সর্বদা Singular ‘has’ হয়।' },
       { id: 'e', answer: 'is', accepted: ['is', 'was'], explanation: 'মূল Subject হলো ‘The quality’ (Singular), তাই Verb হবে ‘is’।' }
     ]
-  }
+  },
+{
+  "id": "tag-passage-1",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #1)",
+  "clues": [],
+  "passage": "Always obey your parents, (a) [___]?\nNever disobey their advice, (b) [___]?\nLet us take care of them, (c) [___]?\nMay they live long, (d) [___]?\nHow loving our parents are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-2",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #2)",
+  "clues": [],
+  "passage": "Get up early in the morning, (a) [___]?\nDo not waste your morning hours, (b) [___]?\nLet us go for a morning walk, (c) [___]?\nMay we remain healthy and active, (d) [___]?\nWhat a refreshing habit morning walking is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't we?",
+      "accepted": [
+        "mayn't we",
+        "mayn't we?",
+        "Mayn't we",
+        "Mayn't we?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-3",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #3)",
+  "clues": [],
+  "passage": "Always speak the truth, (a) [___]?\nNever tell a lie, (b) [___]?\nLet us practise honesty in our lives, (c) [___]?\nMay honest people prosper, (d) [___]?\nWhat a noble virtue honesty is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-4",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #4)",
+  "clues": [],
+  "passage": "Keep your classroom clean, (a) [___]?\nDo not throw rubbish on the floor, (b) [___]?\nLet us use the wastepaper basket, (c) [___]?\nMay our school remain clean and beautiful, (d) [___]?\nHow beautiful a clean classroom looks, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't it?",
+      "accepted": [
+        "mayn't it",
+        "mayn't it?",
+        "Mayn't it",
+        "Mayn't it?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "doesn't it?",
+      "accepted": [
+        "doesn't it",
+        "doesn't it?",
+        "Doesn't it",
+        "Doesn't it?"
+      ],
+      "exp": "Present Simple Affirmative বাক্যে একবচন Subject এর সাথে 'doesn't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-5",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #5)",
+  "clues": [],
+  "passage": "Plant more trees around your house, (a) [___]?\nNever cut down trees unnecessarily, (b) [___]?\nLet us protect our forests, (c) [___]?\nMay our country become greener, (d) [___]?\nWhat useful friends trees are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't it?",
+      "accepted": [
+        "mayn't it",
+        "mayn't it?",
+        "Mayn't it",
+        "Mayn't it?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-6",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #6)",
+  "clues": [],
+  "passage": "Read your lessons attentively, (a) [___]?\nDo not neglect your studies, (b) [___]?\nLet us study together, (c) [___]?\nMay you succeed in the examination, (d) [___]?\nWhat an intelligent student you are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't you?",
+      "accepted": [
+        "mayn't you",
+        "mayn't you?",
+        "Mayn't you",
+        "Mayn't you?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't you?",
+      "accepted": [
+        "aren't you",
+        "aren't you?",
+        "Aren't you",
+        "Aren't you?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-7",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #7)",
+  "clues": [],
+  "passage": "Help the poor and helpless, (a) [___]?\nNever behave badly towards them, (b) [___]?\nLet us stand beside needy people, (c) [___]?\nMay everyone enjoy a happy life, (d) [___]?\nHow helpless the poor people are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-8",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #8)",
+  "clues": [],
+  "passage": "Follow the traffic rules, (a) [___]?\nDo not cross the road carelessly, (b) [___]?\nLet us use the footbridge, (c) [___]?\nMay everyone have a safe journey, (d) [___]?\nWhat a busy road it is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-9",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #9)",
+  "clues": [],
+  "passage": "Take regular physical exercise, (a) [___]?\nDo not remain idle all day, (b) [___]?\nLet us play in the field, (c) [___]?\nMay we enjoy sound health, (d) [___]?\nHow important physical exercise is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't we?",
+      "accepted": [
+        "mayn't we",
+        "mayn't we?",
+        "Mayn't we",
+        "Mayn't we?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-10",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #10)",
+  "clues": [],
+  "passage": "Use water carefully, (a) [___]?\nNever waste clean water, (b) [___]?\nLet us keep our rivers free from pollution, (c) [___]?\nMay everyone have access to safe water, (d) [___]?\nWhat an essential resource water is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-11",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #11)",
+  "clues": [],
+  "passage": "Be kind to animals, (a) [___]?\nDo not hurt them unnecessarily, (b) [___]?\nLet us protect wild animals, (c) [___]?\nMay all animals live safely, (d) [___]?\nHow beautiful these birds are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-12",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #12)",
+  "clues": [],
+  "passage": "Learn English properly, (a) [___]?\nDo not be afraid of making mistakes, (b) [___]?\nLet us practise speaking English every day, (c) [___]?\nMay you become fluent in English, (d) [___]?\nWhat an important language English is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't you?",
+      "accepted": [
+        "mayn't you",
+        "mayn't you?",
+        "Mayn't you",
+        "Mayn't you?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-13",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #13)",
+  "clues": [],
+  "passage": "Respect your teachers, (a) [___]?\nNever ignore their valuable advice, (b) [___]?\nLet us follow their instructions, (c) [___]?\nMay our teachers live long, (d) [___]?\nHow dedicated our teachers are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-14",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #14)",
+  "clues": [],
+  "passage": "Save a part of your income, (a) [___]?\nDo not spend money carelessly, (b) [___]?\nLet us develop the habit of saving, (c) [___]?\nMay your savings increase, (d) [___]?\nWhat a useful habit saving money is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-15",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #15)",
+  "clues": [],
+  "passage": "Keep your environment clean, (a) [___]?\nDo not pollute the air and water, (b) [___]?\nLet us work together to prevent pollution, (c) [___]?\nMay our planet remain safe, (d) [___]?\nWhat a serious problem pollution is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't it?",
+      "accepted": [
+        "mayn't it",
+        "mayn't it?",
+        "Mayn't it",
+        "Mayn't it?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-16",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #16)",
+  "clues": [],
+  "passage": "Make proper use of your time, (a) [___]?\nNever put off today’s work until tomorrow, (b) [___]?\nLet us complete our work in time, (c) [___]?\nMay you achieve success in life, (d) [___]?\nHow valuable time is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't you?",
+      "accepted": [
+        "mayn't you",
+        "mayn't you?",
+        "Mayn't you",
+        "Mayn't you?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-17",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #17)",
+  "clues": [],
+  "passage": "Love your country, (a) [___]?\nNever do anything harmful to it, (b) [___]?\nLet us work for the development of our country, (c) [___]?\nMay our country prosper, (d) [___]?\nWhat a beautiful country ours is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't it?",
+      "accepted": [
+        "mayn't it",
+        "mayn't it?",
+        "Mayn't it",
+        "Mayn't it?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-18",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #18)",
+  "clues": [],
+  "passage": "Read good books regularly, (a) [___]?\nDo not spend all your free time using mobile phones, (b) [___]?\nLet us visit the library today, (c) [___]?\nMay books enlighten our minds, (d) [___]?\nWhat wonderful sources of knowledge books are, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "aren't they?",
+      "accepted": [
+        "aren't they",
+        "aren't they?",
+        "Aren't they",
+        "Aren't they?"
+      ],
+      "exp": "Exclamatory বা Plural/I am বাক্যের Tag হিসেবে 'aren't + pronoun?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-19",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #19)",
+  "clues": [],
+  "passage": "Work hard to reach your goal, (a) [___]?\nNever lose hope, (b) [___]?\nLet us face our challenges bravely, (c) [___]?\nMay all your dreams come true, (d) [___]?\nWhat a difficult journey life is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "tag-passage-20",
+  "topicCategory": "Tag Questions",
+  "classLevel": "Class 9-10",
+  "title": "Add tag questions to the following sentences (a) through (e).",
+  "titleBn": "প্রদত্ত বাক্যগুলোতে সঠিক Tag Question বসিয়ে প্যাসেজটি সম্পূর্ণ করুন (প্যাসেজ #20)",
+  "clues": [],
+  "passage": "Maintain discipline in your life, (a) [___]?\nDo not break the rules, (b) [___]?\nLet us become disciplined citizens, (c) [___]?\nMay everyone understand the value of discipline, (d) [___]?\nWhat an important quality discipline is, (e) [___]?",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "b",
+      "answer": "will you?",
+      "accepted": [
+        "will you",
+        "will you?",
+        "Will you",
+        "Will you?",
+        "won't you",
+        "won't you?",
+        "can you",
+        "can you?"
+      ],
+      "exp": "অনুরোধমূলক বা আদেশসূচক Imperative বাক্যের Tag হিসেবে 'will you?' বা 'won't you?' বসে।"
+    },
+    {
+      "id": "c",
+      "answer": "shall we?",
+      "accepted": [
+        "shall we",
+        "shall we?",
+        "Shall we",
+        "Shall we?"
+      ],
+      "exp": "'Let us / Let's' দ্বারা প্রস্তাব বোঝাতে Tag Question সর্বদা 'shall we?' হয়।"
+    },
+    {
+      "id": "d",
+      "answer": "mayn't they?",
+      "accepted": [
+        "mayn't they",
+        "mayn't they?",
+        "Mayn't they",
+        "Mayn't they?"
+      ],
+      "exp": "Optative বাক্যে প্রার্থনা বা আশীর্বাদে Tag হিসেবে 'mayn't + pronoun?' বসে।"
+    },
+    {
+      "id": "e",
+      "answer": "isn't it?",
+      "accepted": [
+        "isn't it",
+        "isn't it?",
+        "Isn't it",
+        "Isn't it?"
+      ],
+      "exp": "একবচন বস্তুবাচক Exclamatory বা Affirmative বাক্যে 'isn't it?' বসে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-1",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Honesty.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #1: Honesty)",
+  "clues": [],
+  "passage": "Honesty is a great virtue. An (a) [___] (honest) person is respected by everyone. A dishonest person is often (b) [___] (truth) and cannot gain people’s trust. Honesty brings peace and (c) [___] (happy) to our lives. We should never behave (d) [___] (honest) with others. Therefore, every person should understand the (e) [___] (important) of honesty.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "honest",
+      "accepted": [
+        "honest",
+        "Honest",
+        "honest"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'honest' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "untruthful",
+      "accepted": [
+        "untruthful",
+        "Untruthful",
+        "untruthful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'untruthful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "happiness",
+      "accepted": [
+        "happiness",
+        "Happiness",
+        "happiness"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'happiness' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "dishonestly",
+      "accepted": [
+        "dishonestly",
+        "Dishonestly",
+        "dishonestly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'dishonestly' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "importance",
+      "accepted": [
+        "importance",
+        "Importance",
+        "importance"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'importance' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-2",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Education.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #2: Education)",
+  "clues": [],
+  "passage": "Education is essential for both personal and national (a) [___] (develop). An (b) [___] (educate) person can distinguish between right and wrong. Education removes (c) [___] (ignorant) and broadens our minds. Without education, people may remain (d) [___] (aware) of their rights. Therefore, the government should make education easily (e) [___] (access) to everyone.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "development",
+      "accepted": [
+        "development",
+        "Development",
+        "development"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'development' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "educated",
+      "accepted": [
+        "educated",
+        "Educated",
+        "educated"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'educated' বসানো হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "ignorance",
+      "accepted": [
+        "ignorance",
+        "Ignorance",
+        "ignorance"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'ignorance' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "unaware",
+      "accepted": [
+        "unaware",
+        "Unaware",
+        "unaware"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'unaware' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "accessible",
+      "accepted": [
+        "accessible",
+        "Accessible",
+        "accessible"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'accessible' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-3",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: A Good Student.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #3: A Good Student)",
+  "clues": [],
+  "passage": "A good student is always attentive and (a) [___] (discipline). He or she attends school (b) [___] (regular) and completes every task carefully. A good student is never (c) [___] (respect) to teachers. Such a student knows the (d) [___] (valuable) of time and avoids all kinds of (e) [___] (necessary) activities.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "disciplined",
+      "accepted": [
+        "disciplined",
+        "Disciplined",
+        "disciplined"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'disciplined' বসেছে।"
+    },
+    {
+      "id": "b",
+      "answer": "regularly",
+      "accepted": [
+        "regularly",
+        "Regularly",
+        "regularly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'regularly' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "disrespectful",
+      "accepted": [
+        "disrespectful",
+        "Disrespectful",
+        "disrespectful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'disrespectful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "value",
+      "accepted": [
+        "value",
+        "Value",
+        "value"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'value' বসানো হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "unnecessary",
+      "accepted": [
+        "unnecessary",
+        "Unnecessary",
+        "unnecessary"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'unnecessary' বসেছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-4",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Tree Plantation.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #4: Tree Plantation)",
+  "clues": [],
+  "passage": "Trees are extremely (a) [___] (use) to human beings. The (b) [___] (destroy) of forests causes serious environmental problems. People cut down trees (c) [___] (discriminate) for fuel and timber. This practice creates an ecological (d) [___] (balance). Therefore, tree plantation is (e) [___] (essential) for protecting our environment.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "useful",
+      "accepted": [
+        "useful",
+        "Useful",
+        "useful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'useful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "destruction",
+      "accepted": [
+        "destruction",
+        "Destruction",
+        "destruction"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'destruction' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "indiscriminately",
+      "accepted": [
+        "indiscriminately",
+        "Indiscriminately",
+        "indiscriminately"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'indiscriminately' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "imbalance",
+      "accepted": [
+        "imbalance",
+        "Imbalance",
+        "imbalance"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'imbalance' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "essential",
+      "accepted": [
+        "essential",
+        "Essential",
+        "essential"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'essential' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-5",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Physical Exercise.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #5: Physical Exercise)",
+  "clues": [],
+  "passage": "Physical exercise is necessary for maintaining good health. It keeps us physically (a) [___] (strength) and mentally cheerful. Regular exercise improves blood (b) [___] (circulate) and digestion. People who remain (c) [___] (active) may suffer from different diseases. However, (d) [___] (excess) exercise can be harmful. Therefore, we should exercise (e) [___] (regular) but moderately.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "strong",
+      "accepted": [
+        "strong",
+        "Strong",
+        "strong"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'strong' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "circulation",
+      "accepted": [
+        "circulation",
+        "Circulation",
+        "circulation"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'circulation' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "inactive",
+      "accepted": [
+        "inactive",
+        "Inactive",
+        "inactive"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'inactive' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "excessive",
+      "accepted": [
+        "excessive",
+        "Excessive",
+        "excessive"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'excessive' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "regularly",
+      "accepted": [
+        "regularly",
+        "Regularly",
+        "regularly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'regularly' বসেছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-6",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: The Internet.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #6: The Internet)",
+  "clues": [],
+  "passage": "The internet is a wonderful invention of (a) [___] (modern) science. It has made global (b) [___] (communicate) faster and easier. Students can find (c) [___] (use) information through the internet. However, the (d) [___] (proper) use of this technology can cause serious problems. Therefore, internet users should behave (e) [___] (responsible).",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "modern",
+      "accepted": [
+        "modern",
+        "Modern",
+        "modern"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'modern' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "communication",
+      "accepted": [
+        "communication",
+        "Communication",
+        "communication"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'communication' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "useful",
+      "accepted": [
+        "useful",
+        "Useful",
+        "useful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'useful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "improper",
+      "accepted": [
+        "improper",
+        "Improper",
+        "improper"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'improper' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "responsibly",
+      "accepted": [
+        "responsibly",
+        "Responsibly",
+        "responsibly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'responsibly' বসেছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-7",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Traffic Rules.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #7: Traffic Rules)",
+  "clues": [],
+  "passage": "Traffic rules are made for public (a) [___] (safe). Unfortunately, many drivers are (b) [___] (care) about these rules. Their (c) [___] (responsible) behaviour often causes road accidents. Pedestrians should also avoid crossing roads (d) [___] (care). Strict laws and public (e) [___] (aware) can reduce accidents.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "safety",
+      "accepted": [
+        "safety",
+        "Safety",
+        "safety"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'safety' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "careless",
+      "accepted": [
+        "careless",
+        "Careless",
+        "careless"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'careless' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "irresponsible",
+      "accepted": [
+        "irresponsible",
+        "Irresponsible",
+        "irresponsible"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'irresponsible' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "carelessly",
+      "accepted": [
+        "carelessly",
+        "Carelessly",
+        "carelessly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'carelessly' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "awareness",
+      "accepted": [
+        "awareness",
+        "Awareness",
+        "awareness"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'awareness' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-8",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Female Education.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #8: Female Education)",
+  "clues": [],
+  "passage": "Female education is necessary for national (a) [___] (progressive). In the past, many girls were deprived of (b) [___] (education) opportunities. This situation made them economically (c) [___] (dependent) and socially powerless. Education brings about the (d) [___] (empower) of women. No country can achieve real development by keeping women (e) [___] (educated).",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "progress",
+      "accepted": [
+        "progress",
+        "Progress",
+        "progress"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'progress' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "educational",
+      "accepted": [
+        "educational",
+        "Educational",
+        "educational"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'educational' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "dependent",
+      "accepted": [
+        "dependent",
+        "Dependent",
+        "dependent"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'dependent' বসানো হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "empowerment",
+      "accepted": [
+        "empowerment",
+        "Empowerment",
+        "empowerment"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'empowerment' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "uneducated",
+      "accepted": [
+        "uneducated",
+        "Uneducated",
+        "uneducated"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'uneducated' বসেছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-9",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: The Value of Time.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #9: The Value of Time)",
+  "clues": [],
+  "passage": "Time is extremely (a) [___] (value), but many people use it (b) [___] (proper). They remain idle and waste their time in (c) [___] (use) activities. Such people are often (d) [___] (success) in life. A wise person understands the (e) [___] (important) of every moment.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "valuable",
+      "accepted": [
+        "valuable",
+        "Valuable",
+        "valuable"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'valuable' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "improperly",
+      "accepted": [
+        "improperly",
+        "Improperly",
+        "improperly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'improperly' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "useless",
+      "accepted": [
+        "useless",
+        "Useless",
+        "useless"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'useless' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "unsuccessful",
+      "accepted": [
+        "unsuccessful",
+        "Unsuccessful",
+        "unsuccessful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'unsuccessful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "importance",
+      "accepted": [
+        "importance",
+        "Importance",
+        "importance"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'importance' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-10",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Food Adulteration.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #10: Food Adulteration)",
+  "clues": [],
+  "passage": "Food adulteration is a serious problem. Some (a) [___] (honest) traders mix harmful substances with food. Adulterated food is extremely (b) [___] (health) and may cause various diseases. The government should take (c) [___] (effect) measures against food adulteration. Regular market inspections and public (d) [___] (aware) are necessary. The lawbreakers must receive proper (e) [___] (punish).",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "dishonest",
+      "accepted": [
+        "dishonest",
+        "Dishonest",
+        "dishonest"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'dishonest' বসেছে।"
+    },
+    {
+      "id": "b",
+      "answer": "unhealthy",
+      "accepted": [
+        "unhealthy",
+        "Unhealthy",
+        "unhealthy"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'unhealthy' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "effective",
+      "accepted": [
+        "effective",
+        "Effective",
+        "effective"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'effective' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "awareness",
+      "accepted": [
+        "awareness",
+        "Awareness",
+        "awareness"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'awareness' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "punishment",
+      "accepted": [
+        "punishment",
+        "Punishment",
+        "punishment"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'punishment' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-11",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Early Rising.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #11: Early Rising)",
+  "clues": [],
+  "passage": "Early rising is a highly (a) [___] (benefit) habit. An early riser can enjoy the (b) [___] (beautiful) of nature. The fresh morning air keeps a person (c) [___] (health) and active. Those who wake up late often become (d) [___] (regular) in their daily activities. Therefore, everyone should understand the (e) [___] (important) of early rising.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "beneficial",
+      "accepted": [
+        "beneficial",
+        "Beneficial",
+        "beneficial"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'beneficial' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "beauty",
+      "accepted": [
+        "beauty",
+        "Beauty",
+        "beauty"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'beauty' বসানো হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "healthy",
+      "accepted": [
+        "healthy",
+        "Healthy",
+        "healthy"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'healthy' বসানো হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "irregular",
+      "accepted": [
+        "irregular",
+        "Irregular",
+        "irregular"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'irregular' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "importance",
+      "accepted": [
+        "importance",
+        "Importance",
+        "importance"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'importance' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-12",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Discipline.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #12: Discipline)",
+  "clues": [],
+  "passage": "Discipline is necessary for achieving (a) [___] (succeed) in life. A (b) [___] (discipline) person follows rules and performs duties punctually. On the other hand, an (c) [___] (discipline) person often experiences failure. Students should behave (d) [___] (obedient) and respect their teachers. Discipline ensures the smooth (e) [___] (manage) of every institution.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "success",
+      "accepted": [
+        "success",
+        "Success",
+        "success"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'success' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "disciplined",
+      "accepted": [
+        "disciplined",
+        "Disciplined",
+        "disciplined"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'disciplined' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "undisciplined",
+      "accepted": [
+        "undisciplined",
+        "Undisciplined",
+        "undisciplined"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'undisciplined' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "obediently",
+      "accepted": [
+        "obediently",
+        "Obediently",
+        "obediently"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'obediently' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "management",
+      "accepted": [
+        "management",
+        "Management",
+        "management"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'management' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-13",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: A Village Doctor.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #13: A Village Doctor)",
+  "clues": [],
+  "passage": "A village doctor is an important person in a rural area. He provides (a) [___] (medicine) treatment to poor villagers. He is usually very (b) [___] (care) when examining patients. Sometimes, he treats patients who are seriously (c) [___] (health). Although his income may be (d) [___] (sufficient), he continues serving the villagers. His services are highly (e) [___] (value) to the community.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "medical",
+      "accepted": [
+        "medical",
+        "Medical",
+        "medical"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'medical' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "careful",
+      "accepted": [
+        "careful",
+        "Careful",
+        "careful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'careful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "unhealthy",
+      "accepted": [
+        "unhealthy",
+        "Unhealthy",
+        "unhealthy"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'unhealthy' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "insufficient",
+      "accepted": [
+        "insufficient",
+        "Insufficient",
+        "insufficient"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'insufficient' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "valuable",
+      "accepted": [
+        "valuable",
+        "Valuable",
+        "valuable"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'valuable' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-14",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Road Accidents.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #14: Road Accidents)",
+  "clues": [],
+  "passage": "Road accidents have become a common (a) [___] (occur) in our country. They usually happen because of the (b) [___] (care) of drivers. Some drivers operate vehicles (c) [___] (reckless) and ignore traffic rules. Many roads are also (d) [___] (suitable) for heavy traffic. Public awareness and the proper (e) [___] (enforce) of traffic laws can reduce accidents.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "occurrence",
+      "accepted": [
+        "occurrence",
+        "Occurrence",
+        "occurrence"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'occurrence' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "carelessness",
+      "accepted": [
+        "carelessness",
+        "Carelessness",
+        "carelessness"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'carelessness' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "recklessly",
+      "accepted": [
+        "recklessly",
+        "Recklessly",
+        "recklessly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'recklessly' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "unsuitable",
+      "accepted": [
+        "unsuitable",
+        "Unsuitable",
+        "unsuitable"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'unsuitable' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "enforcement",
+      "accepted": [
+        "enforcement",
+        "Enforcement",
+        "enforcement"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'enforcement' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-15",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: A School Library.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #15: A School Library)",
+  "clues": [],
+  "passage": "A school library is an extremely (a) [___] (use) place for students. It contains books on different subjects and provides valuable (b) [___] (inform). Books are usually arranged (c) [___] (system) on shelves. Students should maintain (d) [___] (silent) while reading. Regular library use can greatly (e) [___] (rich) their knowledge.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "useful",
+      "accepted": [
+        "useful",
+        "Useful",
+        "useful"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'useful' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "information",
+      "accepted": [
+        "information",
+        "Information",
+        "information"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'information' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "systematically",
+      "accepted": [
+        "systematically",
+        "Systematically",
+        "systematically"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'systematically' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "silence",
+      "accepted": [
+        "silence",
+        "Silence",
+        "silence"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'silence' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "enrich",
+      "accepted": [
+        "enrich",
+        "Enrich",
+        "enrich"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'enrich' বসানো হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-16",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Climate Change.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #16: Climate Change)",
+  "clues": [],
+  "passage": "Climate change is a major (a) [___] (environment) problem. Human activities are mainly (b) [___] (response) for it. The temperature of the earth is rising because of the (c) [___] (excess) emission of greenhouse gases. Climate change has already affected many countries (d) [___] (serious). Immediate action is necessary to prevent further (e) [___] (destroy).",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "environmental",
+      "accepted": [
+        "environmental",
+        "Environmental",
+        "environmental"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'environmental' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "responsible",
+      "accepted": [
+        "responsible",
+        "Responsible",
+        "responsible"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'responsible' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "excessive",
+      "accepted": [
+        "excessive",
+        "Excessive",
+        "excessive"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'excessive' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "seriously",
+      "accepted": [
+        "seriously",
+        "Seriously",
+        "seriously"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'seriously' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "destruction",
+      "accepted": [
+        "destruction",
+        "Destruction",
+        "destruction"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'destruction' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-17",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Patriotism.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #17: Patriotism)",
+  "clues": [],
+  "passage": "Patriotism means love for one’s country. A (a) [___] (patriot) person works for the welfare of the nation. Such a person performs national duties (b) [___] (sincere). A person without love for the country is considered (c) [___] (patriot). Patriotism encourages people to protect national (d) [___] (independent). It is necessary for the peace and (e) [___] (prosperous) of a country.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "patriotic",
+      "accepted": [
+        "patriotic",
+        "Patriotic",
+        "patriotic"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'patriotic' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "sincerely",
+      "accepted": [
+        "sincerely",
+        "Sincerely",
+        "sincerely"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'sincerely' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "unpatriotic",
+      "accepted": [
+        "unpatriotic",
+        "Unpatriotic",
+        "unpatriotic"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'unpatriotic' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "independence",
+      "accepted": [
+        "independence",
+        "Independence",
+        "independence"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'independence' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "prosperity",
+      "accepted": [
+        "prosperity",
+        "Prosperity",
+        "prosperity"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'prosperity' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-18",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: A Rainy Day.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #18: A Rainy Day)",
+  "clues": [],
+  "passage": "A rainy day is sometimes pleasant but often (a) [___] (comfort) for poor people. Roads become muddy and (b) [___] (pass) after heavy rain. People without umbrellas get (c) [___] (complete) wet. Day labourers may become (d) [___] (work) because they cannot go outside. However, rainfall is highly (e) [___] (benefit) for crops.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "uncomfortable",
+      "accepted": [
+        "uncomfortable",
+        "Uncomfortable",
+        "uncomfortable"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'uncomfortable' গঠিত হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "impassable",
+      "accepted": [
+        "impassable",
+        "Impassable",
+        "impassable"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'impassable' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "completely",
+      "accepted": [
+        "completely",
+        "Completely",
+        "completely"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'completely' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "workless",
+      "accepted": [
+        "workless",
+        "Workless",
+        "workless"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'workless' গঠিত হয়েছে।"
+    },
+    {
+      "id": "e",
+      "answer": "beneficial",
+      "accepted": [
+        "beneficial",
+        "Beneficial",
+        "beneficial"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'beneficial' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-19",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: A Good Teacher.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #19: A Good Teacher)",
+  "clues": [],
+  "passage": "A good teacher plays an important role in the lives of students. He or she makes lessons (a) [___] (interest) and understandable. A good teacher is always (b) [___] (friend) towards students. He or she explains difficult topics (c) [___] (clear) and corrects students’ mistakes. An (d) [___] (patient) teacher may discourage learners. Therefore, patience and (e) [___] (kind) are essential qualities of a teacher.",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "interesting",
+      "accepted": [
+        "interesting",
+        "Interesting",
+        "interesting"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'interesting' বসেছে।"
+    },
+    {
+      "id": "b",
+      "answer": "friendly",
+      "accepted": [
+        "friendly",
+        "Friendly",
+        "friendly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'friendly' বসেছে।"
+    },
+    {
+      "id": "c",
+      "answer": "clearly",
+      "accepted": [
+        "clearly",
+        "Clearly",
+        "clearly"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'clearly' বসেছে।"
+    },
+    {
+      "id": "d",
+      "answer": "impatient",
+      "accepted": [
+        "impatient",
+        "Impatient",
+        "impatient"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'impatient' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "kindness",
+      "accepted": [
+        "kindness",
+        "Kindness",
+        "kindness"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'kindness' গঠিত হয়েছে।"
+    }
+  ]
+},
+{
+  "id": "sp-passage-20",
+  "topicCategory": "Suffix and Prefix",
+  "classLevel": "Class 9-10",
+  "title": "Fill in the gaps (a) through (e) using suffix, prefix or both: Social Media.",
+  "titleBn": "ব্র্যাকেটের মূল শব্দে উপযুক্ত Suffix, Prefix বা উভয়ই যোগ করে শূন্যস্থান পূরণ করুন (প্যাসেজ #20: Social Media)",
+  "clues": [],
+  "passage": "Social media has become extremely (a) [___] (popularity) among young people. It makes online (b) [___] (communicate) quick and easy. However, the (c) [___] (responsible) use of social media can create problems. Some users spread false or (d) [___] (lead) information. Everyone should use social media (e) [___] (wise).",
+  "blanks": [
+    {
+      "id": "a",
+      "answer": "popular",
+      "accepted": [
+        "popular",
+        "Popular",
+        "popular"
+      ],
+      "exp": "প্রদত্ত শূন্যস্থানের পদক্রম ও অর্থ অনুযায়ী সঠিক প্রত্যয়/উপসর্গ যুক্ত করে 'popular' বসানো হয়েছে।"
+    },
+    {
+      "id": "b",
+      "answer": "communication",
+      "accepted": [
+        "communication",
+        "Communication",
+        "communication"
+      ],
+      "exp": "Preposition/Article/Adjective এর পর Noun হিসেবে উপযুক্ত Suffix যোগে 'communication' গঠিত হয়েছে।"
+    },
+    {
+      "id": "c",
+      "answer": "irresponsible",
+      "accepted": [
+        "irresponsible",
+        "Irresponsible",
+        "irresponsible"
+      ],
+      "exp": "Noun এর পূর্বে বা Linking Verb এর পর Adjective হিসেবে Suffix যোগে 'irresponsible' গঠিত হয়েছে।"
+    },
+    {
+      "id": "d",
+      "answer": "misleading",
+      "accepted": [
+        "misleading",
+        "Misleading",
+        "misleading"
+      ],
+      "exp": "অর্থের বৈপরীত্য বা নেতিবাচক ভাব প্রকাশে বিপরীতার্থক Prefix যোগে 'misleading' বসেছে।"
+    },
+    {
+      "id": "e",
+      "answer": "wisely",
+      "accepted": [
+        "wisely",
+        "Wisely",
+        "wisely"
+      ],
+      "exp": "Adjective বা Verb কে Modify করার জন্য Adverb হিসেবে '-ly' প্রত্যয় যোগে 'wisely' বসেছে।"
+    }
+  ]
+}
 ];
 
 /**
@@ -5423,7 +8123,11 @@ export function getPassagesForTopic(topicName = '', classLevel = '') {
 
   // Match category with precise keywords
   let category = '';
-  if (lower.includes('part of speech') || lower.includes('parts of speech') || lower.includes('suffix') || lower.includes('prefix') || lower.includes('word form')) {
+  if (lower.includes('tag')) {
+    category = 'Tag Questions';
+  } else if (lower.includes('suffix') || lower.includes('prefix')) {
+    category = 'Suffix and Prefix';
+  } else if (lower.includes('part of speech') || lower.includes('parts of speech') || lower.includes('word form')) {
     category = 'Parts of Speech';
   } else if (lower.includes('article') || lower.includes('determiner')) {
     category = 'Articles';
@@ -5441,21 +8145,19 @@ export function getPassagesForTopic(topicName = '', classLevel = '') {
     category = 'Modifiers';
   } else if (lower.includes('punctuation')) {
     category = 'Punctuation';
-  } else if (lower.includes('sentence') || lower.includes('connector') || lower.includes('changing') || lower.includes('transformation') || lower.includes('tag')) {
+  } else if (lower.includes('sentence') || lower.includes('connector') || lower.includes('changing') || lower.includes('transformation')) {
     category = 'Sentences';
   }
 
   let matched = PASSAGE_TESTS.filter(p => p.topicCategory === category);
 
   if (matched.length === 0) {
-    // Fallback: search anywhere in title or topicCategory
     matched = PASSAGE_TESTS.filter(p => 
       p.topicCategory.toLowerCase().includes(lower) || 
       lower.includes(p.topicCategory.toLowerCase())
     );
   }
 
-  // If still empty, return standard Articles tests
   if (matched.length === 0) {
     matched = PASSAGE_TESTS.filter(p => p.topicCategory === 'Articles');
   }

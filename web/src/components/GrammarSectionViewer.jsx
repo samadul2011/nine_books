@@ -53,7 +53,8 @@ export default function GrammarSectionViewer({
     if (l.includes('modifier')) return 'Modifiers'
     if (l.includes('punctuation')) return 'Punctuation'
     if (l.includes('agreement') || l.includes('subject')) return 'Subject-Verb Agreement'
-    if (l.includes('part of speech') || l.includes('suffix') || l.includes('prefix') || l.includes('word form')) return 'Parts of Speech'
+    if (l.includes('suffix') || l.includes('prefix')) return 'Suffix and Prefix'
+    if (l.includes('part of speech') || l.includes('word form')) return 'Parts of Speech'
     if (l.includes('sentence') || l.includes('connector')) return 'Sentences'
     return 'Articles'
   }

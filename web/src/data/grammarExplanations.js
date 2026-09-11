@@ -521,6 +521,17 @@ export function getSmartExplanation(ruleText, topicName = "") {
     }
   }
 
+  // 14. SUFFIX & PREFIX
+  if (top.includes("suffix") || top.includes("prefix")) {
+    return {
+      bn_name: "সাফিক্স ও প্রিফিক্স (Suffixes & Prefixes)",
+      bn_expl: "মূল শব্দের (Root Word) পূর্বে বা পরে বর্ণ বা বর্ণসমষ্টি যোগ করে নতুন শব্দ গঠন করাকে Affixation বলে। শুরুতে বসলে Prefix এবং শেষে বসলে Suffix বলা হয়। সাফিক্স সাধারণত শব্দের Parts of Speech পরিবর্তন করে (যেমন: Noun, Adjective, Verb, Adverb), আর প্রিফিক্স সাধারণত বিপরীতার্থক বা অর্থগত পরিবর্তন ঘটায়।",
+      structure: "[Prefix] + Root Word + [Suffix] = New Word",
+      example_breakdown: "un- (Prefix) + happy (Root) + -ly (Suffix) = unhappily / develop + -ment = development",
+      tips: "শূন্যস্থানের আগের ও পরের শব্দ লক্ষ্য করে প্রথমে Parts of Speech (Noun/Adj/Verb/Adv) নির্ধারণ করুন এবং প্যাসেজের মূল ভাব বুঝে প্রিফিক্স যোগ করে অর্থের সামঞ্জস্য রাখুন।"
+    }
+  }
+
   // Fallback: Smart parsing based on text structure without cross-topic keywords
   let title = "ব্যাকরণগত নিয়ম ও গঠন"
   let body = ruleText

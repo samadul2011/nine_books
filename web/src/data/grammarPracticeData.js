@@ -209,12 +209,154 @@ export const TOPIC_EXTRA_PRACTICE = {
     "Fill in the correct verb: Bread and butter (is / are) his favourite breakfast.",
     "Fill in the correct verb: Ten miles (is / are) a long distance to walk on foot.",
     "Fill in the correct verb: One of the students (was / were) absent from the class."
+  ],
+  "Suffix and Prefix": [
+    "Add suffix to form noun: develop (___)",
+    "Add suffix to form noun: educate (___)",
+    "Add suffix to form noun: dark (___)",
+    "Add suffix to form noun: kind (___)",
+    "Add suffix to form noun: pure (___)",
+    "Add suffix to form noun: perform (___)",
+    "Add suffix to form noun: differ (___)",
+    "Add suffix to form noun: friend (___)",
+    "Add suffix to form noun: leader (___)",
+    "Add suffix to form noun: child (___)",
+    "Add suffix to form noun: free (___)",
+    "Add suffix to form noun: teach (___)",
+    "Add suffix to form noun: act (___)",
+    "Add suffix to form noun: science (___)",
+    "Add suffix to form noun: manage (___)",
+    "Add suffix to form noun: punish (___)",
+    "Add suffix to form noun: agree (___)",
+    "Add suffix to form noun: appear (___)",
+    "Add suffix to form adjective: beauty (___)",
+    "Add suffix to form adjective: care (careless/careful) (___)",
+    "Add suffix to form adjective: danger (___)",
+    "Add suffix to form adjective: courage (___)",
+    "Add suffix to form adjective: act (___)",
+    "Add suffix to form adjective: attract (___)",
+    "Add suffix to form adjective: nation (___)",
+    "Add suffix to form adjective: nature (___)",
+    "Add suffix to form adjective: comfort (___)",
+    "Add suffix to form adjective: suit (___)",
+    "Add suffix to form adjective: glory (___)",
+    "Add suffix to form adjective: harm (___)",
+    "Add suffix to form adjective: hope (___)",
+    "Add suffix to form adjective: fame (___)",
+    "Add suffix to form verb: real (___)",
+    "Add suffix to form verb: memory (___)",
+    "Add suffix to form verb: pure (___)",
+    "Add suffix to form verb: simple (___)",
+    "Add suffix to form verb: wide (___)",
+    "Add suffix to form verb: deep (___)",
+    "Add suffix to form verb: sharp (___)",
+    "Add suffix to form adverb: slow (___)",
+    "Add suffix to form adverb: quick (___)",
+    "Add suffix to form adverb: happy (___)",
+    "Add suffix to form adverb: easy (___)",
+    "Add suffix to form adverb: fluent (___)",
+    "Add suffix to form adverb: sincere (___)",
+    "Add suffix to form adverb: regular (___)",
+    "Add prefix to form antonym: happy (___)",
+    "Add prefix to form antonym: possible (___)",
+    "Add prefix to form antonym: legal (___)",
+    "Add prefix to form antonym: regular (___)",
+    "Add prefix to form antonym: honest (___)",
+    "Add prefix to form antonym: moral (___)",
+    "Add prefix to form antonym: polite (___)",
+    "Add prefix to form antonym: agree (___)",
+    "Add prefix to form antonym: literate (___)",
+    "Add prefix to form antonym: obey (___)",
+    "Add both prefix and suffix: happy (___)",
+    "Add both prefix and suffix: comfort (___)",
+    "Add both prefix and suffix: fortune (___)",
+    "Add both prefix and suffix: discipline (___)",
+    "Add both prefix and suffix: regular (___)",
+    "Add both prefix and suffix: success (___)"
   ]
 };
 
 export function getPracticeSolution(questionText = '', topicName = '', index = 0) {
   const text = questionText.toLowerCase();
   const top = (topicName || '').toLowerCase();
+
+
+  // 0. SUFFIX AND PREFIX RESOLVER
+  if (top.includes('suffix') || top.includes('prefix') || text.includes('suffix') || text.includes('prefix')) {
+    if (text.includes('develop')) return { answer: 'development', reason: "Verb 'develop' এর শেষে Noun গঠনকারী Suffix '-ment' যোগ করে 'development' (উন্নয়ন) হয়।" };
+    if (text.includes('educate')) return { answer: 'education', reason: "Verb 'educate' এর শেষে Noun গঠনকারী Suffix '-tion' যোগ করে 'education' (শিক্ষা) হয়।" };
+    if (text.includes('dark')) return { answer: 'darkness', reason: "Adjective 'dark' এর শেষে Noun গঠনকারী Suffix '-ness' যোগ করে 'darkness' (অন্ধকার) হয়।" };
+    if (text.includes('kind')) return { answer: 'kindness', reason: "Adjective 'kind' এর শেষে Noun গঠনকারী Suffix '-ness' যোগ করে 'kindness' (দয়া) হয়।" };
+    if (text.includes('pure') && text.includes('noun')) return { answer: 'purity', reason: "Adjective 'pure' এর সাথে Noun Suffix '-ity' যোগ করে 'purity' (বিশুদ্ধতা) হয়।" };
+    if (text.includes('pure') && text.includes('verb')) return { answer: 'purify', reason: "Adjective 'pure' এর সাথে Verb Suffix '-ify' যোগ করে 'purify' (বিশুদ্ধ করা) হয়।" };
+    if (text.includes('perform')) return { answer: 'performance', reason: "Verb 'perform' এর সাথে Noun Suffix '-ance' যোগ করে 'performance' (কর্মক্ষমতা/সম্পাদন) হয়।" };
+    if (text.includes('differ')) return { answer: 'difference', reason: "Verb 'differ' এর সাথে Noun Suffix '-ence' যোগ করে 'difference' (পার্থক্য) হয়।" };
+    if (text.includes('friend')) return { answer: 'friendship', reason: "Noun 'friend' এর সাথে Noun Suffix '-ship' যোগ করে 'friendship' (বন্ধুত্ব) হয়।" };
+    if (text.includes('leader')) return { answer: 'leadership', reason: "Noun 'leader' এর সাথে Noun Suffix '-ship' যোগ করে 'leadership' (নেতৃত্ব) হয়।" };
+    if (text.includes('child')) return { answer: 'childhood', reason: "Noun 'child' এর সাথে Noun Suffix '-hood' যোগ করে 'childhood' (শৈশব) হয়।" };
+    if (text.includes('free')) return { answer: 'freedom', reason: "Adjective 'free' এর সাথে Noun Suffix '-dom' যোগ করে 'freedom' (স্বাধীনতা) হয়।" };
+    if (text.includes('teach')) return { answer: 'teacher', reason: "Verb 'teach' এর সাথে ব্যক্তিবাচক Noun Suffix '-er' যোগ করে 'teacher' (শিক্ষক) হয়।" };
+    if (text.includes('act') && text.includes('noun')) return { answer: 'actor / action', reason: "Verb 'act' এর সাথে ব্যক্তিবাচক Noun Suffix '-or' যোগে 'actor' অথবা '-ion' যোগে 'action' হয়।" };
+    if (text.includes('act') && text.includes('adjective')) return { answer: 'active', reason: "Verb 'act' এর সাথে Adjective Suffix '-ive' যোগ করে 'active' (সক্রিয়) হয়।" };
+    if (text.includes('science') && text.includes('noun')) return { answer: 'scientist', reason: "Noun 'science' এর সাথে ব্যক্তিবাচক Suffix '-ist' যোগ করে 'scientist' (বিজ্ঞানী) হয়।" };
+    if (text.includes('science') && text.includes('adjective')) return { answer: 'scientific', reason: "Noun 'science' এর সাথে Adjective Suffix '-ific' যোগ করে 'scientific' (বৈজ্ঞানিক) হয়।" };
+    if (text.includes('manage')) return { answer: 'management', reason: "Verb 'manage' এর সাথে Noun Suffix '-ment' যোগ করে 'management' (ব্যবস্থাপনা) হয়।" };
+    if (text.includes('punish')) return { answer: 'punishment', reason: "Verb 'punish' এর সাথে Noun Suffix '-ment' যোগ করে 'punishment' (শাস্তি) হয়।" };
+    if (text.includes('agree') && text.includes('noun')) return { answer: 'agreement', reason: "Verb 'agree' এর সাথে Noun Suffix '-ment' যোগ করে 'agreement' (চুক্তি/সম্মতি) হয়।" };
+    if (text.includes('appear')) return { answer: 'appearance', reason: "Verb 'appear' এর সাথে Noun Suffix '-ance' যোগ করে 'appearance' (উপস্থিতি/আবির্ভাব) হয়।" };
+
+    if (text.includes('beauty') && text.includes('verb')) return { answer: 'beautify', reason: "Noun 'beauty' এর সাথে Verb Suffix '-ify' যোগ করে 'beautify' (সুন্দর করা) হয়।" };
+    if (text.includes('beauty')) return { answer: 'beautiful', reason: "Noun 'beauty' এর সাথে Adjective Suffix '-ful' যোগ করে 'beautiful' (সুন্দর) হয়।" };
+    if (text.includes('care')) return { answer: 'careful / careless', reason: "Root 'care' এর সাথে ইতিবাচকে '-ful' (careful) বা নেতিবাচকে '-less' (careless) বসে।" };
+    if (text.includes('danger')) return { answer: 'dangerous', reason: "Noun 'danger' এর সাথে Adjective Suffix '-ous' যোগ করে 'dangerous' (বিপজ্জনক) হয়।" };
+    if (text.includes('courage')) return { answer: 'courageous', reason: "Noun 'courage' এর সাথে Adjective Suffix '-eous' যোগ করে 'courageous' (সাহসী) হয়।" };
+    if (text.includes('attract')) return { answer: 'attractive', reason: "Verb 'attract' এর সাথে Adjective Suffix '-ive' যোগ করে 'attractive' (আকর্ষণীয়) হয়।" };
+    if (text.includes('nation')) return { answer: 'national', reason: "Noun 'nation' এর সাথে Adjective Suffix '-al' যোগ করে 'national' (জাতীয়) হয়।" };
+    if (text.includes('nature')) return { answer: 'natural', reason: "Noun 'nature' এর সাথে Adjective Suffix '-al' যোগ করে 'natural' (প্রাকৃতিক) হয়।" };
+    if (text.includes('comfort') && (text.includes('both') || text.includes('prefix'))) return { answer: 'uncomfortable', reason: "Prefix 'un-' এবং Suffix '-able' যোগে 'uncomfortable' (অস্বস্তিকর) হয়।" };
+    if (text.includes('comfort')) return { answer: 'comfortable', reason: "Noun 'comfort' এর সাথে Adjective Suffix '-able' যোগ করে 'comfortable' (আরামদায়ক) হয়।" };
+    if (text.includes('suit')) return { answer: 'suitable', reason: "Verb 'suit' এর সাথে Adjective Suffix '-able' যোগ করে 'suitable' (উপযুক্ত) হয়।" };
+    if (text.includes('glory')) return { answer: 'glorious', reason: "Noun 'glory' এর সাথে Adjective Suffix '-ous' যোগ করে 'glorious' (মহিমান্বিত) হয়।" };
+    if (text.includes('harm')) return { answer: 'harmful', reason: "Noun/Verb 'harm' এর সাথে Adjective Suffix '-ful' যোগ করে 'harmful' (ক্ষতিকর) হয়।" };
+    if (text.includes('hope')) return { answer: 'hopeful / hopeless', reason: "Noun 'hope' এর সাথে '-ful' (আশাবাদী) বা '-less' (হতাশ) বসে।" };
+    if (text.includes('fame')) return { answer: 'famous', reason: "Noun 'fame' এর সাথে Adjective Suffix '-ous' যোগ করে 'famous' (বিখ্যাত) হয়।" };
+
+    if (text.includes('real')) return { answer: 'realize', reason: "Adjective 'real' এর সাথে Verb Suffix '-ize' যোগ করে 'realize' (উপলব্ধি করা) হয়।" };
+    if (text.includes('memory')) return { answer: 'memorize', reason: "Noun 'memory' এর সাথে Verb Suffix '-ize' যোগ করে 'memorize' (মুখস্থ করা) হয়।" };
+    if (text.includes('simple')) return { answer: 'simplify', reason: "Adjective 'simple' এর সাথে Verb Suffix '-ify' যোগ করে 'simplify' (সহজ করা) হয়।" };
+    if (text.includes('wide')) return { answer: 'widen', reason: "Adjective 'wide' এর সাথে Verb Suffix '-en' যোগ করে 'widen' (প্রশস্ত করা) হয়।" };
+    if (text.includes('deep')) return { answer: 'deepen', reason: "Adjective 'deep' এর সাথে Verb Suffix '-en' যোগ করে 'deepen' (গভীর করা) হয়।" };
+    if (text.includes('sharp')) return { answer: 'sharpen', reason: "Adjective 'sharp' এর সাথে Verb Suffix '-en' যোগ করে 'sharpen' (ধারালো করা) হয়।" };
+
+    if (text.includes('slow')) return { answer: 'slowly', reason: "Adjective 'slow' এর সাথে Adverb Suffix '-ly' যোগ করে 'slowly' (ধীরে ধীরে) হয়।" };
+    if (text.includes('quick')) return { answer: 'quickly', reason: "Adjective 'quick' এর সাথে Adverb Suffix '-ly' যোগ করে 'quickly' (দ্রুত) হয়।" };
+    if (text.includes('easy')) return { answer: 'easily', reason: "Adjective 'easy' এর শেষে 'y' পরিবর্তিত হয়ে 'i' এবং '-ly' যোগে 'easily' (সহজে) হয়।" };
+    if (text.includes('fluent')) return { answer: 'fluently', reason: "Adjective 'fluent' এর সাথে Adverb Suffix '-ly' যোগ করে 'fluently' (সাবলীলভাবে) হয়।" };
+    if (text.includes('sincere')) return { answer: 'sincerely', reason: "Adjective 'sincere' এর সাথে Adverb Suffix '-ly' যোগ করে 'sincerely' (আন্তরিকভাবে) হয়।" };
+
+    if (text.includes('happy') && text.includes('both')) return { answer: 'unhappily', reason: "Prefix 'un-' এবং Suffix '-ly' যোগ করে 'unhappily' (দুঃখজনকভাবে) হয়।" };
+    if (text.includes('happy') && text.includes('antonym')) return { answer: 'unhappy', reason: "Negative Prefix 'un-' যোগ করে 'unhappy' (অসুখী) হয়।" };
+    if (text.includes('happy') && text.includes('adverb')) return { answer: 'happily', reason: "Adjective 'happy' এর শেষে 'y' পরিবর্তিত হয়ে 'i' এবং '-ly' যোগে 'happily' (সুখে) হয়।" };
+    if (text.includes('possible')) return { answer: 'impossible', reason: "'p' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'im-' বসে 'impossible' (অসম্ভব) হয়।" };
+    if (text.includes('legal')) return { answer: 'illegal', reason: "'l' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'il-' বসে 'illegal' (অবৈধ) হয়।" };
+    if (text.includes('regular') && (text.includes('both') || text.includes('adverb'))) return { answer: 'irregularly', reason: "Prefix 'ir-' এবং Suffix '-ly' যোগ করে 'irregularly' (অনিয়মিতভাবে) হয়।" };
+    if (text.includes('regular')) return { answer: 'irregular', reason: "'r' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'ir-' বসে 'irregular' (অনিয়মিত) হয়।" };
+    if (text.includes('honest')) return { answer: 'dishonest', reason: "Root 'honest' এর পূর্বে বিপরীতার্থক Prefix 'dis-' বসে 'dishonest' (অসৎ) হয়।" };
+    if (text.includes('moral')) return { answer: 'immoral', reason: "'m' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'im-' বসে 'immoral' (অনৈতিক) হয়।" };
+    if (text.includes('polite')) return { answer: 'impolite', reason: "'p' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'im-' বসে 'impolite' (অভদ্র) হয়।" };
+    if (text.includes('agree') && text.includes('antonym')) return { answer: 'disagree', reason: "Verb 'agree' এর পূর্বে বিপরীতার্থক Prefix 'dis-' বসে 'disagree' (অসম্মত হওয়া) হয়।" };
+    if (text.includes('literate')) return { answer: 'illiterate', reason: "'l' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক Prefix 'il-' বসে 'illiterate' (নিরক্ষর) হয়।" };
+    if (text.includes('obey')) return { answer: 'disobey', reason: "Verb 'obey' এর পূর্বে বিপরীতার্থক Prefix 'dis-' বসে 'disagree' (অমান্য করা) হয়।" };
+    if (text.includes('fortune')) return { answer: 'unfortunately', reason: "Prefix 'un-' এবং Suffix '-ate' + '-ly' যোগ করে 'unfortunately' (দুর্ভাগ্যজনকভাবে) হয়।" };
+    if (text.includes('discipline')) return { answer: 'indiscipline', reason: "Prefix 'in-' যোগ করে 'indiscipline' (বিশৃঙ্খলা) গঠিত হয়।" };
+    if (text.includes('success') && text.includes('both')) return { answer: 'unsuccessful', reason: "Prefix 'un-' এবং Suffix '-ful' যোগ করে 'unsuccessful' (অসফল) গঠিত হয়।" };
+    if (text.includes('prosper')) return { answer: 'prosperity', reason: "Preposition 'to' এর পর Noun হিসেবে 'prosperity' (সমৃদ্ধি) বসে।" };
+
+    return {
+      answer: "সঠিক উপসর্গ/প্রত্যয়যুক্ত শব্দ",
+      reason: "বাক্যের অর্থ ও পদক্রম (Parts of Speech) বিবেচনা করে উপযুক্ত সাফিক্স বা প্রিফিক্স যুক্ত করা হয়েছে।"
+    };
+  }
 
   // 1. TAG QUESTIONS RESOLVER
   if (top.includes('tag') || text.startsWith('add tag')) {

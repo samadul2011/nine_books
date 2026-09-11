@@ -335,6 +335,19 @@ export const GRAMMAR_CHAPTERS = [
     "tests_count": 20
   },
   {
+  "id": "grammar-class-9-10-15-suffix-prefix",
+  "subject_id": "grammar-subject-id",
+  "title_bn": "Suffix & Prefix (সাফিক্স ও প্রিফিক্স: উপসর্গ ও প্রত্যয়)",
+  "title_en": "Suffix and Prefix (Class 9-10)",
+  "class_level": "Class 9-10",
+  "topic_name": "Suffix and Prefix",
+  "order_index": 26,
+  "rules_count": 12,
+  "examples_count": 16,
+  "practice_count": 55,
+  "tests_count": 20
+},
+  {
     "id": "grammar-class-11-12-1-advanced-grammar-composition",
     "subject_id": "grammar-subject-id",
     "title_bn": "Advanced Grammar & Composition (উচ্চতর ব্যাকরণ ও কম্পোজিশন)",
@@ -511,6 +524,58 @@ export const GRAMMAR_LESSONS_MAP = {
       ]
     }
   ],
+  "grammar-class-9-10-15-suffix-prefix": [
+    {
+        "id": "lesson-grammar-class-9-10-15-suffix-prefix",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "order_index": 1,
+        "content_text": "# Suffix & Prefix (উপসর্গ ও প্রত্যয়)\n\n**Level**: Class 9-10 (SSC Board Standard) | **Topic**: Suffix & Prefix (সাফিক্স ও প্রিফিক্স)\n\n---\n\n## 1. 📖 Grammar Rules & Explanations (নিয়মাবলী ও সহজ ব্যাখ্যা)\n\n- **1. Noun Suffixes (বিশেষ্য গঠনকারী প্রত্যয়):** Root word এর শেষে `-tion`, `-sion`, `-ment`, `-ness`, `-ity`, `-ance`, `-ence`, `-er`, `-or`, `-ist`, `-hood`, `-ship`, `-dom` যোগ করে Noun গঠন করা হয়।\n- **2. Adjective Suffixes (বিশেষণ গঠনকারী প্রত্যয়):** Root word এর শেষে `-ful`, `-less`, `-ous`, `-ious`, `-ive`, `-al`, `-able`, `-ible`, `-ic`, `-ical` যোগ করে Adjective গঠিত হয়।\n- **3. Verb Suffixes (ক্রিয়া গঠনকারী প্রত্যয়):** Root word এর শেষে `-ize`, `-ise`, `-ify`, `-en` যোগ করে Verb গঠন করা হয়।\n- **4. Adverb Suffixes (ক্রিয়া-বিশেষণ গঠনকারী প্রত্যয়):** Adjective এর শেষে সাধারণত `-ly`, `-ward`, `-wise` যোগ করে Adverb গঠিত হয়।\n- **5. Negative Prefixes (নেতিবাচক উপসর্গ):** Root word এর শুরুতে `un-`, `in-`, `im-`, `il-`, `ir-`, `dis-`, `mis-`, `non-` যুক্ত করে বিপরীতার্থক (Antonym) শব্দ গঠিত হয়।\n- **6. Reversal & Opposition Prefixes (প্রতিরোধমূলক উপসর্গ):** Root word এর পূর্বে `de-`, `anti-`, `counter-`, `mal-` যোগ করে বিপরীত কর্ম বোঝানো হয়।\n- **7. Number, Degree & Time Prefixes (মাত্রা ও সময়বাচক উপসর্গ):** Root word এর পূর্বে `pre-`, `post-`, `re-`, `over-`, `under-`, `multi-`, `sub-` যোগ করা হয়।\n- **8. Combining Prefix & Suffix together (উভয় উপসর্গ ও প্রত্যয় একত্রে):** একই মূল শব্দের পূর্বে Prefix এবং শেষে Suffix উভয়ই যুক্ত হয়ে নতুন পদ গঠিত হয়।\n- **9. Syntactic Position Rule 1 (Noun Formation in Passages):** Article, Possessive Adjective, বা Preposition এর পর শূন্যস্থান থাকলে এবং পরে Noun না থাকলে Noun রূপ বসে।\n- **10. Syntactic Position Rule 2 (Adjective Formation in Passages):** Noun এর পূর্বে অথবা Linking Verb এর পর শূন্যস্থান থাকলে Adjective রূপ বসে।\n- **11. Syntactic Position Rule 3 (Adverb Formation in Passages):** পূর্ণাঙ্গ বাক্যের শুরুতে, শেষে অথবা Auxiliary ও Main Verb এর মাঝে Adverb (-ly) বসে।\n- **12. Contextual Antonym Rule (প্রেক্ষাপট অনুযায়ী বিপরীত শব্দ):** প্যাসেজের সামগ্রিক ভাব যদি নেতিবাচক বা অসাধু কিছু বোঝায়, তবে Negative Prefix যোগ করতে হয়।\n\n---\n\n## 2. 💡 Practical Examples (বাস্তব উদাহরণসমূহ)\n\n1. The teacher praised the boy for his extraordinary creativity. (create → creativity [Noun])\n2. Smoking in public places is highly harmful and offensive. (harm → harmful [Adjective])\n3. We must purify the river water to save aquatic life. (pure → purify [Verb])\n4. The brilliant student answered every difficult question correctly. (correct → correctly [Adverb])\n5. A dishonest man can never enjoy genuine mental peace. (honest → dishonest [Prefix])\n6. Tree plantation is essential to maintain environmental stability. (plant → plantation [Noun])\n7. His careless driving caused the highway tragedy. (care → careless [Suffix])\n8. Unfortunately, he could not reach the interview board on time. (fortune → unfortunately [Both])\n9. Deforestation leads to global warming and severe climate change. (forest → deforestation [Both])\n10. Education broadens our mental horizon and dispels ignorance. (broad → broadens, ignorant → ignorance)\n11. The villagers lived peacefully in their serene native land. (peace → peacefully [Both])\n12. Solving this board mathematics problem is not impossible. (possible → impossible [Prefix])\n13. She proved her complete innocence with valid documented evidence. (innocent → innocence [Noun])\n14. Illiteracy is a major hindrance to national development. (hinder → hindrance, develop → development)\n15. He spoke politely and respectfully with the senior citizens. (polite → politely, respect → respectfully)\n16. We should never encourage indiscipline among youth. (discipline → indiscipline [Prefix])\n\n---\n\n## 3. ✍️ Practice Drills (অনুশীলনমূলক কাজ)\n\n- **Exercise 1:** Add suffix to form noun: develop (___)\n- **Exercise 2:** Add prefix to form antonym: honest (___)\n- **Exercise 3:** Add suffix to form adjective: beauty (___)\n- **Exercise 4:** Add suffix to form adverb: quick (___)\n- **Exercise 5:** Add both prefix and suffix: happy (___)\n- **Exercise 6:** Complete the gap: Education is essential for national (prosper) (___).\n- **Exercise 7:** Complete the gap: Smoking is extremely (harm) (___) to our health.\n- **Exercise 8:** Complete the gap: An (educate) (___) person can distinguish right from wrong.\n- **Exercise 9:** Complete the gap: We should not behave (polite) (___) with others.\n- **Exercise 10:** Complete the gap: Trees are very (use) (___) to our environment.\n",
+        "rules": [
+            "Noun Suffixes (বিশেষ্য গঠনকারী প্রত্যয়): Root word এর শেষে -tion, -sion, -ment, -ness, -ity, -ance, -ence, -er, -or, -ist, -hood, -ship, -dom যোগ করে Noun গঠন করা হয়। Example: educate → education, develop → development, happy → happiness, friend → friendship, free → freedom.",
+            "Adjective Suffixes (বিশেষণ গঠনকারী প্রত্যয়): Root word এর শেষে -ful, -less, -ous, -ious, -ive, -al, -able, -ible, -ic, -ical যোগ করে Adjective গঠিত হয়। Example: beauty → beautiful, care → careless, danger → dangerous, act → active, nation → national, comfort → comfortable.",
+            "Verb Suffixes (ক্রিয়া গঠনকারী প্রত্যয়): Root word এর শেষে -ize, -ise, -ify, -en যোগ করে Verb গঠন করা হয়। Example: real → realize, pure → purify, beauty → beautify, wide → widen, deep → deepen.",
+            "Adverb Suffixes (ক্রিয়া-বিশেষণ গঠনকারী প্রত্যয়): Adjective এর শেষে সাধারণত -ly, -ward, -wise যোগ করে Adverb গঠিত হয়। Example: slow → slowly, quick → quickly, happy → happily, backward, clockwise.",
+            "Negative Prefixes (নেতিবাচক উপসর্গ): Root word এর শুরুতে un-, in-, im-, il-, ir-, dis-, mis-, non- যুক্ত করে বিপরীতার্থক (Antonym) শব্দ গঠিত হয়। Example: happy → unhappy, active → inactive, possible → impossible, legal → illegal, regular → irregular, honest → dishonest, understand → misunderstand, stop → non-stop.",
+            "Reversal & Opposition Prefixes (বিপরীত কর্ম ও প্রতিরোধমূলক উপসর্গ): Root word এর পূর্বে de-, anti-, counter-, mal- যোগ করে ক্রিয়া বা অবস্থার বিপরীত রূপ বোঝায়। Example: forest → deforest, social → anti-social, act → counteract, nutrition → malnutrition.",
+            "Number, Degree & Time Prefixes (মাত্রা, সময় ও সংখ্যাবাচক উপসর্গ): Root word এর পূর্বে pre-, post-, re-, over-, under-, multi-, sub- যোগ করা হয়। Example: pre-exam, post-war, rewrite, overeat, underestimate, multinational, subway.",
+            "Combining Prefix & Suffix together (উভয় উপসর্গ ও প্রত্যয় একত্রে): অনেক ক্ষেত্রে একই মূল শব্দের পূর্বে Prefix এবং শেষে Suffix উভয়ই যুক্ত হয়ে নতুন পদ গঠিত হয়। Example: comfort → uncomfortable, regular → irregularly, fortune → unfortunately, discipline → indiscipline.",
+            "Syntactic Position Rule 1 (Noun Formation in Passages): Article (a, an, the), Possessive Adjective (my, his, her, their, our), অথবা Preposition এর পর শূন্যস্থান থাকলে এবং পরে কোনো Noun না থাকলে শূন্যস্থানে মূল শব্দের Noun রূপ বসে। Example: He is known for his (honest) → honesty. Education is the key to (prosper) → prosperity.",
+            "Syntactic Position Rule 2 (Adjective Formation in Passages): Noun এর ঠিক পূর্বে অথবা Linking Verb (am, is, are, was, were, become, look, seem) এর পর শূন্যস্থান থাকলে মূল শব্দের Adjective রূপ বসে। Example: It was an (enjoy) → enjoyable journey. Smoking is (harm) → harmful to health.",
+            "Syntactic Position Rule 3 (Adverb Formation in Passages): পূর্ণাঙ্গ বাক্যের শুরুতে, শেষে অথবা Auxiliary Verb ও Main Verb এর মাঝে শূন্যস্থান থাকলে মূল শব্দের Adverb (-ly) রূপ বসে। Example: He completed the task (success) → successfully. They (gradual) → gradually overcame the danger.",
+            "Contextual Antonym Rule (প্যাসেজের প্রেক্ষাপট অনুযায়ী বিপরীত শব্দ): প্যাসেজের সামগ্রিক ভাব বা পূর্বাপর বাক্যের অর্থ যদি নেতিবাচক, ক্ষতিকর বা অসাধু কিছু বোঝায়, তবে শূন্যস্থানে উপযুক্ত Negative Prefix যোগ করে বিপরীত শব্দ গঠন করতে হয়। Example: We should avoid all kinds of (discipline) → indiscipline. A corrupted man leads a (happy) → unhappy life."
+        ],
+        "examples": [
+            "The teacher praised the boy for his extraordinary creativity. (create → creativity [Noun])",
+            "Smoking in public places is highly harmful and offensive. (harm → harmful [Adjective])",
+            "We must purify the river water to save aquatic life. (pure → purify [Verb])",
+            "The brilliant student answered every difficult question correctly. (correct → correctly [Adverb])",
+            "A dishonest man can never enjoy genuine mental peace. (honest → dishonest [Prefix])",
+            "Tree plantation is essential to maintain environmental stability. (plant → plantation [Noun])",
+            "His careless driving caused the highway tragedy. (care → careless [Suffix])",
+            "Unfortunately, he could not reach the interview board on time. (fortune → unfortunately [Both])",
+            "Deforestation leads to global warming and severe climate change. (forest → deforestation [Both])",
+            "Education broadens our mental horizon and dispels ignorance. (broad → broadens, ignorant → ignorance)",
+            "The villagers lived peacefully in their serene native land. (peace → peacefully [Both])",
+            "Solving this board mathematics problem is not impossible. (possible → impossible [Prefix])",
+            "She proved her complete innocence with valid documented evidence. (innocent → innocence [Noun])",
+            "Illiteracy is a major hindrance to national development. (hinder → hindrance, develop → development)",
+            "He spoke politely and respectfully with the senior citizens. (polite → politely, respect → respectfully)",
+            "We should never encourage indiscipline among youth. (discipline → indiscipline [Prefix])"
+        ],
+        "practice": [
+            "Add suffix to form noun: develop (___)",
+            "Add prefix to form antonym: honest (___)",
+            "Add suffix to form adjective: beauty (___)",
+            "Add suffix to form adverb: quick (___)",
+            "Add both prefix and suffix: happy (___)",
+            "Complete the gap: Education is essential for national (prosper) (___).",
+            "Complete the gap: Smoking is extremely (harm) (___) to our health.",
+            "Complete the gap: An (educate) (___) person can distinguish right from wrong.",
+            "Complete the gap: We should not behave (polite) (___) with others.",
+            "Complete the gap: Trees are very (use) (___) to our environment."
+        ]
+    }
+],
   "grammar-class-8-1-parts-of-speech-basic": [
     {
       "id": "lesson-grammar-class-8-1-parts-of-speech-basic",
@@ -1926,6 +1991,106 @@ export const GRAMMAR_MCQS_MAP = {
       "explanation_bn": "'Nothing' নেতিবাচক শব্দ এবং এর জন্য Pronoun হিসেবে 'it' বসে। তাই Tag হবে 'is it?'।"
     }
   ],
+  "grammar-class-9-10-15-suffix-prefix": [
+    {
+        "id": "sp-mcq-1",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "Which suffix is used to convert the verb 'develop' into a noun?",
+        "question_bn": "'develop' ভার্বটিকে নাউন এ রূপান্তর করতে কোন সাফিক্সটি ব্যবহৃত হয়?",
+        "options": [
+            "-ment",
+            "-ful",
+            "-ly",
+            "-ize"
+        ],
+        "correct_answer": "-ment",
+        "explanation_bn": "'develop' এর সাথে সাফিক্স '-ment' যোগ করে 'development' (উন্নয়ন) নাউন গঠিত হয়।"
+    },
+    {
+        "id": "sp-mcq-2",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "What is the antonym of 'regular' using a negative prefix?",
+        "question_bn": "নেগেটিভ প্রিফিক্স যোগে 'regular' এর বিপরীত শব্দ কোনটি?",
+        "options": [
+            "irregular",
+            "unregular",
+            "disregular",
+            "inregular"
+        ],
+        "correct_answer": "irregular",
+        "explanation_bn": "'r' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীত শব্দ গঠনে প্রিফিক্স 'ir-' বসে (irregular)।"
+    },
+    {
+        "id": "sp-mcq-3",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "Which suffix transforms the adjective 'pure' into a verb?",
+        "question_bn": "'pure' এডজেক্টিভটিকে ভার্ব এ রূপান্তর করতে কোন সাফিক্স ব্যবহৃত হয়?",
+        "options": [
+            "-ify",
+            "-tion",
+            "-ness",
+            "-able"
+        ],
+        "correct_answer": "-ify",
+        "explanation_bn": "'pure' এর সাথে সাফিক্স '-ify' যুক্ত হয়ে 'purify' (পরিশোধন করা) ভার্ব গঠিত হয়।"
+    },
+    {
+        "id": "sp-mcq-4",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "Choose the correct form of 'honest' in: 'We should avoid (honest).'",
+        "question_bn": "সঠিক প্রিফিক্স/সাফিক্স বসান: We should avoid (honest).",
+        "options": [
+            "dishonesty",
+            "honestly",
+            "unhonest",
+            "dishonest"
+        ],
+        "correct_answer": "dishonesty",
+        "explanation_bn": "avoid এর পর object হিসেবে Noun এবং নেতিবাচক কাজের অর্থ প্রকাশে 'dishonesty' (অসততা) বসে।"
+    },
+    {
+        "id": "sp-mcq-5",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "Which prefix makes 'possible' negative?",
+        "question_bn": "'possible' শব্দটিকে নেগেটিভ করতে কোন প্রিফিক্স ব্যবহৃত হয়?",
+        "options": [
+            "im-",
+            "un-",
+            "in-",
+            "dis-"
+        ],
+        "correct_answer": "im-",
+        "explanation_bn": "'p' দিয়ে শুরু হওয়া শব্দের পূর্বে বিপরীতার্থক প্রিফিক্স হিসেবে 'im-' বসে (impossible)।"
+    },
+    {
+        "id": "sp-mcq-6",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "The students completed their assignment (successful).",
+        "question_bn": "সঠিক রূপটি বাছাই করুন: The students completed their assignment (successful).",
+        "options": [
+            "successfully",
+            "success",
+            "succeed",
+            "successful"
+        ],
+        "correct_answer": "successfully",
+        "explanation_bn": "verb টি কীভাবে সম্পন্ন হয়েছে তা বোঝাতে Adverb হিসেবে '-ly' যোগে 'successfully' বসে।"
+    },
+    {
+        "id": "sp-mcq-7",
+        "chapter_id": "grammar-class-9-10-15-suffix-prefix",
+        "question_en": "Which word combines both a prefix and a suffix with root 'fortune'?",
+        "question_bn": "'fortune' মূল শব্দের সাথে প্রিফিক্স ও সাফিক্স উভয়ই যুক্ত রূপ কোনটি?",
+        "options": [
+            "unfortunately",
+            "fortunate",
+            "misfortune",
+            "fortunately"
+        ],
+        "correct_answer": "unfortunately",
+        "explanation_bn": "Prefix 'un-' এবং Suffix '-ate' + '-ly' যুক্ত হয়ে 'unfortunately' গঠিত হয়েছে।"
+    }
+],
   "grammar-class-8-1-parts-of-speech-basic": [
     {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-1",
