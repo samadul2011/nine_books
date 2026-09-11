@@ -19,6 +19,7 @@ export class TTSService {
     // Audio elements & synthesis
     this.audioElement = null
     this.speechUtterance = null
+    this._currentBlobUrl = null   // track blob URLs for cleanup
     
     // Listeners
     this.listeners = {
@@ -241,66 +242,99 @@ export class TTSService {
     }
   }
 
-  playNeuralChunk(text, index) {
+  // Internal helper — attaches event handlers to an Audio element and starts playback
+  _playAudioElement(audio, blobUrl, index) {
+    audio.playbackRate = this.speed
+    this._currentBlobUrl = blobUrl
+    this.audioElement = audio
+
+    audio.onended = () => {
+      if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
+      if (this.isPlaying && !this.isPaused) this.playChunk(index + 1)
+    }
+
+    audio.onerror = (e) => {
+      if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
+      console.warn('Neural audio error, falling back to device TTS:', e)
+      if (this.isPlaying) this.playDeviceChunk(this.chunks[index], index)
+    }
+
+    const p = audio.play()
+    if (p !== undefined) {
+      p.catch(err => {
+        if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
+        console.warn('Audio play() rejected, falling back to device TTS:', err)
+        if (this.isPlaying) this.playDeviceChunk(this.chunks[index], index)
+      })
+    }
+  }
+
+  async playNeuralChunk(text, index) {
     try {
       if (this.audioElement) {
         this.audioElement.pause()
+        this.audioElement.src = ''
         this.audioElement = null
+      }
+      if (this._currentBlobUrl) {
+        URL.revokeObjectURL(this._currentBlobUrl)
+        this._currentBlobUrl = null
       }
 
       // Detect language: English vs Bengali
       const engCount = (text.match(/[a-zA-Z]/g) || []).length
       const bnCount = (text.match(/[\u0980-\u09FF]/g) || []).length
       const lang = engCount >= bnCount && engCount > 0 ? 'en' : 'bn'
-
       const encoded = encodeURIComponent(text)
+      const googleTtsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`
 
-      // Google TTS direct URL — works locally; on GitHub Pages Google may block
-      // due to missing spoofed Referer header (the Vite proxy handled that locally).
-      // We use a 2.5s timeout to detect silent failures and fall back to device voice.
-      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`
+      const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname)
 
-      const audio = new Audio(url)
-      audio.playbackRate = this.speed
-      this.audioElement = audio
+      if (isLocalhost) {
+        // On localhost: Vite proxy adds spoofed Referer/User-Agent headers — use it directly
+        const localUrl = `/api/tts?text=${encoded}&lang=${lang}`
+        this._playAudioElement(new Audio(localUrl), null, index)
+        return
+      }
 
-      // --- Timeout fallback: if audio hasn't started in 2.5s, use device voice ---
-      let didStart = false
-      const fallbackTimer = setTimeout(() => {
-        if (!didStart && this.isPlaying && this.audioElement === audio) {
-          console.warn('Neural TTS timed out (likely blocked by Google on this domain), falling back to device voice.')
-          audio.pause()
-          this.audioElement = null
-          this.playDeviceChunk(text, index)
+      // On GitHub Pages / production:
+      // Google TTS blocks direct browser requests (no server-side Referer spoofing).
+      // Solution: fetch audio via corsproxy.io → convert to Blob URL → play.
+      // Fallback chain: corsproxy.io → allorigins.win → device voice
+      const proxies = [
+        `https://corsproxy.io/?url=${encodeURIComponent(googleTtsUrl)}`,
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(googleTtsUrl)}`
+      ]
+
+      for (const proxyUrl of proxies) {
+        if (!this.isPlaying) return  // user stopped while we were fetching
+        try {
+          const controller = new AbortController()
+          const timer = setTimeout(() => controller.abort(), 8000)
+          const res = await fetch(proxyUrl, { signal: controller.signal })
+          clearTimeout(timer)
+
+          if (!res.ok) throw new Error(`HTTP ${res.status}`)
+          if (!this.isPlaying) return
+
+          const blob = await res.blob()
+          if (!this.isPlaying) return
+
+          const blobUrl = URL.createObjectURL(blob)
+          this._playAudioElement(new Audio(blobUrl), blobUrl, index)
+          return  // success — stop trying proxies
+        } catch (err) {
+          console.warn(`Neural TTS proxy failed (${proxyUrl}):`, err.message)
         }
-      }, 2500)
-
-      audio.oncanplay = () => { didStart = true; clearTimeout(fallbackTimer) }
-
-      audio.onended = () => {
-        didStart = true
-        clearTimeout(fallbackTimer)
-        if (this.isPlaying && !this.isPaused) {
-          this.playChunk(index + 1)
-        }
       }
 
-      audio.onerror = (e) => {
-        clearTimeout(fallbackTimer)
-        console.warn('Neural audio chunk error, falling back to device TTS for this chunk:', e)
-        this.playDeviceChunk(text, index)
-      }
+      // All proxies failed — fall back to device voice
+      console.warn('All Neural TTS proxies failed, using device voice.')
+      if (this.isPlaying) this.playDeviceChunk(text, index)
 
-      const playPromise = audio.play()
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          clearTimeout(fallbackTimer)
-          console.warn('Audio play prevented by browser, falling back to device TTS:', err)
-          this.playDeviceChunk(text, index)
-        })
-      }
     } catch (err) {
-      this.playDeviceChunk(text, index)
+      console.warn('playNeuralChunk unexpected error:', err)
+      if (this.isPlaying) this.playDeviceChunk(text, index)
     }
   }
 
@@ -382,6 +416,12 @@ export class TTSService {
       this.audioElement.pause()
       this.audioElement.src = ''
       this.audioElement = null
+    }
+
+    // Revoke any blob URL to free memory
+    if (this._currentBlobUrl) {
+      URL.revokeObjectURL(this._currentBlobUrl)
+      this._currentBlobUrl = null
     }
 
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
