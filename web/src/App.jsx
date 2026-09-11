@@ -32,7 +32,8 @@ import {
   BookOpenCheck,
   ListOrdered,
   BarChart3,
-  Search
+  Search,
+  ArrowLeft
 } from 'lucide-react'
 import LessonAudioPlayer from './components/LessonAudioPlayer'
 import TextSelectionToolbar from './components/TextSelectionToolbar'
@@ -45,6 +46,7 @@ import { MATH_FALLBACK_CHAPTERS, MATH_CH1_FALLBACK_LESSON, MATH_CH3_FALLBACK_LES
 import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from './data/financeBankingData'
 import { GRAMMAR_SUBJECT, GRAMMAR_CHAPTERS, GRAMMAR_LESSONS_MAP, GRAMMAR_MCQS_MAP } from './data/grammarData'
 import GrammarSectionViewer from './components/GrammarSectionViewer'
+import GrammarLevelExam from './components/GrammarLevelExam'
 
 
 export default function App() {
@@ -52,6 +54,7 @@ export default function App() {
   const [mobileView, setMobileView] = useState('subjects') // 'subjects'|'chapters'|'read'|'quiz'|'progress'
   const [isSidebarOpen, setIsSidebarOpen] = useState(true) // Collapsible sidebar for expansive reading
   const [grammarClassFilter, setGrammarClassFilter] = useState('All') // 'All' | 'Class 8' | 'Class 9-10' | 'Class 11-12'
+  const [isLevelExamActive, setIsLevelExamActive] = useState(false)
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
     return saved ? parseInt(saved, 10) : 125 // Default to 125% for grand, comfortable reading
@@ -559,6 +562,30 @@ export default function App() {
                     </span>
                   </h2>
 
+                  {/* Grammar Level Exam Launcher Banner */}
+                  {(selectedSubject?.id === 'grammar-subject-id' || (selectedSubject?.name_en || '').toLowerCase().includes('grammar')) && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsLevelExamActive(true)
+                        setMobileView('read')
+                      }}
+                      className={`w-full mb-3 p-3 rounded-2xl border text-xs font-bold transition flex items-center justify-between shadow-sm ${
+                        isLevelExamActive
+                          ? 'bg-gradient-to-r from-amber-500/20 via-teal-500/20 to-emerald-500/20 border-amber-500 text-amber-300 ring-2 ring-amber-500/40'
+                          : 'bg-gradient-to-r from-slate-900 to-slate-800/90 border-amber-500/40 text-amber-300 hover:border-amber-500/70 hover:bg-slate-800'
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <Award className="w-4 h-4 text-amber-400 animate-pulse" />
+                        <span>লেভেল মূল্যায়ন পরীক্ষা</span>
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 font-extrabold">
+                        TEST
+                      </span>
+                    </button>
+                  )}
+
                   {/* Grammar Class Filter Tabs */}
                   {(selectedSubject?.id === 'grammar-subject-id' || (selectedSubject?.name_en || '').toLowerCase().includes('grammar')) && (
                     <div className="grid grid-cols-2 gap-1.5 mb-3 pb-3 border-b border-slate-800/80">
@@ -572,11 +599,12 @@ export default function App() {
                           key={lvl.id}
                           type="button"
                           onClick={() => {
+                            setIsLevelExamActive(false)
                             setGrammarClassFilter(lvl.id)
                             fetchChapters('grammar-subject-id', selectedSubject, lvl.id)
                           }}
                           className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-between transition border ${
-                            grammarClassFilter === lvl.id
+                            !isLevelExamActive && grammarClassFilter === lvl.id
                               ? 'bg-teal-500/20 border-teal-500/60 text-teal-300 font-bold shadow-sm'
                               : 'bg-slate-800/40 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
                           }`}
@@ -593,12 +621,13 @@ export default function App() {
                       <button
                         key={ch.id}
                         onClick={() => {
+                          setIsLevelExamActive(false)
                           setSelectedChapter(ch)
                           fetchChapterDetails(ch.id, selectedSubject, ch)
                           setMobileView('read') // auto-advance on mobile
                         }}
                         className={`w-full text-left px-2.5 py-2 rounded-xl text-xs transition flex items-center gap-2.5 border ${
-                          selectedChapter?.id === ch.id
+                          !isLevelExamActive && selectedChapter?.id === ch.id
                             ? 'bg-slate-800 border-teal-500/60 text-teal-300 font-medium shadow-sm'
                             : 'border-transparent text-slate-300 hover:bg-slate-800/60'
                         }`}
@@ -640,7 +669,27 @@ export default function App() {
                   </button>
                 </div>
               )}
-              {selectedChapter ? (
+              {isLevelExamActive ? (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <button
+                      onClick={() => setIsLevelExamActive(false)}
+                      className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-900 border border-teal-500/40 text-xs font-semibold text-teal-300 hover:bg-slate-800 transition shadow-sm"
+                    >
+                      <ArrowLeft className="w-4 h-4" />
+                      <span>টপিক ও পাঠে ফিরে যান (Back to Topic Lessons)</span>
+                    </button>
+                  </div>
+                  <GrammarLevelExam 
+                    onClose={() => setIsLevelExamActive(false)} 
+                    onSelectChapter={(ch) => {
+                      setIsLevelExamActive(false)
+                      setSelectedChapter(ch)
+                      fetchChapterDetails(ch.id, selectedSubject, ch)
+                    }}
+                  />
+                </div>
+              ) : selectedChapter ? (
                 <>
                   {/* Chapter Header */}
                   <div className="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-slate-800 rounded-2xl p-6">
@@ -675,6 +724,15 @@ export default function App() {
                             <HelpCircle className="w-4 h-4 text-emerald-400" />
                             {questions.length}টি কুইজ প্রশ্ন (MCQ Tests)
                           </span>
+
+                          <button
+                            type="button"
+                            onClick={() => setIsLevelExamActive(true)}
+                            className="ml-auto px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500/20 to-teal-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 shadow-sm"
+                          >
+                            <Award className="w-3.5 h-3.5 text-amber-400" />
+                            <span>লেভেল টেস্ট পরীক্ষা দিন</span>
+                          </button>
                         </>
                       ) : (
                         <>
@@ -873,9 +931,9 @@ export default function App() {
                                   </span>
                                   <div>
                                     <div className="text-sm sm:text-base font-semibold text-slate-100 leading-snug">
-                                      {q.question_bn}
+                                      {q.question_bn || q.question_text || q.question_en}
                                     </div>
-                                    {q.question_en && q.question_en !== q.question_bn && (
+                                    {q.question_en && q.question_en !== (q.question_bn || q.question_text) && (
                                       <div className="text-xs text-slate-400 font-normal mt-0.5">
                                         {q.question_en}
                                       </div>

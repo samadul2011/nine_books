@@ -1827,6 +1827,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-1",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Which part of speech is the word 'quickly' in the sentence: 'She runs quickly'?",
+      "question_bn": "Which part of speech is the word 'quickly' in the sentence: 'She runs quickly'?",
+      "question_en": "Which part of speech is the word 'quickly' in the sentence: 'She runs quickly'?",
       "options_json": [
         "Noun",
         "Verb",
@@ -1840,6 +1842,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-2",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Identify the noun in this sentence: 'The cat sleeps on the mat.'",
+      "question_bn": "Identify the noun in this sentence: 'The cat sleeps on the mat.'",
+      "question_en": "Identify the noun in this sentence: 'The cat sleeps on the mat.'",
       "options_json": [
         "sleeps",
         "cat",
@@ -1853,6 +1857,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-3",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "What is the pronoun in: 'He gave her a book.'?",
+      "question_bn": "What is the pronoun in: 'He gave her a book.'?",
+      "question_en": "What is the pronoun in: 'He gave her a book.'?",
       "options_json": [
         "gave",
         "He",
@@ -1866,6 +1872,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-4",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Which word is a verb in: 'Birds fly in the sky.'?",
+      "question_bn": "Which word is a verb in: 'Birds fly in the sky.'?",
+      "question_en": "Which word is a verb in: 'Birds fly in the sky.'?",
       "options_json": [
         "Birds",
         "in",
@@ -1879,6 +1887,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-5",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Find the adjective in: 'The big house is beautiful.'",
+      "question_bn": "Find the adjective in: 'The big house is beautiful.'",
+      "question_en": "Find the adjective in: 'The big house is beautiful.'",
       "options_json": [
         "house",
         "big",
@@ -1892,6 +1902,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-6",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Which word is a preposition in: 'The book is on the table.'?",
+      "question_bn": "Which word is a preposition in: 'The book is on the table.'?",
+      "question_en": "Which word is a preposition in: 'The book is on the table.'?",
       "options_json": [
         "book",
         "is",
@@ -1905,6 +1917,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-7",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Identify the conjunction in: 'I like tea and coffee.'",
+      "question_bn": "Identify the conjunction in: 'I like tea and coffee.'",
+      "question_en": "Identify the conjunction in: 'I like tea and coffee.'",
       "options_json": [
         "like",
         "tea",
@@ -1918,6 +1932,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-8",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "What part of speech is 'Wow' in: 'Wow! That's amazing!'?",
+      "question_bn": "What part of speech is 'Wow' in: 'Wow! That's amazing!'?",
+      "question_en": "What part of speech is 'Wow' in: 'Wow! That's amazing!'?",
       "options_json": [
         "Interjection",
         "Noun",
@@ -1931,6 +1947,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-9",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Which word is an adverb in: 'She sings beautifully.'?",
+      "question_bn": "Which word is an adverb in: 'She sings beautifully.'?",
+      "question_en": "Which word is an adverb in: 'She sings beautifully.'?",
       "options_json": [
         "She",
         "sings",
@@ -1944,6 +1962,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-10",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Find the verb in: 'They are playing football.'",
+      "question_bn": "Find the verb in: 'They are playing football.'",
+      "question_en": "Find the verb in: 'They are playing football.'",
       "options_json": [
         "They",
         "are",
@@ -1957,6 +1977,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-11",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Which part of speech describes a noun?",
+      "question_bn": "Which part of speech describes a noun?",
+      "question_en": "Which part of speech describes a noun?",
       "options_json": [
         "Adverb",
         "Adjective",
@@ -1970,6 +1992,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-1-parts-of-speech-basic-12",
       "chapter_id": "grammar-class-8-1-parts-of-speech-basic",
       "question_text": "Identify the pronoun in: 'It is raining outside.'",
+      "question_bn": "Identify the pronoun in: 'It is raining outside.'",
+      "question_en": "Identify the pronoun in: 'It is raining outside.'",
       "options_json": [
         "is",
         "raining",
@@ -1985,6 +2009,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-1",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What is the subject in: 'The teacher teaches English.'?",
+      "question_bn": "What is the subject in: 'The teacher teaches English.'?",
+      "question_en": "What is the subject in: 'The teacher teaches English.'?",
       "options_json": [
         "teaches",
         "The teacher",
@@ -1998,6 +2024,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-2",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What is the predicate in: 'Birds fly in the sky.'?",
+      "question_bn": "What is the predicate in: 'Birds fly in the sky.'?",
+      "question_en": "What is the predicate in: 'Birds fly in the sky.'?",
       "options_json": [
         "Birds",
         "in the sky",
@@ -2011,6 +2039,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-3",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What type of sentence is: 'She reads a book.'?",
+      "question_bn": "What type of sentence is: 'She reads a book.'?",
+      "question_en": "What type of sentence is: 'She reads a book.'?",
       "options_json": [
         "Interrogative",
         "Imperative",
@@ -2024,6 +2054,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-4",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What type of sentence is: 'Where are you going?'",
+      "question_bn": "What type of sentence is: 'Where are you going?'",
+      "question_en": "What type of sentence is: 'Where are you going?'",
       "options_json": [
         "Assertive",
         "Interrogative",
@@ -2037,6 +2069,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-5",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What type of sentence is: 'Close the door.'?",
+      "question_bn": "What type of sentence is: 'Close the door.'?",
+      "question_en": "What type of sentence is: 'Close the door.'?",
       "options_json": [
         "Assertive",
         "Interrogative",
@@ -2050,6 +2084,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-6",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What type of sentence is: 'What a beautiful day!'?",
+      "question_bn": "What type of sentence is: 'What a beautiful day!'?",
+      "question_en": "What type of sentence is: 'What a beautiful day!'?",
       "options_json": [
         "Assertive",
         "Interrogative",
@@ -2063,6 +2099,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-7",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "Which is an affirmative sentence?",
+      "question_bn": "Which is an affirmative sentence?",
+      "question_en": "Which is an affirmative sentence?",
       "options_json": [
         "I do not like tea.",
         "She likes ice cream.",
@@ -2076,6 +2114,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-8",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "Which is a negative sentence?",
+      "question_bn": "Which is a negative sentence?",
+      "question_en": "Which is a negative sentence?",
       "options_json": [
         "I will go to school.",
         "She likes ice cream.",
@@ -2089,6 +2129,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-9",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "Identify the subject: 'Rahul is a good student.'",
+      "question_bn": "Identify the subject: 'Rahul is a good student.'",
+      "question_en": "Identify the subject: 'Rahul is a good student.'",
       "options_json": [
         "is",
         "Rahul",
@@ -2102,6 +2144,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-10",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "Identify the predicate: 'The students studied hard.'",
+      "question_bn": "Identify the predicate: 'The students studied hard.'",
+      "question_en": "Identify the predicate: 'The students studied hard.'",
       "options_json": [
         "The students",
         "students",
@@ -2115,6 +2159,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-11",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "What makes a complete sentence?",
+      "question_bn": "What makes a complete sentence?",
+      "question_en": "What makes a complete sentence?",
       "options_json": [
         "Only a subject",
         "Only a predicate",
@@ -2128,6 +2174,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-2-sentences-subject-predicate-kinds-12",
       "chapter_id": "grammar-class-8-2-sentences-subject-predicate-kinds",
       "question_text": "Which sentence asks a question?",
+      "question_bn": "Which sentence asks a question?",
+      "question_en": "Which sentence asks a question?",
       "options_json": [
         "She is reading.",
         "Do you like ice cream?",
@@ -2143,6 +2191,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-1",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to interrogative: He plays football.",
+      "question_bn": "Convert to interrogative: He plays football.",
+      "question_en": "Convert to interrogative: He plays football.",
       "options_json": [
         "Does he play football?",
         "He plays football?",
@@ -2156,6 +2206,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-2",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to assertive: Are you ready?",
+      "question_bn": "Convert to assertive: Are you ready?",
+      "question_en": "Convert to assertive: Are you ready?",
       "options_json": [
         "You are ready?",
         "You are ready.",
@@ -2169,6 +2221,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-3",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to negative: He likes music.",
+      "question_bn": "Convert to negative: He likes music.",
+      "question_en": "Convert to negative: He likes music.",
       "options_json": [
         "He does not like music.",
         "He did not like music.",
@@ -2182,6 +2236,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-4",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to affirmative: She does not want to go.",
+      "question_bn": "Convert to affirmative: She does not want to go.",
+      "question_en": "Convert to affirmative: She does not want to go.",
       "options_json": [
         "She wants to go.",
         "She wanted to go.",
@@ -2195,6 +2251,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-5",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to exclamatory: The view is wonderful.",
+      "question_bn": "Convert to exclamatory: The view is wonderful.",
+      "question_en": "Convert to exclamatory: The view is wonderful.",
       "options_json": [
         "What a wonderful view!",
         "Is the view wonderful?",
@@ -2208,6 +2266,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-6",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to exclamatory: He is so tall.",
+      "question_bn": "Convert to exclamatory: He is so tall.",
+      "question_en": "Convert to exclamatory: He is so tall.",
       "options_json": [
         "How tall he is!",
         "What a tall he is!",
@@ -2221,6 +2281,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-7",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to assertive: How brave you are!",
+      "question_bn": "Convert to assertive: How brave you are!",
+      "question_en": "Convert to assertive: How brave you are!",
       "options_json": [
         "You are very brave.",
         "You are brave.",
@@ -2234,6 +2296,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-8",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to interrogative: They can swim fast.",
+      "question_bn": "Convert to interrogative: They can swim fast.",
+      "question_en": "Convert to interrogative: They can swim fast.",
       "options_json": [
         "Can they swim fast?",
         "Do they swim fast?",
@@ -2247,6 +2311,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-9",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to imperative: You should finish your homework.",
+      "question_bn": "Convert to imperative: You should finish your homework.",
+      "question_en": "Convert to imperative: You should finish your homework.",
       "options_json": [
         "Finish your homework.",
         "You finish your homework.",
@@ -2260,6 +2326,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-10",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to assertive: Sit here quietly.",
+      "question_bn": "Convert to assertive: Sit here quietly.",
+      "question_en": "Convert to assertive: Sit here quietly.",
       "options_json": [
         "You should sit here quietly.",
         "You are sitting here quietly.",
@@ -2273,6 +2341,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-11",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to negative: The students study hard.",
+      "question_bn": "Convert to negative: The students study hard.",
+      "question_en": "Convert to negative: The students study hard.",
       "options_json": [
         "The students do not study hard.",
         "The students did not study hard.",
@@ -2286,6 +2356,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-3-changing-sentences-12",
       "chapter_id": "grammar-class-8-3-changing-sentences",
       "question_text": "Convert to affirmative: I do not need help.",
+      "question_bn": "Convert to affirmative: I do not need help.",
+      "question_en": "Convert to affirmative: I do not need help.",
       "options_json": [
         "I need help.",
         "I needed help.",
@@ -2301,6 +2373,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-1",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: I saw ___ elephant at ___ zoo.",
+      "question_bn": "Fill in: I saw ___ elephant at ___ zoo.",
+      "question_en": "Fill in: I saw ___ elephant at ___ zoo.",
       "options_json": [
         "an, the",
         "a, the",
@@ -2314,6 +2388,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-2",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: He is ___ honest boy.",
+      "question_bn": "Fill in: He is ___ honest boy.",
+      "question_en": "Fill in: He is ___ honest boy.",
       "options_json": [
         "an",
         "a",
@@ -2327,6 +2403,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-3",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: ___ milk is good for health.",
+      "question_bn": "Fill in: ___ milk is good for health.",
+      "question_en": "Fill in: ___ milk is good for health.",
       "options_json": [
         "no article",
         "A",
@@ -2340,6 +2418,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-4",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: Please pass me ___ salt.",
+      "question_bn": "Fill in: Please pass me ___ salt.",
+      "question_en": "Fill in: Please pass me ___ salt.",
       "options_json": [
         "the",
         "a",
@@ -2353,6 +2433,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-5",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: ___ children love ___ chocolate.",
+      "question_bn": "Fill in: ___ children love ___ chocolate.",
+      "question_en": "Fill in: ___ children love ___ chocolate.",
       "options_json": [
         "no article, no article",
         "The, the",
@@ -2366,6 +2448,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-6",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: She plays ___ violin very well.",
+      "question_bn": "Fill in: She plays ___ violin very well.",
+      "question_en": "Fill in: She plays ___ violin very well.",
       "options_json": [
         "the",
         "a",
@@ -2379,6 +2463,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-7",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: He wants to become ___ engineer.",
+      "question_bn": "Fill in: He wants to become ___ engineer.",
+      "question_en": "Fill in: He wants to become ___ engineer.",
       "options_json": [
         "an",
         "a",
@@ -2392,6 +2478,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-8",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: ___ sun rises in ___ east.",
+      "question_bn": "Fill in: ___ sun rises in ___ east.",
+      "question_en": "Fill in: ___ sun rises in ___ east.",
       "options_json": [
         "The, the",
         "A, the",
@@ -2405,6 +2493,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-9",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: ___ honesty is ___ best policy.",
+      "question_bn": "Fill in: ___ honesty is ___ best policy.",
+      "question_en": "Fill in: ___ honesty is ___ best policy.",
       "options_json": [
         "no article, the",
         "The, the",
@@ -2418,6 +2508,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-10",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: Can you play ___ piano?",
+      "question_bn": "Fill in: Can you play ___ piano?",
+      "question_en": "Fill in: Can you play ___ piano?",
       "options_json": [
         "the",
         "a",
@@ -2431,6 +2523,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-11",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: We usually have ___ breakfast at 7 o'clock.",
+      "question_bn": "Fill in: We usually have ___ breakfast at 7 o'clock.",
+      "question_en": "Fill in: We usually have ___ breakfast at 7 o'clock.",
       "options_json": [
         "no article",
         "a",
@@ -2444,6 +2538,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-4-articles-a-an-the-zero-12",
       "chapter_id": "grammar-class-8-4-articles-a-an-the-zero",
       "question_text": "Fill in: Do you need ___ pen?",
+      "question_bn": "Fill in: Do you need ___ pen?",
+      "question_en": "Fill in: Do you need ___ pen?",
       "options_json": [
         "a",
         "an",
@@ -2459,6 +2555,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-1",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: We meet ___ 6 pm.",
+      "question_bn": "Fill in: We meet ___ 6 pm.",
+      "question_en": "Fill in: We meet ___ 6 pm.",
       "options_json": [
         "at",
         "on",
@@ -2472,6 +2570,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-2",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: The cat slept ___ the sofa.",
+      "question_bn": "Fill in: The cat slept ___ the sofa.",
+      "question_en": "Fill in: The cat slept ___ the sofa.",
       "options_json": [
         "on",
         "in",
@@ -2485,6 +2585,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-3",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: They walked ___ the park to the school.",
+      "question_bn": "Fill in: They walked ___ the park to the school.",
+      "question_en": "Fill in: They walked ___ the park to the school.",
       "options_json": [
         "through",
         "across",
@@ -2498,6 +2600,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-4",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: I will study ___ Tuesday.",
+      "question_bn": "Fill in: I will study ___ Tuesday.",
+      "question_en": "Fill in: I will study ___ Tuesday.",
       "options_json": [
         "on",
         "at",
@@ -2511,6 +2615,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-5",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: We travelled ___ bus.",
+      "question_bn": "Fill in: We travelled ___ bus.",
+      "question_en": "Fill in: We travelled ___ bus.",
       "options_json": [
         "by",
         "on",
@@ -2524,6 +2630,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-6",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: The letter is ___ the drawer.",
+      "question_bn": "Fill in: The letter is ___ the drawer.",
+      "question_en": "Fill in: The letter is ___ the drawer.",
       "options_json": [
         "in",
         "on",
@@ -2537,6 +2645,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-7",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: He jumped ___ the river.",
+      "question_bn": "Fill in: He jumped ___ the river.",
+      "question_en": "Fill in: He jumped ___ the river.",
       "options_json": [
         "into",
         "in",
@@ -2550,6 +2660,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-8",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: She lives ___ Seeb, near Muscat.",
+      "question_bn": "Fill in: She lives ___ Seeb, near Muscat.",
+      "question_en": "Fill in: She lives ___ Seeb, near Muscat.",
       "options_json": [
         "in",
         "on",
@@ -2563,6 +2675,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-9",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: The movie starts ___ 8 o'clock sharp.",
+      "question_bn": "Fill in: The movie starts ___ 8 o'clock sharp.",
+      "question_en": "Fill in: The movie starts ___ 8 o'clock sharp.",
       "options_json": [
         "at",
         "on",
@@ -2576,6 +2690,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-10",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: The cat jumped ___ the wall.",
+      "question_bn": "Fill in: The cat jumped ___ the wall.",
+      "question_en": "Fill in: The cat jumped ___ the wall.",
       "options_json": [
         "over",
         "above",
@@ -2589,6 +2705,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-11",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: The kids played ___ the park ___ the afternoon.",
+      "question_bn": "Fill in: The kids played ___ the park ___ the afternoon.",
+      "question_en": "Fill in: The kids played ___ the park ___ the afternoon.",
       "options_json": [
         "in, in",
         "at, in",
@@ -2602,6 +2720,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-5-prepositions-time-place-movement-12",
       "chapter_id": "grammar-class-8-5-prepositions-time-place-movement",
       "question_text": "Fill in: We need to finish this project ___ Friday.",
+      "question_bn": "Fill in: We need to finish this project ___ Friday.",
+      "question_en": "Fill in: We need to finish this project ___ Friday.",
       "options_json": [
         "by",
         "on",
@@ -2617,6 +2737,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-1",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to present continuous: She plays the piano.",
+      "question_bn": "Change to present continuous: She plays the piano.",
+      "question_en": "Change to present continuous: She plays the piano.",
       "options_json": [
         "She is playing the piano.",
         "She was playing the piano.",
@@ -2630,6 +2752,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-2",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to simple past: They eat dinner at 7 pm.",
+      "question_bn": "Change to simple past: They eat dinner at 7 pm.",
+      "question_en": "Change to simple past: They eat dinner at 7 pm.",
       "options_json": [
         "They ate dinner at 7 pm.",
         "They have eaten dinner at 7 pm.",
@@ -2643,6 +2767,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-3",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to present perfect: I finish my project.",
+      "question_bn": "Change to present perfect: I finish my project.",
+      "question_en": "Change to present perfect: I finish my project.",
       "options_json": [
         "I have finished my project.",
         "I finished my project.",
@@ -2656,6 +2782,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-4",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to simple future: You will finish the work tomorrow.",
+      "question_bn": "Change to simple future: You will finish the work tomorrow.",
+      "question_en": "Change to simple future: You will finish the work tomorrow.",
       "options_json": [
         "You will finish the work tomorrow.",
         "You finished the work tomorrow.",
@@ -2669,6 +2797,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-5",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to simple present: She is reading a book right now.",
+      "question_bn": "Change to simple present: She is reading a book right now.",
+      "question_en": "Change to simple present: She is reading a book right now.",
       "options_json": [
         "She reads books.",
         "She read books.",
@@ -2682,6 +2812,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-6",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to past continuous: When I arrived, he slept.",
+      "question_bn": "Change to past continuous: When I arrived, he slept.",
+      "question_en": "Change to past continuous: When I arrived, he slept.",
       "options_json": [
         "When I arrived, he was sleeping.",
         "When I arrived, he is sleeping.",
@@ -2695,6 +2827,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-7",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to past perfect: After she left, I realized my mistake.",
+      "question_bn": "Change to past perfect: After she left, I realized my mistake.",
+      "question_en": "Change to past perfect: After she left, I realized my mistake.",
       "options_json": [
         "After she had left, I realized my mistake.",
         "After she has left, I realized my mistake.",
@@ -2708,6 +2842,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-8",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to present continuous: He watches TV every evening.",
+      "question_bn": "Change to present continuous: He watches TV every evening.",
+      "question_en": "Change to present continuous: He watches TV every evening.",
       "options_json": [
         "He is watching TV.",
         "He was watching TV.",
@@ -2721,6 +2857,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-9",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to future continuous: At this time tomorrow, we travel to Nizwa.",
+      "question_bn": "Change to future continuous: At this time tomorrow, we travel to Nizwa.",
+      "question_en": "Change to future continuous: At this time tomorrow, we travel to Nizwa.",
       "options_json": [
         "At this time tomorrow, we will be travelling to Nizwa.",
         "At this time tomorrow, we are travelling to Nizwa.",
@@ -2734,6 +2872,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-10",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to simple past: She writes three emails this morning.",
+      "question_bn": "Change to simple past: She writes three emails this morning.",
+      "question_en": "Change to simple past: She writes three emails this morning.",
       "options_json": [
         "She wrote three emails this morning.",
         "She is writing three emails this morning.",
@@ -2747,6 +2887,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-11",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to present perfect: We see that movie twice already.",
+      "question_bn": "Change to present perfect: We see that movie twice already.",
+      "question_en": "Change to present perfect: We see that movie twice already.",
       "options_json": [
         "We have seen that movie twice already.",
         "We saw that movie twice already.",
@@ -2760,6 +2902,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-6-tense-simple-12",
       "chapter_id": "grammar-class-8-6-tense-simple",
       "question_text": "Change to simple present: Water is boiling at 100 degrees.",
+      "question_bn": "Change to simple present: Water is boiling at 100 degrees.",
+      "question_en": "Change to simple present: Water is boiling at 100 degrees.",
       "options_json": [
         "Water boils at 100 degrees.",
         "Water boiled at 100 degrees.",
@@ -2775,6 +2919,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-1",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Complete: He _____ (play) football every day.",
+      "question_bn": "Complete: He _____ (play) football every day.",
+      "question_en": "Complete: He _____ (play) football every day.",
       "options_json": [
         "plays",
         "play",
@@ -2788,6 +2934,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-2",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Complete: She _____ (study) mathematics.",
+      "question_bn": "Complete: She _____ (study) mathematics.",
+      "question_en": "Complete: She _____ (study) mathematics.",
       "options_json": [
         "studies",
         "study",
@@ -2801,6 +2949,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-3",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Complete: The bird _____ (fly) in the sky.",
+      "question_bn": "Complete: The bird _____ (fly) in the sky.",
+      "question_en": "Complete: The bird _____ (fly) in the sky.",
       "options_json": [
         "flies",
         "fly",
@@ -2814,6 +2964,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-4",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Complete: He _____ (try) his best.",
+      "question_bn": "Complete: He _____ (try) his best.",
+      "question_en": "Complete: He _____ (try) his best.",
       "options_json": [
         "tries",
         "try",
@@ -2827,6 +2979,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-5",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix error: He go to school every day.",
+      "question_bn": "Fix error: He go to school every day.",
+      "question_en": "Fix error: He go to school every day.",
       "options_json": [
         "He goes to school every day.",
         "He going to school every day.",
@@ -2840,6 +2994,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-6",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix error: She do not like milk.",
+      "question_bn": "Fix error: She do not like milk.",
+      "question_en": "Fix error: She do not like milk.",
       "options_json": [
         "She does not like milk.",
         "She did not like milk.",
@@ -2853,6 +3009,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-7",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix error: The team are winning.",
+      "question_bn": "Fix error: The team are winning.",
+      "question_en": "Fix error: The team are winning.",
       "options_json": [
         "The team is winning.",
         "The team be winning.",
@@ -2866,6 +3024,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-8",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Choose: Either of them _____ correct.",
+      "question_bn": "Choose: Either of them _____ correct.",
+      "question_en": "Choose: Either of them _____ correct.",
       "options_json": [
         "is",
         "are",
@@ -2879,6 +3039,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-9",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix: You is my best friend.",
+      "question_bn": "Fix: You is my best friend.",
+      "question_en": "Fix: You is my best friend.",
       "options_json": [
         "You are my best friend.",
         "You am my best friend.",
@@ -2892,6 +3054,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-10",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Complete: The box _____ (contain) jewels.",
+      "question_bn": "Complete: The box _____ (contain) jewels.",
+      "question_en": "Complete: The box _____ (contain) jewels.",
       "options_json": [
         "contains",
         "contain",
@@ -2905,6 +3069,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-11",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix: The team play well together.",
+      "question_bn": "Fix: The team play well together.",
+      "question_en": "Fix: The team play well together.",
       "options_json": [
         "The team plays well together.",
         "The team playing well together.",
@@ -2918,6 +3084,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-7-subject-verb-agreement-basic-12",
       "chapter_id": "grammar-class-8-7-subject-verb-agreement-basic",
       "question_text": "Fix: Everybody are happy.",
+      "question_bn": "Fix: Everybody are happy.",
+      "question_en": "Fix: Everybody are happy.",
       "options_json": [
         "Everybody is happy.",
         "Everybody be happy.",
@@ -2933,6 +3101,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-1",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: The farmer grows crops.",
+      "question_bn": "Convert to passive: The farmer grows crops.",
+      "question_en": "Convert to passive: The farmer grows crops.",
       "options_json": [
         "Crops are grown by the farmer.",
         "Crops were grown by the farmer.",
@@ -2946,6 +3116,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-2",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: She completed the project.",
+      "question_bn": "Convert to passive: She completed the project.",
+      "question_en": "Convert to passive: She completed the project.",
       "options_json": [
         "The project was completed by her.",
         "The project is completed by her.",
@@ -2959,6 +3131,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-3",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: They are preparing the meal.",
+      "question_bn": "Convert to passive: They are preparing the meal.",
+      "question_en": "Convert to passive: They are preparing the meal.",
       "options_json": [
         "The meal is being prepared by them.",
         "The meal was prepared by them.",
@@ -2972,6 +3146,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-4",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: He had written the letter.",
+      "question_bn": "Convert to passive: He had written the letter.",
+      "question_en": "Convert to passive: He had written the letter.",
       "options_json": [
         "The letter had been written by him.",
         "The letter has been written by him.",
@@ -2985,6 +3161,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-5",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to active: The crime was solved by the police.",
+      "question_bn": "Convert to active: The crime was solved by the police.",
+      "question_en": "Convert to active: The crime was solved by the police.",
       "options_json": [
         "The police solved the crime.",
         "The police solve the crime.",
@@ -2998,6 +3176,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-6",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: The police caught the thief.",
+      "question_bn": "Convert to passive: The police caught the thief.",
+      "question_en": "Convert to passive: The police caught the thief.",
       "options_json": [
         "The thief was caught by the police.",
         "The thief is caught by the police.",
@@ -3011,6 +3191,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-7",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to active: The project has been completed by the team.",
+      "question_bn": "Convert to active: The project has been completed by the team.",
+      "question_en": "Convert to active: The project has been completed by the team.",
       "options_json": [
         "The team has completed the project.",
         "The team completed the project.",
@@ -3024,6 +3206,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-8",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: The teacher marked the papers.",
+      "question_bn": "Convert to passive: The teacher marked the papers.",
+      "question_en": "Convert to passive: The teacher marked the papers.",
       "options_json": [
         "The papers were marked by the teacher.",
         "The papers are marked by the teacher.",
@@ -3037,6 +3221,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-9",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: She is decorating the hall.",
+      "question_bn": "Convert to passive: She is decorating the hall.",
+      "question_en": "Convert to passive: She is decorating the hall.",
       "options_json": [
         "The hall is being decorated by her.",
         "The hall was decorated by her.",
@@ -3050,6 +3236,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-10",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Identify: Is 'The teacher teaches the student' active or passive?",
+      "question_bn": "Identify: Is 'The teacher teaches the student' active or passive?",
+      "question_en": "Identify: Is 'The teacher teaches the student' active or passive?",
       "options_json": [
         "Active voice",
         "Passive voice",
@@ -3063,6 +3251,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-11",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: The mechanic will repair the car.",
+      "question_bn": "Convert to passive: The mechanic will repair the car.",
+      "question_en": "Convert to passive: The mechanic will repair the car.",
       "options_json": [
         "The car will be repaired by the mechanic.",
         "The car is repaired by the mechanic.",
@@ -3076,6 +3266,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-8-voice-simple-12",
       "chapter_id": "grammar-class-8-8-voice-simple",
       "question_text": "Convert to passive: They nominated him for the award.",
+      "question_bn": "Convert to passive: They nominated him for the award.",
+      "question_en": "Convert to passive: They nominated him for the award.",
       "options_json": [
         "He was nominated for the award.",
         "He is nominated for the award.",
@@ -3091,6 +3283,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-1",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I am happy (She said)",
+      "question_bn": "Convert to indirect: I am happy (She said)",
+      "question_en": "Convert to indirect: I am happy (She said)",
       "options_json": [
         "She said that she was happy.",
         "She said that she is happy.",
@@ -3104,6 +3298,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-2",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I like tea (He said)",
+      "question_bn": "Convert to indirect: I like tea (He said)",
+      "question_en": "Convert to indirect: I like tea (He said)",
       "options_json": [
         "He said that he liked tea.",
         "He said that he likes tea.",
@@ -3117,6 +3313,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-3",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I am reading (She said)",
+      "question_bn": "Convert to indirect: I am reading (She said)",
+      "question_en": "Convert to indirect: I am reading (She said)",
       "options_json": [
         "She said that she was reading.",
         "She said that she is reading.",
@@ -3130,6 +3328,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-4",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I have finished (He said)",
+      "question_bn": "Convert to indirect: I have finished (He said)",
+      "question_en": "Convert to indirect: I have finished (He said)",
       "options_json": [
         "He said that he had finished.",
         "He said that he has finished.",
@@ -3143,6 +3343,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-5",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I will come (She said)",
+      "question_bn": "Convert to indirect: I will come (She said)",
+      "question_en": "Convert to indirect: I will come (She said)",
       "options_json": [
         "She said that she would come.",
         "She said that she will come.",
@@ -3156,6 +3358,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-6",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I went to school (He said)",
+      "question_bn": "Convert to indirect: I went to school (He said)",
+      "question_en": "Convert to indirect: I went to school (He said)",
       "options_json": [
         "He said that he had gone to school.",
         "He said that he went to school.",
@@ -3169,6 +3373,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-7",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Universal truth: Water boils at 100°C (Teacher said)",
+      "question_bn": "Universal truth: Water boils at 100°C (Teacher said)",
+      "question_en": "Universal truth: Water boils at 100°C (Teacher said)",
       "options_json": [
         "Teacher said that water boils at 100°C.",
         "Teacher said that water boiled at 100°C.",
@@ -3182,6 +3388,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-8",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I am very happy (They said)",
+      "question_bn": "Convert to indirect: I am very happy (They said)",
+      "question_en": "Convert to indirect: I am very happy (They said)",
       "options_json": [
         "They said that they were very happy.",
         "They said that they are very happy.",
@@ -3195,6 +3403,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-9",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert with told: You should work hard (He told me)",
+      "question_bn": "Convert with told: You should work hard (He told me)",
+      "question_en": "Convert with told: You should work hard (He told me)",
       "options_json": [
         "He told me that I should work hard.",
         "He told me that you should work hard.",
@@ -3208,6 +3418,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-10",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I do not like this food (She said)",
+      "question_bn": "Convert to indirect: I do not like this food (She said)",
+      "question_en": "Convert to indirect: I do not like this food (She said)",
       "options_json": [
         "She said that she did not like that food.",
         "She said that she does not like this food.",
@@ -3221,6 +3433,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-11",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert to indirect: I have already done it (He said)",
+      "question_bn": "Convert to indirect: I have already done it (He said)",
+      "question_en": "Convert to indirect: I have already done it (He said)",
       "options_json": [
         "He said that he had already done it.",
         "He said that he has already done it.",
@@ -3234,6 +3448,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-9-narration-statements-12",
       "chapter_id": "grammar-class-8-9-narration-statements",
       "question_text": "Convert with time change: I will go tomorrow (She said)",
+      "question_bn": "Convert with time change: I will go tomorrow (She said)",
+      "question_en": "Convert with time change: I will go tomorrow (She said)",
       "options_json": [
         "She said that she would go the next day.",
         "She said that she will go tomorrow.",
@@ -3249,6 +3465,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-1",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Choose the adjective in: The small dog barked loudly.",
+      "question_bn": "Choose the adjective in: The small dog barked loudly.",
+      "question_en": "Choose the adjective in: The small dog barked loudly.",
       "options_json": [
         "small",
         "dog",
@@ -3262,6 +3480,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-2",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Choose the adverb in: She sang beautifully at the concert.",
+      "question_bn": "Choose the adverb in: She sang beautifully at the concert.",
+      "question_en": "Choose the adverb in: She sang beautifully at the concert.",
       "options_json": [
         "beautifully",
         "sang",
@@ -3275,6 +3495,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-3",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Form adverb from 'careful':",
+      "question_bn": "Form adverb from 'careful':",
+      "question_en": "Form adverb from 'careful':",
       "options_json": [
         "carefully",
         "carefuller",
@@ -3288,6 +3510,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-4",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Form adverb from 'quick':",
+      "question_bn": "Form adverb from 'quick':",
+      "question_en": "Form adverb from 'quick':",
       "options_json": [
         "quickly",
         "quicker",
@@ -3301,6 +3525,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-5",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Choose adjective: The _____ (quick/quickly) response was appreciated.",
+      "question_bn": "Choose adjective: The _____ (quick/quickly) response was appreciated.",
+      "question_en": "Choose adjective: The _____ (quick/quickly) response was appreciated.",
       "options_json": [
         "quick",
         "quickly",
@@ -3314,6 +3540,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-6",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Choose adverb: She _____ (quick/quickly) finished the work.",
+      "question_bn": "Choose adverb: She _____ (quick/quickly) finished the work.",
+      "question_en": "Choose adverb: She _____ (quick/quickly) finished the work.",
       "options_json": [
         "quickly",
         "quick",
@@ -3327,6 +3555,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-7",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Superlative of 'bad':",
+      "question_bn": "Superlative of 'bad':",
+      "question_en": "Superlative of 'bad':",
       "options_json": [
         "worst",
         "worse",
@@ -3340,6 +3570,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-8",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Complete: This is the _____ (interesting - superlative) book.",
+      "question_bn": "Complete: This is the _____ (interesting - superlative) book.",
+      "question_en": "Complete: This is the _____ (interesting - superlative) book.",
       "options_json": [
         "most interesting",
         "more interesting",
@@ -3353,6 +3585,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-9",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Complete: That book is _____ (interesting - comparative) than this one.",
+      "question_bn": "Complete: That book is _____ (interesting - comparative) than this one.",
+      "question_en": "Complete: That book is _____ (interesting - comparative) than this one.",
       "options_json": [
         "more interesting",
         "most interesting",
@@ -3366,6 +3600,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-10",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Form adverb from 'immediate':",
+      "question_bn": "Form adverb from 'immediate':",
+      "question_en": "Form adverb from 'immediate':",
       "options_json": [
         "immediately",
         "immediatly",
@@ -3379,6 +3615,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-11",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Complete: He _____ (rare) visits the market.",
+      "question_bn": "Complete: He _____ (rare) visits the market.",
+      "question_en": "Complete: He _____ (rare) visits the market.",
       "options_json": [
         "rarely",
         "rare",
@@ -3392,6 +3630,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-10-modifiers-basic-12",
       "chapter_id": "grammar-class-8-10-modifiers-basic",
       "question_text": "Complete: We _____ (usual) go to school.",
+      "question_bn": "Complete: We _____ (usual) go to school.",
+      "question_en": "Complete: We _____ (usual) go to school.",
       "options_json": [
         "usually",
         "usual",
@@ -3407,6 +3647,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-1",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "What symbol ends a question?",
+      "question_bn": "What symbol ends a question?",
+      "question_en": "What symbol ends a question?",
       "options_json": [
         "Question mark (?)",
         "Period (.)",
@@ -3420,6 +3662,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-2",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "What symbol shows strong emotion?",
+      "question_bn": "What symbol shows strong emotion?",
+      "question_en": "What symbol shows strong emotion?",
       "options_json": [
         "Exclamation mark (!)",
         "Period (.)",
@@ -3433,6 +3677,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-3",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "What does a comma (,) do in a sentence?",
+      "question_bn": "What does a comma (,) do in a sentence?",
+      "question_en": "What does a comma (,) do in a sentence?",
       "options_json": [
         "Separates items in a list or ideas",
         "Ends a sentence",
@@ -3446,6 +3692,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-4",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "What does an apostrophe (') show?",
+      "question_bn": "What does an apostrophe (') show?",
+      "question_en": "What does an apostrophe (') show?",
       "options_json": [
         "Possession or contractions",
         "Ends a sentence",
@@ -3459,6 +3707,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-5",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Correct: The boys book is new.",
+      "question_bn": "Correct: The boys book is new.",
+      "question_en": "Correct: The boys book is new.",
       "options_json": [
         "The boy's book is new.",
         "The boys' book is new.",
@@ -3472,6 +3722,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-6",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Fix apostrophe: Ive lost my keys",
+      "question_bn": "Fix apostrophe: Ive lost my keys",
+      "question_en": "Fix apostrophe: Ive lost my keys",
       "options_json": [
         "I've lost my keys.",
         "Ive' lost my keys.",
@@ -3485,6 +3737,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-7",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Fix with question mark: Where is your book",
+      "question_bn": "Fix with question mark: Where is your book",
+      "question_en": "Fix with question mark: Where is your book",
       "options_json": [
         "Where is your book?",
         "Where is your book.",
@@ -3498,6 +3752,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-8",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Fix with exclamation mark: Stop doing that",
+      "question_bn": "Fix with exclamation mark: Stop doing that",
+      "question_en": "Fix with exclamation mark: Stop doing that",
       "options_json": [
         "Stop doing that!",
         "Stop doing that.",
@@ -3511,6 +3767,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-9",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Add hyphen: This is a self made success story",
+      "question_bn": "Add hyphen: This is a self made success story",
+      "question_en": "Add hyphen: This is a self made success story",
       "options_json": [
         "This is a self-made success story.",
         "This is a self made success story.",
@@ -3524,6 +3782,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-10",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Fix apostrophe: She didnt go",
+      "question_bn": "Fix apostrophe: She didnt go",
+      "question_en": "Fix apostrophe: She didnt go",
       "options_json": [
         "She didn't go.",
         "She did'nt go.",
@@ -3537,6 +3797,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-11",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Fix commas: I like reading writing and playing",
+      "question_bn": "Fix commas: I like reading writing and playing",
+      "question_en": "Fix commas: I like reading writing and playing",
       "options_json": [
         "I like reading, writing, and playing.",
         "I like reading writing and playing.",
@@ -3550,6 +3812,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-8-11-punctuation-basic-12",
       "chapter_id": "grammar-class-8-11-punctuation-basic",
       "question_text": "Punctuate exclamation: what a wonderful day this is",
+      "question_bn": "Punctuate exclamation: what a wonderful day this is",
+      "question_en": "Punctuate exclamation: what a wonderful day this is",
       "options_json": [
         "What a wonderful day this is!",
         "What a wonderful day this is.",
@@ -3565,6 +3829,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-1",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is an abstract noun?",
+      "question_bn": "Which is an abstract noun?",
+      "question_en": "Which is an abstract noun?",
       "options_json": [
         "Table",
         "Happiness",
@@ -3578,6 +3844,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-2",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the collective noun: The team won the match.",
+      "question_bn": "Identify the collective noun: The team won the match.",
+      "question_en": "Identify the collective noun: The team won the match.",
       "options_json": [
         "The",
         "team",
@@ -3591,6 +3859,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-3",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a relative pronoun?",
+      "question_bn": "Which is a relative pronoun?",
+      "question_en": "Which is a relative pronoun?",
       "options_json": [
         "I",
         "who",
@@ -3604,6 +3874,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-4",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Choose the reflexive pronoun: She hurt ___.",
+      "question_bn": "Choose the reflexive pronoun: She hurt ___.",
+      "question_en": "Choose the reflexive pronoun: She hurt ___.",
       "options_json": [
         "her",
         "she",
@@ -3617,6 +3889,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-5",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which verb is transitive: He reads ___ every day.",
+      "question_bn": "Which verb is transitive: He reads ___ every day.",
+      "question_en": "Which verb is transitive: He reads ___ every day.",
       "options_json": [
         "sleeps",
         "books",
@@ -3630,6 +3904,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-6",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which verb is intransitive?",
+      "question_bn": "Which verb is intransitive?",
+      "question_en": "Which verb is intransitive?",
       "options_json": [
         "She eats rice",
         "He reads books",
@@ -3643,6 +3919,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-7",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of adjective: This book is mine.",
+      "question_bn": "What type of adjective: This book is mine.",
+      "question_en": "What type of adjective: This book is mine.",
       "options_json": [
         "Demonstrative",
         "Possessive",
@@ -3656,6 +3934,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-8",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the distributive adjective: ___ student must bring a pen.",
+      "question_bn": "Identify the distributive adjective: ___ student must bring a pen.",
+      "question_en": "Identify the distributive adjective: ___ student must bring a pen.",
       "options_json": [
         "Many",
         "Some",
@@ -3669,6 +3949,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-9",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of adverb: She sings beautifully.",
+      "question_bn": "What type of adverb: She sings beautifully.",
+      "question_en": "What type of adverb: She sings beautifully.",
       "options_json": [
         "Time",
         "Place",
@@ -3682,6 +3964,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-10",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the adverb of frequency: Bangladeshi students ___ respect their teachers.",
+      "question_bn": "Identify the adverb of frequency: Bangladeshi students ___ respect their teachers.",
+      "question_en": "Identify the adverb of frequency: Bangladeshi students ___ respect their teachers.",
       "options_json": [
         "yesterday",
         "there",
@@ -3695,6 +3979,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-11",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a coordinating conjunction?",
+      "question_bn": "Which is a coordinating conjunction?",
+      "question_en": "Which is a coordinating conjunction?",
       "options_json": [
         "because",
         "although",
@@ -3708,6 +3994,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-12",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a subordinating conjunction?",
+      "question_bn": "Which is a subordinating conjunction?",
+      "question_en": "Which is a subordinating conjunction?",
       "options_json": [
         "and",
         "or",
@@ -3721,6 +4009,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-13",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Complete the correlative conjunction: Either you ___ I will go.",
+      "question_bn": "Complete the correlative conjunction: Either you ___ I will go.",
+      "question_en": "Complete the correlative conjunction: Either you ___ I will go.",
       "options_json": [
         "and",
         "but",
@@ -3734,6 +4024,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-14",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which expresses joy?",
+      "question_bn": "Which expresses joy?",
+      "question_en": "Which expresses joy?",
       "options_json": [
         "Alas!",
         "Hurray!",
@@ -3747,6 +4039,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-15",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is an interjection?",
+      "question_bn": "Which is an interjection?",
+      "question_en": "Which is an interjection?",
       "options_json": [
         "Hello",
         "Wow!",
@@ -3760,6 +4054,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-16",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "In 'She runs fast', fast is a/an:",
+      "question_bn": "In 'She runs fast', fast is a/an:",
+      "question_en": "In 'She runs fast', fast is a/an:",
       "options_json": [
         "Noun",
         "Verb",
@@ -3773,6 +4069,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-17",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "In 'He is fast', fast is a/an:",
+      "question_bn": "In 'He is fast', fast is a/an:",
+      "question_en": "In 'He is fast', fast is a/an:",
       "options_json": [
         "Noun",
         "Verb",
@@ -3786,6 +4084,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-18",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the gerund: Swimming is good exercise.",
+      "question_bn": "Identify the gerund: Swimming is good exercise.",
+      "question_en": "Identify the gerund: Swimming is good exercise.",
       "options_json": [
         "Swimming",
         "is",
@@ -3799,6 +4099,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-19",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a compound noun?",
+      "question_bn": "Which is a compound noun?",
+      "question_en": "Which is a compound noun?",
       "options_json": [
         "beautiful",
         "classroom",
@@ -3812,6 +4114,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-20",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is countable?",
+      "question_bn": "Which is countable?",
+      "question_en": "Which is countable?",
       "options_json": [
         "water",
         "rice",
@@ -3825,6 +4129,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-21",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is uncountable?",
+      "question_bn": "Which is uncountable?",
+      "question_en": "Which is uncountable?",
       "options_json": [
         "chairs",
         "students",
@@ -3838,6 +4144,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-22",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Choose the reciprocal pronoun: They helped ___.",
+      "question_bn": "Choose the reciprocal pronoun: They helped ___.",
+      "question_en": "Choose the reciprocal pronoun: They helped ___.",
       "options_json": [
         "themselves",
         "each other",
@@ -3851,6 +4159,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-23",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of pronoun: The boy who came late is my friend.",
+      "question_bn": "What type of pronoun: The boy who came late is my friend.",
+      "question_en": "What type of pronoun: The boy who came late is my friend.",
       "options_json": [
         "Personal",
         "Relative",
@@ -3864,6 +4174,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-24",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the infinitive: She wants to learn English.",
+      "question_bn": "Identify the infinitive: She wants to learn English.",
+      "question_en": "Identify the infinitive: She wants to learn English.",
       "options_json": [
         "wants",
         "to learn",
@@ -3877,6 +4189,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-25",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What is 'running' in: The running water is cold.",
+      "question_bn": "What is 'running' in: The running water is cold.",
+      "question_en": "What is 'running' in: The running water is cold.",
       "options_json": [
         "Gerund",
         "Present participle (adjective)",
@@ -3890,6 +4204,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-26",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Choose the possessive adjective: ___ book is on the table.",
+      "question_bn": "Choose the possessive adjective: ___ book is on the table.",
+      "question_en": "Choose the possessive adjective: ___ book is on the table.",
       "options_json": [
         "I",
         "Me",
@@ -3903,6 +4219,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-27",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is an interrogative adjective?",
+      "question_bn": "Which is an interrogative adjective?",
+      "question_en": "Which is an interrogative adjective?",
       "options_json": [
         "this",
         "my",
@@ -3916,6 +4234,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-28",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of adverb: He will come soon.",
+      "question_bn": "What type of adverb: He will come soon.",
+      "question_en": "What type of adverb: He will come soon.",
       "options_json": [
         "Manner",
         "Time",
@@ -3929,6 +4249,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-29",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the adverb of place: She looked everywhere.",
+      "question_bn": "Identify the adverb of place: She looked everywhere.",
+      "question_en": "Identify the adverb of place: She looked everywhere.",
       "options_json": [
         "She",
         "looked",
@@ -3942,6 +4264,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-30",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of adverb: This is very important.",
+      "question_bn": "What type of adverb: This is very important.",
+      "question_en": "What type of adverb: This is very important.",
       "options_json": [
         "Manner",
         "Degree",
@@ -3955,6 +4279,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-31",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Complete: Not only did he study ___ also passed.",
+      "question_bn": "Complete: Not only did he study ___ also passed.",
+      "question_en": "Complete: Not only did he study ___ also passed.",
       "options_json": [
         "and",
         "but",
@@ -3968,6 +4294,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-32",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a determiner?",
+      "question_bn": "Which is a determiner?",
+      "question_en": "Which is a determiner?",
       "options_json": [
         "quickly",
         "some",
@@ -3981,6 +4309,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-33",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the quantifier: Many students attended.",
+      "question_bn": "Identify the quantifier: Many students attended.",
+      "question_en": "Identify the quantifier: Many students attended.",
       "options_json": [
         "Many",
         "students",
@@ -3994,6 +4324,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-34",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "In 'The committee has decided', committee is:",
+      "question_bn": "In 'The committee has decided', committee is:",
+      "question_en": "In 'The committee has decided', committee is:",
       "options_json": [
         "Abstract noun",
         "Collective noun",
@@ -4007,6 +4339,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-35",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Choose the correct order:",
+      "question_bn": "Choose the correct order:",
+      "question_en": "Choose the correct order:",
       "options_json": [
         "Book interesting this",
         "This interesting book",
@@ -4020,6 +4354,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-36",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What part of speech is 'well' in: She is well.",
+      "question_bn": "What part of speech is 'well' in: She is well.",
+      "question_en": "What part of speech is 'well' in: She is well.",
       "options_json": [
         "Adverb",
         "Adjective",
@@ -4033,6 +4369,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-37",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What part of speech is 'well' in: She sings well.",
+      "question_bn": "What part of speech is 'well' in: She sings well.",
+      "question_en": "What part of speech is 'well' in: She sings well.",
       "options_json": [
         "Adverb",
         "Adjective",
@@ -4046,6 +4384,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-38",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the finite verb: She wants to go.",
+      "question_bn": "Identify the finite verb: She wants to go.",
+      "question_en": "Identify the finite verb: She wants to go.",
       "options_json": [
         "wants",
         "to go",
@@ -4059,6 +4399,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-39",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which sentence has a transitive verb?",
+      "question_bn": "Which sentence has a transitive verb?",
+      "question_en": "Which sentence has a transitive verb?",
       "options_json": [
         "Birds fly",
         "She sleeps",
@@ -4072,6 +4414,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-40",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which expresses sorrow?",
+      "question_bn": "Which expresses sorrow?",
+      "question_en": "Which expresses sorrow?",
       "options_json": [
         "Hurray!",
         "Alas!",
@@ -4085,6 +4429,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-41",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Choose the correct conjunction: I studied hard ___ I passed.",
+      "question_bn": "Choose the correct conjunction: I studied hard ___ I passed.",
+      "question_en": "Choose the correct conjunction: I studied hard ___ I passed.",
       "options_json": [
         "but",
         "although",
@@ -4098,6 +4444,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-42",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a demonstrative pronoun?",
+      "question_bn": "Which is a demonstrative pronoun?",
+      "question_en": "Which is a demonstrative pronoun?",
       "options_json": [
         "who",
         "that",
@@ -4111,6 +4459,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-43",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What type of noun is 'courage'?",
+      "question_bn": "What type of noun is 'courage'?",
+      "question_en": "What type of noun is 'courage'?",
       "options_json": [
         "Concrete",
         "Abstract",
@@ -4124,6 +4474,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-44",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "In 'He drove the car fast', fast is:",
+      "question_bn": "In 'He drove the car fast', fast is:",
+      "question_en": "In 'He drove the car fast', fast is:",
       "options_json": [
         "Adjective",
         "Adverb",
@@ -4137,6 +4489,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-45",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which sentence uses 'neither...nor' correctly?",
+      "question_bn": "Which sentence uses 'neither...nor' correctly?",
+      "question_en": "Which sentence uses 'neither...nor' correctly?",
       "options_json": [
         "Neither he and I are going",
         "Neither he or I am going",
@@ -4150,6 +4504,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-46",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Identify the present participle used as adjective: The boiling water is hot.",
+      "question_bn": "Identify the present participle used as adjective: The boiling water is hot.",
+      "question_en": "Identify the present participle used as adjective: The boiling water is hot.",
       "options_json": [
         "The",
         "boiling",
@@ -4163,6 +4519,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-47",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is an adverb of degree?",
+      "question_bn": "Which is an adverb of degree?",
+      "question_en": "Which is an adverb of degree?",
       "options_json": [
         "yesterday",
         "here",
@@ -4176,6 +4534,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-48",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "In 'She made herself a dress', what is 'herself'?",
+      "question_bn": "In 'She made herself a dress', what is 'herself'?",
+      "question_en": "In 'She made herself a dress', what is 'herself'?",
       "options_json": [
         "Personal pronoun",
         "Reflexive pronoun",
@@ -4189,6 +4549,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-49",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "What is 'toothbrush'?",
+      "question_bn": "What is 'toothbrush'?",
+      "question_en": "What is 'toothbrush'?",
       "options_json": [
         "Abstract noun",
         "Collective noun",
@@ -4202,6 +4564,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-1-parts-of-speech-advanced-50",
       "chapter_id": "grammar-class-9-10-1-parts-of-speech-advanced",
       "question_text": "Which is a non-finite verb?",
+      "question_bn": "Which is a non-finite verb?",
+      "question_en": "Which is a non-finite verb?",
       "options_json": [
         "She runs",
         "He went",
@@ -4217,6 +4581,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-1",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "We depend ___ our family.",
+      "question_bn": "We depend ___ our family.",
+      "question_en": "We depend ___ our family.",
       "options_json": [
         "for",
         "on",
@@ -4230,6 +4596,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-2",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She is proud ___ her result.",
+      "question_bn": "She is proud ___ her result.",
+      "question_en": "She is proud ___ her result.",
       "options_json": [
         "at",
         "of",
@@ -4243,6 +4611,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-3",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Fill: We will stay ___ the hostel during the exam week.",
+      "question_bn": "Fill: We will stay ___ the hostel during the exam week.",
+      "question_en": "Fill: We will stay ___ the hostel during the exam week.",
       "options_json": [
         "in",
         "at",
@@ -4256,6 +4626,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-4",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Choose: He walked ___ the market to buy vegetables.",
+      "question_bn": "Choose: He walked ___ the market to buy vegetables.",
+      "question_en": "Choose: He walked ___ the market to buy vegetables.",
       "options_json": [
         "to",
         "through",
@@ -4269,6 +4641,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-5",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Select: The concert starts ___ 7 p.m.",
+      "question_bn": "Select: The concert starts ___ 7 p.m.",
+      "question_en": "Select: The concert starts ___ 7 p.m.",
       "options_json": [
         "at",
         "on",
@@ -4282,6 +4656,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-6",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Which pairs correctly: Thank you ___ your help.",
+      "question_bn": "Which pairs correctly: Thank you ___ your help.",
+      "question_en": "Which pairs correctly: Thank you ___ your help.",
       "options_json": [
         "for",
         "to",
@@ -4295,6 +4671,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-7",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Complete: I left ___ study after dinner.",
+      "question_bn": "Complete: I left ___ study after dinner.",
+      "question_en": "Complete: I left ___ study after dinner.",
       "options_json": [
         "for",
         "from",
@@ -4308,6 +4686,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-8",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Choose: The bird flew ___ the tree.",
+      "question_bn": "Choose: The bird flew ___ the tree.",
+      "question_en": "Choose: The bird flew ___ the tree.",
       "options_json": [
         "over",
         "on",
@@ -4321,6 +4701,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-9",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Select: She prefers tea ___ coffee.",
+      "question_bn": "Select: She prefers tea ___ coffee.",
+      "question_en": "Select: She prefers tea ___ coffee.",
       "options_json": [
         "to",
         "for",
@@ -4334,6 +4716,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-10",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Fill: The teacher spoke ___ the students about the rules.",
+      "question_bn": "Fill: The teacher spoke ___ the students about the rules.",
+      "question_en": "Fill: The teacher spoke ___ the students about the rules.",
       "options_json": [
         "with",
         "on",
@@ -4347,6 +4731,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-11",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The book is ___ the table.",
+      "question_bn": "The book is ___ the table.",
+      "question_en": "The book is ___ the table.",
       "options_json": [
         "in",
         "on",
@@ -4360,6 +4746,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-12",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "We will meet ___ the stadium.",
+      "question_bn": "We will meet ___ the stadium.",
+      "question_en": "We will meet ___ the stadium.",
       "options_json": [
         "in",
         "at",
@@ -4373,6 +4761,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-13",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He succeeded ___ his hard work.",
+      "question_bn": "He succeeded ___ his hard work.",
+      "question_en": "He succeeded ___ his hard work.",
       "options_json": [
         "from",
         "because of",
@@ -4386,6 +4776,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-14",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The bus runs ___ Dhaka to Sylhet.",
+      "question_bn": "The bus runs ___ Dhaka to Sylhet.",
+      "question_en": "The bus runs ___ Dhaka to Sylhet.",
       "options_json": [
         "from",
         "between",
@@ -4399,6 +4791,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-15",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She is interested ___ art competitions.",
+      "question_bn": "She is interested ___ art competitions.",
+      "question_en": "She is interested ___ art competitions.",
       "options_json": [
         "on",
         "about",
@@ -4412,6 +4806,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-16",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The child is afraid ___ the dark.",
+      "question_bn": "The child is afraid ___ the dark.",
+      "question_en": "The child is afraid ___ the dark.",
       "options_json": [
         "about",
         "from",
@@ -4425,6 +4821,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-17",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "They arrived ___ time for the show.",
+      "question_bn": "They arrived ___ time for the show.",
+      "question_en": "They arrived ___ time for the show.",
       "options_json": [
         "at",
         "on",
@@ -4438,6 +4836,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-18",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He walked ___ the river bank.",
+      "question_bn": "He walked ___ the river bank.",
+      "question_en": "He walked ___ the river bank.",
       "options_json": [
         "over",
         "along",
@@ -4451,6 +4851,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-19",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The students are good ___ teamwork.",
+      "question_bn": "The students are good ___ teamwork.",
+      "question_en": "The students are good ___ teamwork.",
       "options_json": [
         "for",
         "at",
@@ -4464,6 +4866,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-20",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She divided the cake ___ her friends.",
+      "question_bn": "She divided the cake ___ her friends.",
+      "question_en": "She divided the cake ___ her friends.",
       "options_json": [
         "between",
         "among",
@@ -4477,6 +4881,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-21",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "They apologized ___ arriving late.",
+      "question_bn": "They apologized ___ arriving late.",
+      "question_en": "They apologized ___ arriving late.",
       "options_json": [
         "for",
         "to",
@@ -4490,6 +4896,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-22",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The painting was created ___ 2023.",
+      "question_bn": "The painting was created ___ 2023.",
+      "question_en": "The painting was created ___ 2023.",
       "options_json": [
         "in",
         "at",
@@ -4503,6 +4911,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-23",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Please concentrate ___ your studies.",
+      "question_bn": "Please concentrate ___ your studies.",
+      "question_en": "Please concentrate ___ your studies.",
       "options_json": [
         "from",
         "on",
@@ -4516,6 +4926,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-24",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He kept the medicine ___ the shelf.",
+      "question_bn": "He kept the medicine ___ the shelf.",
+      "question_en": "He kept the medicine ___ the shelf.",
       "options_json": [
         "in",
         "on",
@@ -4529,6 +4941,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-25",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Drop by the office ___ noon.",
+      "question_bn": "Drop by the office ___ noon.",
+      "question_en": "Drop by the office ___ noon.",
       "options_json": [
         "at",
         "by",
@@ -4542,6 +4956,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-26",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "This song reminds me ___ childhood.",
+      "question_bn": "This song reminds me ___ childhood.",
+      "question_en": "This song reminds me ___ childhood.",
       "options_json": [
         "about",
         "of",
@@ -4555,6 +4971,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-27",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "We are excited ___ the trip.",
+      "question_bn": "We are excited ___ the trip.",
+      "question_en": "We are excited ___ the trip.",
       "options_json": [
         "about",
         "for",
@@ -4568,6 +4986,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-28",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Report ___ the results tomorrow.",
+      "question_bn": "Report ___ the results tomorrow.",
+      "question_en": "Report ___ the results tomorrow.",
       "options_json": [
         "on",
         "about",
@@ -4581,6 +5001,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-29",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She is jealous ___ her friend.",
+      "question_bn": "She is jealous ___ her friend.",
+      "question_en": "She is jealous ___ her friend.",
       "options_json": [
         "with",
         "for",
@@ -4594,6 +5016,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-30",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "I looked ___ my old teacher.",
+      "question_bn": "I looked ___ my old teacher.",
+      "question_en": "I looked ___ my old teacher.",
       "options_json": [
         "around",
         "for",
@@ -4607,6 +5031,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-31",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The plane departs ___ midnight.",
+      "question_bn": "The plane departs ___ midnight.",
+      "question_en": "The plane departs ___ midnight.",
       "options_json": [
         "in",
         "at",
@@ -4620,6 +5046,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-32",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He is responsible ___ the new project.",
+      "question_bn": "He is responsible ___ the new project.",
+      "question_en": "He is responsible ___ the new project.",
       "options_json": [
         "to",
         "for",
@@ -4633,6 +5061,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-33",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "I prefer coffee ___ tea.",
+      "question_bn": "I prefer coffee ___ tea.",
+      "question_en": "I prefer coffee ___ tea.",
       "options_json": [
         "to",
         "over",
@@ -4646,6 +5076,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-34",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The competition is ___ July.",
+      "question_bn": "The competition is ___ July.",
+      "question_en": "The competition is ___ July.",
       "options_json": [
         "on",
         "in",
@@ -4659,6 +5091,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-35",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "They divided the tasks ___ each other.",
+      "question_bn": "They divided the tasks ___ each other.",
+      "question_en": "They divided the tasks ___ each other.",
       "options_json": [
         "between",
         "among",
@@ -4672,6 +5106,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-36",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The answer depends ___ the question.",
+      "question_bn": "The answer depends ___ the question.",
+      "question_en": "The answer depends ___ the question.",
       "options_json": [
         "of",
         "on",
@@ -4685,6 +5121,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-37",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She insisted ___ helping.",
+      "question_bn": "She insisted ___ helping.",
+      "question_en": "She insisted ___ helping.",
       "options_json": [
         "on",
         "in",
@@ -4698,6 +5136,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-38",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He insisted ___ driving himself.",
+      "question_bn": "He insisted ___ driving himself.",
+      "question_en": "He insisted ___ driving himself.",
       "options_json": [
         "about",
         "on",
@@ -4711,6 +5151,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-39",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The manager approved the proposal ___ the budget.",
+      "question_bn": "The manager approved the proposal ___ the budget.",
+      "question_en": "The manager approved the proposal ___ the budget.",
       "options_json": [
         "within",
         "over",
@@ -4724,6 +5166,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-40",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The cat jumped ___ the wall.",
+      "question_bn": "The cat jumped ___ the wall.",
+      "question_en": "The cat jumped ___ the wall.",
       "options_json": [
         "over",
         "above",
@@ -4737,6 +5181,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-41",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The letter was written ___ her teacher.",
+      "question_bn": "The letter was written ___ her teacher.",
+      "question_en": "The letter was written ___ her teacher.",
       "options_json": [
         "by",
         "to",
@@ -4750,6 +5196,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-42",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "He graduated ___ honors.",
+      "question_bn": "He graduated ___ honors.",
+      "question_en": "He graduated ___ honors.",
       "options_json": [
         "with",
         "on",
@@ -4763,6 +5211,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-43",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "Stay ___ the path.",
+      "question_bn": "Stay ___ the path.",
+      "question_en": "Stay ___ the path.",
       "options_json": [
         "on",
         "in",
@@ -4776,6 +5226,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-44",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The movie starts ___ 7:30.",
+      "question_bn": "The movie starts ___ 7:30.",
+      "question_en": "The movie starts ___ 7:30.",
       "options_json": [
         "at",
         "in",
@@ -4789,6 +5241,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-45",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The kids are keen ___ learning.",
+      "question_bn": "The kids are keen ___ learning.",
+      "question_en": "The kids are keen ___ learning.",
       "options_json": [
         "about",
         "for",
@@ -4802,6 +5256,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-46",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "They were shocked ___ the news.",
+      "question_bn": "They were shocked ___ the news.",
+      "question_en": "They were shocked ___ the news.",
       "options_json": [
         "in",
         "by",
@@ -4815,6 +5271,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-47",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The train arrived ___ schedule.",
+      "question_bn": "The train arrived ___ schedule.",
+      "question_en": "The train arrived ___ schedule.",
       "options_json": [
         "on",
         "in",
@@ -4828,6 +5286,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-48",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "We celebrated ___ our victory.",
+      "question_bn": "We celebrated ___ our victory.",
+      "question_en": "We celebrated ___ our victory.",
       "options_json": [
         "for",
         "after",
@@ -4841,6 +5301,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-49",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "The boat sailed ___ the harbor.",
+      "question_bn": "The boat sailed ___ the harbor.",
+      "question_en": "The boat sailed ___ the harbor.",
       "options_json": [
         "through",
         "along",
@@ -4854,6 +5316,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-2-prepositions-collocations-50",
       "chapter_id": "grammar-class-9-10-2-prepositions-collocations",
       "question_text": "She is guilty ___ lying.",
+      "question_bn": "She is guilty ___ lying.",
+      "question_en": "She is guilty ___ lying.",
       "options_json": [
         "of",
         "for",
@@ -4869,6 +5333,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-1",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a mass noun?",
+      "question_bn": "Which is a mass noun?",
+      "question_en": "Which is a mass noun?",
       "options_json": [
         "chairs",
         "furniture",
@@ -4882,6 +5348,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-2",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the abstract noun: Democracy requires active participation.",
+      "question_bn": "Identify the abstract noun: Democracy requires active participation.",
+      "question_en": "Identify the abstract noun: Democracy requires active participation.",
       "options_json": [
         "requires",
         "active",
@@ -4895,6 +5363,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-3",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a collective noun?",
+      "question_bn": "Which is a collective noun?",
+      "question_en": "Which is a collective noun?",
       "options_json": [
         "teacher",
         "orchestra",
@@ -4908,6 +5378,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-4",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the correct relative pronoun: The person ___ I spoke was helpful.",
+      "question_bn": "Choose the correct relative pronoun: The person ___ I spoke was helpful.",
+      "question_en": "Choose the correct relative pronoun: The person ___ I spoke was helpful.",
       "options_json": [
         "who",
         "whom",
@@ -4921,6 +5393,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-5",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the compound relative pronoun: ___ finishes first wins the prize.",
+      "question_bn": "Identify the compound relative pronoun: ___ finishes first wins the prize.",
+      "question_en": "Identify the compound relative pronoun: ___ finishes first wins the prize.",
       "options_json": [
         "Who",
         "Whom",
@@ -4934,6 +5408,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-6",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What tense is 'has been reading'?",
+      "question_bn": "What tense is 'has been reading'?",
+      "question_en": "What tense is 'has been reading'?",
       "options_json": [
         "Present continuous",
         "Present perfect",
@@ -4947,6 +5423,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-7",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What tense is 'had been studying'?",
+      "question_bn": "What tense is 'had been studying'?",
+      "question_en": "What tense is 'had been studying'?",
       "options_json": [
         "Past continuous",
         "Past perfect",
@@ -4960,6 +5438,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-8",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which adjective cannot be compared?",
+      "question_bn": "Which adjective cannot be compared?",
+      "question_en": "Which adjective cannot be compared?",
       "options_json": [
         "beautiful",
         "unique",
@@ -4973,6 +5453,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-9",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the participial adjective: The fascinating documentary won awards.",
+      "question_bn": "Identify the participial adjective: The fascinating documentary won awards.",
+      "question_en": "Identify the participial adjective: The fascinating documentary won awards.",
       "options_json": [
         "The",
         "fascinating",
@@ -4986,6 +5468,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-10",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Where is the adverb positioned: Unfortunately, he missed the train.",
+      "question_bn": "Where is the adverb positioned: Unfortunately, he missed the train.",
+      "question_en": "Where is the adverb positioned: Unfortunately, he missed the train.",
       "options_json": [
         "Initial position",
         "Mid position",
@@ -4999,6 +5483,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-11",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the adverb modifying an adjective: The extremely difficult problem.",
+      "question_bn": "Identify the adverb modifying an adjective: The extremely difficult problem.",
+      "question_en": "Identify the adverb modifying an adjective: The extremely difficult problem.",
       "options_json": [
         "The",
         "extremely",
@@ -5012,6 +5498,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-12",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a temporal preposition?",
+      "question_bn": "Which is a temporal preposition?",
+      "question_en": "Which is a temporal preposition?",
       "options_json": [
         "on",
         "during",
@@ -5025,6 +5513,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-13",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the causal preposition: The event was cancelled ___ bad weather.",
+      "question_bn": "Choose the causal preposition: The event was cancelled ___ bad weather.",
+      "question_en": "Choose the causal preposition: The event was cancelled ___ bad weather.",
       "options_json": [
         "during",
         "within",
@@ -5038,6 +5528,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-14",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is an adverbial conjunction?",
+      "question_bn": "Which is an adverbial conjunction?",
+      "question_en": "Which is an adverbial conjunction?",
       "options_json": [
         "and",
         "but",
@@ -5051,6 +5543,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-15",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the correlative conjunction: ___ the students ___ the teacher attended.",
+      "question_bn": "Identify the correlative conjunction: ___ the students ___ the teacher attended.",
+      "question_en": "Identify the correlative conjunction: ___ the students ___ the teacher attended.",
       "options_json": [
         "And...and",
         "Both...and",
@@ -5064,6 +5558,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-16",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a subordinate conjunction for contrast?",
+      "question_bn": "Which is a subordinate conjunction for contrast?",
+      "question_en": "Which is a subordinate conjunction for contrast?",
       "options_json": [
         "because",
         "although",
@@ -5077,6 +5573,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-17",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the demonstrative determiner: This concept requires analysis.",
+      "question_bn": "Identify the demonstrative determiner: This concept requires analysis.",
+      "question_en": "Identify the demonstrative determiner: This concept requires analysis.",
       "options_json": [
         "This",
         "concept",
@@ -5090,6 +5588,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-18",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a possessive determiner?",
+      "question_bn": "Which is a possessive determiner?",
+      "question_en": "Which is a possessive determiner?",
       "options_json": [
         "his",
         "he",
@@ -5103,6 +5603,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-19",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the quantifying determiner: ___ students passed the exam.",
+      "question_bn": "Choose the quantifying determiner: ___ students passed the exam.",
+      "question_en": "Choose the quantifying determiner: ___ students passed the exam.",
       "options_json": [
         "The",
         "This",
@@ -5116,6 +5618,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-20",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What is 'equipment' in terms of noun classification?",
+      "question_bn": "What is 'equipment' in terms of noun classification?",
+      "question_en": "What is 'equipment' in terms of noun classification?",
       "options_json": [
         "Concrete noun",
         "Abstract noun",
@@ -5129,6 +5633,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-21",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify 'loyalty' as a noun type:",
+      "question_bn": "Identify 'loyalty' as a noun type:",
+      "question_en": "Identify 'loyalty' as a noun type:",
       "options_json": [
         "Concrete",
         "Abstract",
@@ -5142,6 +5648,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-22",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which relative pronoun shows possession?",
+      "question_bn": "Which relative pronoun shows possession?",
+      "question_en": "Which relative pronoun shows possession?",
       "options_json": [
         "who",
         "whom",
@@ -5155,6 +5663,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-23",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Complete: The student ___ bag was lost reported to the office.",
+      "question_bn": "Complete: The student ___ bag was lost reported to the office.",
+      "question_en": "Complete: The student ___ bag was lost reported to the office.",
       "options_json": [
         "who",
         "whom",
@@ -5168,6 +5678,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-24",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What tense: She will have completed the project by Friday.",
+      "question_bn": "What tense: She will have completed the project by Friday.",
+      "question_en": "What tense: She will have completed the project by Friday.",
       "options_json": [
         "Future simple",
         "Future continuous",
@@ -5181,6 +5693,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-25",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the tense: They will be studying at 8 p.m.",
+      "question_bn": "Identify the tense: They will be studying at 8 p.m.",
+      "question_en": "Identify the tense: They will be studying at 8 p.m.",
       "options_json": [
         "Future simple",
         "Future continuous",
@@ -5194,6 +5708,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-26",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is an absolute adjective that cannot be compared?",
+      "question_bn": "Which is an absolute adjective that cannot be compared?",
+      "question_en": "Which is an absolute adjective that cannot be compared?",
       "options_json": [
         "beautiful",
         "complete",
@@ -5207,6 +5723,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-27",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the superlative form:",
+      "question_bn": "Identify the superlative form:",
+      "question_en": "Identify the superlative form:",
       "options_json": [
         "more interesting",
         "most interesting",
@@ -5220,6 +5738,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-28",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is correct for the comparative of 'good'?",
+      "question_bn": "Which is correct for the comparative of 'good'?",
+      "question_en": "Which is correct for the comparative of 'good'?",
       "options_json": [
         "gooder",
         "more good",
@@ -5233,6 +5753,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-29",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Where is the adverb: He unfortunately missed the meeting.",
+      "question_bn": "Where is the adverb: He unfortunately missed the meeting.",
+      "question_en": "Where is the adverb: He unfortunately missed the meeting.",
       "options_json": [
         "Initial",
         "Mid",
@@ -5246,6 +5768,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-30",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the adverb modifying another adverb: very slowly",
+      "question_bn": "Identify the adverb modifying another adverb: very slowly",
+      "question_en": "Identify the adverb modifying another adverb: very slowly",
       "options_json": [
         "very",
         "slowly",
@@ -5259,6 +5783,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-31",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which prepositional phrase means 'intentionally'?",
+      "question_bn": "Which prepositional phrase means 'intentionally'?",
+      "question_en": "Which prepositional phrase means 'intentionally'?",
       "options_json": [
         "by accident",
         "on purpose",
@@ -5272,6 +5798,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-32",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the correct preposition: ___ the entire conference, she took notes.",
+      "question_bn": "Choose the correct preposition: ___ the entire conference, she took notes.",
+      "question_en": "Choose the correct preposition: ___ the entire conference, she took notes.",
       "options_json": [
         "During",
         "Throughout",
@@ -5285,6 +5813,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-33",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which shows cause: The match was postponed ___ rain.",
+      "question_bn": "Which shows cause: The match was postponed ___ rain.",
+      "question_en": "Which shows cause: The match was postponed ___ rain.",
       "options_json": [
         "during",
         "throughout",
@@ -5298,6 +5828,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-34",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which adverbial conjunction shows addition?",
+      "question_bn": "Which adverbial conjunction shows addition?",
+      "question_en": "Which adverbial conjunction shows addition?",
       "options_json": [
         "however",
         "nevertheless",
@@ -5311,6 +5843,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-35",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which adverbial conjunction shows contrast?",
+      "question_bn": "Which adverbial conjunction shows contrast?",
+      "question_en": "Which adverbial conjunction shows contrast?",
       "options_json": [
         "moreover",
         "furthermore",
@@ -5324,6 +5858,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-36",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Complete the correlative: Either you apologize ___ I will leave.",
+      "question_bn": "Complete the correlative: Either you apologize ___ I will leave.",
+      "question_en": "Complete the correlative: Either you apologize ___ I will leave.",
       "options_json": [
         "and",
         "but",
@@ -5337,6 +5873,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-37",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which is a subordinate conjunction for cause?",
+      "question_bn": "Which is a subordinate conjunction for cause?",
+      "question_en": "Which is a subordinate conjunction for cause?",
       "options_json": [
         "although",
         "because",
@@ -5350,6 +5888,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-38",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the correct: ___ he was tired, he continued working.",
+      "question_bn": "Choose the correct: ___ he was tired, he continued working.",
+      "question_en": "Choose the correct: ___ he was tired, he continued working.",
       "options_json": [
         "Because",
         "Although",
@@ -5363,6 +5903,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-39",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What type of determiner is 'several'?",
+      "question_bn": "What type of determiner is 'several'?",
+      "question_en": "What type of determiner is 'several'?",
       "options_json": [
         "Demonstrative",
         "Possessive",
@@ -5376,6 +5918,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-40",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify the determiner: Many students attended the lecture.",
+      "question_bn": "Identify the determiner: Many students attended the lecture.",
+      "question_en": "Identify the determiner: Many students attended the lecture.",
       "options_json": [
         "Many",
         "students",
@@ -5389,6 +5933,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-41",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which shows possession?",
+      "question_bn": "Which shows possession?",
+      "question_en": "Which shows possession?",
       "options_json": [
         "this",
         "these",
@@ -5402,6 +5948,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-42",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What is 'information' classified as?",
+      "question_bn": "What is 'information' classified as?",
+      "question_en": "What is 'information' classified as?",
       "options_json": [
         "Countable noun",
         "Mass noun",
@@ -5415,6 +5963,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-43",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which word is a collective noun?",
+      "question_bn": "Which word is a collective noun?",
+      "question_en": "Which word is a collective noun?",
       "options_json": [
         "student",
         "audience",
@@ -5428,6 +5978,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-44",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What type is 'courage'?",
+      "question_bn": "What type is 'courage'?",
+      "question_en": "What type is 'courage'?",
       "options_json": [
         "Concrete",
         "Abstract",
@@ -5441,6 +5993,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-45",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Choose the compound relative pronoun: Give it to ___ needs it most.",
+      "question_bn": "Choose the compound relative pronoun: Give it to ___ needs it most.",
+      "question_en": "Choose the compound relative pronoun: Give it to ___ needs it most.",
       "options_json": [
         "who",
         "whoever",
@@ -5454,6 +6008,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-46",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "What is the tense: I have read three books this month.",
+      "question_bn": "What is the tense: I have read three books this month.",
+      "question_en": "What is the tense: I have read three books this month.",
       "options_json": [
         "Present simple",
         "Present perfect",
@@ -5467,6 +6023,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-47",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Identify: She had left before I arrived.",
+      "question_bn": "Identify: She had left before I arrived.",
+      "question_en": "Identify: She had left before I arrived.",
       "options_json": [
         "Past simple",
         "Past perfect",
@@ -5480,6 +6038,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-48",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which adjective is participial?",
+      "question_bn": "Which adjective is participial?",
+      "question_en": "Which adjective is participial?",
       "options_json": [
         "beautiful",
         "broken",
@@ -5493,6 +6053,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-49",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Where is the adverb: She worked hard, unfortunately.",
+      "question_bn": "Where is the adverb: She worked hard, unfortunately.",
+      "question_en": "Where is the adverb: She worked hard, unfortunately.",
       "options_json": [
         "Initial",
         "Mid",
@@ -5506,6 +6068,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-3-parts-of-speech-professional-usage-50",
       "chapter_id": "grammar-class-9-10-3-parts-of-speech-professional-usage",
       "question_text": "Which means 'unintentionally'?",
+      "question_bn": "Which means 'unintentionally'?",
+      "question_en": "Which means 'unintentionally'?",
       "options_json": [
         "on purpose",
         "by accident",
@@ -5521,6 +6085,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-1",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "What is the noun form of 'happy'?",
+      "question_bn": "What is the noun form of 'happy'?",
+      "question_en": "What is the noun form of 'happy'?",
       "options_json": [
         "happily",
         "happiness",
@@ -5533,6 +6099,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-2",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the adjective form of 'create'?",
+      "question_bn": "Which is the adjective form of 'create'?",
+      "question_en": "Which is the adjective form of 'create'?",
       "options_json": [
         "creation",
         "creative",
@@ -5545,6 +6113,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-3",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the adverb form of 'careful'.",
+      "question_bn": "Choose the adverb form of 'careful'.",
+      "question_en": "Choose the adverb form of 'careful'.",
       "options_json": [
         "care",
         "carefully",
@@ -5557,6 +6127,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-4",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the verb form of 'strength'?",
+      "question_bn": "Which is the verb form of 'strength'?",
+      "question_en": "Which is the verb form of 'strength'?",
       "options_json": [
         "strong",
         "strengthen",
@@ -5569,6 +6141,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-5",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the correct word form: He solved the problem ___.",
+      "question_bn": "Choose the correct word form: He solved the problem ___.",
+      "question_en": "Choose the correct word form: He solved the problem ___.",
       "options_json": [
         "easy",
         "easily",
@@ -5581,6 +6155,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-6",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to noun form: develop",
+      "question_bn": "Change the word to noun form: develop",
+      "question_en": "Change the word to noun form: develop",
       "options_json": [
         "develop",
         "development",
@@ -5593,6 +6169,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-7",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adjective form: danger",
+      "question_bn": "Change the word to adjective form: danger",
+      "question_en": "Change the word to adjective form: danger",
       "options_json": [
         "danger",
         "dangerous",
@@ -5605,6 +6183,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-8",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adverb form: quick",
+      "question_bn": "Change the word to adverb form: quick",
+      "question_en": "Change the word to adverb form: quick",
       "options_json": [
         "quick",
         "quickly",
@@ -5617,6 +6197,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-9",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to verb form: decision",
+      "question_bn": "Change the word to verb form: decision",
+      "question_en": "Change the word to verb form: decision",
       "options_json": [
         "decide",
         "decisive",
@@ -5629,6 +6211,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-10",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adverb form: complete",
+      "question_bn": "Change the word to adverb form: complete",
+      "question_en": "Change the word to adverb form: complete",
       "options_json": [
         "completion",
         "complete",
@@ -5641,6 +6225,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-11",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "What is the noun form of 'beautiful'?",
+      "question_bn": "What is the noun form of 'beautiful'?",
+      "question_en": "What is the noun form of 'beautiful'?",
       "options_json": [
         "beauty",
         "beautifully",
@@ -5653,6 +6239,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-12",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the adjective form of 'attract'?",
+      "question_bn": "Which is the adjective form of 'attract'?",
+      "question_en": "Which is the adjective form of 'attract'?",
       "options_json": [
         "attraction",
         "attractive",
@@ -5665,6 +6253,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-13",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the adverb form of 'patient'.",
+      "question_bn": "Choose the adverb form of 'patient'.",
+      "question_en": "Choose the adverb form of 'patient'.",
       "options_json": [
         "patience",
         "patiently",
@@ -5677,6 +6267,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-14",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the verb form of 'success'?",
+      "question_bn": "Which is the verb form of 'success'?",
+      "question_en": "Which is the verb form of 'success'?",
       "options_json": [
         "successful",
         "succeed",
@@ -5689,6 +6281,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-15",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the correct word form: She sings very ___.",
+      "question_bn": "Choose the correct word form: She sings very ___.",
+      "question_en": "Choose the correct word form: She sings very ___.",
       "options_json": [
         "beauty",
         "beautiful",
@@ -5701,6 +6295,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-16",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to noun form: educate",
+      "question_bn": "Change the word to noun form: educate",
+      "question_en": "Change the word to noun form: educate",
       "options_json": [
         "education",
         "educate",
@@ -5713,6 +6309,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-17",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adjective form: comfort",
+      "question_bn": "Change the word to adjective form: comfort",
+      "question_en": "Change the word to adjective form: comfort",
       "options_json": [
         "comfort",
         "comfortable",
@@ -5725,6 +6323,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-18",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adverb form: honest",
+      "question_bn": "Change the word to adverb form: honest",
+      "question_en": "Change the word to adverb form: honest",
       "options_json": [
         "honesty",
         "honest",
@@ -5737,6 +6337,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-19",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to verb form: knowledge",
+      "question_bn": "Change the word to verb form: knowledge",
+      "question_en": "Change the word to verb form: knowledge",
       "options_json": [
         "know",
         "knowledge",
@@ -5749,6 +6351,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-20",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the correct word form: They worked ___ to finish the project.",
+      "question_bn": "Choose the correct word form: They worked ___ to finish the project.",
+      "question_en": "Choose the correct word form: They worked ___ to finish the project.",
       "options_json": [
         "hard",
         "hardly",
@@ -5761,6 +6365,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-21",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "What is the adjective form of 'science'?",
+      "question_bn": "What is the adjective form of 'science'?",
+      "question_en": "What is the adjective form of 'science'?",
       "options_json": [
         "scientific",
         "scientist",
@@ -5773,6 +6379,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-22",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the adverb form of 'slow'?",
+      "question_bn": "Which is the adverb form of 'slow'?",
+      "question_en": "Which is the adverb form of 'slow'?",
       "options_json": [
         "slowly",
         "slowness",
@@ -5785,6 +6393,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-23",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to noun form: intelligent",
+      "question_bn": "Change the word to noun form: intelligent",
+      "question_en": "Change the word to noun form: intelligent",
       "options_json": [
         "intelligence",
         "intelligently",
@@ -5797,6 +6407,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-24",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the verb form of 'length'?",
+      "question_bn": "Which is the verb form of 'length'?",
+      "question_en": "Which is the verb form of 'length'?",
       "options_json": [
         "lengthen",
         "lengthy",
@@ -5809,6 +6421,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-25",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the correct word form: She expressed herself ___.",
+      "question_bn": "Choose the correct word form: She expressed herself ___.",
+      "question_en": "Choose the correct word form: She expressed herself ___.",
       "options_json": [
         "clear",
         "clearly",
@@ -5821,6 +6435,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-26",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to adjective form: expense",
+      "question_bn": "Change the word to adjective form: expense",
+      "question_en": "Change the word to adjective form: expense",
       "options_json": [
         "expensive",
         "expensively",
@@ -5833,6 +6449,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-27",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "What is the noun form of 'cruel'?",
+      "question_bn": "What is the noun form of 'cruel'?",
+      "question_en": "What is the noun form of 'cruel'?",
       "options_json": [
         "cruelty",
         "cruelly",
@@ -5845,6 +6463,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-28",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Which is the adverb form of 'probable'?",
+      "question_bn": "Which is the adverb form of 'probable'?",
+      "question_en": "Which is the adverb form of 'probable'?",
       "options_json": [
         "probably",
         "probability",
@@ -5857,6 +6477,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-29",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Change the word to verb form: practical",
+      "question_bn": "Change the word to verb form: practical",
+      "question_en": "Change the word to verb form: practical",
       "options_json": [
         "practice",
         "practise",
@@ -5869,6 +6491,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-4-parts-of-speech-word-form-30",
       "chapter_id": "grammar-class-9-10-4-parts-of-speech-word-form",
       "question_text": "Choose the correct word form: The music sounded ___.",
+      "question_bn": "Choose the correct word form: The music sounded ___.",
+      "question_en": "Choose the correct word form: The music sounded ___.",
       "options_json": [
         "harmony",
         "harmonious",
@@ -5883,6 +6507,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-1",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Is 'in the park' a phrase or clause?",
+      "question_bn": "Is 'in the park' a phrase or clause?",
+      "question_en": "Is 'in the park' a phrase or clause?",
       "options_json": [
         "phrase",
         "clause"
@@ -5894,6 +6520,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-2",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which is a phrase?",
+      "question_bn": "Which is a phrase?",
+      "question_en": "Which is a phrase?",
       "options_json": [
         "she runs quickly",
         "very beautiful flower",
@@ -5907,6 +6535,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-3",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which is a clause?",
+      "question_bn": "Which is a clause?",
+      "question_en": "Which is a clause?",
       "options_json": [
         "in the morning",
         "quite happily",
@@ -5920,6 +6550,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-4",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type of sentence is: 'The dog barked.'?",
+      "question_bn": "What type of sentence is: 'The dog barked.'?",
+      "question_en": "What type of sentence is: 'The dog barked.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -5933,6 +6565,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-5",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type of sentence is: 'She studied hard, and she passed the exam.'?",
+      "question_bn": "What type of sentence is: 'She studied hard, and she passed the exam.'?",
+      "question_en": "What type of sentence is: 'She studied hard, and she passed the exam.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -5946,6 +6580,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-6",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type of sentence is: 'When it rains, I stay home.'?",
+      "question_bn": "What type of sentence is: 'When it rains, I stay home.'?",
+      "question_en": "What type of sentence is: 'When it rains, I stay home.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -5959,6 +6595,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-7",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify the sentence type: 'Because he was late, he ran quickly, and he still missed the bus.'",
+      "question_bn": "Identify the sentence type: 'Because he was late, he ran quickly, and he still missed the bus.'",
+      "question_en": "Identify the sentence type: 'Because he was late, he ran quickly, and he still missed the bus.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -5972,6 +6610,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-8",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence is compound?",
+      "question_bn": "Which sentence is compound?",
+      "question_en": "Which sentence is compound?",
       "options_json": [
         "She walks to school every day.",
         "He plays guitar and drums.",
@@ -5985,6 +6625,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-9",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence is complex?",
+      "question_bn": "Which sentence is complex?",
+      "question_en": "Which sentence is complex?",
       "options_json": [
         "I like chocolate, and you like vanilla.",
         "After school, we went home.",
@@ -5998,6 +6640,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-10",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many independent clauses are in: 'She finished her work, and he started his.'?",
+      "question_bn": "How many independent clauses are in: 'She finished her work, and he started his.'?",
+      "question_en": "How many independent clauses are in: 'She finished her work, and he started his.'?",
       "options_json": [
         "One",
         "Two",
@@ -6011,6 +6655,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-11",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What joins the two independent clauses in: 'I love music, but my sister loves sports.'?",
+      "question_bn": "What joins the two independent clauses in: 'I love music, but my sister loves sports.'?",
+      "question_en": "What joins the two independent clauses in: 'I love music, but my sister loves sports.'?",
       "options_json": [
         "comma only",
         "comma and coordinating conjunction",
@@ -6024,6 +6670,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-12",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which is a dependent clause?",
+      "question_bn": "Which is a dependent clause?",
+      "question_en": "Which is a dependent clause?",
       "options_json": [
         "The cat sleeps peacefully.",
         "Before the storm arrives",
@@ -6037,6 +6685,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-13",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many independent clauses does 'She danced while he played music' contain?",
+      "question_bn": "How many independent clauses does 'She danced while he played music' contain?",
+      "question_en": "How many independent clauses does 'She danced while he played music' contain?",
       "options_json": [
         "One",
         "Two",
@@ -6050,6 +6700,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-14",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify the sentence type: 'He is intelligent.'",
+      "question_bn": "Identify the sentence type: 'He is intelligent.'",
+      "question_en": "Identify the sentence type: 'He is intelligent.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6063,6 +6715,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-15",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence contains a dependent clause?",
+      "question_bn": "Which sentence contains a dependent clause?",
+      "question_en": "Which sentence contains a dependent clause?",
       "options_json": [
         "They played games in the park.",
         "Since it was raining, we stayed indoors.",
@@ -6076,6 +6730,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-16",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'Although she was tired, she smiled.'?",
+      "question_bn": "What type is: 'Although she was tired, she smiled.'?",
+      "question_en": "What type is: 'Although she was tired, she smiled.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6089,6 +6745,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-17",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which coordinating conjunction is used in: 'He studied hard yet he failed.'?",
+      "question_bn": "Which coordinating conjunction is used in: 'He studied hard yet he failed.'?",
+      "question_en": "Which coordinating conjunction is used in: 'He studied hard yet he failed.'?",
       "options_json": [
         "and",
         "but",
@@ -6102,6 +6760,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-18",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many dependent clauses in: 'If you work hard, you will succeed because you are determined.'?",
+      "question_bn": "How many dependent clauses in: 'If you work hard, you will succeed because you are determined.'?",
+      "question_en": "How many dependent clauses in: 'If you work hard, you will succeed because you are determined.'?",
       "options_json": [
         "One",
         "Two",
@@ -6115,6 +6775,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-19",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify: 'The book on the table is interesting.'",
+      "question_bn": "Identify: 'The book on the table is interesting.'",
+      "question_en": "Identify: 'The book on the table is interesting.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6128,6 +6790,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-20",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'When you call me, I will come; however, I might be late.'?",
+      "question_bn": "What type is: 'When you call me, I will come; however, I might be late.'?",
+      "question_en": "What type is: 'When you call me, I will come; however, I might be late.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6141,6 +6805,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-21",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which is a phrase?",
+      "question_bn": "Which is a phrase?",
+      "question_en": "Which is a phrase?",
       "options_json": [
         "after she left",
         "when he arrives",
@@ -6154,6 +6820,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-22",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many subjects does 'He reads and writes.' have?",
+      "question_bn": "How many subjects does 'He reads and writes.' have?",
+      "question_en": "How many subjects does 'He reads and writes.' have?",
       "options_json": [
         "One",
         "Two",
@@ -6167,6 +6835,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-23",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify: 'The team won the match, and the crowd cheered loudly.'",
+      "question_bn": "Identify: 'The team won the match, and the crowd cheered loudly.'",
+      "question_en": "Identify: 'The team won the match, and the crowd cheered loudly.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6180,6 +6850,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-24",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'Unless you study, you will fail.'?",
+      "question_bn": "What type is: 'Unless you study, you will fail.'?",
+      "question_en": "What type is: 'Unless you study, you will fail.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6193,6 +6865,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-25",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence is simple?",
+      "question_bn": "Which sentence is simple?",
+      "question_en": "Which sentence is simple?",
       "options_json": [
         "She sings, and he dances.",
         "Before the show starts, we will buy tickets.",
@@ -6206,6 +6880,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-26",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many clauses in: 'I went to the market because I needed vegetables.'?",
+      "question_bn": "How many clauses in: 'I went to the market because I needed vegetables.'?",
+      "question_en": "How many clauses in: 'I went to the market because I needed vegetables.'?",
       "options_json": [
         "One independent clause only",
         "One independent, one dependent",
@@ -6219,6 +6895,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-27",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'She likes coffee, but he prefers tea.'?",
+      "question_bn": "What type is: 'She likes coffee, but he prefers tea.'?",
+      "question_en": "What type is: 'She likes coffee, but he prefers tea.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6232,6 +6910,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-28",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which statement is true about 'While she was cooking, the guests arrived.'?",
+      "question_bn": "Which statement is true about 'While she was cooking, the guests arrived.'?",
+      "question_en": "Which statement is true about 'While she was cooking, the guests arrived.'?",
       "options_json": [
         "It has two independent clauses",
         "It is a simple sentence",
@@ -6245,6 +6925,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-29",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Is 'very quickly' a phrase or clause?",
+      "question_bn": "Is 'very quickly' a phrase or clause?",
+      "question_en": "Is 'very quickly' a phrase or clause?",
       "options_json": [
         "Phrase",
         "Clause",
@@ -6258,6 +6940,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-30",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify: 'The students studied hard, and they passed the test because they were well-prepared.'",
+      "question_bn": "Identify: 'The students studied hard, and they passed the test because they were well-prepared.'",
+      "question_en": "Identify: 'The students studied hard, and they passed the test because they were well-prepared.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6271,6 +6955,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-31",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many verbs in 'He walked and talked throughout the evening.'?",
+      "question_bn": "How many verbs in 'He walked and talked throughout the evening.'?",
+      "question_en": "How many verbs in 'He walked and talked throughout the evening.'?",
       "options_json": [
         "One",
         "Two",
@@ -6284,6 +6970,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-32",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence has a dependent clause?",
+      "question_bn": "Which sentence has a dependent clause?",
+      "question_en": "Which sentence has a dependent clause?",
       "options_json": [
         "He plays football.",
         "She eats breakfast and lunch.",
@@ -6297,6 +6985,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-33",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'I will wait for you, or you can meet me later.'?",
+      "question_bn": "What type is: 'I will wait for you, or you can meet me later.'?",
+      "question_en": "What type is: 'I will wait for you, or you can meet me later.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6310,6 +7000,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-34",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Is 'after the game ended' independent or dependent?",
+      "question_bn": "Is 'after the game ended' independent or dependent?",
+      "question_en": "Is 'after the game ended' independent or dependent?",
       "options_json": [
         "Independent clause",
         "Dependent clause",
@@ -6323,6 +7015,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-35",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify: 'The weather is sunny, so let's go for a walk.'",
+      "question_bn": "Identify: 'The weather is sunny, so let's go for a walk.'",
+      "question_en": "Identify: 'The weather is sunny, so let's go for a walk.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6336,6 +7030,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-36",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many independent clauses in: 'Because he was late, he ran quickly.'?",
+      "question_bn": "How many independent clauses in: 'Because he was late, he ran quickly.'?",
+      "question_en": "How many independent clauses in: 'Because he was late, he ran quickly.'?",
       "options_json": [
         "One",
         "Two",
@@ -6349,6 +7045,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-37",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'Since you are here, stay for dinner, and join us later for a movie.'?",
+      "question_bn": "What type is: 'Since you are here, stay for dinner, and join us later for a movie.'?",
+      "question_en": "What type is: 'Since you are here, stay for dinner, and join us later for a movie.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6362,6 +7060,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-38",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which is NOT a subordinating conjunction?",
+      "question_bn": "Which is NOT a subordinating conjunction?",
+      "question_en": "Which is NOT a subordinating conjunction?",
       "options_json": [
         "because",
         "although",
@@ -6375,6 +7075,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-39",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Identify: 'She reads books every day.'",
+      "question_bn": "Identify: 'She reads books every day.'",
+      "question_en": "Identify: 'She reads books every day.'",
       "options_json": [
         "Simple",
         "Compound",
@@ -6388,6 +7090,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-40",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "How many dependent clauses in: 'If you work hard and if you focus, you will succeed.'?",
+      "question_bn": "How many dependent clauses in: 'If you work hard and if you focus, you will succeed.'?",
+      "question_en": "How many dependent clauses in: 'If you work hard and if you focus, you will succeed.'?",
       "options_json": [
         "One",
         "Two",
@@ -6401,6 +7105,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-41",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "What type is: 'He came home, fixed dinner, and rested.'?",
+      "question_bn": "What type is: 'He came home, fixed dinner, and rested.'?",
+      "question_en": "What type is: 'He came home, fixed dinner, and rested.'?",
       "options_json": [
         "Simple",
         "Compound",
@@ -6414,6 +7120,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound-42",
       "chapter_id": "grammar-class-9-10-5-sentences-phrase-vs-clause-simple-compound",
       "question_text": "Which sentence is compound-complex?",
+      "question_bn": "Which sentence is compound-complex?",
+      "question_en": "Which sentence is compound-complex?",
       "options_json": [
         "I will come if you call.",
         "She danced and sang beautifully.",
@@ -6429,6 +7137,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-1",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose the correct article: ___ moon shines at night.",
+      "question_bn": "Choose the correct article: ___ moon shines at night.",
+      "question_en": "Choose the correct article: ___ moon shines at night.",
       "options_json": [
         "A",
         "An",
@@ -6442,6 +7152,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-2",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick the best answer: I ate ___ mango from the basket.",
+      "question_bn": "Pick the best answer: I ate ___ mango from the basket.",
+      "question_en": "Pick the best answer: I ate ___ mango from the basket.",
       "options_json": [
         "A",
         "An",
@@ -6455,6 +7167,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-3",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select the right article: ___ Himalayas are beautiful.",
+      "question_bn": "Select the right article: ___ Himalayas are beautiful.",
+      "question_en": "Select the right article: ___ Himalayas are beautiful.",
       "options_json": [
         "A",
         "The",
@@ -6468,6 +7182,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-4",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "What fits: ___ students drank water after ___ match.",
+      "question_bn": "What fits: ___ students drank water after ___ match.",
+      "question_en": "What fits: ___ students drank water after ___ match.",
       "options_json": [
         "The, the",
         "The, a",
@@ -6481,6 +7197,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-5",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose the correct form: I am reading ___ English newspaper every day.",
+      "question_bn": "Choose the correct form: I am reading ___ English newspaper every day.",
+      "question_en": "Choose the correct form: I am reading ___ English newspaper every day.",
       "options_json": [
         "a",
         "an",
@@ -6494,6 +7212,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-6",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Identify the article: ___ sun rises in the east.",
+      "question_bn": "Identify the article: ___ sun rises in the east.",
+      "question_en": "Identify the article: ___ sun rises in the east.",
       "options_json": [
         "A",
         "An",
@@ -6507,6 +7227,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-7",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Complete: ___ hour-long class started early.",
+      "question_bn": "Complete: ___ hour-long class started early.",
+      "question_en": "Complete: ___ hour-long class started early.",
       "options_json": [
         "A",
         "An",
@@ -6520,6 +7242,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-8",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose the right article: ___ university in our town offers scholarships.",
+      "question_bn": "Choose the right article: ___ university in our town offers scholarships.",
+      "question_en": "Choose the right article: ___ university in our town offers scholarships.",
       "options_json": [
         "A",
         "An",
@@ -6533,6 +7257,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-9",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select the best option: ___ movies teach us about life.",
+      "question_bn": "Select the best option: ___ movies teach us about life.",
+      "question_en": "Select the best option: ___ movies teach us about life.",
       "options_json": [
         "A",
         "The",
@@ -6546,6 +7272,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-10",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill the blank: She carries ___ umbrella every rainy day.",
+      "question_bn": "Fill the blank: She carries ___ umbrella every rainy day.",
+      "question_en": "Fill the blank: She carries ___ umbrella every rainy day.",
       "options_json": [
         "a",
         "an",
@@ -6559,6 +7287,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-11",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ honesty of the witness impressed the judge.",
+      "question_bn": "Choose: ___ honesty of the witness impressed the judge.",
+      "question_en": "Choose: ___ honesty of the witness impressed the judge.",
       "options_json": [
         "A",
         "An",
@@ -6572,6 +7302,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-12",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Which fits: I have ___ idea that we should start early.",
+      "question_bn": "Which fits: I have ___ idea that we should start early.",
+      "question_en": "Which fits: I have ___ idea that we should start early.",
       "options_json": [
         "a",
         "an",
@@ -6585,6 +7317,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-13",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick the article: ___ police officer waved the car through.",
+      "question_bn": "Pick the article: ___ police officer waved the car through.",
+      "question_en": "Pick the article: ___ police officer waved the car through.",
       "options_json": [
         "A",
         "An",
@@ -6598,6 +7332,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-14",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Complete: Please pass me ___ salt.",
+      "question_bn": "Complete: Please pass me ___ salt.",
+      "question_en": "Complete: Please pass me ___ salt.",
       "options_json": [
         "A",
         "An",
@@ -6611,6 +7347,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-15",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: He visited ___ doctor after the accident.",
+      "question_bn": "Choose: He visited ___ doctor after the accident.",
+      "question_en": "Choose: He visited ___ doctor after the accident.",
       "options_json": [
         "a",
         "an",
@@ -6624,6 +7362,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-16",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ moon is full tonight.",
+      "question_bn": "Select: ___ moon is full tonight.",
+      "question_en": "Select: ___ moon is full tonight.",
       "options_json": [
         "A",
         "An",
@@ -6637,6 +7377,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-17",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill: ___ children in my class love science.",
+      "question_bn": "Fill: ___ children in my class love science.",
+      "question_en": "Fill: ___ children in my class love science.",
       "options_json": [
         "A",
         "The",
@@ -6650,6 +7392,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-18",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: ___ apple a day keeps ___ doctor away.",
+      "question_bn": "Pick: ___ apple a day keeps ___ doctor away.",
+      "question_en": "Pick: ___ apple a day keeps ___ doctor away.",
       "options_json": [
         "The, the",
         "An, the",
@@ -6663,6 +7407,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-19",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose the article: ___ rice in this plate is hot.",
+      "question_bn": "Choose the article: ___ rice in this plate is hot.",
+      "question_en": "Choose the article: ___ rice in this plate is hot.",
       "options_json": [
         "A",
         "An",
@@ -6676,6 +7422,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-20",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Which is correct: I have ___ few friends in the city.",
+      "question_bn": "Which is correct: I have ___ few friends in the city.",
+      "question_en": "Which is correct: I have ___ few friends in the city.",
       "options_json": [
         "A",
         "An",
@@ -6689,6 +7437,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-21",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: They went to ___ cinema after dinner.",
+      "question_bn": "Select: They went to ___ cinema after dinner.",
+      "question_en": "Select: They went to ___ cinema after dinner.",
       "options_json": [
         "A",
         "An",
@@ -6702,6 +7452,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-22",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick the right words: ___ milk is kept in ___ fridge.",
+      "question_bn": "Pick the right words: ___ milk is kept in ___ fridge.",
+      "question_en": "Pick the right words: ___ milk is kept in ___ fridge.",
       "options_json": [
         "A, a",
         "The, the",
@@ -6715,6 +7467,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-23",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill: ___ teacher instructed ___ students gently.",
+      "question_bn": "Fill: ___ teacher instructed ___ students gently.",
+      "question_en": "Fill: ___ teacher instructed ___ students gently.",
       "options_json": [
         "The, the",
         "A, the",
@@ -6728,6 +7482,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-24",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: Give me ___ two cups of tea.",
+      "question_bn": "Choose: Give me ___ two cups of tea.",
+      "question_en": "Choose: Give me ___ two cups of tea.",
       "options_json": [
         "A",
         "An",
@@ -6741,6 +7497,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-25",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ Bangladeshi flag waved proudly.",
+      "question_bn": "Select: ___ Bangladeshi flag waved proudly.",
+      "question_en": "Select: ___ Bangladeshi flag waved proudly.",
       "options_json": [
         "A",
         "An",
@@ -6754,6 +7512,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-26",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Which fits: He wants to be ___ engineer.",
+      "question_bn": "Which fits: He wants to be ___ engineer.",
+      "question_en": "Which fits: He wants to be ___ engineer.",
       "options_json": [
         "A",
         "An",
@@ -6767,6 +7527,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-27",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: We need ___ paper for our project.",
+      "question_bn": "Choose: We need ___ paper for our project.",
+      "question_en": "Choose: We need ___ paper for our project.",
       "options_json": [
         "A",
         "An",
@@ -6780,6 +7542,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-28",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: ___ most talented singer won the contest.",
+      "question_bn": "Pick: ___ most talented singer won the contest.",
+      "question_en": "Pick: ___ most talented singer won the contest.",
       "options_json": [
         "A",
         "An",
@@ -6793,6 +7557,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-29",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill: ___ truth is difficult to hear.",
+      "question_bn": "Fill: ___ truth is difficult to hear.",
+      "question_en": "Fill: ___ truth is difficult to hear.",
       "options_json": [
         "A",
         "An",
@@ -6806,6 +7572,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-30",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ university ceremony starts soon.",
+      "question_bn": "Select: ___ university ceremony starts soon.",
+      "question_en": "Select: ___ university ceremony starts soon.",
       "options_json": [
         "A",
         "An",
@@ -6819,6 +7587,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-31",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: I saw ___ kingfisher at ___ pond.",
+      "question_bn": "Choose: I saw ___ kingfisher at ___ pond.",
+      "question_en": "Choose: I saw ___ kingfisher at ___ pond.",
       "options_json": [
         "A, the",
         "An, a",
@@ -6832,6 +7602,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-32",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: ___ longest river in the world is ___ Nile.",
+      "question_bn": "Pick: ___ longest river in the world is ___ Nile.",
+      "question_en": "Pick: ___ longest river in the world is ___ Nile.",
       "options_json": [
         "A, a",
         "The, the",
@@ -6845,6 +7617,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-33",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Complete: We watched ___ exciting movie last night.",
+      "question_bn": "Complete: We watched ___ exciting movie last night.",
+      "question_en": "Complete: We watched ___ exciting movie last night.",
       "options_json": [
         "A",
         "An",
@@ -6858,6 +7632,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-34",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Identify: ___ Royal Bengal tiger is endangered.",
+      "question_bn": "Identify: ___ Royal Bengal tiger is endangered.",
+      "question_en": "Identify: ___ Royal Bengal tiger is endangered.",
       "options_json": [
         "A",
         "An",
@@ -6871,6 +7647,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-35",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ idea came from ___ elder brother.",
+      "question_bn": "Choose: ___ idea came from ___ elder brother.",
+      "question_en": "Choose: ___ idea came from ___ elder brother.",
       "options_json": [
         "A, the",
         "An, the",
@@ -6884,6 +7662,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-36",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill: ___ award ceremony honoured ___ athletes.",
+      "question_bn": "Fill: ___ award ceremony honoured ___ athletes.",
+      "question_en": "Fill: ___ award ceremony honoured ___ athletes.",
       "options_json": [
         "The, the",
         "An, the",
@@ -6897,6 +7677,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-37",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: ___ United Kingdom includes ___ countries.",
+      "question_bn": "Pick: ___ United Kingdom includes ___ countries.",
+      "question_en": "Pick: ___ United Kingdom includes ___ countries.",
       "options_json": [
         "A, some",
         "The, some",
@@ -6910,6 +7692,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-38",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: She bought ___ orange and ___ apple.",
+      "question_bn": "Select: She bought ___ orange and ___ apple.",
+      "question_en": "Select: She bought ___ orange and ___ apple.",
       "options_json": [
         "An, an",
         "A, a",
@@ -6923,6 +7707,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-39",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Complete: ___ university offers ___ best scholarships.",
+      "question_bn": "Complete: ___ university offers ___ best scholarships.",
+      "question_en": "Complete: ___ university offers ___ best scholarships.",
       "options_json": [
         "A, a",
         "The, the",
@@ -6936,6 +7722,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-40",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ Pacific Ocean is ___ largest ocean.",
+      "question_bn": "Choose: ___ Pacific Ocean is ___ largest ocean.",
+      "question_en": "Choose: ___ Pacific Ocean is ___ largest ocean.",
       "options_json": [
         "The, the",
         "A, a",
@@ -6949,6 +7737,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-41",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: They have ___ plan for ___ future.",
+      "question_bn": "Pick: They have ___ plan for ___ future.",
+      "question_en": "Pick: They have ___ plan for ___ future.",
       "options_json": [
         "A, the",
         "An, a",
@@ -6962,6 +7752,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-42",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ best teacher in ___ school retired.",
+      "question_bn": "Select: ___ best teacher in ___ school retired.",
+      "question_en": "Select: ___ best teacher in ___ school retired.",
       "options_json": [
         "A, the",
         "The, a",
@@ -6975,6 +7767,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-43",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Fill: ___ new headmaster greeted ___ parents.",
+      "question_bn": "Fill: ___ new headmaster greeted ___ parents.",
+      "question_en": "Fill: ___ new headmaster greeted ___ parents.",
       "options_json": [
         "A, the",
         "An, the",
@@ -6988,6 +7782,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-44",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ water in ___ river is clean.",
+      "question_bn": "Choose: ___ water in ___ river is clean.",
+      "question_en": "Choose: ___ water in ___ river is clean.",
       "options_json": [
         "The, the",
         "A, a",
@@ -7001,6 +7797,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-45",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Pick: ___ teacher asked me to bring ___ report.",
+      "question_bn": "Pick: ___ teacher asked me to bring ___ report.",
+      "question_en": "Pick: ___ teacher asked me to bring ___ report.",
       "options_json": [
         "A, a",
         "The, the",
@@ -7014,6 +7812,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-46",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Complete: ___ story we heard last night inspired us.",
+      "question_bn": "Complete: ___ story we heard last night inspired us.",
+      "question_en": "Complete: ___ story we heard last night inspired us.",
       "options_json": [
         "A",
         "An",
@@ -7027,6 +7827,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-47",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ mountain climbers reached ___ peak.",
+      "question_bn": "Select: ___ mountain climbers reached ___ peak.",
+      "question_en": "Select: ___ mountain climbers reached ___ peak.",
       "options_json": [
         "The, the",
         "A, the",
@@ -7040,6 +7842,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-48",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ human right is ___ right to education.",
+      "question_bn": "Choose: ___ human right is ___ right to education.",
+      "question_en": "Choose: ___ human right is ___ right to education.",
       "options_json": [
         "The, the",
         "A, a",
@@ -7053,6 +7857,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-49",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Select: ___ Atlantic is colder than ___ Pacific.",
+      "question_bn": "Select: ___ Atlantic is colder than ___ Pacific.",
+      "question_en": "Select: ___ Atlantic is colder than ___ Pacific.",
       "options_json": [
         "A, the",
         "The, the",
@@ -7066,6 +7872,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-6-articles-exceptions-50",
       "chapter_id": "grammar-class-9-10-6-articles-exceptions",
       "question_text": "Choose: ___ few students knew ___ answer.",
+      "question_bn": "Choose: ___ few students knew ___ answer.",
+      "question_en": "Choose: ___ few students knew ___ answer.",
       "options_json": [
         "A, the",
         "Some, the",
@@ -7081,6 +7889,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-1",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the simple present: She ___ to school every day.",
+      "question_bn": "Choose the simple present: She ___ to school every day.",
+      "question_en": "Choose the simple present: She ___ to school every day.",
       "options_json": [
         "goes",
         "is going",
@@ -7094,6 +7904,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-2",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the simple past: They ___ the match yesterday.",
+      "question_bn": "Pick the simple past: They ___ the match yesterday.",
+      "question_en": "Pick the simple past: They ___ the match yesterday.",
       "options_json": [
         "won",
         "win",
@@ -7107,6 +7919,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-3",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Select the simple future: I ___ you later.",
+      "question_bn": "Select the simple future: I ___ you later.",
+      "question_en": "Select the simple future: I ___ you later.",
       "options_json": [
         "will call",
         "called",
@@ -7120,6 +7934,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-4",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the present continuous: He reads a book now.",
+      "question_bn": "Choose the present continuous: He reads a book now.",
+      "question_en": "Choose the present continuous: He reads a book now.",
       "options_json": [
         "He is reading a book now",
         "He read a book now",
@@ -7133,6 +7949,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-5",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the past continuous: They ___ (play) at 5 p.m.",
+      "question_bn": "Pick the past continuous: They ___ (play) at 5 p.m.",
+      "question_en": "Pick the past continuous: They ___ (play) at 5 p.m.",
       "options_json": [
         "were playing",
         "are playing",
@@ -7146,6 +7964,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-6",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Select the future continuous: She ___ at 8 p.m.",
+      "question_bn": "Select the future continuous: She ___ at 8 p.m.",
+      "question_en": "Select the future continuous: She ___ at 8 p.m.",
       "options_json": [
         "will be studying",
         "studied",
@@ -7159,6 +7979,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-7",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the present perfect: I ___ my homework.",
+      "question_bn": "Choose the present perfect: I ___ my homework.",
+      "question_en": "Choose the present perfect: I ___ my homework.",
       "options_json": [
         "have finished",
         "am finishing",
@@ -7172,6 +7994,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-8",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the past perfect: The bus ___ before we arrived.",
+      "question_bn": "Pick the past perfect: The bus ___ before we arrived.",
+      "question_en": "Pick the past perfect: The bus ___ before we arrived.",
       "options_json": [
         "had left",
         "left",
@@ -7185,6 +8009,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-9",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: He has been working since morning.",
+      "question_bn": "Identify the tense: He has been working since morning.",
+      "question_en": "Identify the tense: He has been working since morning.",
       "options_json": [
         "Present perfect continuous",
         "Present continuous",
@@ -7198,6 +8024,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-10",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (wait) when I called.",
+      "question_bn": "Choose the correct form: She ___ (wait) when I called.",
+      "question_en": "Choose the correct form: She ___ (wait) when I called.",
       "options_json": [
         "was waiting",
         "is waiting",
@@ -7211,6 +8039,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-11",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Select the present perfect continuous: They ___ for two hours.",
+      "question_bn": "Select the present perfect continuous: They ___ for two hours.",
+      "question_en": "Select the present perfect continuous: They ___ for two hours.",
       "options_json": [
         "have been studying",
         "are studying",
@@ -7224,6 +8054,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-12",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the past perfect continuous: He ___ for an hour before the bus came.",
+      "question_bn": "Choose the past perfect continuous: He ___ for an hour before the bus came.",
+      "question_en": "Choose the past perfect continuous: He ___ for an hour before the bus came.",
       "options_json": [
         "had been waiting",
         "has been waiting",
@@ -7237,6 +8069,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-13",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the correct tense: I ___ (see) that movie already.",
+      "question_bn": "Pick the correct tense: I ___ (see) that movie already.",
+      "question_en": "Pick the correct tense: I ___ (see) that movie already.",
       "options_json": [
         "have seen",
         "am seeing",
@@ -7250,6 +8084,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-14",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct sentence:",
+      "question_bn": "Choose the correct sentence:",
+      "question_en": "Choose the correct sentence:",
       "options_json": [
         "She was cooking when the phone rang",
         "She cooked when the phone was ringing",
@@ -7263,6 +8099,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-15",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Select the correct form: By 2010, they ___ (move) to Dhaka.",
+      "question_bn": "Select the correct form: By 2010, they ___ (move) to Dhaka.",
+      "question_en": "Select the correct form: By 2010, they ___ (move) to Dhaka.",
       "options_json": [
         "had moved",
         "have moved",
@@ -7276,6 +8114,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-16",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: They have been playing since 6 a.m.",
+      "question_bn": "Identify the tense: They have been playing since 6 a.m.",
+      "question_en": "Identify the tense: They have been playing since 6 a.m.",
       "options_json": [
         "Present perfect continuous",
         "Present perfect",
@@ -7289,6 +8129,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-17",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the past perfect continuous: He ___ for two hours before the class started.",
+      "question_bn": "Choose the past perfect continuous: He ___ for two hours before the class started.",
+      "question_en": "Choose the past perfect continuous: He ___ for two hours before the class started.",
       "options_json": [
         "had been studying",
         "has been studying",
@@ -7302,6 +8144,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-18",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the simple present: She ___ tea every morning.",
+      "question_bn": "Choose the simple present: She ___ tea every morning.",
+      "question_en": "Choose the simple present: She ___ tea every morning.",
       "options_json": [
         "drinks",
         "is drinking",
@@ -7315,6 +8159,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-19",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the simple past: We ___ to the market yesterday.",
+      "question_bn": "Choose the simple past: We ___ to the market yesterday.",
+      "question_en": "Choose the simple past: We ___ to the market yesterday.",
       "options_json": [
         "went",
         "go",
@@ -7328,6 +8174,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-20",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the simple future: They ___ the match tomorrow.",
+      "question_bn": "Choose the simple future: They ___ the match tomorrow.",
+      "question_en": "Choose the simple future: They ___ the match tomorrow.",
       "options_json": [
         "will play",
         "played",
@@ -7341,6 +8189,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-21",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the present continuous: He ___ right now.",
+      "question_bn": "Pick the present continuous: He ___ right now.",
+      "question_en": "Pick the present continuous: He ___ right now.",
       "options_json": [
         "is sleeping",
         "slept",
@@ -7354,6 +8204,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-22",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the past continuous: They ___ when it started to rain.",
+      "question_bn": "Pick the past continuous: They ___ when it started to rain.",
+      "question_en": "Pick the past continuous: They ___ when it started to rain.",
       "options_json": [
         "were playing",
         "play",
@@ -7367,6 +8219,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-23",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Pick the future continuous: I ___ at 10 a.m. tomorrow.",
+      "question_bn": "Pick the future continuous: I ___ at 10 a.m. tomorrow.",
+      "question_en": "Pick the future continuous: I ___ at 10 a.m. tomorrow.",
       "options_json": [
         "will be studying",
         "study",
@@ -7380,6 +8234,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-24",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the present perfect: She ___ her homework already.",
+      "question_bn": "Choose the present perfect: She ___ her homework already.",
+      "question_en": "Choose the present perfect: She ___ her homework already.",
       "options_json": [
         "has finished",
         "is finishing",
@@ -7393,6 +8249,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-25",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the past perfect: He ___ the bus before I reached the stop.",
+      "question_bn": "Choose the past perfect: He ___ the bus before I reached the stop.",
+      "question_en": "Choose the past perfect: He ___ the bus before I reached the stop.",
       "options_json": [
         "had caught",
         "caught",
@@ -7406,6 +8264,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-26",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the present perfect continuous: They ___ for two hours.",
+      "question_bn": "Choose the present perfect continuous: They ___ for two hours.",
+      "question_en": "Choose the present perfect continuous: They ___ for two hours.",
       "options_json": [
         "have been waiting",
         "are waiting",
@@ -7419,6 +8279,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-27",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the past perfect continuous: She ___ for an hour before the class started.",
+      "question_bn": "Choose the past perfect continuous: She ___ for an hour before the class started.",
+      "question_en": "Choose the past perfect continuous: She ___ for an hour before the class started.",
       "options_json": [
         "had been studying",
         "has been studying",
@@ -7432,6 +8294,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-28",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: I write letters on Sundays.",
+      "question_bn": "Identify the tense: I write letters on Sundays.",
+      "question_en": "Identify the tense: I write letters on Sundays.",
       "options_json": [
         "Simple present",
         "Present continuous",
@@ -7445,6 +8309,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-29",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: She was cooking when I arrived.",
+      "question_bn": "Identify the tense: She was cooking when I arrived.",
+      "question_en": "Identify the tense: She was cooking when I arrived.",
       "options_json": [
         "Past continuous",
         "Simple past",
@@ -7458,6 +8324,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-30",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: They have lived here for years.",
+      "question_bn": "Identify the tense: They have lived here for years.",
+      "question_en": "Identify the tense: They have lived here for years.",
       "options_json": [
         "Present perfect",
         "Present perfect continuous",
@@ -7471,6 +8339,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-31",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Identify the tense: I will be traveling next week.",
+      "question_bn": "Identify the tense: I will be traveling next week.",
+      "question_en": "Identify the tense: I will be traveling next week.",
       "options_json": [
         "Future continuous",
         "Simple future",
@@ -7484,6 +8354,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-32",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (work) in the bank now.",
+      "question_bn": "Choose the correct form: He ___ (work) in the bank now.",
+      "question_en": "Choose the correct form: He ___ (work) in the bank now.",
       "options_json": [
         "is working",
         "works",
@@ -7497,6 +8369,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-33",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (finish) the project last week.",
+      "question_bn": "Choose the correct form: They ___ (finish) the project last week.",
+      "question_en": "Choose the correct form: They ___ (finish) the project last week.",
       "options_json": [
         "finished",
         "finish",
@@ -7510,6 +8384,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-34",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (visit) Cox's Bazar in 2022.",
+      "question_bn": "Choose the correct form: I ___ (visit) Cox's Bazar in 2022.",
+      "question_en": "Choose the correct form: I ___ (visit) Cox's Bazar in 2022.",
       "options_json": [
         "visited",
         "visit",
@@ -7523,6 +8399,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-35",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (not/see) the film yet.",
+      "question_bn": "Choose the correct form: She ___ (not/see) the film yet.",
+      "question_en": "Choose the correct form: She ___ (not/see) the film yet.",
       "options_json": [
         "has not seen",
         "did not see",
@@ -7536,6 +8414,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-36",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (wait) for you since 6 p.m.",
+      "question_bn": "Choose the correct form: We ___ (wait) for you since 6 p.m.",
+      "question_en": "Choose the correct form: We ___ (wait) for you since 6 p.m.",
       "options_json": [
         "have been waiting",
         "wait",
@@ -7549,6 +8429,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-37",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: By the time we arrived, the train ___ (leave).",
+      "question_bn": "Choose the correct form: By the time we arrived, the train ___ (leave).",
+      "question_en": "Choose the correct form: By the time we arrived, the train ___ (leave).",
       "options_json": [
         "had left",
         "left",
@@ -7562,6 +8444,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-38",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (play) when the power went out.",
+      "question_bn": "Choose the correct form: They ___ (play) when the power went out.",
+      "question_en": "Choose the correct form: They ___ (play) when the power went out.",
       "options_json": [
         "were playing",
         "play",
@@ -7575,6 +8459,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-39",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (call) you tonight.",
+      "question_bn": "Choose the correct form: I ___ (call) you tonight.",
+      "question_en": "Choose the correct form: I ___ (call) you tonight.",
       "options_json": [
         "will call",
         "called",
@@ -7588,6 +8474,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-40",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (read) at 9 p.m. yesterday.",
+      "question_bn": "Choose the correct form: She ___ (read) at 9 p.m. yesterday.",
+      "question_en": "Choose the correct form: She ___ (read) at 9 p.m. yesterday.",
       "options_json": [
         "was reading",
         "reads",
@@ -7601,6 +8489,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-41",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (study) for two hours before dinner.",
+      "question_bn": "Choose the correct form: He ___ (study) for two hours before dinner.",
+      "question_en": "Choose the correct form: He ___ (study) for two hours before dinner.",
       "options_json": [
         "had been studying",
         "has been studying",
@@ -7614,6 +8504,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-42",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (know) him since childhood.",
+      "question_bn": "Choose the correct form: I ___ (know) him since childhood.",
+      "question_en": "Choose the correct form: I ___ (know) him since childhood.",
       "options_json": [
         "have known",
         "know",
@@ -7627,6 +8519,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-43",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: The students ___ (write) now.",
+      "question_bn": "Choose the correct form: The students ___ (write) now.",
+      "question_en": "Choose the correct form: The students ___ (write) now.",
       "options_json": [
         "are writing",
         "write",
@@ -7640,6 +8534,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-44",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (go) to school every day.",
+      "question_bn": "Choose the correct form: She ___ (go) to school every day.",
+      "question_en": "Choose the correct form: She ___ (go) to school every day.",
       "options_json": [
         "goes",
         "is going",
@@ -7653,6 +8549,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-45",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (be) at the library yesterday.",
+      "question_bn": "Choose the correct form: We ___ (be) at the library yesterday.",
+      "question_en": "Choose the correct form: We ___ (be) at the library yesterday.",
       "options_json": [
         "were",
         "are",
@@ -7666,6 +8564,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-46",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (be) at home now.",
+      "question_bn": "Choose the correct form: He ___ (be) at home now.",
+      "question_en": "Choose the correct form: He ___ (be) at home now.",
       "options_json": [
         "is",
         "was",
@@ -7679,6 +8579,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-47",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (be) in class at 10 a.m. tomorrow.",
+      "question_bn": "Choose the correct form: They ___ (be) in class at 10 a.m. tomorrow.",
+      "question_en": "Choose the correct form: They ___ (be) in class at 10 a.m. tomorrow.",
       "options_json": [
         "will be",
         "are",
@@ -7692,6 +8594,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-48",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (not/finish) my homework yet.",
+      "question_bn": "Choose the correct form: I ___ (not/finish) my homework yet.",
+      "question_en": "Choose the correct form: I ___ (not/finish) my homework yet.",
       "options_json": [
         "have not finished",
         "did not finish",
@@ -7705,6 +8609,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-49",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (live) in Dhaka since 2015.",
+      "question_bn": "Choose the correct form: She ___ (live) in Dhaka since 2015.",
+      "question_en": "Choose the correct form: She ___ (live) in Dhaka since 2015.",
       "options_json": [
         "has lived",
         "lived",
@@ -7718,6 +8624,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-50",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: The match ___ (start) at 4 p.m. every day.",
+      "question_bn": "Choose the correct form: The match ___ (start) at 4 p.m. every day.",
+      "question_en": "Choose the correct form: The match ___ (start) at 4 p.m. every day.",
       "options_json": [
         "starts",
         "is starting",
@@ -7731,6 +8639,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-51",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (see) him last night.",
+      "question_bn": "Choose the correct form: I ___ (see) him last night.",
+      "question_en": "Choose the correct form: I ___ (see) him last night.",
       "options_json": [
         "saw",
         "see",
@@ -7744,6 +8654,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-52",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (study) when her mother called.",
+      "question_bn": "Choose the correct form: She ___ (study) when her mother called.",
+      "question_en": "Choose the correct form: She ___ (study) when her mother called.",
       "options_json": [
         "was studying",
         "studies",
@@ -7757,6 +8669,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-53",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (finish) the work by next week.",
+      "question_bn": "Choose the correct form: They ___ (finish) the work by next week.",
+      "question_en": "Choose the correct form: They ___ (finish) the work by next week.",
       "options_json": [
         "will have finished",
         "finish",
@@ -7770,6 +8684,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-54",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (wait) for her for two hours yesterday.",
+      "question_bn": "Choose the correct form: He ___ (wait) for her for two hours yesterday.",
+      "question_en": "Choose the correct form: He ___ (wait) for her for two hours yesterday.",
       "options_json": [
         "was waiting",
         "waits",
@@ -7783,6 +8699,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-55",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (travel) to Chittagong this time tomorrow.",
+      "question_bn": "Choose the correct form: We ___ (travel) to Chittagong this time tomorrow.",
+      "question_en": "Choose the correct form: We ___ (travel) to Chittagong this time tomorrow.",
       "options_json": [
         "will be traveling",
         "travel",
@@ -7796,6 +8714,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-56",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (cook) dinner when I reached home.",
+      "question_bn": "Choose the correct form: She ___ (cook) dinner when I reached home.",
+      "question_en": "Choose the correct form: She ___ (cook) dinner when I reached home.",
       "options_json": [
         "was cooking",
         "cooks",
@@ -7809,6 +8729,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-57",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (play) football every Friday.",
+      "question_bn": "Choose the correct form: They ___ (play) football every Friday.",
+      "question_en": "Choose the correct form: They ___ (play) football every Friday.",
       "options_json": [
         "play",
         "are playing",
@@ -7822,6 +8744,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-58",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (read) this book already.",
+      "question_bn": "Choose the correct form: I ___ (read) this book already.",
+      "question_en": "Choose the correct form: I ___ (read) this book already.",
       "options_json": [
         "have read",
         "read",
@@ -7835,6 +8759,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-59",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (buy) a new phone last month.",
+      "question_bn": "Choose the correct form: He ___ (buy) a new phone last month.",
+      "question_en": "Choose the correct form: He ___ (buy) a new phone last month.",
       "options_json": [
         "bought",
         "buys",
@@ -7848,6 +8774,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-60",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (not/see) him since Eid.",
+      "question_bn": "Choose the correct form: We ___ (not/see) him since Eid.",
+      "question_en": "Choose the correct form: We ___ (not/see) him since Eid.",
       "options_json": [
         "have not seen",
         "did not see",
@@ -7861,6 +8789,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-61",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (visit) her grandmother next week.",
+      "question_bn": "Choose the correct form: She ___ (visit) her grandmother next week.",
+      "question_en": "Choose the correct form: She ___ (visit) her grandmother next week.",
       "options_json": [
         "will visit",
         "visited",
@@ -7874,6 +8804,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-62",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: By the time the bell rang, the teacher ___ (finish) the lesson.",
+      "question_bn": "Choose the correct form: By the time the bell rang, the teacher ___ (finish) the lesson.",
+      "question_en": "Choose the correct form: By the time the bell rang, the teacher ___ (finish) the lesson.",
       "options_json": [
         "had finished",
         "finished",
@@ -7887,6 +8819,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-63",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: The children ___ (sleep) when the storm began.",
+      "question_bn": "Choose the correct form: The children ___ (sleep) when the storm began.",
+      "question_en": "Choose the correct form: The children ___ (sleep) when the storm began.",
       "options_json": [
         "were sleeping",
         "sleep",
@@ -7900,6 +8834,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-64",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (be) busy these days.",
+      "question_bn": "Choose the correct form: I ___ (be) busy these days.",
+      "question_en": "Choose the correct form: I ___ (be) busy these days.",
       "options_json": [
         "am",
         "was",
@@ -7913,6 +8849,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-65",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (be) here an hour ago.",
+      "question_bn": "Choose the correct form: He ___ (be) here an hour ago.",
+      "question_en": "Choose the correct form: He ___ (be) here an hour ago.",
       "options_json": [
         "was",
         "is",
@@ -7926,6 +8864,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-66",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (be) at the meeting tomorrow.",
+      "question_bn": "Choose the correct form: We ___ (be) at the meeting tomorrow.",
+      "question_en": "Choose the correct form: We ___ (be) at the meeting tomorrow.",
       "options_json": [
         "will be",
         "are",
@@ -7939,6 +8879,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-67",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (teach) here for five years.",
+      "question_bn": "Choose the correct form: She ___ (teach) here for five years.",
+      "question_en": "Choose the correct form: She ___ (teach) here for five years.",
       "options_json": [
         "has taught",
         "taught",
@@ -7952,6 +8894,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-68",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (wait) for him when he arrived.",
+      "question_bn": "Choose the correct form: I ___ (wait) for him when he arrived.",
+      "question_en": "Choose the correct form: I ___ (wait) for him when he arrived.",
       "options_json": [
         "was waiting",
         "wait",
@@ -7965,6 +8909,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-69",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (build) the bridge next year.",
+      "question_bn": "Choose the correct form: They ___ (build) the bridge next year.",
+      "question_en": "Choose the correct form: They ___ (build) the bridge next year.",
       "options_json": [
         "will build",
         "built",
@@ -7978,6 +8924,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-70",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: By 5 p.m., we ___ (complete) the task.",
+      "question_bn": "Choose the correct form: By 5 p.m., we ___ (complete) the task.",
+      "question_en": "Choose the correct form: By 5 p.m., we ___ (complete) the task.",
       "options_json": [
         "will have completed",
         "complete",
@@ -7991,6 +8939,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-71",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (write) a letter now.",
+      "question_bn": "Choose the correct form: She ___ (write) a letter now.",
+      "question_en": "Choose the correct form: She ___ (write) a letter now.",
       "options_json": [
         "is writing",
         "writes",
@@ -8004,6 +8954,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-72",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (sleep) at 11 p.m. last night.",
+      "question_bn": "Choose the correct form: He ___ (sleep) at 11 p.m. last night.",
+      "question_en": "Choose the correct form: He ___ (sleep) at 11 p.m. last night.",
       "options_json": [
         "was sleeping",
         "slept",
@@ -8017,6 +8969,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-73",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: We ___ (study) for the test these days.",
+      "question_bn": "Choose the correct form: We ___ (study) for the test these days.",
+      "question_en": "Choose the correct form: We ___ (study) for the test these days.",
       "options_json": [
         "are studying",
         "study",
@@ -8030,6 +8984,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-74",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (have) a new bag last week.",
+      "question_bn": "Choose the correct form: She ___ (have) a new bag last week.",
+      "question_en": "Choose the correct form: She ___ (have) a new bag last week.",
       "options_json": [
         "had",
         "has",
@@ -8043,6 +8999,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-75",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (have) a test tomorrow.",
+      "question_bn": "Choose the correct form: I ___ (have) a test tomorrow.",
+      "question_en": "Choose the correct form: I ___ (have) a test tomorrow.",
       "options_json": [
         "will have",
         "have",
@@ -8056,6 +9014,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-76",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (play) since 6 a.m.",
+      "question_bn": "Choose the correct form: They ___ (play) since 6 a.m.",
+      "question_en": "Choose the correct form: They ___ (play) since 6 a.m.",
       "options_json": [
         "have been playing",
         "play",
@@ -8069,6 +9029,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-77",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: By the time I reached, she ___ (leave).",
+      "question_bn": "Choose the correct form: By the time I reached, she ___ (leave).",
+      "question_en": "Choose the correct form: By the time I reached, she ___ (leave).",
       "options_json": [
         "had left",
         "left",
@@ -8082,6 +9044,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-78",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: I ___ (call) you after class.",
+      "question_bn": "Choose the correct form: I ___ (call) you after class.",
+      "question_en": "Choose the correct form: I ___ (call) you after class.",
       "options_json": [
         "will call",
         "call",
@@ -8095,6 +9059,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-79",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: He ___ (work) here since January.",
+      "question_bn": "Choose the correct form: He ___ (work) here since January.",
+      "question_en": "Choose the correct form: He ___ (work) here since January.",
       "options_json": [
         "has been working",
         "works",
@@ -8108,6 +9074,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-80",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: She ___ (read) the book when I entered.",
+      "question_bn": "Choose the correct form: She ___ (read) the book when I entered.",
+      "question_en": "Choose the correct form: She ___ (read) the book when I entered.",
       "options_json": [
         "was reading",
         "reads",
@@ -8121,6 +9089,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-7-tense-81",
       "chapter_id": "grammar-class-9-10-7-tense",
       "question_text": "Choose the correct form: They ___ (visit) us next month.",
+      "question_bn": "Choose the correct form: They ___ (visit) us next month.",
+      "question_en": "Choose the correct form: They ___ (visit) us next month.",
       "options_json": [
         "will visit",
         "visited",
@@ -8136,6 +9106,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-1",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The team ___ playing well.",
+      "question_bn": "The team ___ playing well.",
+      "question_en": "The team ___ playing well.",
       "options_json": [
         "is",
         "are"
@@ -8147,6 +9119,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-2",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Each of the girls ___ a prize.",
+      "question_bn": "Each of the girls ___ a prize.",
+      "question_en": "Each of the girls ___ a prize.",
       "options_json": [
         "has",
         "have",
@@ -8160,6 +9134,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-3",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Neither the teacher nor the students ___ absent today.",
+      "question_bn": "Neither the teacher nor the students ___ absent today.",
+      "question_en": "Neither the teacher nor the students ___ absent today.",
       "options_json": [
         "is",
         "are",
@@ -8173,6 +9149,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-4",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Either the students or the teacher ___ responsible.",
+      "question_bn": "Either the students or the teacher ___ responsible.",
+      "question_en": "Either the students or the teacher ___ responsible.",
       "options_json": [
         "is",
         "are",
@@ -8186,6 +9164,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-5",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "A number of students ___ late.",
+      "question_bn": "A number of students ___ late.",
+      "question_en": "A number of students ___ late.",
       "options_json": [
         "is",
         "are",
@@ -8199,6 +9179,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-6",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The number of students ___ increasing.",
+      "question_bn": "The number of students ___ increasing.",
+      "question_en": "The number of students ___ increasing.",
       "options_json": [
         "is",
         "are",
@@ -8212,6 +9194,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-7",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Mathematics ___ my favorite subject.",
+      "question_bn": "Mathematics ___ my favorite subject.",
+      "question_en": "Mathematics ___ my favorite subject.",
       "options_json": [
         "is",
         "are",
@@ -8225,6 +9209,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-8",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The scissors ___ on the table.",
+      "question_bn": "The scissors ___ on the table.",
+      "question_en": "The scissors ___ on the table.",
       "options_json": [
         "is",
         "are",
@@ -8238,6 +9224,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-9",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "There ___ many reasons for the delay.",
+      "question_bn": "There ___ many reasons for the delay.",
+      "question_en": "There ___ many reasons for the delay.",
       "options_json": [
         "is",
         "are",
@@ -8251,6 +9239,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-10",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "There ___ a book on the desk.",
+      "question_bn": "There ___ a book on the desk.",
+      "question_en": "There ___ a book on the desk.",
       "options_json": [
         "is",
         "are",
@@ -8264,6 +9254,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-11",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Everyone in the class ___ ready.",
+      "question_bn": "Everyone in the class ___ ready.",
+      "question_en": "Everyone in the class ___ ready.",
       "options_json": [
         "is",
         "are",
@@ -8277,6 +9269,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-12",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The list of items ___ on the desk.",
+      "question_bn": "The list of items ___ on the desk.",
+      "question_en": "The list of items ___ on the desk.",
       "options_json": [
         "is",
         "are",
@@ -8290,6 +9284,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-13",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Rice and curry ___ my lunch. (as a single unit)",
+      "question_bn": "Rice and curry ___ my lunch. (as a single unit)",
+      "question_en": "Rice and curry ___ my lunch. (as a single unit)",
       "options_json": [
         "is",
         "are",
@@ -8303,6 +9299,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-14",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Rahim and Karim ___ good friends.",
+      "question_bn": "Rahim and Karim ___ good friends.",
+      "question_en": "Rahim and Karim ___ good friends.",
       "options_json": [
         "is",
         "are",
@@ -8316,6 +9314,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-15",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Some of the water ___ dirty.",
+      "question_bn": "Some of the water ___ dirty.",
+      "question_en": "Some of the water ___ dirty.",
       "options_json": [
         "is",
         "are",
@@ -8329,6 +9329,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-16",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Some of the students ___ absent.",
+      "question_bn": "Some of the students ___ absent.",
+      "question_en": "Some of the students ___ absent.",
       "options_json": [
         "is",
         "are",
@@ -8342,6 +9344,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-17",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The committee ___ reached a decision. (one unit)",
+      "question_bn": "The committee ___ reached a decision. (one unit)",
+      "question_en": "The committee ___ reached a decision. (one unit)",
       "options_json": [
         "has",
         "have",
@@ -8355,6 +9359,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-18",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The committee ___ arguing among themselves. (members)",
+      "question_bn": "The committee ___ arguing among themselves. (members)",
+      "question_en": "The committee ___ arguing among themselves. (members)",
       "options_json": [
         "is",
         "are",
@@ -8368,6 +9374,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-19",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Either my brother or my parents ___ coming.",
+      "question_bn": "Either my brother or my parents ___ coming.",
+      "question_en": "Either my brother or my parents ___ coming.",
       "options_json": [
         "is",
         "are",
@@ -8381,6 +9389,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-20",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Neither of the answers ___ correct.",
+      "question_bn": "Neither of the answers ___ correct.",
+      "question_en": "Neither of the answers ___ correct.",
       "options_json": [
         "is",
         "are",
@@ -8394,6 +9404,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-21",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Every student ___ present today.",
+      "question_bn": "Every student ___ present today.",
+      "question_en": "Every student ___ present today.",
       "options_json": [
         "is",
         "are",
@@ -8407,6 +9419,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-22",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The news about the election ___ surprising.",
+      "question_bn": "The news about the election ___ surprising.",
+      "question_en": "The news about the election ___ surprising.",
       "options_json": [
         "is",
         "are",
@@ -8420,6 +9434,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-23",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Physics ___ difficult for me.",
+      "question_bn": "Physics ___ difficult for me.",
+      "question_en": "Physics ___ difficult for me.",
       "options_json": [
         "is",
         "are",
@@ -8433,6 +9449,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-24",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "My trousers ___ torn.",
+      "question_bn": "My trousers ___ torn.",
+      "question_en": "My trousers ___ torn.",
       "options_json": [
         "is",
         "are",
@@ -8446,6 +9464,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-25",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Either the principal or the teachers ___ responsible.",
+      "question_bn": "Either the principal or the teachers ___ responsible.",
+      "question_en": "Either the principal or the teachers ___ responsible.",
       "options_json": [
         "is",
         "are",
@@ -8459,6 +9479,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-26",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Neither the boys nor the girl ___ present.",
+      "question_bn": "Neither the boys nor the girl ___ present.",
+      "question_en": "Neither the boys nor the girl ___ present.",
       "options_json": [
         "is",
         "are",
@@ -8472,6 +9494,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-27",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The jury ___ divided in their opinions. (members)",
+      "question_bn": "The jury ___ divided in their opinions. (members)",
+      "question_en": "The jury ___ divided in their opinions. (members)",
       "options_json": [
         "is",
         "are",
@@ -8485,6 +9509,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-28",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "A lot of students ___ absent yesterday.",
+      "question_bn": "A lot of students ___ absent yesterday.",
+      "question_en": "A lot of students ___ absent yesterday.",
       "options_json": [
         "is",
         "are",
@@ -8498,6 +9524,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-29",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "A lot of time ___ wasted.",
+      "question_bn": "A lot of time ___ wasted.",
+      "question_en": "A lot of time ___ wasted.",
       "options_json": [
         "is",
         "are",
@@ -8511,6 +9539,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-30",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "None of the Bangladeshi students ___ ready.",
+      "question_bn": "None of the Bangladeshi students ___ ready.",
+      "question_en": "None of the Bangladeshi students ___ ready.",
       "options_json": [
         "is",
         "are",
@@ -8524,6 +9554,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-31",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "None of the water from Buriganga River ___ clean.",
+      "question_bn": "None of the water from Buriganga River ___ clean.",
+      "question_en": "None of the water from Buriganga River ___ clean.",
       "options_json": [
         "is",
         "are",
@@ -8537,6 +9569,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-32",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "There ___ three Bengali books and a pen on the table.",
+      "question_bn": "There ___ three Bengali books and a pen on the table.",
+      "question_en": "There ___ three Bengali books and a pen on the table.",
       "options_json": [
         "is",
         "are",
@@ -8550,6 +9584,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-33",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Here ___ the SSC exam results you were waiting for.",
+      "question_bn": "Here ___ the SSC exam results you were waiting for.",
+      "question_en": "Here ___ the SSC exam results you were waiting for.",
       "options_json": [
         "is",
         "are",
@@ -8563,6 +9599,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-34",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Rice and curry ___ my favorite Bangladeshi breakfast.",
+      "question_bn": "Rice and curry ___ my favorite Bangladeshi breakfast.",
+      "question_en": "Rice and curry ___ my favorite Bangladeshi breakfast.",
       "options_json": [
         "is",
         "are",
@@ -8576,6 +9614,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-35",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "My glasses ___ on the table.",
+      "question_bn": "My glasses ___ on the table.",
+      "question_en": "My glasses ___ on the table.",
       "options_json": [
         "is",
         "are",
@@ -8589,6 +9629,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-36",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The police ___ searching for the thief.",
+      "question_bn": "The police ___ searching for the thief.",
+      "question_en": "The police ___ searching for the thief.",
       "options_json": [
         "is",
         "are",
@@ -8602,6 +9644,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-37",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Each of the boys ___ given a prize.",
+      "question_bn": "Each of the boys ___ given a prize.",
+      "question_en": "Each of the boys ___ given a prize.",
       "options_json": [
         "is",
         "are",
@@ -8615,6 +9659,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-38",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Either of the answers ___ correct.",
+      "question_bn": "Either of the answers ___ correct.",
+      "question_en": "Either of the answers ___ correct.",
       "options_json": [
         "is",
         "are",
@@ -8628,6 +9674,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-39",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The family ___ going on vacation together. (one unit)",
+      "question_bn": "The family ___ going on vacation together. (one unit)",
+      "question_en": "The family ___ going on vacation together. (one unit)",
       "options_json": [
         "is",
         "are",
@@ -8641,6 +9689,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-40",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The family ___ fighting among themselves. (members)",
+      "question_bn": "The family ___ fighting among themselves. (members)",
+      "question_en": "The family ___ fighting among themselves. (members)",
       "options_json": [
         "is",
         "are",
@@ -8654,6 +9704,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-41",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Ten kilometers ___ a long distance to walk.",
+      "question_bn": "Ten kilometers ___ a long distance to walk.",
+      "question_en": "Ten kilometers ___ a long distance to walk.",
       "options_json": [
         "is",
         "are",
@@ -8667,6 +9719,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-42",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Five thousand taka ___ too much for this book.",
+      "question_bn": "Five thousand taka ___ too much for this book.",
+      "question_en": "Five thousand taka ___ too much for this book.",
       "options_json": [
         "is",
         "are",
@@ -8680,6 +9734,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-43",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "One of my friends ___ living abroad.",
+      "question_bn": "One of my friends ___ living abroad.",
+      "question_en": "One of my friends ___ living abroad.",
       "options_json": [
         "is",
         "are",
@@ -8693,6 +9749,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-44",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Many students ___ participated in the competition.",
+      "question_bn": "Many students ___ participated in the competition.",
+      "question_en": "Many students ___ participated in the competition.",
       "options_json": [
         "has",
         "have",
@@ -8706,6 +9764,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-45",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Several books ___ missing from the library.",
+      "question_bn": "Several books ___ missing from the library.",
+      "question_en": "Several books ___ missing from the library.",
       "options_json": [
         "is",
         "are",
@@ -8719,6 +9779,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-46",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The government ___ taking new measures. (one unit)",
+      "question_bn": "The government ___ taking new measures. (one unit)",
+      "question_en": "The government ___ taking new measures. (one unit)",
       "options_json": [
         "is",
         "are",
@@ -8732,6 +9794,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-47",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Neither Rahim nor his brothers ___ at home.",
+      "question_bn": "Neither Rahim nor his brothers ___ at home.",
+      "question_en": "Neither Rahim nor his brothers ___ at home.",
       "options_json": [
         "is",
         "are",
@@ -8745,6 +9809,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-48",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Either the books or the pen ___ on the desk.",
+      "question_bn": "Either the books or the pen ___ on the desk.",
+      "question_en": "Either the books or the pen ___ on the desk.",
       "options_json": [
         "is",
         "are",
@@ -8758,6 +9824,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-49",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "The staff ___ working hard. (members)",
+      "question_bn": "The staff ___ working hard. (members)",
+      "question_en": "The staff ___ working hard. (members)",
       "options_json": [
         "is",
         "are",
@@ -8771,6 +9839,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-8-subject-verb-agreement-tricky-subjects-50",
       "chapter_id": "grammar-class-9-10-8-subject-verb-agreement-tricky-subjects",
       "question_text": "Two-thirds of the students ___ passed.",
+      "question_bn": "Two-thirds of the students ___ passed.",
+      "question_en": "Two-thirds of the students ___ passed.",
       "options_json": [
         "has",
         "have",
@@ -8786,6 +9856,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-1",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform to negative: 'He is brave.'",
+      "question_bn": "Transform to negative: 'He is brave.'",
+      "question_en": "Transform to negative: 'He is brave.'",
       "options_json": [
         "He is not cowardly",
         "He is cowardly",
@@ -8799,6 +9871,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-2",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Convert 'The box is too heavy to carry' using 'so...that':",
+      "question_bn": "Convert 'The box is too heavy to carry' using 'so...that':",
+      "question_en": "Convert 'The box is too heavy to carry' using 'so...that':",
       "options_json": [
         "The box is so heavy that I can carry it",
         "The box is so heavy that I cannot carry it",
@@ -8812,6 +9886,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-3",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform to complex: 'After finishing homework, I played.'",
+      "question_bn": "Transform to complex: 'After finishing homework, I played.'",
+      "question_en": "Transform to complex: 'After finishing homework, I played.'",
       "options_json": [
         "After I finished homework, I played",
         "When I finished homework, I played",
@@ -8825,6 +9901,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-4",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform to compound: 'Realizing the danger, he ran away.'",
+      "question_bn": "Transform to compound: 'Realizing the danger, he ran away.'",
+      "question_en": "Transform to compound: 'Realizing the danger, he ran away.'",
       "options_json": [
         "He realized the danger, so he ran away",
         "He realized the danger and he ran away",
@@ -8838,6 +9916,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-5",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform to affirmative: 'No student failed the test.'",
+      "question_bn": "Transform to affirmative: 'No student failed the test.'",
+      "question_en": "Transform to affirmative: 'No student failed the test.'",
       "options_json": [
         "All students passed the test",
         "Some students passed the test",
@@ -8851,6 +9931,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-6",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Using 'whoever': 'Any child who obeys will be rewarded.'",
+      "question_bn": "Using 'whoever': 'Any child who obeys will be rewarded.'",
+      "question_en": "Using 'whoever': 'Any child who obeys will be rewarded.'",
       "options_json": [
         "Whoever obeys will be rewarded",
         "Any child obeys will be rewarded",
@@ -8864,6 +9946,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-7",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform: 'She is intelligent enough to understand.'",
+      "question_bn": "Transform: 'She is intelligent enough to understand.'",
+      "question_en": "Transform: 'She is intelligent enough to understand.'",
       "options_json": [
         "She is so intelligent that she cannot understand",
         "She is too intelligent to understand",
@@ -8877,6 +9961,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-8",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Convert to simple: 'Although it rained, I went out.'",
+      "question_bn": "Convert to simple: 'Although it rained, I went out.'",
+      "question_en": "Convert to simple: 'Although it rained, I went out.'",
       "options_json": [
         "Despite the rain, I went out",
         "I went out raining",
@@ -8890,6 +9976,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-9",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform to negative: 'Everyone attended the meeting.'",
+      "question_bn": "Transform to negative: 'Everyone attended the meeting.'",
+      "question_en": "Transform to negative: 'Everyone attended the meeting.'",
       "options_json": [
         "No one attended the meeting",
         "Someone attended the meeting",
@@ -8903,6 +9991,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-10",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform using 'so': 'The problem is too complex to solve.'",
+      "question_bn": "Transform using 'so': 'The problem is too complex to solve.'",
+      "question_en": "Transform using 'so': 'The problem is too complex to solve.'",
       "options_json": [
         "The problem is so complex that we cannot solve it",
         "The problem is so complex that we can solve it",
@@ -8916,6 +10006,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-11",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Convert to complex: 'He ran quickly to escape.'",
+      "question_bn": "Convert to complex: 'He ran quickly to escape.'",
+      "question_en": "Convert to complex: 'He ran quickly to escape.'",
       "options_json": [
         "He ran quickly so that he could escape",
         "He ran quickly and escaped",
@@ -8929,6 +10021,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-12",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform: 'Only the rich can afford this.'",
+      "question_bn": "Transform: 'Only the rich can afford this.'",
+      "question_en": "Transform: 'Only the rich can afford this.'",
       "options_json": [
         "The poor cannot afford this",
         "Only rich people afford this",
@@ -8942,6 +10036,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-13",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change to question: 'You will help me.'",
+      "question_bn": "Change to question: 'You will help me.'",
+      "question_en": "Change to question: 'You will help me.'",
       "options_json": [
         "Will you help me?",
         "You will help me?",
@@ -8955,6 +10051,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-14",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Turn into question: 'She can solve the puzzle.'",
+      "question_bn": "Turn into question: 'She can solve the puzzle.'",
+      "question_en": "Turn into question: 'She can solve the puzzle.'",
       "options_json": [
         "Can she solve the puzzle?",
         "Does she can solve the puzzle?",
@@ -8968,6 +10066,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-15",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Form a polite request: 'Bring the file.'",
+      "question_bn": "Form a polite request: 'Bring the file.'",
+      "question_en": "Form a polite request: 'Bring the file.'",
       "options_json": [
         "Could you bring the file?",
         "Bring the file please?",
@@ -8981,6 +10081,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-16",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Make the command softer: 'Open the window.'",
+      "question_bn": "Make the command softer: 'Open the window.'",
+      "question_en": "Make the command softer: 'Open the window.'",
       "options_json": [
         "Please open the window.",
         "Open the window please?",
@@ -8994,6 +10096,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-17",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Convert to exclamation: 'The food tastes amazing.'",
+      "question_bn": "Convert to exclamation: 'The food tastes amazing.'",
+      "question_en": "Convert to exclamation: 'The food tastes amazing.'",
       "options_json": [
         "What amazing food it is!",
         "Amazing is the food!",
@@ -9007,6 +10111,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-18",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Turn exclamation back: 'How tall he is!'.",
+      "question_bn": "Turn exclamation back: 'How tall he is!'.",
+      "question_en": "Turn exclamation back: 'How tall he is!'.",
       "options_json": [
         "He is very tall.",
         "He is tall how.",
@@ -9020,6 +10126,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-19",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change statement to question: 'They have finished homework.'",
+      "question_bn": "Change statement to question: 'They have finished homework.'",
+      "question_en": "Change statement to question: 'They have finished homework.'",
       "options_json": [
         "Have they finished homework?",
         "They have finished homework?",
@@ -9033,6 +10141,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-20",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request version of 'Send the report.'",
+      "question_bn": "Polite request version of 'Send the report.'",
+      "question_en": "Polite request version of 'Send the report.'",
       "options_json": [
         "Please send the report.",
         "Send the report, please?",
@@ -9046,6 +10156,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-21",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Create exclamation from 'The actors performed well.'",
+      "question_bn": "Create exclamation from 'The actors performed well.'",
+      "question_en": "Create exclamation from 'The actors performed well.'",
       "options_json": [
         "What great performances they gave!",
         "How well the actors performed!",
@@ -9059,6 +10171,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-22",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Question form of 'He should apologize.'",
+      "question_bn": "Question form of 'He should apologize.'",
+      "question_en": "Question form of 'He should apologize.'",
       "options_json": [
         "Should he apologize?",
         "He should apologize?",
@@ -9072,6 +10186,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-23",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Soft request for 'Give me the pen.'",
+      "question_bn": "Soft request for 'Give me the pen.'",
+      "question_en": "Soft request for 'Give me the pen.'",
       "options_json": [
         "Kindly give me the pen.",
         "Give me the pen please?",
@@ -9085,6 +10201,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-24",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamatory change of 'The sunset is gorgeous.'",
+      "question_bn": "Exclamatory change of 'The sunset is gorgeous.'",
+      "question_en": "Exclamatory change of 'The sunset is gorgeous.'",
       "options_json": [
         "What a gorgeous sunset it is!",
         "How is the gorgeous sunset!",
@@ -9098,6 +10216,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-25",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change statement to question: 'You heard the news.'",
+      "question_bn": "Change statement to question: 'You heard the news.'",
+      "question_en": "Change statement to question: 'You heard the news.'",
       "options_json": [
         "Did you hear the news?",
         "You heard the news?",
@@ -9111,6 +10231,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-26",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request for 'Bring tea.'",
+      "question_bn": "Polite request for 'Bring tea.'",
+      "question_en": "Polite request for 'Bring tea.'",
       "options_json": [
         "Could you bring tea?",
         "Bring tea now!",
@@ -9124,6 +10246,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-27",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamatory rewrite of 'She solved the problem quickly.'",
+      "question_bn": "Exclamatory rewrite of 'She solved the problem quickly.'",
+      "question_en": "Exclamatory rewrite of 'She solved the problem quickly.'",
       "options_json": [
         "What quick thinking she showed!",
         "How quickly she solved the problem!",
@@ -9137,6 +10261,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-28",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Turn statement into question: 'The train leaves soon.'",
+      "question_bn": "Turn statement into question: 'The train leaves soon.'",
+      "question_en": "Turn statement into question: 'The train leaves soon.'",
       "options_json": [
         "Does the train leave soon?",
         "The train leaves soon?",
@@ -9150,6 +10276,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-29",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request of 'Bring water.'",
+      "question_bn": "Polite request of 'Bring water.'",
+      "question_en": "Polite request of 'Bring water.'",
       "options_json": [
         "Please bring water.",
         "Bring water kindly?",
@@ -9163,6 +10291,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-30",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamation for 'The night is cold.'",
+      "question_bn": "Exclamation for 'The night is cold.'",
+      "question_en": "Exclamation for 'The night is cold.'",
       "options_json": [
         "How cold the night is!",
         "Such cold night!",
@@ -9176,6 +10306,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-31",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Question form: 'They have sent the parcel.'",
+      "question_bn": "Question form: 'They have sent the parcel.'",
+      "question_en": "Question form: 'They have sent the parcel.'",
       "options_json": [
         "Have they sent the parcel?",
         "They sent the parcel?",
@@ -9189,6 +10321,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-32",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request for 'Pass the salt.'",
+      "question_bn": "Polite request for 'Pass the salt.'",
+      "question_en": "Polite request for 'Pass the salt.'",
       "options_json": [
         "Would you pass the salt?",
         "Pass the salt please?",
@@ -9202,6 +10336,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-33",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Heightened exclamation for 'The crowd cheered loudly.'",
+      "question_bn": "Heightened exclamation for 'The crowd cheered loudly.'",
+      "question_en": "Heightened exclamation for 'The crowd cheered loudly.'",
       "options_json": [
         "How loudly the crowd cheered!",
         "Loudly cheered the crowd!",
@@ -9215,6 +10351,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-34",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change 'He will leave soon' to a question.",
+      "question_bn": "Change 'He will leave soon' to a question.",
+      "question_en": "Change 'He will leave soon' to a question.",
       "options_json": [
         "Will he leave soon?",
         "He will leave soon?",
@@ -9228,6 +10366,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-35",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Turn 'Close the gate' into a polite request.",
+      "question_bn": "Turn 'Close the gate' into a polite request.",
+      "question_en": "Turn 'Close the gate' into a polite request.",
       "options_json": [
         "Please close the gate.",
         "Close the gate please?",
@@ -9241,6 +10381,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-36",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclaim: 'The star shines bright.'",
+      "question_bn": "Exclaim: 'The star shines bright.'",
+      "question_en": "Exclaim: 'The star shines bright.'",
       "options_json": [
         "How bright the star shines!",
         "Star shines bright how!",
@@ -9254,6 +10396,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-37",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change 'She studies hard' to question.",
+      "question_bn": "Change 'She studies hard' to question.",
+      "question_en": "Change 'She studies hard' to question.",
       "options_json": [
         "Does she study hard?",
         "She studies hard?",
@@ -9267,6 +10411,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-38",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request for 'Bring her notes.'",
+      "question_bn": "Polite request for 'Bring her notes.'",
+      "question_en": "Polite request for 'Bring her notes.'",
       "options_json": [
         "Could you bring her notes?",
         "Bring her notes please?",
@@ -9280,6 +10426,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-39",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamation change of 'The view is calm.'",
+      "question_bn": "Exclamation change of 'The view is calm.'",
+      "question_en": "Exclamation change of 'The view is calm.'",
       "options_json": [
         "What a calm view it is!",
         "Calm view how it is!",
@@ -9293,6 +10441,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-40",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform 'They opened the shop.' into question.",
+      "question_bn": "Transform 'They opened the shop.' into question.",
+      "question_en": "Transform 'They opened the shop.' into question.",
       "options_json": [
         "Did they open the shop?",
         "They opened the shop?",
@@ -9306,6 +10456,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-41",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Make 'Light the candle.' a polite request.",
+      "question_bn": "Make 'Light the candle.' a polite request.",
+      "question_en": "Make 'Light the candle.' a polite request.",
       "options_json": [
         "Please light the candle.",
         "Light the candle please?",
@@ -9319,6 +10471,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-42",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamation from 'The students were attentive.'",
+      "question_bn": "Exclamation from 'The students were attentive.'",
+      "question_en": "Exclamation from 'The students were attentive.'",
       "options_json": [
         "How attentive the students were!",
         "Attentive they were!",
@@ -9332,6 +10486,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-43",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change 'She had finished dinner.' into question.",
+      "question_bn": "Change 'She had finished dinner.' into question.",
+      "question_en": "Change 'She had finished dinner.' into question.",
       "options_json": [
         "Had she finished dinner?",
         "She had finished dinner?",
@@ -9345,6 +10501,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-44",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request for 'Tell me the story.'",
+      "question_bn": "Polite request for 'Tell me the story.'",
+      "question_en": "Polite request for 'Tell me the story.'",
       "options_json": [
         "Could you tell me the story?",
         "Tell me the story please?",
@@ -9358,6 +10516,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-45",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Convert 'The party was joyful.' to exclamation.",
+      "question_bn": "Convert 'The party was joyful.' to exclamation.",
+      "question_en": "Convert 'The party was joyful.' to exclamation.",
       "options_json": [
         "What a joyful party it was!",
         "Joyful party the!",
@@ -9371,6 +10531,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-46",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Question form for 'He has paid the bill.'",
+      "question_bn": "Question form for 'He has paid the bill.'",
+      "question_en": "Question form for 'He has paid the bill.'",
       "options_json": [
         "Has he paid the bill?",
         "He has paid the bill?",
@@ -9384,6 +10546,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-47",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request version of 'Share your notes.'",
+      "question_bn": "Polite request version of 'Share your notes.'",
+      "question_en": "Polite request version of 'Share your notes.'",
       "options_json": [
         "Would you share your notes?",
         "Share notes please?",
@@ -9397,6 +10561,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-48",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Exclamation change of 'The breeze is gentle.'",
+      "question_bn": "Exclamation change of 'The breeze is gentle.'",
+      "question_en": "Exclamation change of 'The breeze is gentle.'",
       "options_json": [
         "What a gentle breeze it is!",
         "Gentle breeze the is!",
@@ -9410,6 +10576,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-49",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Change 'They complete the course.' into question.",
+      "question_bn": "Change 'They complete the course.' into question.",
+      "question_en": "Change 'They complete the course.' into question.",
       "options_json": [
         "Do they complete the course?",
         "They complete the course?",
@@ -9423,6 +10591,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-50",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Polite request for 'Close your books.'",
+      "question_bn": "Polite request for 'Close your books.'",
+      "question_en": "Polite request for 'Close your books.'",
       "options_json": [
         "Could you close your books?",
         "Close your books please?",
@@ -9436,6 +10606,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-9-transformation-of-sentences-51",
       "chapter_id": "grammar-class-9-10-9-transformation-of-sentences",
       "question_text": "Transform 'The stars shine bright.' into exclamation.",
+      "question_bn": "Transform 'The stars shine bright.' into exclamation.",
+      "question_en": "Transform 'The stars shine bright.' into exclamation.",
       "options_json": [
         "How brightly the stars shine!",
         "Stars shine bright how!",
@@ -9451,6 +10623,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-1",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'The gardener planted flowers.'",
+      "question_bn": "Convert to passive: 'The gardener planted flowers.'",
+      "question_en": "Convert to passive: 'The gardener planted flowers.'",
       "options_json": [
         "Flowers were planted by the gardener",
         "Flowers are planted by the gardener",
@@ -9464,6 +10638,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-2",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'She writes poetry.'",
+      "question_bn": "Convert to passive: 'She writes poetry.'",
+      "question_en": "Convert to passive: 'She writes poetry.'",
       "options_json": [
         "Poetry is written by her",
         "Poetry was written by her",
@@ -9477,6 +10653,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-3",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'The team will win the match.'",
+      "question_bn": "Convert to passive: 'The team will win the match.'",
+      "question_en": "Convert to passive: 'The team will win the match.'",
       "options_json": [
         "The match will be won by the team",
         "The match has been won",
@@ -9490,6 +10668,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-4",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to active: 'The cake was baked by my mother.'",
+      "question_bn": "Convert to active: 'The cake was baked by my mother.'",
+      "question_en": "Convert to active: 'The cake was baked by my mother.'",
       "options_json": [
         "My mother baked the cake",
         "My mother is baking the cake",
@@ -9503,6 +10683,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-5",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'He has completed the project.'",
+      "question_bn": "Convert to passive: 'He has completed the project.'",
+      "question_en": "Convert to passive: 'He has completed the project.'",
       "options_json": [
         "The project has been completed by him",
         "The project was completed by him",
@@ -9516,6 +10698,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-6",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Which is in passive voice?",
+      "question_bn": "Which is in passive voice?",
+      "question_en": "Which is in passive voice?",
       "options_json": [
         "He solved the problem",
         "The problem was solved by him",
@@ -9529,6 +10713,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-7",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'They bought a new house.'",
+      "question_bn": "Convert to passive: 'They bought a new house.'",
+      "question_en": "Convert to passive: 'They bought a new house.'",
       "options_json": [
         "A new house was bought by them",
         "A new house is bought by them",
@@ -9542,6 +10728,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-8",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to active: 'The book is written by her.'",
+      "question_bn": "Convert to active: 'The book is written by her.'",
+      "question_en": "Convert to active: 'The book is written by her.'",
       "options_json": [
         "She writes the book",
         "She is writing the book",
@@ -9555,6 +10743,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-9",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Why use passive voice: 'The accident was reported.'?",
+      "question_bn": "Why use passive voice: 'The accident was reported.'?",
+      "question_en": "Why use passive voice: 'The accident was reported.'?",
       "options_json": [
         "Agent is unknown",
         "Focus on who did it",
@@ -9568,6 +10758,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-10",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'Scientists conducted the experiment.'",
+      "question_bn": "Convert to passive: 'Scientists conducted the experiment.'",
+      "question_en": "Convert to passive: 'Scientists conducted the experiment.'",
       "options_json": [
         "The experiment was conducted by scientists",
         "The experiment is conducted by scientists",
@@ -9581,6 +10773,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-11",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Which sentence is in active voice?",
+      "question_bn": "Which sentence is in active voice?",
+      "question_en": "Which sentence is in active voice?",
       "options_json": [
         "The prize was awarded by the principal",
         "The principal awarded the prize",
@@ -9594,6 +10788,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-12",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'They will organize the event.'",
+      "question_bn": "Convert to passive: 'They will organize the event.'",
+      "question_en": "Convert to passive: 'They will organize the event.'",
       "options_json": [
         "The event will be organized by them",
         "The event has been organized",
@@ -9607,6 +10803,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-13",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'The chef prepares dinner.'",
+      "question_bn": "Convert to passive: 'The chef prepares dinner.'",
+      "question_en": "Convert to passive: 'The chef prepares dinner.'",
       "options_json": [
         "Dinner is prepared by the chef",
         "The chef is preparing dinner",
@@ -9620,6 +10818,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-14",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to active: 'The novel was written by her.'",
+      "question_bn": "Convert to active: 'The novel was written by her.'",
+      "question_en": "Convert to active: 'The novel was written by her.'",
       "options_json": [
         "She writes the novel",
         "She wrote the novel",
@@ -9633,6 +10833,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-15",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose the best passive voice: 'They send newsletters every week.'",
+      "question_bn": "Choose the best passive voice: 'They send newsletters every week.'",
+      "question_en": "Choose the best passive voice: 'They send newsletters every week.'",
       "options_json": [
         "Newsletters are sent every week",
         "Newsletters have sent every week",
@@ -9646,6 +10848,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-16",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive with modal: 'You must obey the rules.'",
+      "question_bn": "Passive with modal: 'You must obey the rules.'",
+      "question_en": "Passive with modal: 'You must obey the rules.'",
       "options_json": [
         "The rules must be obeyed",
         "The rules must obeyed",
@@ -9659,6 +10863,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-17",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive perfect: 'She has finished the report.'",
+      "question_bn": "Passive perfect: 'She has finished the report.'",
+      "question_en": "Passive perfect: 'She has finished the report.'",
       "options_json": [
         "The report has been finished by her",
         "The report has been finishing by her",
@@ -9672,6 +10878,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-18",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Agent optional: Choose sentence with agent omitted.",
+      "question_bn": "Agent optional: Choose sentence with agent omitted.",
+      "question_en": "Agent optional: Choose sentence with agent omitted.",
       "options_json": [
         "The painting was admired",
         "The painting was admired by her",
@@ -9685,6 +10893,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-19",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'Someone stole my phone.'",
+      "question_bn": "Convert to passive: 'Someone stole my phone.'",
+      "question_en": "Convert to passive: 'Someone stole my phone.'",
       "options_json": [
         "My phone was stolen",
         "My phone stolen",
@@ -9698,6 +10908,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-20",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive modal: 'They can finish the work.'",
+      "question_bn": "Passive modal: 'They can finish the work.'",
+      "question_en": "Passive modal: 'They can finish the work.'",
       "options_json": [
         "The work can be finished by them",
         "The work can finishing by them",
@@ -9711,6 +10923,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-21",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose the active voice counterpart: 'The song was sung by the choir.'",
+      "question_bn": "Choose the active voice counterpart: 'The song was sung by the choir.'",
+      "question_en": "Choose the active voice counterpart: 'The song was sung by the choir.'",
       "options_json": [
         "The choir sings the song",
         "The choir sang the song",
@@ -9724,6 +10938,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-22",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive tense shift: 'He had written the letter.'",
+      "question_bn": "Passive tense shift: 'He had written the letter.'",
+      "question_en": "Passive tense shift: 'He had written the letter.'",
       "options_json": [
         "The letter had been written by him",
         "The letter has been written by him",
@@ -9737,6 +10953,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-23",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose the sentence that is passive voice.",
+      "question_bn": "Choose the sentence that is passive voice.",
+      "question_en": "Choose the sentence that is passive voice.",
       "options_json": [
         "The committee approved the plan",
         "The plan was approved by the committee",
@@ -9750,6 +10968,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-24",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'They will release the movie soon.'",
+      "question_bn": "Convert to passive: 'They will release the movie soon.'",
+      "question_en": "Convert to passive: 'They will release the movie soon.'",
       "options_json": [
         "The movie will be released soon",
         "The movie releases soon",
@@ -9763,6 +10983,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-25",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive with perfect aspect: 'He has solved the puzzle.'",
+      "question_bn": "Passive with perfect aspect: 'He has solved the puzzle.'",
+      "question_en": "Passive with perfect aspect: 'He has solved the puzzle.'",
       "options_json": [
         "The puzzle has been solved by him",
         "The puzzle has solved by him",
@@ -9776,6 +10998,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-26",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Which sentence keeps agent and uses passive?",
+      "question_bn": "Which sentence keeps agent and uses passive?",
+      "question_en": "Which sentence keeps agent and uses passive?",
       "options_json": [
         "The song is listened to by many",
         "Many listen to the song",
@@ -9789,6 +11013,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-27",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'Rain drenched the field.'",
+      "question_bn": "Convert to passive: 'Rain drenched the field.'",
+      "question_en": "Convert to passive: 'Rain drenched the field.'",
       "options_json": [
         "The field was drenched by rain",
         "The field is drenched by rain",
@@ -9802,6 +11028,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-28",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Active voice version of: 'The homework was done by the students.'",
+      "question_bn": "Active voice version of: 'The homework was done by the students.'",
+      "question_en": "Active voice version of: 'The homework was done by the students.'",
       "options_json": [
         "The students did the homework",
         "The students do the homework",
@@ -9815,6 +11043,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-29",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive: 'People admire her ideas.'",
+      "question_bn": "Passive: 'People admire her ideas.'",
+      "question_en": "Passive: 'People admire her ideas.'",
       "options_json": [
         "Her ideas are admired",
         "Her ideas is admired",
@@ -9828,6 +11058,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-30",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive modal: 'You should complete the form.'",
+      "question_bn": "Passive modal: 'You should complete the form.'",
+      "question_en": "Passive modal: 'You should complete the form.'",
       "options_json": [
         "The form should be completed",
         "The form should be complete",
@@ -9841,6 +11073,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-31",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose correct passive with future: 'They will announce the result.'",
+      "question_bn": "Choose correct passive with future: 'They will announce the result.'",
+      "question_en": "Choose correct passive with future: 'They will announce the result.'",
       "options_json": [
         "The result will be announced",
         "The result will announce",
@@ -9854,6 +11088,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-32",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'Someone had planted the tree.'",
+      "question_bn": "Convert to passive: 'Someone had planted the tree.'",
+      "question_en": "Convert to passive: 'Someone had planted the tree.'",
       "options_json": [
         "The tree had been planted",
         "The tree has been planted",
@@ -9867,6 +11103,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-33",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Which sentence is active voice?",
+      "question_bn": "Which sentence is active voice?",
+      "question_en": "Which sentence is active voice?",
       "options_json": [
         "The speech was delivered by the president",
         "The president delivered the speech",
@@ -9880,6 +11118,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-34",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive perfect with modal: 'They might have completed the task.'",
+      "question_bn": "Passive perfect with modal: 'They might have completed the task.'",
+      "question_en": "Passive perfect with modal: 'They might have completed the task.'",
       "options_json": [
         "The task might have been completed",
         "The task might have completed",
@@ -9893,6 +11133,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-35",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Select passive that omits agent: 'He taught the lesson.'",
+      "question_bn": "Select passive that omits agent: 'He taught the lesson.'",
+      "question_en": "Select passive that omits agent: 'He taught the lesson.'",
       "options_json": [
         "The lesson was taught",
         "Was taught the lesson",
@@ -9906,6 +11148,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-36",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'Engineers design the bridge.'",
+      "question_bn": "Convert to passive: 'Engineers design the bridge.'",
+      "question_en": "Convert to passive: 'Engineers design the bridge.'",
       "options_json": [
         "The bridge is designed by engineers",
         "Engineers designs the bridge",
@@ -9919,6 +11163,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-37",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive with 'by' required: 'The jury awarded the prize.'",
+      "question_bn": "Passive with 'by' required: 'The jury awarded the prize.'",
+      "question_en": "Passive with 'by' required: 'The jury awarded the prize.'",
       "options_json": [
         "The prize was awarded by the jury",
         "The prize awarded the jury",
@@ -9932,6 +11178,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-38",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Modal passive: 'They may cancel the match.'",
+      "question_bn": "Modal passive: 'They may cancel the match.'",
+      "question_en": "Modal passive: 'They may cancel the match.'",
       "options_json": [
         "The match may be canceled",
         "The match may canceled",
@@ -9945,6 +11193,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-39",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose the passive that keeps time expression: 'The police closed the road yesterday.'",
+      "question_bn": "Choose the passive that keeps time expression: 'The police closed the road yesterday.'",
+      "question_en": "Choose the passive that keeps time expression: 'The police closed the road yesterday.'",
       "options_json": [
         "The road was closed yesterday",
         "Yesterday the road is closed",
@@ -9958,6 +11208,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-40",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'They award scholarships every year.'",
+      "question_bn": "Convert to passive: 'They award scholarships every year.'",
+      "question_en": "Convert to passive: 'They award scholarships every year.'",
       "options_json": [
         "Scholarships are awarded every year",
         "Scholarships awarded every year",
@@ -9971,6 +11223,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-41",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Active voice of: 'The song was recorded by the band.'",
+      "question_bn": "Active voice of: 'The song was recorded by the band.'",
+      "question_en": "Active voice of: 'The song was recorded by the band.'",
       "options_json": [
         "The band recorded the song",
         "The band records the song",
@@ -9984,6 +11238,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-42",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive description: 'These notes explain the theory.'",
+      "question_bn": "Passive description: 'These notes explain the theory.'",
+      "question_en": "Passive description: 'These notes explain the theory.'",
       "options_json": [
         "The theory is explained by these notes",
         "The theory explained these notes",
@@ -9997,6 +11253,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-43",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Modal passive: 'He should complete the assignment.'",
+      "question_bn": "Modal passive: 'He should complete the assignment.'",
+      "question_en": "Modal passive: 'He should complete the assignment.'",
       "options_json": [
         "The assignment should be completed",
         "The assignment should complete",
@@ -10010,6 +11268,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-44",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Choose correct passive for present perfect: 'She has sent the mail.'",
+      "question_bn": "Choose correct passive for present perfect: 'She has sent the mail.'",
+      "question_en": "Choose correct passive for present perfect: 'She has sent the mail.'",
       "options_json": [
         "The mail has been sent",
         "The mail has sent",
@@ -10023,6 +11283,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-45",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to active: 'A mistake was made.'",
+      "question_bn": "Convert to active: 'A mistake was made.'",
+      "question_en": "Convert to active: 'A mistake was made.'",
       "options_json": [
         "Someone made a mistake",
         "A mistake make someone",
@@ -10036,6 +11298,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-46",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Passive advanced: 'The medication must be taken twice.'",
+      "question_bn": "Passive advanced: 'The medication must be taken twice.'",
+      "question_en": "Passive advanced: 'The medication must be taken twice.'",
       "options_json": [
         "The medication must be taken twice",
         "Must be taken the medication twice",
@@ -10049,6 +11313,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-47",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Identify sentence that keeps performer in passive: 'The new policy was introduced by the minister.'",
+      "question_bn": "Identify sentence that keeps performer in passive: 'The new policy was introduced by the minister.'",
+      "question_en": "Identify sentence that keeps performer in passive: 'The new policy was introduced by the minister.'",
       "options_json": [
         "The new policy was introduced by the minister",
         "The new policy is introduced by the minister",
@@ -10062,6 +11328,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-10-voice-active-and-passive-48",
       "chapter_id": "grammar-class-9-10-10-voice-active-and-passive",
       "question_text": "Convert to passive: 'They have redesigned the website.'",
+      "question_bn": "Convert to passive: 'They have redesigned the website.'",
+      "question_en": "Convert to passive: 'They have redesigned the website.'",
       "options_json": [
         "The website has been redesigned",
         "The website has redesigned",
@@ -10077,6 +11345,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-1",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'He said, \"I like ice cream.\"'",
+      "question_bn": "Convert to indirect: 'He said, \"I like ice cream.\"'",
+      "question_en": "Convert to indirect: 'He said, \"I like ice cream.\"'",
       "options_json": [
         "He said he likes ice cream",
         "He said he liked ice cream",
@@ -10090,6 +11360,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-2",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'She asked, \"What is your name?\"'",
+      "question_bn": "Convert to indirect: 'She asked, \"What is your name?\"'",
+      "question_en": "Convert to indirect: 'She asked, \"What is your name?\"'",
       "options_json": [
         "She asked what my name is",
         "She asked what my name was",
@@ -10103,6 +11375,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-3",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'He said, \"I will come tomorrow.\"'",
+      "question_bn": "Convert to indirect: 'He said, \"I will come tomorrow.\"'",
+      "question_en": "Convert to indirect: 'He said, \"I will come tomorrow.\"'",
       "options_json": [
         "He said he will come tomorrow",
         "He said he would come tomorrow",
@@ -10116,6 +11390,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-4",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'She said, \"Study hard.\"'",
+      "question_bn": "Convert to indirect: 'She said, \"Study hard.\"'",
+      "question_en": "Convert to indirect: 'She said, \"Study hard.\"'",
       "options_json": [
         "She said to study hard",
         "She asked me to study hard",
@@ -10129,6 +11405,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-5",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'He asked, \"Do you like sports?\"'",
+      "question_bn": "Convert to indirect: 'He asked, \"Do you like sports?\"'",
+      "question_en": "Convert to indirect: 'He asked, \"Do you like sports?\"'",
       "options_json": [
         "He asked if I like sports",
         "He asked if I liked sports",
@@ -10142,6 +11420,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-6",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Identify the narration type: 'He said, \"I am leaving.\"'",
+      "question_bn": "Identify the narration type: 'He said, \"I am leaving.\"'",
+      "question_en": "Identify the narration type: 'He said, \"I am leaving.\"'",
       "options_json": [
         "Direct narration",
         "Indirect narration",
@@ -10155,6 +11435,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-7",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'She said, \"Don't eat junk food.\"'",
+      "question_bn": "Convert to indirect: 'She said, \"Don't eat junk food.\"'",
+      "question_en": "Convert to indirect: 'She said, \"Don't eat junk food.\"'",
       "options_json": [
         "She said not to eat junk food",
         "She warned me not to eat junk food",
@@ -10168,6 +11450,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-8",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'He said, \"I have completed the project.\"'",
+      "question_bn": "Convert to indirect: 'He said, \"I have completed the project.\"'",
+      "question_en": "Convert to indirect: 'He said, \"I have completed the project.\"'",
       "options_json": [
         "He said he has completed the project",
         "He said he had completed the project",
@@ -10181,6 +11465,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-9",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to direct: 'She asked if I could help her.'",
+      "question_bn": "Convert to direct: 'She asked if I could help her.'",
+      "question_en": "Convert to direct: 'She asked if I could help her.'",
       "options_json": [
         "She said, \"Can you help me?\"",
         "She asked, \"Can you help me?\"",
@@ -10194,6 +11480,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-10",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'He said, \"I was very angry.\"'",
+      "question_bn": "Convert to indirect: 'He said, \"I was very angry.\"'",
+      "question_en": "Convert to indirect: 'He said, \"I was very angry.\"'",
       "options_json": [
         "He said he was very angry",
         "He said he had been very angry",
@@ -10207,6 +11495,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-11",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Which is indirect narration?",
+      "question_bn": "Which is indirect narration?",
+      "question_en": "Which is indirect narration?",
       "options_json": [
         "She said, \"I am happy.\"",
         "She said that she was happy",
@@ -10220,6 +11510,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-11-narration-direct-and-indirect-12",
       "chapter_id": "grammar-class-9-10-11-narration-direct-and-indirect",
       "question_text": "Convert to indirect: 'She asked, \"Will you attend the party?\"'",
+      "question_bn": "Convert to indirect: 'She asked, \"Will you attend the party?\"'",
+      "question_en": "Convert to indirect: 'She asked, \"Will you attend the party?\"'",
       "options_json": [
         "She asked if I will attend the party",
         "She asked if I would attend the party",
@@ -10235,6 +11527,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-1",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with coordinating conjunction: 'I wanted to go. I was tired.'",
+      "question_bn": "Combine with coordinating conjunction: 'I wanted to go. I was tired.'",
+      "question_en": "Combine with coordinating conjunction: 'I wanted to go. I was tired.'",
       "options_json": [
         "I wanted to go and I was tired",
         "I wanted to go but I was tired",
@@ -10248,6 +11542,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-2",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with subordinating conjunction: 'You work hard. You will pass.'",
+      "question_bn": "Combine with subordinating conjunction: 'You work hard. You will pass.'",
+      "question_en": "Combine with subordinating conjunction: 'You work hard. You will pass.'",
       "options_json": [
         "If you work hard, you will pass",
         "You work hard and you will pass",
@@ -10261,6 +11557,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-3",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with relative pronoun: 'The girl is intelligent. She won the prize.'",
+      "question_bn": "Combine with relative pronoun: 'The girl is intelligent. She won the prize.'",
+      "question_en": "Combine with relative pronoun: 'The girl is intelligent. She won the prize.'",
       "options_json": [
         "The girl who is intelligent won the prize",
         "The girl, who is intelligent, won the prize",
@@ -10274,6 +11572,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-4",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with participle: 'He completed his homework. He went to play.'",
+      "question_bn": "Combine with participle: 'He completed his homework. He went to play.'",
+      "question_en": "Combine with participle: 'He completed his homework. He went to play.'",
       "options_json": [
         "He completed his homework and went to play",
         "Having completed his homework, he went to play",
@@ -10287,6 +11587,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-5",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'She is poor. She is happy.'",
+      "question_bn": "Combine: 'She is poor. She is happy.'",
+      "question_en": "Combine: 'She is poor. She is happy.'",
       "options_json": [
         "She is poor and happy",
         "Although she is poor, she is happy",
@@ -10300,6 +11602,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-6",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'because': 'He failed. He didn't study.'",
+      "question_bn": "Combine with 'because': 'He failed. He didn't study.'",
+      "question_en": "Combine with 'because': 'He failed. He didn't study.'",
       "options_json": [
         "He failed because he didn't study",
         "He failed and he didn't study",
@@ -10313,6 +11617,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-7",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'This is the school. I studied there.'",
+      "question_bn": "Combine: 'This is the school. I studied there.'",
+      "question_en": "Combine: 'This is the school. I studied there.'",
       "options_json": [
         "This is the school which I studied",
         "This is the school that I studied in",
@@ -10326,6 +11632,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-8",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'if': 'You come. I will help you.'",
+      "question_bn": "Combine with 'if': 'You come. I will help you.'",
+      "question_en": "Combine with 'if': 'You come. I will help you.'",
       "options_json": [
         "If you come, I will help you",
         "You come and I will help you",
@@ -10339,6 +11647,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-9",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'He was tired. He continued working.'",
+      "question_bn": "Combine: 'He was tired. He continued working.'",
+      "question_en": "Combine: 'He was tired. He continued working.'",
       "options_json": [
         "He was tired and continued working",
         "Although he was tired, he continued working",
@@ -10352,6 +11662,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-10",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'The boy ran fast. He wanted to escape.'",
+      "question_bn": "Combine: 'The boy ran fast. He wanted to escape.'",
+      "question_en": "Combine: 'The boy ran fast. He wanted to escape.'",
       "options_json": [
         "The boy ran fast and wanted to escape",
         "The boy ran fast because he wanted to escape",
@@ -10365,6 +11677,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-11",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'The weather is nice. Let's go out.'",
+      "question_bn": "Combine: 'The weather is nice. Let's go out.'",
+      "question_en": "Combine: 'The weather is nice. Let's go out.'",
       "options_json": [
         "The weather is nice, so let's go out",
         "The weather is nice and let's go out",
@@ -10378,6 +11692,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-12",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine: 'The man worked hard. He achieved success.'",
+      "question_bn": "Combine: 'The man worked hard. He achieved success.'",
+      "question_en": "Combine: 'The man worked hard. He achieved success.'",
       "options_json": [
         "The man worked hard and achieved success",
         "Working hard, the man achieved success",
@@ -10391,6 +11707,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-13",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'and': 'He collects coins. He writes stories.'",
+      "question_bn": "Combine with 'and': 'He collects coins. He writes stories.'",
+      "question_en": "Combine with 'and': 'He collects coins. He writes stories.'",
       "options_json": [
         "He collects coins and writes stories.",
         "He collects coins, and writes stories.",
@@ -10404,6 +11722,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-14",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'but': 'Mira wanted to attend. She was working.'",
+      "question_bn": "Combine with 'but': 'Mira wanted to attend. She was working.'",
+      "question_en": "Combine with 'but': 'Mira wanted to attend. She was working.'",
       "options_json": [
         "Mira wanted to attend but she was working.",
         "Mira wanted to attend, but she was working.",
@@ -10417,6 +11737,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-15",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'so': 'It started to rain. We canceled the picnic.'",
+      "question_bn": "Combine with 'so': 'It started to rain. We canceled the picnic.'",
+      "question_en": "Combine with 'so': 'It started to rain. We canceled the picnic.'",
       "options_json": [
         "It started to rain so we canceled the picnic.",
         "It started to rain; we canceled the picnic.",
@@ -10430,6 +11752,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-16",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'yet': 'The cake looked good. She did not taste it.'",
+      "question_bn": "Combine with 'yet': 'The cake looked good. She did not taste it.'",
+      "question_en": "Combine with 'yet': 'The cake looked good. She did not taste it.'",
       "options_json": [
         "The cake looked good yet she did not taste it.",
         "The cake looked good, yet she did not taste it.",
@@ -10443,6 +11767,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-17",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'nor': 'He doesn't own a car. He doesn't ride a bike.'",
+      "question_bn": "Combine with 'nor': 'He doesn't own a car. He doesn't ride a bike.'",
+      "question_en": "Combine with 'nor': 'He doesn't own a car. He doesn't ride a bike.'",
       "options_json": [
         "He neither owns a car nor rides a bike.",
         "He doesn't own a car nor ride a bike.",
@@ -10456,6 +11782,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-18",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'or': 'You can help now. You can go later.'",
+      "question_bn": "Combine with 'or': 'You can help now. You can go later.'",
+      "question_en": "Combine with 'or': 'You can help now. You can go later.'",
       "options_json": [
         "You can help now or go later.",
         "You can help now, or go later.",
@@ -10469,6 +11797,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-19",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'because': 'They left late. They missed the bus.'",
+      "question_bn": "Combine with 'because': 'They left late. They missed the bus.'",
+      "question_en": "Combine with 'because': 'They left late. They missed the bus.'",
       "options_json": [
         "They left late because they missed the bus.",
         "Because they left late, they missed the bus.",
@@ -10482,6 +11812,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-20",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'although': 'The movie was long. People enjoyed it.'",
+      "question_bn": "Combine with 'although': 'The movie was long. People enjoyed it.'",
+      "question_en": "Combine with 'although': 'The movie was long. People enjoyed it.'",
       "options_json": [
         "Although the movie was long, people enjoyed it.",
         "People enjoyed it although the movie was long.",
@@ -10495,6 +11827,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-21",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'if': 'You study daily. You will progress.'",
+      "question_bn": "Combine with 'if': 'You study daily. You will progress.'",
+      "question_en": "Combine with 'if': 'You study daily. You will progress.'",
       "options_json": [
         "If you study daily, you will progress.",
         "You study daily if you will progress.",
@@ -10508,6 +11842,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-22",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'when': 'The alarm rang. The students woke up.'",
+      "question_bn": "Combine with 'when': 'The alarm rang. The students woke up.'",
+      "question_en": "Combine with 'when': 'The alarm rang. The students woke up.'",
       "options_json": [
         "When the alarm rang, the students woke up.",
         "The students woke up when the alarm ranged.",
@@ -10521,6 +11857,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-23",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'after': 'He typed the report. He emailed his boss.'",
+      "question_bn": "Combine with 'after': 'He typed the report. He emailed his boss.'",
+      "question_en": "Combine with 'after': 'He typed the report. He emailed his boss.'",
       "options_json": [
         "After he typed the report, he emailed his boss.",
         "He typed the report, and he emailed his boss.",
@@ -10534,6 +11872,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-24",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'before': 'We lit candles. The concert began.'",
+      "question_bn": "Combine with 'before': 'We lit candles. The concert began.'",
+      "question_en": "Combine with 'before': 'We lit candles. The concert began.'",
       "options_json": [
         "Before the concert began, we lit candles.",
         "We lit candles before the concert began.",
@@ -10547,6 +11887,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-25",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'while': 'I cooked dinner. My brother set the table.'",
+      "question_bn": "Combine with 'while': 'I cooked dinner. My brother set the table.'",
+      "question_en": "Combine with 'while': 'I cooked dinner. My brother set the table.'",
       "options_json": [
         "While I cooked dinner, my brother set the table.",
         "I cooked dinner and my brother set the table.",
@@ -10560,6 +11902,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-26",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'unless': 'You apologize. I will stay away.'",
+      "question_bn": "Combine with 'unless': 'You apologize. I will stay away.'",
+      "question_en": "Combine with 'unless': 'You apologize. I will stay away.'",
       "options_json": [
         "Unless you apologize, I will stay away.",
         "You apologize unless I will stay away.",
@@ -10573,6 +11917,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-27",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'since': 'She has practiced daily. She sings confidently.'",
+      "question_bn": "Combine with 'since': 'She has practiced daily. She sings confidently.'",
+      "question_en": "Combine with 'since': 'She has practiced daily. She sings confidently.'",
       "options_json": [
         "Since she has practiced daily, she sings confidently.",
         "She sings confidently because she practices daily.",
@@ -10586,6 +11932,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-28",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'who': 'The actor performed well. The actor returned the award.'",
+      "question_bn": "Combine with 'who': 'The actor performed well. The actor returned the award.'",
+      "question_en": "Combine with 'who': 'The actor performed well. The actor returned the award.'",
       "options_json": [
         "The actor who performed well returned the award.",
         "The actor performed well who returned the award.",
@@ -10599,6 +11947,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-29",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'which': 'The antique vase broke. The vase was priceless.'",
+      "question_bn": "Combine with 'which': 'The antique vase broke. The vase was priceless.'",
+      "question_en": "Combine with 'which': 'The antique vase broke. The vase was priceless.'",
       "options_json": [
         "The antique vase which was priceless broke.",
         "The antique vase broke which was priceless.",
@@ -10612,6 +11962,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-30",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'whose': 'The poet wrote the verses. The poet's voice inspired many.'",
+      "question_bn": "Combine with 'whose': 'The poet wrote the verses. The poet's voice inspired many.'",
+      "question_en": "Combine with 'whose': 'The poet wrote the verses. The poet's voice inspired many.'",
       "options_json": [
         "The poet whose voice inspired many wrote the verses.",
         "Whose voice inspired many, the poet wrote the verses.",
@@ -10625,6 +11977,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-31",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a participial phrase: 'She finished the assignment. She took a nap.'",
+      "question_bn": "Combine with a participial phrase: 'She finished the assignment. She took a nap.'",
+      "question_en": "Combine with a participial phrase: 'She finished the assignment. She took a nap.'",
       "options_json": [
         "Having finished the assignment, she took a nap.",
         "She took a nap, having finished the assignment.",
@@ -10638,6 +11992,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-32",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a participial phrase: 'The puppy chased the ball. The puppy wagged its tail.'",
+      "question_bn": "Combine with a participial phrase: 'The puppy chased the ball. The puppy wagged its tail.'",
+      "question_en": "Combine with a participial phrase: 'The puppy chased the ball. The puppy wagged its tail.'",
       "options_json": [
         "Chasing the ball, the puppy wagged its tail.",
         "The puppy wagged its tail, chasing the ball.",
@@ -10651,6 +12007,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-33",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a participial phrase: 'He noticed the clouds. He grabbed the umbrella.'",
+      "question_bn": "Combine with a participial phrase: 'He noticed the clouds. He grabbed the umbrella.'",
+      "question_en": "Combine with a participial phrase: 'He noticed the clouds. He grabbed the umbrella.'",
       "options_json": [
         "Noticing the clouds, he grabbed the umbrella.",
         "He grabbed the umbrella noticing the clouds.",
@@ -10664,6 +12022,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-34",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a prepositional phrase: 'The children returned. It was bedtime.'",
+      "question_bn": "Combine with a prepositional phrase: 'The children returned. It was bedtime.'",
+      "question_en": "Combine with a prepositional phrase: 'The children returned. It was bedtime.'",
       "options_json": [
         "The children returned at bedtime.",
         "The children returned because it was bedtime.",
@@ -10677,6 +12037,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-35",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a prepositional phrase: 'He sat. It was the front row.'",
+      "question_bn": "Combine with a prepositional phrase: 'He sat. It was the front row.'",
+      "question_en": "Combine with a prepositional phrase: 'He sat. It was the front row.'",
       "options_json": [
         "He sat in the front row.",
         "He sat the front row.",
@@ -10690,6 +12052,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-36",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'so that': 'She saved money. She wanted to buy a bike.'",
+      "question_bn": "Combine with 'so that': 'She saved money. She wanted to buy a bike.'",
+      "question_en": "Combine with 'so that': 'She saved money. She wanted to buy a bike.'",
       "options_json": [
         "She saved money so that she could buy a bike.",
         "She saved money because she could buy a bike.",
@@ -10703,6 +12067,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-37",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'in order to': 'He whispered. He did not disturb others.'",
+      "question_bn": "Combine with 'in order to': 'He whispered. He did not disturb others.'",
+      "question_en": "Combine with 'in order to': 'He whispered. He did not disturb others.'",
       "options_json": [
         "He whispered in order to not disturb others.",
         "In order to not disturb others, he whispered.",
@@ -10716,6 +12082,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-38",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'as soon as': 'She finished dinner. She called her friend.'",
+      "question_bn": "Combine with 'as soon as': 'She finished dinner. She called her friend.'",
+      "question_en": "Combine with 'as soon as': 'She finished dinner. She called her friend.'",
       "options_json": [
         "As soon as she finished dinner, she called her friend.",
         "She called her friend as soon as she finished dinner.",
@@ -10729,6 +12097,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-39",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'even though': 'The exam was hard. The students remained calm.'",
+      "question_bn": "Combine with 'even though': 'The exam was hard. The students remained calm.'",
+      "question_en": "Combine with 'even though': 'The exam was hard. The students remained calm.'",
       "options_json": [
         "Even though the exam was hard, the students remained calm.",
         "Even though the students remained calm, the exam was hard.",
@@ -10742,6 +12112,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-40",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'because of': 'Rain poured. The match was canceled.'",
+      "question_bn": "Combine with 'because of': 'Rain poured. The match was canceled.'",
+      "question_en": "Combine with 'because of': 'Rain poured. The match was canceled.'",
       "options_json": [
         "Because of the pouring rain, the match was canceled.",
         "The match was canceled because the rain poured.",
@@ -10755,6 +12127,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-41",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'either...or': 'You revise your draft. You submit it as is.'",
+      "question_bn": "Combine with 'either...or': 'You revise your draft. You submit it as is.'",
+      "question_en": "Combine with 'either...or': 'You revise your draft. You submit it as is.'",
       "options_json": [
         "Either you revise your draft or you submit it as is.",
         "You revise your draft either or submit it as is.",
@@ -10768,6 +12142,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-42",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'not only...but also': 'He speaks Spanish. He speaks French.'",
+      "question_bn": "Combine with 'not only...but also': 'He speaks Spanish. He speaks French.'",
+      "question_en": "Combine with 'not only...but also': 'He speaks Spanish. He speaks French.'",
       "options_json": [
         "Not only does he speak Spanish, but he also speaks French.",
         "He not only speaks Spanish and he also speaks French.",
@@ -10781,6 +12157,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-43",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'provided that': 'You pay now. I will reserve the ticket.'",
+      "question_bn": "Combine with 'provided that': 'You pay now. I will reserve the ticket.'",
+      "question_en": "Combine with 'provided that': 'You pay now. I will reserve the ticket.'",
       "options_json": [
         "I will reserve the ticket provided that you pay now.",
         "I will reserve the ticket because you pay now.",
@@ -10794,6 +12172,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-44",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'so...that': 'He practiced daily. His skills improved.'",
+      "question_bn": "Combine with 'so...that': 'He practiced daily. His skills improved.'",
+      "question_en": "Combine with 'so...that': 'He practiced daily. His skills improved.'",
       "options_json": [
         "He practiced daily so that his skills improved.",
         "He practiced daily, so his skills improved.",
@@ -10807,6 +12187,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-45",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'even if': 'The noise continues. He studies.'",
+      "question_bn": "Combine with 'even if': 'The noise continues. He studies.'",
+      "question_en": "Combine with 'even if': 'The noise continues. He studies.'",
       "options_json": [
         "Even if the noise continues, he studies.",
         "Even if the noise continues, he stops studying.",
@@ -10820,6 +12202,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-46",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with a participial phrase: 'She opened the gift. She smiled widely.'",
+      "question_bn": "Combine with a participial phrase: 'She opened the gift. She smiled widely.'",
+      "question_en": "Combine with a participial phrase: 'She opened the gift. She smiled widely.'",
       "options_json": [
         "Opening the gift, she smiled widely.",
         "She opened the gift and she smiled widely.",
@@ -10833,6 +12217,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-47",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'where': 'They visited the town. The town had a famous market.'",
+      "question_bn": "Combine with 'where': 'They visited the town. The town had a famous market.'",
+      "question_en": "Combine with 'where': 'They visited the town. The town had a famous market.'",
       "options_json": [
         "They visited the town where a famous market stood.",
         "They visited the town that a famous market stood.",
@@ -10846,6 +12232,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-48",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'as': 'It gets colder. We add blankets.'",
+      "question_bn": "Combine with 'as': 'It gets colder. We add blankets.'",
+      "question_en": "Combine with 'as': 'It gets colder. We add blankets.'",
       "options_json": [
         "As it gets colder, we add blankets.",
         "As it gets colder, we remove blankets.",
@@ -10859,6 +12247,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-49",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'whenever': 'He practices. He improves steadily.'",
+      "question_bn": "Combine with 'whenever': 'He practices. He improves steadily.'",
+      "question_en": "Combine with 'whenever': 'He practices. He improves steadily.'",
       "options_json": [
         "Whenever he practices, he improves steadily.",
         "He improves whenever he practices badly.",
@@ -10872,6 +12262,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-50",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'before': 'She checked the map. She began hiking.'",
+      "question_bn": "Combine with 'before': 'She checked the map. She began hiking.'",
+      "question_en": "Combine with 'before': 'She checked the map. She began hiking.'",
       "options_json": [
         "Before she began hiking, she checked the map.",
         "She began hiking before she checked the map.",
@@ -10885,6 +12277,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-12-combination-of-sentences-51",
       "chapter_id": "grammar-class-9-10-12-combination-of-sentences",
       "question_text": "Combine with 'after': 'We finished the debate. We tallied the votes.'",
+      "question_bn": "Combine with 'after': 'We finished the debate. We tallied the votes.'",
+      "question_en": "Combine with 'after': 'We finished the debate. We tallied the votes.'",
       "options_json": [
         "After we finished the debate, we tallied the votes.",
         "We tallied the votes after we finished the debate.",
@@ -10900,6 +12294,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-1",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence has correct modifier placement?",
+      "question_bn": "Which sentence has correct modifier placement?",
+      "question_en": "Which sentence has correct modifier placement?",
       "options_json": [
         "Running quickly, the road seemed long",
         "Running quickly, the boy reached home",
@@ -10913,6 +12309,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-2",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Identify the dangling modifier: 'After reading the book, it was returned to the library.'",
+      "question_bn": "Identify the dangling modifier: 'After reading the book, it was returned to the library.'",
+      "question_en": "Identify the dangling modifier: 'After reading the book, it was returned to the library.'",
       "options_json": [
         "The book doesn't match the subject",
         "'it' should be 'she' or 'he'",
@@ -10926,6 +12324,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-3",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Correct the misplaced modifier: 'I bought a dress from the shop with blue stripes.'",
+      "question_bn": "Correct the misplaced modifier: 'I bought a dress from the shop with blue stripes.'",
+      "question_en": "Correct the misplaced modifier: 'I bought a dress from the shop with blue stripes.'",
       "options_json": [
         "The dress with blue stripes is from the shop",
         "I bought a dress with blue stripes from the shop",
@@ -10939,6 +12339,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-4",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence has a dangling modifier?",
+      "question_bn": "Which sentence has a dangling modifier?",
+      "question_en": "Which sentence has a dangling modifier?",
       "options_json": [
         "The student who studied hard passed",
         "Finishing homework, I went to play",
@@ -10952,6 +12354,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-5",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Fix the sentence: 'The teacher gave the test to the student that was difficult.'",
+      "question_bn": "Fix the sentence: 'The teacher gave the test to the student that was difficult.'",
+      "question_en": "Fix the sentence: 'The teacher gave the test to the student that was difficult.'",
       "options_json": [
         "The teacher gave the difficult test to the student",
         "The teacher gave the test that was difficult to the student",
@@ -10965,6 +12369,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-6",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence is correct?",
+      "question_bn": "Which sentence is correct?",
+      "question_en": "Which sentence is correct?",
       "options_json": [
         "Walking to school, the rain started",
         "Walking to school, it started to rain",
@@ -10978,6 +12384,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-7",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Identify the error: 'Wearing a red dress, the party was exciting.'",
+      "question_bn": "Identify the error: 'Wearing a red dress, the party was exciting.'",
+      "question_en": "Identify the error: 'Wearing a red dress, the party was exciting.'",
       "options_json": [
         "Dangling modifier - dress can't wear itself",
         "Misplaced adverb",
@@ -10991,6 +12399,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-8",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which modifies the sentence correctly?",
+      "question_bn": "Which modifies the sentence correctly?",
+      "question_en": "Which modifies the sentence correctly?",
       "options_json": [
         "The athlete ran very fast covering the distance",
         "Very fast, the athlete covered the distance",
@@ -11004,6 +12414,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-9",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Correct the misplaced modifier: 'I saw the elephant through the window wearing glasses.'",
+      "question_bn": "Correct the misplaced modifier: 'I saw the elephant through the window wearing glasses.'",
+      "question_en": "Correct the misplaced modifier: 'I saw the elephant through the window wearing glasses.'",
       "options_json": [
         "Wearing glasses, I saw the elephant through the window",
         "I saw the elephant wearing glasses through the window",
@@ -11017,6 +12429,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-10",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence has the modifier in the correct position?",
+      "question_bn": "Which sentence has the modifier in the correct position?",
+      "question_en": "Which sentence has the modifier in the correct position?",
       "options_json": [
         "The house on the hill that was old looked beautiful",
         "The old house on the hill looked beautiful",
@@ -11030,6 +12444,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-11",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Identify the dangling participle: 'Having finished the work, the sun was setting.'",
+      "question_bn": "Identify the dangling participle: 'Having finished the work, the sun was setting.'",
+      "question_en": "Identify the dangling participle: 'Having finished the work, the sun was setting.'",
       "options_json": [
         "The sun can't finish work",
         "The tense is wrong",
@@ -11043,6 +12459,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-12",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence corrects the dangling modifier?",
+      "question_bn": "Which sentence corrects the dangling modifier?",
+      "question_en": "Which sentence corrects the dangling modifier?",
       "options_json": [
         "Arriving late, the class had started",
         "Arriving late, I found the class had started",
@@ -11056,6 +12474,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-13",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Correct the misplaced modifier: 'She served sandwiches to children on paper plates.'",
+      "question_bn": "Correct the misplaced modifier: 'She served sandwiches to children on paper plates.'",
+      "question_en": "Correct the misplaced modifier: 'She served sandwiches to children on paper plates.'",
       "options_json": [
         "On paper plates, she served sandwiches to children",
         "She served sandwiches to children on paper plates",
@@ -11069,6 +12489,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-14",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence places the adverb 'only' correctly?",
+      "question_bn": "Which sentence places the adverb 'only' correctly?",
+      "question_en": "Which sentence places the adverb 'only' correctly?",
       "options_json": [
         "I only eat vegetables on Sundays",
         "Only I eat vegetables on Sundays",
@@ -11082,6 +12504,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-15",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the correctly placed prepositional phrase: 'The boy read the book in the library yesterday.'",
+      "question_bn": "Choose the correctly placed prepositional phrase: 'The boy read the book in the library yesterday.'",
+      "question_en": "Choose the correctly placed prepositional phrase: 'The boy read the book in the library yesterday.'",
       "options_json": [
         "In the library yesterday, the boy read the book",
         "The boy read the book in the library yesterday",
@@ -11095,6 +12519,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-16",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence avoids a dangling modifier for 'Having finished the work'?",
+      "question_bn": "Which sentence avoids a dangling modifier for 'Having finished the work'?",
+      "question_en": "Which sentence avoids a dangling modifier for 'Having finished the work'?",
       "options_json": [
         "Having finished the work, the report was submitted",
         "Having finished the work, she submitted the report",
@@ -11108,6 +12534,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-17",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence demonstrates proper placement of 'barely'?",
+      "question_bn": "Which sentence demonstrates proper placement of 'barely'?",
+      "question_en": "Which sentence demonstrates proper placement of 'barely'?",
       "options_json": [
         "I barely saw the plane land",
         "Barely I saw the plane land",
@@ -11121,6 +12549,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-18",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the sentence with the modifier closest to the word it describes: 'The students completed the assignment excitedly.'",
+      "question_bn": "Choose the sentence with the modifier closest to the word it describes: 'The students completed the assignment excitedly.'",
+      "question_en": "Choose the sentence with the modifier closest to the word it describes: 'The students completed the assignment excitedly.'",
       "options_json": [
         "Excitedly the students completed the assignment",
         "The excitedly students completed the assignment",
@@ -11134,6 +12564,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-19",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Identify the sentence that fixes the squinting modifier 'soon'.",
+      "question_bn": "Identify the sentence that fixes the squinting modifier 'soon'.",
+      "question_en": "Identify the sentence that fixes the squinting modifier 'soon'.",
       "options_json": [
         "We soon will visit the museum",
         "Soon we will visit the museum",
@@ -11147,6 +12579,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-20",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence correctly uses the phrase 'with a smile' to describe the teacher?",
+      "question_bn": "Which sentence correctly uses the phrase 'with a smile' to describe the teacher?",
+      "question_en": "Which sentence correctly uses the phrase 'with a smile' to describe the teacher?",
       "options_json": [
         "The teacher with a smile greeted us",
         "With a smile the teacher greeted us",
@@ -11160,6 +12594,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-21",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the correct correction for 'I almost drove the car for three hours.'",
+      "question_bn": "Choose the correct correction for 'I almost drove the car for three hours.'",
+      "question_en": "Choose the correct correction for 'I almost drove the car for three hours.'",
       "options_json": [
         "I drove the car almost for three hours",
         "I almost drove the car for three hours",
@@ -11173,6 +12609,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-22",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which revision avoids a misplaced modifier in 'They served cheese sandwiches to the guests on paper plates'?",
+      "question_bn": "Which revision avoids a misplaced modifier in 'They served cheese sandwiches to the guests on paper plates'?",
+      "question_en": "Which revision avoids a misplaced modifier in 'They served cheese sandwiches to the guests on paper plates'?",
       "options_json": [
         "They served cheese sandwiches on paper plates to the guests",
         "On paper plates, they served cheese sandwiches to the guests",
@@ -11186,6 +12624,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-23",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Select the sentence that correctly places the adverb 'still'.",
+      "question_bn": "Select the sentence that correctly places the adverb 'still'.",
+      "question_en": "Select the sentence that correctly places the adverb 'still'.",
       "options_json": [
         "I still have not finished the project",
         "Still I have not finished the project",
@@ -11199,6 +12639,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-24",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which option eliminates the dangling modifier 'Walking into the room'?",
+      "question_bn": "Which option eliminates the dangling modifier 'Walking into the room'?",
+      "question_en": "Which option eliminates the dangling modifier 'Walking into the room'?",
       "options_json": [
         "Walking into the room, the lights were bright",
         "Walking into the room, I noticed the lights were bright",
@@ -11212,6 +12654,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-25",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the sentence that places 'only' before the word it limits.",
+      "question_bn": "Choose the sentence that places 'only' before the word it limits.",
+      "question_en": "Choose the sentence that places 'only' before the word it limits.",
       "options_json": [
         "I only like oranges",
         "I like only oranges",
@@ -11225,6 +12669,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-26",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence keeps the participial phrase 'Written carefully' near the noun it modifies?",
+      "question_bn": "Which sentence keeps the participial phrase 'Written carefully' near the noun it modifies?",
+      "question_en": "Which sentence keeps the participial phrase 'Written carefully' near the noun it modifies?",
       "options_json": [
         "Written carefully, the instructions made sense",
         "The instructions, written carefully, made sense",
@@ -11238,6 +12684,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-27",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Select the sentence without a misplaced modifier for 'after a long day'.",
+      "question_bn": "Select the sentence without a misplaced modifier for 'after a long day'.",
+      "question_en": "Select the sentence without a misplaced modifier for 'after a long day'.",
       "options_json": [
         "After a long day, the bed felt soft",
         "After a long day the bed felt soft",
@@ -11251,6 +12699,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-28",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence correctly limits 'sometimes'?",
+      "question_bn": "Which sentence correctly limits 'sometimes'?",
+      "question_en": "Which sentence correctly limits 'sometimes'?",
       "options_json": [
         "Sometimes we only visit the park",
         "We sometimes only visit the park",
@@ -11264,6 +12714,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-29",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the sentence that avoids a misplaced modifier in 'I saw the moon shining through my window wearing a smile'.",
+      "question_bn": "Choose the sentence that avoids a misplaced modifier in 'I saw the moon shining through my window wearing a smile'.",
+      "question_en": "Choose the sentence that avoids a misplaced modifier in 'I saw the moon shining through my window wearing a smile'.",
       "options_json": [
         "Wearing a smile, I saw the moon shining through my window",
         "I saw the moon shining through my window wearing a smile",
@@ -11277,6 +12729,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-30",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence shows correct modifier placement for 'only'?",
+      "question_bn": "Which sentence shows correct modifier placement for 'only'?",
+      "question_en": "Which sentence shows correct modifier placement for 'only'?",
       "options_json": [
         "We only eat dessert on weekends",
         "Only we eat dessert on weekends",
@@ -11290,6 +12744,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-31",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Select the sentence where 'barely' modifies the verb properly.",
+      "question_bn": "Select the sentence where 'barely' modifies the verb properly.",
+      "question_en": "Select the sentence where 'barely' modifies the verb properly.",
       "options_json": [
         "She barely had a chance to speak",
         "Barely she had a chance to speak",
@@ -11303,6 +12759,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-32",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence keeps the relative clause next to the noun it describes?",
+      "question_bn": "Which sentence keeps the relative clause next to the noun it describes?",
+      "question_en": "Which sentence keeps the relative clause next to the noun it describes?",
       "options_json": [
         "The dog that chased the cat barked loudly",
         "The dog barked loudly that chased the cat",
@@ -11316,6 +12774,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-33",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the sentence that correctly locates the phrase 'with enthusiasm.'",
+      "question_bn": "Choose the sentence that correctly locates the phrase 'with enthusiasm.'",
+      "question_en": "Choose the sentence that correctly locates the phrase 'with enthusiasm.'",
       "options_json": [
         "The coach, with enthusiasm, praised the players",
         "With enthusiasm the coach praised the players",
@@ -11329,6 +12789,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-34",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence avoids a squinting modifier for 'probably'?",
+      "question_bn": "Which sentence avoids a squinting modifier for 'probably'?",
+      "question_en": "Which sentence avoids a squinting modifier for 'probably'?",
       "options_json": [
         "He probably will leave early",
         "Probably he will leave early",
@@ -11342,6 +12804,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-35",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Select the sentence that moves 'after practice' to the proper place.",
+      "question_bn": "Select the sentence that moves 'after practice' to the proper place.",
+      "question_en": "Select the sentence that moves 'after practice' to the proper place.",
       "options_json": [
         "After practice the team left the field",
         "The team left the field after practice",
@@ -11355,6 +12819,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-36",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence keeps the participial phrase 'carrying a lantern' next to 'the guards'?",
+      "question_bn": "Which sentence keeps the participial phrase 'carrying a lantern' next to 'the guards'?",
+      "question_en": "Which sentence keeps the participial phrase 'carrying a lantern' next to 'the guards'?",
       "options_json": [
         "Carrying a lantern, the guards patrolled the night",
         "The guards carrying a lantern patrolled the night",
@@ -11368,6 +12834,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-37",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Choose the sentence that correctly places 'only' before 'students'.",
+      "question_bn": "Choose the sentence that correctly places 'only' before 'students'.",
+      "question_en": "Choose the sentence that correctly places 'only' before 'students'.",
       "options_json": [
         "Only students took the exam",
         "Students only took the exam",
@@ -11381,6 +12849,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-38",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence correctly pairs 'After finishing his chores' with the subject?",
+      "question_bn": "Which sentence correctly pairs 'After finishing his chores' with the subject?",
+      "question_en": "Which sentence correctly pairs 'After finishing his chores' with the subject?",
       "options_json": [
         "After finishing his chores, the reward was given to him",
         "After finishing his chores, he received the reward",
@@ -11394,6 +12864,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-39",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Select the sentence that keeps 'often' next to the verb it modifies.",
+      "question_bn": "Select the sentence that keeps 'often' next to the verb it modifies.",
+      "question_en": "Select the sentence that keeps 'often' next to the verb it modifies.",
       "options_json": [
         "Sometimes they often visit museums",
         "They often visit museums",
@@ -11407,6 +12879,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-9-10-13-modifiers-40",
       "chapter_id": "grammar-class-9-10-13-modifiers",
       "question_text": "Which sentence places the relative clause 'who assigned the homework' correctly?",
+      "question_bn": "Which sentence places the relative clause 'who assigned the homework' correctly?",
+      "question_en": "Which sentence places the relative clause 'who assigned the homework' correctly?",
       "options_json": [
         "The teacher who assigned the homework explained it clearly",
         "The teacher explained who assigned the homework it clearly",
@@ -11422,6 +12896,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-1",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which conditional expresses unreal present?",
+      "question_bn": "Which conditional expresses unreal present?",
+      "question_en": "Which conditional expresses unreal present?",
       "options_json": [
         "Type 0",
         "Type 1",
@@ -11435,6 +12911,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-2",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete: If I _____ rich, I would help poor students in Bangladesh.",
+      "question_bn": "Complete: If I _____ rich, I would help poor students in Bangladesh.",
+      "question_en": "Complete: If I _____ rich, I would help poor students in Bangladesh.",
       "options_json": [
         "am",
         "was",
@@ -11448,6 +12926,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-3",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "After 'I wish', which form is correct?",
+      "question_bn": "After 'I wish', which form is correct?",
+      "question_en": "After 'I wish', which form is correct?",
       "options_json": [
         "I wish I was in Dhaka",
         "I wish I were in Dhaka",
@@ -11461,6 +12941,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-4",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which uses correct inversion?",
+      "question_bn": "Which uses correct inversion?",
+      "question_en": "Which uses correct inversion?",
       "options_json": [
         "Never I have seen such beauty",
         "Never have I seen such beauty",
@@ -11474,6 +12956,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-5",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Fix the parallel structure: She likes swimming, dancing, and to sing.",
+      "question_bn": "Fix the parallel structure: She likes swimming, dancing, and to sing.",
+      "question_en": "Fix the parallel structure: She likes swimming, dancing, and to sing.",
       "options_json": [
         "She likes swimming, dancing, and singing",
         "She likes to swim, to dance, and singing",
@@ -11487,6 +12971,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-6",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete Type 3 conditional: If I _____ harder, I would have passed HSC.",
+      "question_bn": "Complete Type 3 conditional: If I _____ harder, I would have passed HSC.",
+      "question_en": "Complete Type 3 conditional: If I _____ harder, I would have passed HSC.",
       "options_json": [
         "study",
         "studied",
@@ -11500,6 +12986,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-7",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which is correct subjunctive?",
+      "question_bn": "Which is correct subjunctive?",
+      "question_en": "Which is correct subjunctive?",
       "options_json": [
         "The principal demands that he comes early",
         "The principal demands that he come early",
@@ -11513,6 +13001,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-8",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete with ellipsis: Rahim studies at Dhaka College and Karim _____.",
+      "question_bn": "Complete with ellipsis: Rahim studies at Dhaka College and Karim _____.",
+      "question_en": "Complete with ellipsis: Rahim studies at Dhaka College and Karim _____.",
       "options_json": [
         "does too",
         "studies too",
@@ -11526,6 +13016,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-9",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which inversion is correct for: The exam was so difficult that everyone failed.",
+      "question_bn": "Which inversion is correct for: The exam was so difficult that everyone failed.",
+      "question_en": "Which inversion is correct for: The exam was so difficult that everyone failed.",
       "options_json": [
         "So difficult was the exam that everyone failed",
         "So the exam was difficult that everyone failed",
@@ -11539,6 +13031,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-10",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete Type 1: If Bangladesh Cricket Team _____ today, we will celebrate.",
+      "question_bn": "Complete Type 1: If Bangladesh Cricket Team _____ today, we will celebrate.",
+      "question_en": "Complete Type 1: If Bangladesh Cricket Team _____ today, we will celebrate.",
       "options_json": [
         "win",
         "wins",
@@ -11552,6 +13046,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-11",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which sentence has correct parallel structure?",
+      "question_bn": "Which sentence has correct parallel structure?",
+      "question_en": "Which sentence has correct parallel structure?",
       "options_json": [
         "The HSC syllabus includes grammar, composition, and how to speak",
         "The HSC syllabus includes grammar, composition, and speaking",
@@ -11565,6 +13061,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-12",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "After 'Hardly', which structure is correct?",
+      "question_bn": "After 'Hardly', which structure is correct?",
+      "question_en": "After 'Hardly', which structure is correct?",
       "options_json": [
         "Hardly the bell rang when students left",
         "Hardly did the bell ring when students left",
@@ -11578,6 +13076,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-13",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete: It is crucial that every HSC student _____ the exam rules.",
+      "question_bn": "Complete: It is crucial that every HSC student _____ the exam rules.",
+      "question_en": "Complete: It is crucial that every HSC student _____ the exam rules.",
       "options_json": [
         "follows",
         "follow",
@@ -11591,6 +13091,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-14",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Type 2 conditional: If I _____ a car, I would drive to Cox's Bazar.",
+      "question_bn": "Type 2 conditional: If I _____ a car, I would drive to Cox's Bazar.",
+      "question_en": "Type 2 conditional: If I _____ a car, I would drive to Cox's Bazar.",
       "options_json": [
         "have",
         "had",
@@ -11604,6 +13106,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-15",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which uses correct inversion with 'Only'?",
+      "question_bn": "Which uses correct inversion with 'Only'?",
+      "question_en": "Which uses correct inversion with 'Only'?",
       "options_json": [
         "Only after the exam I realized my mistake",
         "Only after the exam realized I my mistake",
@@ -11617,6 +13121,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-16",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "I wish I _____ at the Pohela Boishakh celebration yesterday.",
+      "question_bn": "I wish I _____ at the Pohela Boishakh celebration yesterday.",
+      "question_en": "I wish I _____ at the Pohela Boishakh celebration yesterday.",
       "options_json": [
         "was",
         "were",
@@ -11630,6 +13136,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-17",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Fix parallel: The teacher asked us to study, practicing, and review.",
+      "question_bn": "Fix parallel: The teacher asked us to study, practicing, and review.",
+      "question_en": "Fix parallel: The teacher asked us to study, practicing, and review.",
       "options_json": [
         "to study, to practice, and to review",
         "study, practice, and reviewing",
@@ -11643,6 +13151,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-18",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete Type 0: If you _____ water, it freezes.",
+      "question_bn": "Complete Type 0: If you _____ water, it freezes.",
+      "question_en": "Complete Type 0: If you _____ water, it freezes.",
       "options_json": [
         "will cool",
         "cool",
@@ -11656,6 +13166,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-19",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which inversion is correct for: I had never tasted such delicious hilsa fish.",
+      "question_bn": "Which inversion is correct for: I had never tasted such delicious hilsa fish.",
+      "question_en": "Which inversion is correct for: I had never tasted such delicious hilsa fish.",
       "options_json": [
         "Never I had tasted such delicious hilsa fish",
         "Never had I tasted such delicious hilsa fish",
@@ -11669,6 +13181,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-20",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete: If I had known about the traffic in Dhaka, I _____ earlier.",
+      "question_bn": "Complete: If I had known about the traffic in Dhaka, I _____ earlier.",
+      "question_en": "Complete: If I had known about the traffic in Dhaka, I _____ earlier.",
       "options_json": [
         "would leave",
         "would have left",
@@ -11682,6 +13196,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-21",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which subjunctive is correct?",
+      "question_bn": "Which subjunctive is correct?",
+      "question_en": "Which subjunctive is correct?",
       "options_json": [
         "I recommend that she studies harder",
         "I recommend that she study harder",
@@ -11695,6 +13211,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-22",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Use ellipsis correctly: She wants to visit Sylhet and I want to visit Sylhet too.",
+      "question_bn": "Use ellipsis correctly: She wants to visit Sylhet and I want to visit Sylhet too.",
+      "question_en": "Use ellipsis correctly: She wants to visit Sylhet and I want to visit Sylhet too.",
       "options_json": [
         "She wants to visit Sylhet and I want to too",
         "She wants to visit Sylhet and I too",
@@ -11708,6 +13226,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-23",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete Type 1: If you _____ all HSC chapters, you will pass with flying colors.",
+      "question_bn": "Complete Type 1: If you _____ all HSC chapters, you will pass with flying colors.",
+      "question_en": "Complete Type 1: If you _____ all HSC chapters, you will pass with flying colors.",
       "options_json": [
         "will study",
         "study",
@@ -11721,6 +13241,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-24",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Invert: The students were so excited that they couldn't sleep.",
+      "question_bn": "Invert: The students were so excited that they couldn't sleep.",
+      "question_en": "Invert: The students were so excited that they couldn't sleep.",
       "options_json": [
         "So excited were the students that they couldn't sleep",
         "So the students were excited that they couldn't sleep",
@@ -11734,6 +13256,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-25",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Type 3: If the train _____ on time, we wouldn't have missed the concert in Dhaka.",
+      "question_bn": "Type 3: If the train _____ on time, we wouldn't have missed the concert in Dhaka.",
+      "question_en": "Type 3: If the train _____ on time, we wouldn't have missed the concert in Dhaka.",
       "options_json": [
         "arrived",
         "had arrived",
@@ -11747,6 +13271,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-26",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Which has correct parallel structure?",
+      "question_bn": "Which has correct parallel structure?",
+      "question_en": "Which has correct parallel structure?",
       "options_json": [
         "The HSC exam requires dedication, perseverance, and to be patient",
         "The HSC exam requires dedication, perseverance, and patience",
@@ -11760,6 +13286,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-27",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "After 'Scarcely', which is correct?",
+      "question_bn": "After 'Scarcely', which is correct?",
+      "question_en": "After 'Scarcely', which is correct?",
       "options_json": [
         "Scarcely I had entered when the bell rang",
         "Scarcely had I entered when the bell rang",
@@ -11773,6 +13301,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-28",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Subjunctive: It is necessary that he _____ present at the HSC orientation.",
+      "question_bn": "Subjunctive: It is necessary that he _____ present at the HSC orientation.",
+      "question_en": "Subjunctive: It is necessary that he _____ present at the HSC orientation.",
       "options_json": [
         "is",
         "be",
@@ -11786,6 +13316,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-29",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Type 2: If the Padma Bridge _____ built earlier, travel would have been easier.",
+      "question_bn": "Type 2: If the Padma Bridge _____ built earlier, travel would have been easier.",
+      "question_en": "Type 2: If the Padma Bridge _____ built earlier, travel would have been easier.",
       "options_json": [
         "was",
         "were",
@@ -11799,6 +13331,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-1-advanced-grammar-composition-30",
       "chapter_id": "grammar-class-11-12-1-advanced-grammar-composition",
       "question_text": "Complete with proper ellipsis: Can you solve this math problem? I think I can _____.",
+      "question_bn": "Complete with proper ellipsis: Can you solve this math problem? I think I can _____.",
+      "question_en": "Complete with proper ellipsis: Can you solve this math problem? I think I can _____.",
       "options_json": [
         "solve",
         "solve it",
@@ -11814,6 +13348,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-1",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "What does 'burn the midnight oil' mean?",
+      "question_bn": "What does 'burn the midnight oil' mean?",
+      "question_en": "What does 'burn the midnight oil' mean?",
       "options_json": [
         "Waste fuel",
         "Study late at night",
@@ -11827,6 +13363,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-2",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "If something is 'a piece of cake', it is:",
+      "question_bn": "If something is 'a piece of cake', it is:",
+      "question_en": "If something is 'a piece of cake', it is:",
       "options_json": [
         "Delicious",
         "Very difficult",
@@ -11840,6 +13378,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-3",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'At the eleventh hour' means:",
+      "question_bn": "'At the eleventh hour' means:",
+      "question_en": "'At the eleventh hour' means:",
       "options_json": [
         "At 11 o'clock",
         "At the last moment",
@@ -11853,6 +13393,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-4",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Hit the books' means:",
+      "question_bn": "'Hit the books' means:",
+      "question_en": "'Hit the books' means:",
       "options_json": [
         "Throw books",
         "Buy books",
@@ -11866,6 +13408,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-5",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Break the ice' means:",
+      "question_bn": "'Break the ice' means:",
+      "question_en": "'Break the ice' means:",
       "options_json": [
         "Destroy something",
         "Feel cold",
@@ -11879,6 +13423,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-6",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Once in a blue moon' means:",
+      "question_bn": "'Once in a blue moon' means:",
+      "question_en": "'Once in a blue moon' means:",
       "options_json": [
         "Every night",
         "Very rarely",
@@ -11892,6 +13438,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-7",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Go the extra mile' means:",
+      "question_bn": "'Go the extra mile' means:",
+      "question_en": "'Go the extra mile' means:",
       "options_json": [
         "Travel far",
         "Walk slowly",
@@ -11905,6 +13453,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-8",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'In the nick of time' means:",
+      "question_bn": "'In the nick of time' means:",
+      "question_en": "'In the nick of time' means:",
       "options_json": [
         "Too late",
         "Too early",
@@ -11918,6 +13468,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-9",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Beat around the bush' means:",
+      "question_bn": "'Beat around the bush' means:",
+      "question_en": "'Beat around the bush' means:",
       "options_json": [
         "Hit plants",
         "Avoid the main topic",
@@ -11931,6 +13483,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-10",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'A blessing in disguise' is:",
+      "question_bn": "'A blessing in disguise' is:",
+      "question_en": "'A blessing in disguise' is:",
       "options_json": [
         "A costume party",
         "A hidden gift",
@@ -11944,6 +13498,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-11",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: The HSC exam was _____ for the well-prepared students.",
+      "question_bn": "Complete: The HSC exam was _____ for the well-prepared students.",
+      "question_en": "Complete: The HSC exam was _____ for the well-prepared students.",
       "options_json": [
         "a piece of cake",
         "burning midnight oil",
@@ -11957,6 +13513,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-12",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Learn by heart' means:",
+      "question_bn": "'Learn by heart' means:",
+      "question_en": "'Learn by heart' means:",
       "options_json": [
         "Learn with emotion",
         "Memorize",
@@ -11970,6 +13528,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-13",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Under the weather' means:",
+      "question_bn": "'Under the weather' means:",
+      "question_en": "'Under the weather' means:",
       "options_json": [
         "In the rain",
         "Feeling sick",
@@ -11983,6 +13543,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-14",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Call it a day' means:",
+      "question_bn": "'Call it a day' means:",
+      "question_en": "'Call it a day' means:",
       "options_json": [
         "Name a day",
         "Stop working",
@@ -11996,6 +13558,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-15",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Out of the blue' means:",
+      "question_bn": "'Out of the blue' means:",
+      "question_en": "'Out of the blue' means:",
       "options_json": [
         "From the sky",
         "Feeling sad",
@@ -12009,6 +13573,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-16",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: Before HSC exams, Bangladeshi students _____ every night.",
+      "question_bn": "Complete: Before HSC exams, Bangladeshi students _____ every night.",
+      "question_en": "Complete: Before HSC exams, Bangladeshi students _____ every night.",
       "options_json": [
         "break the ice",
         "burn the midnight oil",
@@ -12022,6 +13588,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-17",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Pull yourself together' means:",
+      "question_bn": "'Pull yourself together' means:",
+      "question_en": "'Pull yourself together' means:",
       "options_json": [
         "Exercise",
         "Dress properly",
@@ -12035,6 +13603,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-18",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Against the clock' means:",
+      "question_bn": "'Against the clock' means:",
+      "question_en": "'Against the clock' means:",
       "options_json": [
         "Opposing time",
         "In a hurry",
@@ -12048,6 +13618,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-19",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Kill two birds with one stone' means:",
+      "question_bn": "'Kill two birds with one stone' means:",
+      "question_en": "'Kill two birds with one stone' means:",
       "options_json": [
         "Hunt birds",
         "Be cruel",
@@ -12061,6 +13633,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-20",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Better late than never' means:",
+      "question_bn": "'Better late than never' means:",
+      "question_en": "'Better late than never' means:",
       "options_json": [
         "Always be late",
         "Never be late",
@@ -12074,6 +13648,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-21",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: The student _____ and understood the difficult concept.",
+      "question_bn": "Complete: The student _____ and understood the difficult concept.",
+      "question_en": "Complete: The student _____ and understood the difficult concept.",
       "options_json": [
         "broke the ice",
         "burned the midnight oil",
@@ -12087,6 +13663,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-22",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'At stake' means:",
+      "question_bn": "'At stake' means:",
+      "question_en": "'At stake' means:",
       "options_json": [
         "On a stick",
         "At risk",
@@ -12100,6 +13678,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-23",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Rise to the occasion' means:",
+      "question_bn": "'Rise to the occasion' means:",
+      "question_en": "'Rise to the occasion' means:",
       "options_json": [
         "Stand up",
         "Wake up early",
@@ -12113,6 +13693,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-24",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: She submitted her Dhaka University application _____.",
+      "question_bn": "Complete: She submitted her Dhaka University application _____.",
+      "question_en": "Complete: She submitted her Dhaka University application _____.",
       "options_json": [
         "once in a blue moon",
         "at the eleventh hour",
@@ -12126,6 +13708,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-25",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Get the hang of it' means:",
+      "question_bn": "'Get the hang of it' means:",
+      "question_en": "'Get the hang of it' means:",
       "options_json": [
         "Hang something",
         "Give up",
@@ -12139,6 +13723,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-26",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'In the long run' means:",
+      "question_bn": "'In the long run' means:",
+      "question_en": "'In the long run' means:",
       "options_json": [
         "Marathon race",
         "Immediately",
@@ -12152,6 +13738,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-27",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: The teacher's strict methods were _____ because students learned discipline.",
+      "question_bn": "Complete: The teacher's strict methods were _____ because students learned discipline.",
+      "question_en": "Complete: The teacher's strict methods were _____ because students learned discipline.",
       "options_json": [
         "a blessing in disguise",
         "a piece of cake",
@@ -12165,6 +13753,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-28",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'Back to the drawing board' means:",
+      "question_bn": "'Back to the drawing board' means:",
+      "question_en": "'Back to the drawing board' means:",
       "options_json": [
         "Draw pictures",
         "Start over",
@@ -12178,6 +13768,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-29",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "'On purpose' means:",
+      "question_bn": "'On purpose' means:",
+      "question_en": "'On purpose' means:",
       "options_json": [
         "By accident",
         "Deliberately",
@@ -12191,6 +13783,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-2-idioms-and-phrases-30",
       "chapter_id": "grammar-class-11-12-2-idioms-and-phrases",
       "question_text": "Complete: HSC students must _____ to succeed in competitive exams.",
+      "question_bn": "Complete: HSC students must _____ to succeed in competitive exams.",
+      "question_en": "Complete: HSC students must _____ to succeed in competitive exams.",
       "options_json": [
         "beat around the bush",
         "go the extra mile",
@@ -12206,6 +13800,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-1",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence is compound-complex?",
+      "question_bn": "Which sentence is compound-complex?",
+      "question_en": "Which sentence is compound-complex?",
       "options_json": [
         "I went to Dhaka and visited the museum",
         "When it rained, I stayed home",
@@ -12219,6 +13815,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-2",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the noun clause: 'I know that Dhaka University is prestigious.'",
+      "question_bn": "Identify the noun clause: 'I know that Dhaka University is prestigious.'",
+      "question_en": "Identify the noun clause: 'I know that Dhaka University is prestigious.'",
       "options_json": [
         "I know",
         "that Dhaka University is prestigious",
@@ -12232,6 +13830,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-3",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which uses a non-defining adjective clause correctly?",
+      "question_bn": "Which uses a non-defining adjective clause correctly?",
+      "question_en": "Which uses a non-defining adjective clause correctly?",
       "options_json": [
         "The student who won is smart",
         "My sister who lives in Sylhet is a teacher",
@@ -12245,6 +13845,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-4",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "What type of adverb clause is this? 'Because he studied hard, he passed HSC.'",
+      "question_bn": "What type of adverb clause is this? 'Because he studied hard, he passed HSC.'",
+      "question_en": "What type of adverb clause is this? 'Because he studied hard, he passed HSC.'",
       "options_json": [
         "Time",
         "Reason",
@@ -12258,6 +13860,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-5",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which is a correctly reduced clause?",
+      "question_bn": "Which is a correctly reduced clause?",
+      "question_en": "Which is a correctly reduced clause?",
       "options_json": [
         "While studying, I listening to music",
         "Studied hard, he passed the exam",
@@ -12271,6 +13875,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-6",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the appositive: 'Rahim, my best friend, lives in Chittagong.'",
+      "question_bn": "Identify the appositive: 'Rahim, my best friend, lives in Chittagong.'",
+      "question_en": "Identify the appositive: 'Rahim, my best friend, lives in Chittagong.'",
       "options_json": [
         "Rahim",
         "my best friend",
@@ -12284,6 +13890,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-7",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence contains an absolute phrase?",
+      "question_bn": "Which sentence contains an absolute phrase?",
+      "question_en": "Which sentence contains an absolute phrase?",
       "options_json": [
         "The exam being over, students celebrated",
         "After the exam, students celebrated",
@@ -12297,6 +13905,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-8",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which is a correctly embedded question?",
+      "question_bn": "Which is a correctly embedded question?",
+      "question_en": "Which is a correctly embedded question?",
       "options_json": [
         "I wonder where is the library",
         "I wonder where the library is",
@@ -12310,6 +13920,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-9",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the noun clause: 'What impressed me was his dedication.'",
+      "question_bn": "Identify the noun clause: 'What impressed me was his dedication.'",
+      "question_en": "Identify the noun clause: 'What impressed me was his dedication.'",
       "options_json": [
         "impressed me",
         "What impressed me",
@@ -12323,6 +13935,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-10",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which adverb clause shows purpose?",
+      "question_bn": "Which adverb clause shows purpose?",
+      "question_en": "Which adverb clause shows purpose?",
       "options_json": [
         "When I study, I concentrate",
         "Because I studied, I passed",
@@ -12336,6 +13950,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-11",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence has correct adjective clause punctuation?",
+      "question_bn": "Which sentence has correct adjective clause punctuation?",
+      "question_en": "Which sentence has correct adjective clause punctuation?",
       "options_json": [
         "The teacher, who taught us English was excellent",
         "The teacher who taught us English, was excellent",
@@ -12349,6 +13965,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-12",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "What is the function of the noun clause? 'The fact that he won surprised everyone.'",
+      "question_bn": "What is the function of the noun clause? 'The fact that he won surprised everyone.'",
+      "question_en": "What is the function of the noun clause? 'The fact that he won surprised everyone.'",
       "options_json": [
         "Subject",
         "Object",
@@ -12362,6 +13980,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-13",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which reduced clause is correct?",
+      "question_bn": "Which reduced clause is correct?",
+      "question_en": "Which reduced clause is correct?",
       "options_json": [
         "Walking to school, it started raining",
         "Finished the work, he left",
@@ -12375,6 +13995,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-14",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the compound-complex sentence:",
+      "question_bn": "Identify the compound-complex sentence:",
+      "question_en": "Identify the compound-complex sentence:",
       "options_json": [
         "I studied hard, and I passed HSC",
         "When I studied hard, I passed HSC",
@@ -12388,6 +14010,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-15",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence uses 'whose' correctly?",
+      "question_bn": "Which sentence uses 'whose' correctly?",
+      "question_en": "Which sentence uses 'whose' correctly?",
       "options_json": [
         "The student whose book I borrowed is from Dhaka",
         "The student whose is from Dhaka borrowed my book",
@@ -12401,6 +14025,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-16",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which adverb clause shows contrast?",
+      "question_bn": "Which adverb clause shows contrast?",
+      "question_en": "Which adverb clause shows contrast?",
       "options_json": [
         "Although the exam was hard, I passed",
         "Because the exam was hard, I studied",
@@ -12414,6 +14040,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-17",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "What type of clause is this? 'The teacher knows whether the students understood.'",
+      "question_bn": "What type of clause is this? 'The teacher knows whether the students understood.'",
+      "question_en": "What type of clause is this? 'The teacher knows whether the students understood.'",
       "options_json": [
         "Adjective clause",
         "Adverb clause",
@@ -12427,6 +14055,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-18",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which appositive is punctuated correctly?",
+      "question_bn": "Which appositive is punctuated correctly?",
+      "question_en": "Which appositive is punctuated correctly?",
       "options_json": [
         "Cox's Bazar a popular beach is in Bangladesh",
         "Cox's Bazar, a popular beach is in Bangladesh",
@@ -12440,6 +14070,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-19",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the absolute phrase: 'His homework completed, Rahim played cricket.'",
+      "question_bn": "Identify the absolute phrase: 'His homework completed, Rahim played cricket.'",
+      "question_en": "Identify the absolute phrase: 'His homework completed, Rahim played cricket.'",
       "options_json": [
         "His homework",
         "His homework completed",
@@ -12453,6 +14085,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-20",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which embedded question is correct?",
+      "question_bn": "Which embedded question is correct?",
+      "question_en": "Which embedded question is correct?",
       "options_json": [
         "Can you tell me what time is it?",
         "Can you tell me what time it is?",
@@ -12466,6 +14100,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-21",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence combines clauses most effectively?",
+      "question_bn": "Which sentence combines clauses most effectively?",
+      "question_en": "Which sentence combines clauses most effectively?",
       "options_json": [
         "I went to Dhaka. I visited museums. I learned history.",
         "I went to Dhaka and visited museums and learned history",
@@ -12479,6 +14115,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-22",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which clause shows time?",
+      "question_bn": "Which clause shows time?",
+      "question_en": "Which clause shows time?",
       "options_json": [
         "After the monsoon ends, farmers harvest rice",
         "Because the monsoon ended, farmers harvested rice",
@@ -12492,6 +14130,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-23",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the error in this reduced clause: 'Walking to Dhaka University, the rain started.'",
+      "question_bn": "Identify the error in this reduced clause: 'Walking to Dhaka University, the rain started.'",
+      "question_en": "Identify the error in this reduced clause: 'Walking to Dhaka University, the rain started.'",
       "options_json": [
         "Incorrect verb form",
         "Dangling modifier - rain can't walk",
@@ -12505,6 +14145,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-24",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which noun clause functions as the subject?",
+      "question_bn": "Which noun clause functions as the subject?",
+      "question_en": "Which noun clause functions as the subject?",
       "options_json": [
         "I believe that he is honest",
         "What you say is true",
@@ -12518,6 +14160,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-25",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence uses a defining adjective clause?",
+      "question_bn": "Which sentence uses a defining adjective clause?",
+      "question_en": "Which sentence uses a defining adjective clause?",
       "options_json": [
         "My brother, who is a doctor, helps people",
         "The Sundarbans, which is a mangrove forest, is beautiful",
@@ -12531,6 +14175,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-26",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "What is the purpose of this adverb clause? 'She speaks slowly so that everyone can understand.'",
+      "question_bn": "What is the purpose of this adverb clause? 'She speaks slowly so that everyone can understand.'",
+      "question_en": "What is the purpose of this adverb clause? 'She speaks slowly so that everyone can understand.'",
       "options_json": [
         "Time",
         "Reason",
@@ -12544,6 +14190,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-27",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which compound-complex sentence is structured correctly?",
+      "question_bn": "Which compound-complex sentence is structured correctly?",
+      "question_en": "Which compound-complex sentence is structured correctly?",
       "options_json": [
         "When HSC exams begin students study and they feel nervous",
         "When HSC exams begin, students study, and they feel nervous",
@@ -12557,6 +14205,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-28",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Identify the noun clause: 'I wonder how Bangladeshi students prepare for HSC.'",
+      "question_bn": "Identify the noun clause: 'I wonder how Bangladeshi students prepare for HSC.'",
+      "question_en": "Identify the noun clause: 'I wonder how Bangladeshi students prepare for HSC.'",
       "options_json": [
         "I wonder",
         "how Bangladeshi students prepare for HSC",
@@ -12570,6 +14220,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-29",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which sentence correctly uses an adjective clause with 'where'?",
+      "question_bn": "Which sentence correctly uses an adjective clause with 'where'?",
+      "question_en": "Which sentence correctly uses an adjective clause with 'where'?",
       "options_json": [
         "The school where I studied was excellent",
         "Where I studied the school was excellent",
@@ -12583,6 +14235,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-3-advanced-sentence-patterns-30",
       "chapter_id": "grammar-class-11-12-3-advanced-sentence-patterns",
       "question_text": "Which reduced clause is grammatically correct?",
+      "question_bn": "Which reduced clause is grammatically correct?",
+      "question_en": "Which reduced clause is grammatically correct?",
       "options_json": [
         "Knowing the answer, the question was easy",
         "Tired from studying, I taking a break",
@@ -12598,6 +14252,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-1",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The Bangladesh is a beautiful country",
         "Bangladesh is a beautiful country",
@@ -12611,6 +14267,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-2",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ Padma Bridge was built recently.",
+      "question_bn": "Complete: ___ Padma Bridge was built recently.",
+      "question_en": "Complete: ___ Padma Bridge was built recently.",
       "options_json": [
         "A",
         "An",
@@ -12624,6 +14282,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-3",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She plays the cricket very well",
         "She plays cricket very well",
@@ -12637,6 +14297,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-4",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: I study at ___ Dhaka University.",
+      "question_bn": "Complete: I study at ___ Dhaka University.",
+      "question_en": "Complete: I study at ___ Dhaka University.",
       "options_json": [
         "a",
         "an",
@@ -12650,6 +14312,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-5",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which uses the article correctly?",
+      "question_bn": "Which uses the article correctly?",
+      "question_en": "Which uses the article correctly?",
       "options_json": [
         "Students need the education",
         "Students need education",
@@ -12663,6 +14327,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-6",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ Bay of Bengal is south of Bangladesh.",
+      "question_bn": "Complete: ___ Bay of Bengal is south of Bangladesh.",
+      "question_en": "Complete: ___ Bay of Bengal is south of Bangladesh.",
       "options_json": [
         "A",
         "An",
@@ -12676,6 +14342,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-7",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She is teacher at school",
         "She is a teacher at school",
@@ -12689,6 +14357,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-8",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ sun rises in ___ east.",
+      "question_bn": "Complete: ___ sun rises in ___ east.",
+      "question_en": "Complete: ___ sun rises in ___ east.",
       "options_json": [
         "A, the",
         "The, the",
@@ -12702,6 +14372,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-9",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I eat the breakfast at 7 AM",
         "I eat breakfast at 7 AM",
@@ -12715,6 +14387,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-10",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: She wants to become ___ engineer.",
+      "question_bn": "Complete: She wants to become ___ engineer.",
+      "question_en": "Complete: She wants to become ___ engineer.",
       "options_json": [
         "a",
         "an",
@@ -12728,6 +14402,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-11",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct for general meaning?",
+      "question_bn": "Which is correct for general meaning?",
+      "question_en": "Which is correct for general meaning?",
       "options_json": [
         "The books are important for learning",
         "Books are important for learning",
@@ -12741,6 +14417,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-12",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: I read ___ Daily Star every morning.",
+      "question_bn": "Complete: I read ___ Daily Star every morning.",
+      "question_en": "Complete: I read ___ Daily Star every morning.",
       "options_json": [
         "a",
         "an",
@@ -12754,6 +14432,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-13",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Go to the bed early tonight",
         "Go to bed early tonight",
@@ -12767,6 +14447,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-14",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ Himalayas are the highest mountains.",
+      "question_bn": "Complete: ___ Himalayas are the highest mountains.",
+      "question_en": "Complete: ___ Himalayas are the highest mountains.",
       "options_json": [
         "A",
         "An",
@@ -12780,6 +14462,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-15",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I play the football every day",
         "I play football every day",
@@ -12793,6 +14477,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-16",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: This is ___ most difficult question in the exam.",
+      "question_bn": "Complete: This is ___ most difficult question in the exam.",
+      "question_en": "Complete: This is ___ most difficult question in the exam.",
       "options_json": [
         "a",
         "an",
@@ -12806,6 +14492,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-17",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Water is the essential for life",
         "The water is essential for life",
@@ -12819,6 +14507,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-18",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: I bought ___ book. ___ book is very interesting.",
+      "question_bn": "Complete: I bought ___ book. ___ book is very interesting.",
+      "question_en": "Complete: I bought ___ book. ___ book is very interesting.",
       "options_json": [
         "a, The",
         "the, A",
@@ -12832,6 +14522,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-19",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She plays the piano beautifully",
         "She plays piano beautifully",
@@ -12845,6 +14537,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-20",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ Sundarbans is home to ___ Royal Bengal Tiger.",
+      "question_bn": "Complete: ___ Sundarbans is home to ___ Royal Bengal Tiger.",
+      "question_en": "Complete: ___ Sundarbans is home to ___ Royal Bengal Tiger.",
       "options_json": [
         "The, the",
         "A, a",
@@ -12858,6 +14552,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-21",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct for a profession?",
+      "question_bn": "Which is correct for a profession?",
+      "question_en": "Which is correct for a profession?",
       "options_json": [
         "He is doctor",
         "He is the doctor",
@@ -12871,6 +14567,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-22",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: I go to ___ school by bus.",
+      "question_bn": "Complete: I go to ___ school by bus.",
+      "question_en": "Complete: I go to ___ school by bus.",
       "options_json": [
         "a",
         "an",
@@ -12884,6 +14582,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-23",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Mount Everest is the highest mountain",
         "The Mount Everest is highest mountain",
@@ -12897,6 +14597,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-24",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ English is difficult, but I enjoy studying it.",
+      "question_bn": "Complete: ___ English is difficult, but I enjoy studying it.",
+      "question_en": "Complete: ___ English is difficult, but I enjoy studying it.",
       "options_json": [
         "A",
         "An",
@@ -12910,6 +14612,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-25",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I study in the morning and evening",
         "I study in morning and the evening",
@@ -12923,6 +14627,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-26",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: She has ___ MBA from Dhaka University.",
+      "question_bn": "Complete: She has ___ MBA from Dhaka University.",
+      "question_en": "Complete: She has ___ MBA from Dhaka University.",
       "options_json": [
         "a",
         "an",
@@ -12936,6 +14642,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-27",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The life is beautiful",
         "Life is beautiful",
@@ -12949,6 +14657,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-28",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ first chapter of the book is interesting.",
+      "question_bn": "Complete: ___ first chapter of the book is interesting.",
+      "question_en": "Complete: ___ first chapter of the book is interesting.",
       "options_json": [
         "A",
         "An",
@@ -12962,6 +14672,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-29",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I live in the Dhaka",
         "I live in Dhaka",
@@ -12975,6 +14687,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-4-articles-determiners-advanced-30",
       "chapter_id": "grammar-class-11-12-4-articles-determiners-advanced",
       "question_text": "Complete: ___ honesty is ___ best policy.",
+      "question_bn": "Complete: ___ honesty is ___ best policy.",
+      "question_en": "Complete: ___ honesty is ___ best policy.",
       "options_json": [
         "The, the",
         "No article, the",
@@ -12990,6 +14704,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-1",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Apart of English, I study science",
         "Apart from English, I study science",
@@ -13003,6 +14719,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-2",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: The work must be finished ___ Monday.",
+      "question_bn": "Complete: The work must be finished ___ Monday.",
+      "question_en": "Complete: The work must be finished ___ Monday.",
       "options_json": [
         "by",
         "until",
@@ -13016,6 +14734,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-3",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She is good in mathematics",
         "She is good at mathematics",
@@ -13029,6 +14749,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-4",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: Success depends ___ hard work.",
+      "question_bn": "Complete: Success depends ___ hard work.",
+      "question_en": "Complete: Success depends ___ hard work.",
       "options_json": [
         "in",
         "on",
@@ -13042,6 +14764,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-5",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Discuss about the problem",
         "Discuss the problem",
@@ -13055,6 +14779,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-6",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: ___ heavy rain, the match continued.",
+      "question_bn": "Complete: ___ heavy rain, the match continued.",
+      "question_en": "Complete: ___ heavy rain, the match continued.",
       "options_json": [
         "Despite of",
         "In spite",
@@ -13068,6 +14794,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-7",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Bangladesh is famous with hospitality",
         "Bangladesh is famous for hospitality",
@@ -13081,6 +14809,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-8",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: The secret is ___ you and me.",
+      "question_bn": "Complete: The secret is ___ you and me.",
+      "question_en": "Complete: The secret is ___ you and me.",
       "options_json": [
         "among",
         "between",
@@ -13094,6 +14824,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-9",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She married with him",
         "She married to him",
@@ -13107,6 +14839,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-10",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: I apologized ___ being late.",
+      "question_bn": "Complete: I apologized ___ being late.",
+      "question_en": "Complete: I apologized ___ being late.",
       "options_json": [
         "of",
         "for",
@@ -13120,6 +14854,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-11",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "According with the rules",
         "According to the rules",
@@ -13133,6 +14869,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-12",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: ___ all students, she is the best.",
+      "question_bn": "Complete: ___ all students, she is the best.",
+      "question_en": "Complete: ___ all students, she is the best.",
       "options_json": [
         "Between",
         "Among",
@@ -13146,6 +14884,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-13",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Different than others",
         "Different from others",
@@ -13159,6 +14899,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-14",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: He is interested ___ learning English.",
+      "question_bn": "Complete: He is interested ___ learning English.",
+      "question_en": "Complete: He is interested ___ learning English.",
       "options_json": [
         "at",
         "in",
@@ -13172,6 +14914,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-15",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I reached at home late",
         "I reached to home late",
@@ -13185,6 +14929,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-16",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: ___ mathematics, she studies physics.",
+      "question_bn": "Complete: ___ mathematics, she studies physics.",
+      "question_en": "Complete: ___ mathematics, she studies physics.",
       "options_json": [
         "Beside",
         "Besides",
@@ -13198,6 +14944,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-17",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Consist in three parts",
         "Consist of three parts",
@@ -13211,6 +14959,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-18",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: Submit the report ___ a week.",
+      "question_bn": "Complete: Submit the report ___ a week.",
+      "question_en": "Complete: Submit the report ___ a week.",
       "options_json": [
         "by",
         "within",
@@ -13224,6 +14974,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-19",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Proud about my country",
         "Proud of my country",
@@ -13237,6 +14989,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-20",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: I have been studying ___ 2020.",
+      "question_bn": "Complete: I have been studying ___ 2020.",
+      "question_en": "Complete: I have been studying ___ 2020.",
       "options_json": [
         "from",
         "for",
@@ -13250,6 +15004,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-21",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Angry on him",
         "Angry with him",
@@ -13263,6 +15019,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-22",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: Thanks ___ your help, I passed.",
+      "question_bn": "Complete: Thanks ___ your help, I passed.",
+      "question_en": "Complete: Thanks ___ your help, I passed.",
       "options_json": [
         "for",
         "to",
@@ -13276,6 +15034,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-23",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Capable for doing it",
         "Capable of doing it",
@@ -13289,6 +15049,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-24",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: The exam continued ___ the afternoon.",
+      "question_bn": "Complete: The exam continued ___ the afternoon.",
+      "question_en": "Complete: The exam continued ___ the afternoon.",
       "options_json": [
         "since",
         "for",
@@ -13302,6 +15064,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-25",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Believe on God",
         "Believe in God",
@@ -13315,6 +15079,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-26",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: I studied ___ three hours yesterday.",
+      "question_bn": "Complete: I studied ___ three hours yesterday.",
+      "question_en": "Complete: I studied ___ three hours yesterday.",
       "options_json": [
         "since",
         "from",
@@ -13328,6 +15094,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-27",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Responsible of the project",
         "Responsible for the project",
@@ -13341,6 +15109,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-28",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: He succeeded ___ passing the HSC.",
+      "question_bn": "Complete: He succeeded ___ passing the HSC.",
+      "question_en": "Complete: He succeeded ___ passing the HSC.",
       "options_json": [
         "at",
         "in",
@@ -13354,6 +15124,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-29",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Deal of the problem",
         "Deal with the problem",
@@ -13367,6 +15139,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-5-prepositions-advanced-patterns-30",
       "chapter_id": "grammar-class-11-12-5-prepositions-advanced-patterns",
       "question_text": "Complete: ___ reference to your letter...",
+      "question_bn": "Complete: ___ reference to your letter...",
+      "question_en": "Complete: ___ reference to your letter...",
       "options_json": [
         "In",
         "With",
@@ -13382,6 +15156,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-1",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I love Dhaka, it's my hometown",
         "I love Dhaka; it's my hometown",
@@ -13395,6 +15171,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-2",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "You need three things, a pen, paper, focus",
         "You need three things; a pen, paper, focus",
@@ -13408,6 +15186,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-3",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which uses dashes correctly?",
+      "question_bn": "Which uses dashes correctly?",
+      "question_en": "Which uses dashes correctly?",
       "options_json": [
         "The HSC exam-the most important-requires preparation",
         "The HSC exam - the most important - requires preparation",
@@ -13421,6 +15201,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-4",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Dhaka, the capital is crowded",
         "Dhaka (the capital) is crowded",
@@ -13434,6 +15216,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-5",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which quotation is punctuated correctly?",
+      "question_bn": "Which quotation is punctuated correctly?",
+      "question_en": "Which quotation is punctuated correctly?",
       "options_json": [
         "She said \"I will pass the HSC.\"",
         "She said, \"I will pass the HSC\".",
@@ -13447,6 +15231,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-6",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which apostrophe usage is correct?",
+      "question_bn": "Which apostrophe usage is correct?",
+      "question_en": "Which apostrophe usage is correct?",
       "options_json": [
         "The books pages were torn",
         "The book's pages were torn",
@@ -13460,6 +15246,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-7",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I study physics, chemistry and biology",
         "I study physics, chemistry, and biology",
@@ -13473,6 +15261,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-8",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which uses ellipsis correctly?",
+      "question_bn": "Which uses ellipsis correctly?",
+      "question_en": "Which uses ellipsis correctly?",
       "options_json": [
         "Bangladesh gained independence.. after struggle",
         "Bangladesh gained independence ... after struggle",
@@ -13486,6 +15276,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-9",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Its a beautiful day",
         "Its' a beautiful day",
@@ -13499,6 +15291,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-10",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which capitalization is correct?",
+      "question_bn": "Which capitalization is correct?",
+      "question_en": "Which capitalization is correct?",
       "options_json": [
         "I study Mathematics and English",
         "I study mathematics and English",
@@ -13512,6 +15306,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-11",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She studied hard, therefore she passed",
         "She studied hard; therefore, she passed",
@@ -13525,6 +15321,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-12",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The subjects are: Physics, Chemistry",
         "The subjects are; Physics, Chemistry",
@@ -13538,6 +15336,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-13",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which bracket usage is correct?",
+      "question_bn": "Which bracket usage is correct?",
+      "question_en": "Which bracket usage is correct?",
       "options_json": [
         "He (the Prime Minister) announced",
         "He [the Prime Minister] announced",
@@ -13551,6 +15351,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-14",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Dr Karim teaches us",
         "Dr. Karim teaches us",
@@ -13564,6 +15366,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-15",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The time is 3.30 PM",
         "The time is 3-30 PM",
@@ -13577,6 +15381,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-16",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The well known teacher",
         "The well-known teacher",
@@ -13590,6 +15396,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-17",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct for possession?",
+      "question_bn": "Which is correct for possession?",
+      "question_en": "Which is correct for possession?",
       "options_json": [
         "Bangladeshs history",
         "Bangladesh's history",
@@ -13603,6 +15411,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-18",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "My teacher, who is from Dhaka is excellent",
         "My teacher who is from Dhaka, is excellent",
@@ -13616,6 +15426,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-19",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "After finishing the exam I felt relieved",
         "After finishing the exam, I felt relieved",
@@ -13629,6 +15441,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-20",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which title capitalization is correct?",
+      "question_bn": "Which title capitalization is correct?",
+      "question_en": "Which title capitalization is correct?",
       "options_json": [
         "The importance of education in bangladesh",
         "The Importance Of Education In Bangladesh",
@@ -13642,6 +15456,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-21",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Students, who work hard, succeed",
         "Students who work hard succeed",
@@ -13655,6 +15471,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-22",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The exam begins in january",
         "The exam begins in January",
@@ -13668,6 +15486,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-23",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She has one goal, to pass HSC",
         "She has one goal; to pass HSC",
@@ -13681,6 +15501,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-24",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Don't give up",
         "Dont' give up",
@@ -13694,6 +15516,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-25",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The ratio is 2-1",
         "The ratio is 2/1",
@@ -13707,6 +15531,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-26",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Three cities, Dhaka, Chittagong, Sylhet, are major",
         "Three cities: Dhaka, Chittagong, Sylhet—are major",
@@ -13720,6 +15546,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-27",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I wonder.. will I pass",
         "I wonder... will I pass",
@@ -13733,6 +15561,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-28",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "The padma bridge is long",
         "The Padma bridge is long",
@@ -13746,6 +15576,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-29",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I love winter season",
         "I love Winter season",
@@ -13759,6 +15591,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-6-punctuation-for-academic-writing-30",
       "chapter_id": "grammar-class-11-12-6-punctuation-for-academic-writing",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Bangladesh (formerly east pakistan) gained independence",
         "Bangladesh (formerly East Pakistan) gained independence",
@@ -13774,6 +15608,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-1",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is the best emphasis?",
+      "question_bn": "Which is the best emphasis?",
+      "question_en": "Which is the best emphasis?",
       "options_json": [
         "Karim won the prize",
         "It is Karim who won the prize",
@@ -13787,6 +15623,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-2",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes 'hard work'?",
+      "question_bn": "Which emphasizes 'hard work'?",
+      "question_en": "Which emphasizes 'hard work'?",
       "options_json": [
         "She succeeded through hard work",
         "What she succeeded through was hard work",
@@ -13800,6 +15638,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-3",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses inversion correctly?",
+      "question_bn": "Which uses inversion correctly?",
+      "question_en": "Which uses inversion correctly?",
       "options_json": [
         "Never I have seen such beauty",
         "Never have I seen such beauty",
@@ -13813,6 +15653,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-4",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Rarely she misses class",
         "Rarely does she miss class",
@@ -13826,6 +15668,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-5",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes the object?",
+      "question_bn": "Which emphasizes the object?",
+      "question_en": "Which emphasizes the object?",
       "options_json": [
         "The government built the bridge",
         "The bridge was built by the government",
@@ -13839,6 +15683,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-6",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is the best what-cleft?",
+      "question_bn": "Which is the best what-cleft?",
+      "question_en": "Which is the best what-cleft?",
       "options_json": [
         "She needs is confidence",
         "What she needs confidence",
@@ -13852,6 +15698,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-7",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses fronting for emphasis?",
+      "question_bn": "Which uses fronting for emphasis?",
+      "question_en": "Which uses fronting for emphasis?",
       "options_json": [
         "She achieved success through hard work",
         "Through hard work, she achieved success",
@@ -13865,6 +15713,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-8",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Not only he passed, but he got the highest marks",
         "Not only did he pass, but he got the highest marks",
@@ -13878,6 +15728,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-9",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes existence?",
+      "question_bn": "Which emphasizes existence?",
+      "question_en": "Which emphasizes existence?",
       "options_json": [
         "Many students are in the library",
         "There are many students in the library",
@@ -13891,6 +15743,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-10",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is better structured?",
+      "question_bn": "Which is better structured?",
+      "question_en": "Which is better structured?",
       "options_json": [
         "That you passed pleases me",
         "It pleases me that you passed",
@@ -13904,6 +15758,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-11",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes 'in 1971'?",
+      "question_bn": "Which emphasizes 'in 1971'?",
+      "question_en": "Which emphasizes 'in 1971'?",
       "options_json": [
         "Bangladesh gained independence in 1971",
         "In 1971, Bangladesh gained independence",
@@ -13917,6 +15773,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-12",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Seldom we get such opportunities",
         "Seldom do we get such opportunities",
@@ -13930,6 +15788,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-13",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes the action?",
+      "question_bn": "Which emphasizes the action?",
+      "question_en": "Which emphasizes the action?",
       "options_json": [
         "He said something strange",
         "What he said was strange",
@@ -13943,6 +15803,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-14",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses 'who' correctly?",
+      "question_bn": "Which uses 'who' correctly?",
+      "question_en": "Which uses 'who' correctly?",
       "options_json": [
         "It was the prize that Karim won",
         "It was Karim who won the prize",
@@ -13956,6 +15818,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-15",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Hardly the exam had started when power went out",
         "Hardly had the exam started when power went out",
@@ -13969,6 +15833,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-16",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes 'better education'?",
+      "question_bn": "Which emphasizes 'better education'?",
+      "question_en": "Which emphasizes 'better education'?",
       "options_json": [
         "Bangladesh needs better education",
         "Better education Bangladesh needs",
@@ -13982,6 +15848,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-17",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "To study hard is necessary",
         "It is necessary to study hard",
@@ -13995,6 +15863,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-18",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses passive for emphasis?",
+      "question_bn": "Which uses passive for emphasis?",
+      "question_en": "Which uses passive for emphasis?",
       "options_json": [
         "UNESCO recognized the Sundarbans",
         "The Sundarbans was recognized by UNESCO",
@@ -14008,6 +15878,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-19",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Only after studying hard he passed",
         "Only after studying hard did he pass",
@@ -14021,6 +15893,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-20",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes the location?",
+      "question_bn": "Which emphasizes the location?",
+      "question_en": "Which emphasizes the location?",
       "options_json": [
         "Traffic is a challenge in Dhaka",
         "In Dhaka, traffic is a challenge",
@@ -14034,6 +15908,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-21",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "There is a problem with the system",
         "There are a problem with the system",
@@ -14047,6 +15923,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-22",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses double emphasis?",
+      "question_bn": "Which uses double emphasis?",
+      "question_en": "Which uses double emphasis?",
       "options_json": [
         "She succeeded because of hard work",
         "It was because of hard work that she succeeded",
@@ -14060,6 +15938,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-23",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "At no time I was worried",
         "At no time was I worried",
@@ -14073,6 +15953,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-24",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes the book?",
+      "question_bn": "Which emphasizes the book?",
+      "question_en": "Which emphasizes the book?",
       "options_json": [
         "She wants to read the book",
         "The book is what she wants to read",
@@ -14086,6 +15968,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-25",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Little she knew about the exam",
         "Little did she know about the exam",
@@ -14099,6 +15983,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-26",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is better structured?",
+      "question_bn": "Which is better structured?",
+      "question_en": "Which is better structured?",
       "options_json": [
         "That she passed the HSC amazed everyone",
         "It amazed everyone that she passed the HSC",
@@ -14112,6 +15998,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-27",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes dedication?",
+      "question_bn": "Which emphasizes dedication?",
+      "question_en": "Which emphasizes dedication?",
       "options_json": [
         "She achieved success through dedication",
         "Through dedication, she achieved success",
@@ -14125,6 +16013,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-28",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Under no circumstances you should cheat",
         "Under no circumstances should you cheat",
@@ -14138,6 +16028,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-29",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which uses there-structure correctly?",
+      "question_bn": "Which uses there-structure correctly?",
+      "question_en": "Which uses there-structure correctly?",
       "options_json": [
         "There is many students in class",
         "There are many students in class",
@@ -14151,6 +16043,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-7-word-order-emphasis-30",
       "chapter_id": "grammar-class-11-12-7-word-order-emphasis",
       "question_text": "Which emphasizes 'confidence'?",
+      "question_bn": "Which emphasizes 'confidence'?",
+      "question_en": "Which emphasizes 'confidence'?",
       "options_json": [
         "She lacks confidence",
         "What she lacks is confidence",
@@ -14166,6 +16060,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-1",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Each students has a book",
         "Each student has a book",
@@ -14179,6 +16075,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-2",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Every of the students must attend",
         "Every student must attend",
@@ -14192,6 +16090,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-3",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for two items?",
+      "question_bn": "Which is correct for two items?",
+      "question_en": "Which is correct for two items?",
       "options_json": [
         "All of the two books are good",
         "Both of the two books are good",
@@ -14205,6 +16105,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-4",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Either answer are correct",
         "Either answers is correct",
@@ -14218,6 +16120,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-5",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Neither student passed",
         "Neither students passed",
@@ -14231,6 +16135,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-6",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for countable nouns?",
+      "question_bn": "Which is correct for countable nouns?",
+      "question_en": "Which is correct for countable nouns?",
       "options_json": [
         "How much students are there?",
         "How many students are there?",
@@ -14244,6 +16150,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-7",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for uncountable nouns?",
+      "question_bn": "Which is correct for uncountable nouns?",
+      "question_en": "Which is correct for uncountable nouns?",
       "options_json": [
         "How many time do you have?",
         "How much time do you have?",
@@ -14257,6 +16165,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-8",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which has positive meaning?",
+      "question_bn": "Which has positive meaning?",
+      "question_en": "Which has positive meaning?",
       "options_json": [
         "Few students passed",
         "A few students passed",
@@ -14270,6 +16180,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-9",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which has negative meaning?",
+      "question_bn": "Which has negative meaning?",
+      "question_en": "Which has negative meaning?",
       "options_json": [
         "A few hope remains",
         "A little hope remains",
@@ -14283,6 +16195,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-10",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "All of student must study",
         "All students must study",
@@ -14296,6 +16210,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-11",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for an offer?",
+      "question_bn": "Which is correct for an offer?",
+      "question_en": "Which is correct for an offer?",
       "options_json": [
         "Would you like any tea?",
         "Would you like some tea?",
@@ -14309,6 +16225,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-12",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for a negative statement?",
+      "question_bn": "Which is correct for a negative statement?",
+      "question_en": "Which is correct for a negative statement?",
       "options_json": [
         "I don't have some money",
         "I don't have any money",
@@ -14322,6 +16240,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-13",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I have no any time",
         "I have no time",
@@ -14335,6 +16255,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-14",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "None of the students has passed",
         "None of the students have passed",
@@ -14348,6 +16270,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-15",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Half of students is present",
         "Half the students is present",
@@ -14361,6 +16285,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-16",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Several student came",
         "Several students came",
@@ -14374,6 +16300,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-17",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I have plenty of times",
         "I have plenty of time",
@@ -14387,6 +16315,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-18",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Each of the students have a book",
         "Each of the students has a book",
@@ -14400,6 +16330,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-19",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Both of student passed",
         "Both students passed",
@@ -14413,6 +16345,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-20",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct with uncountable noun?",
+      "question_bn": "Which is correct with uncountable noun?",
+      "question_en": "Which is correct with uncountable noun?",
       "options_json": [
         "I need many help",
         "I need much help",
@@ -14426,6 +16360,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-21",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct with countable noun?",
+      "question_bn": "Which is correct with countable noun?",
+      "question_en": "Which is correct with countable noun?",
       "options_json": [
         "She has much friends",
         "She has many friends",
@@ -14439,6 +16375,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-22",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which means 'not one and not the other'?",
+      "question_bn": "Which means 'not one and not the other'?",
+      "question_en": "Which means 'not one and not the other'?",
       "options_json": [
         "Either of them is correct",
         "Neither of them is correct",
@@ -14452,6 +16390,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-23",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Do you have some questions?",
         "Do you have any questions?",
@@ -14465,6 +16405,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-24",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "There is few water left",
         "There is little water left",
@@ -14478,6 +16420,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-25",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Numerous students has applied",
         "Numerous student has applied",
@@ -14491,6 +16435,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-26",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct for a polite request?",
+      "question_bn": "Which is correct for a polite request?",
+      "question_en": "Which is correct for a polite request?",
       "options_json": [
         "Can I have any help?",
         "Can I have some help?",
@@ -14504,6 +16450,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-27",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Every student in Bangladesh are hardworking",
         "Every students in Bangladesh is hardworking",
@@ -14517,6 +16465,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-28",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is more positive?",
+      "question_bn": "Which is more positive?",
+      "question_en": "Which is more positive?",
       "options_json": [
         "Few students understood",
         "A few students understood",
@@ -14530,6 +16480,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-29",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Half of the class have passed",
         "Half the class have passed",
@@ -14543,6 +16495,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-8-determiners-quantifiers-30",
       "chapter_id": "grammar-class-11-12-8-determiners-quantifiers",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "All the both students passed",
         "Both the students passed",
@@ -14558,6 +16512,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-1",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She said that she is tired",
         "She said that she was tired",
@@ -14571,6 +16527,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-2",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct for a universal truth?",
+      "question_bn": "Which is correct for a universal truth?",
+      "question_en": "Which is correct for a universal truth?",
       "options_json": [
         "He said water boiled at 100°C",
         "He said water boils at 100°C",
@@ -14584,6 +16542,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-3",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Do you like Dhaka?\"",
+      "question_bn": "Report: \"Do you like Dhaka?\"",
+      "question_en": "Report: \"Do you like Dhaka?\"",
       "options_json": [
         "He asked do I like Dhaka",
         "He asked if I liked Dhaka",
@@ -14597,6 +16557,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-4",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Study hard!\"",
+      "question_bn": "Report: \"Study hard!\"",
+      "question_en": "Report: \"Study hard!\"",
       "options_json": [
         "He told me study hard",
         "He told me to study hard",
@@ -14610,6 +16572,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-5",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Please help me.\"",
+      "question_bn": "Report: \"Please help me.\"",
+      "question_en": "Report: \"Please help me.\"",
       "options_json": [
         "She asked me help her",
         "She asked me to help her",
@@ -14623,6 +16587,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-6",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She says she is tired",
         "She says she was tired",
@@ -14636,6 +16602,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-7",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I will come tomorrow.\"",
+      "question_bn": "Report: \"I will come tomorrow.\"",
+      "question_en": "Report: \"I will come tomorrow.\"",
       "options_json": [
         "He said he will come the next day",
         "He said he would come the next day",
@@ -14649,6 +16617,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-8",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Let's go to Dhaka.\"",
+      "question_bn": "Report: \"Let's go to Dhaka.\"",
+      "question_en": "Report: \"Let's go to Dhaka.\"",
       "options_json": [
         "He suggested to go to Dhaka",
         "He suggested that we go to Dhaka",
@@ -14662,6 +16632,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-9",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I broke the window.\"",
+      "question_bn": "Report: \"I broke the window.\"",
+      "question_en": "Report: \"I broke the window.\"",
       "options_json": [
         "He admitted break the window",
         "He admitted to break the window",
@@ -14675,6 +16647,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-10",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Where do you live?\"",
+      "question_bn": "Report: \"Where do you live?\"",
+      "question_en": "Report: \"Where do you live?\"",
       "options_json": [
         "She asked where did I live",
         "She asked where do I live",
@@ -14688,6 +16662,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-11",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Don't be late!\"",
+      "question_bn": "Report: \"Don't be late!\"",
+      "question_en": "Report: \"Don't be late!\"",
       "options_json": [
         "She warned me not be late",
         "She warned me to not be late",
@@ -14701,6 +16677,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-12",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He said he can do it",
         "He said he could do it",
@@ -14714,6 +16692,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-13",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"You should study more.\"",
+      "question_bn": "Report: \"You should study more.\"",
+      "question_en": "Report: \"You should study more.\"",
       "options_json": [
         "She advised me study more",
         "She advised me to study more",
@@ -14727,6 +16707,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-14",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I didn't cheat.\"",
+      "question_bn": "Report: \"I didn't cheat.\"",
+      "question_en": "Report: \"I didn't cheat.\"",
       "options_json": [
         "He denied cheat",
         "He denied to cheat",
@@ -14740,6 +16722,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-15",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She apologized for be late",
         "She apologized for being late",
@@ -14753,6 +16737,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-16",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"It may rain tomorrow.\"",
+      "question_bn": "Report: \"It may rain tomorrow.\"",
+      "question_en": "Report: \"It may rain tomorrow.\"",
       "options_json": [
         "He said it may rain the next day",
         "He said it might rain the next day",
@@ -14766,6 +16752,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-17",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He told that he was tired",
         "He told me that he was tired",
@@ -14779,6 +16767,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-18",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"Could you open the door?\"",
+      "question_bn": "Report: \"Could you open the door?\"",
+      "question_en": "Report: \"Could you open the door?\"",
       "options_json": [
         "She asked me open the door",
         "She asked me to open the door",
@@ -14792,6 +16782,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-19",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She said she will help me",
         "She said she would help me",
@@ -14805,6 +16797,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-20",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I have finished my work.\"",
+      "question_bn": "Report: \"I have finished my work.\"",
+      "question_en": "Report: \"I have finished my work.\"",
       "options_json": [
         "He said he finished his work",
         "He said he has finished his work",
@@ -14818,6 +16812,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-21",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She suggested going to the library",
         "She suggested to go to the library",
@@ -14831,6 +16827,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-22",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"What time is it?\"",
+      "question_bn": "Report: \"What time is it?\"",
+      "question_en": "Report: \"What time is it?\"",
       "options_json": [
         "He asked what time it was",
         "He asked what time is it",
@@ -14844,6 +16842,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-23",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He promised help me",
         "He promised to help me",
@@ -14857,6 +16857,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-24",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"The sun rises in the east.\"",
+      "question_bn": "Report: \"The sun rises in the east.\"",
+      "question_en": "Report: \"The sun rises in the east.\"",
       "options_json": [
         "She said the sun rose in the east",
         "She said the sun rises in the east",
@@ -14870,6 +16872,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-25",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He blamed me for cause the problem",
         "He blamed me for causing the problem",
@@ -14883,6 +16887,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-26",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I am coming tomorrow.\"",
+      "question_bn": "Report: \"I am coming tomorrow.\"",
+      "question_en": "Report: \"I am coming tomorrow.\"",
       "options_json": [
         "She said she is coming the next day",
         "She said she was coming the next day",
@@ -14896,6 +16902,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-27",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He explained that he has been busy",
         "He explained that he had been busy",
@@ -14909,6 +16917,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-28",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"You caused this problem.\"",
+      "question_bn": "Report: \"You caused this problem.\"",
+      "question_en": "Report: \"You caused this problem.\"",
       "options_json": [
         "He accused me of cause the problem",
         "He accused me of causing the problem",
@@ -14922,6 +16932,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-29",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She reminded me to complete the work",
         "She reminded me complete the work",
@@ -14935,6 +16947,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-9-reported-speech-advanced-30",
       "chapter_id": "grammar-class-11-12-9-reported-speech-advanced",
       "question_text": "Report: \"I used to live in Dhaka.\"",
+      "question_bn": "Report: \"I used to live in Dhaka.\"",
+      "question_en": "Report: \"I used to live in Dhaka.\"",
       "options_json": [
         "He said he use to live in Dhaka",
         "He said he used to live in Dhaka",
@@ -14950,6 +16964,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-1",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows strong certainty?",
+      "question_bn": "Which shows strong certainty?",
+      "question_en": "Which shows strong certainty?",
       "options_json": [
         "She may be at home",
         "She might be at home",
@@ -14963,6 +16979,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-2",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows impossibility?",
+      "question_bn": "Which shows impossibility?",
+      "question_en": "Which shows impossibility?",
       "options_json": [
         "He may not be tired",
         "He might not be tired",
@@ -14976,6 +16994,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-3",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct for past certainty?",
+      "question_bn": "Which is correct for past certainty?",
+      "question_en": "Which is correct for past certainty?",
       "options_json": [
         "She must studied hard",
         "She must have studied hard",
@@ -14989,6 +17009,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-4",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows prohibition?",
+      "question_bn": "Which shows prohibition?",
+      "question_en": "Which shows prohibition?",
       "options_json": [
         "You don't have to cheat",
         "You mustn't cheat",
@@ -15002,6 +17024,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-5",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows NO obligation?",
+      "question_bn": "Which shows NO obligation?",
+      "question_en": "Which shows NO obligation?",
       "options_json": [
         "You mustn't come",
         "You don't have to come",
@@ -15015,6 +17039,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-6",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct for past advice?",
+      "question_bn": "Which is correct for past advice?",
+      "question_en": "Which is correct for past advice?",
       "options_json": [
         "You should study harder",
         "You should have studied harder",
@@ -15028,6 +17054,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-7",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is most polite?",
+      "question_bn": "Which is most polite?",
+      "question_en": "Which is most polite?",
       "options_json": [
         "Can you help me?",
         "Could you help me?",
@@ -15041,6 +17069,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-8",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows possibility?",
+      "question_bn": "Which shows possibility?",
+      "question_en": "Which shows possibility?",
       "options_json": [
         "It must rain tomorrow",
         "It can't rain tomorrow",
@@ -15054,6 +17084,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-9",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Students must to attend class",
         "Students must attend class",
@@ -15067,6 +17099,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-10",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows past possibility?",
+      "question_bn": "Which shows past possibility?",
+      "question_en": "Which shows past possibility?",
       "options_json": [
         "She might miss the bus",
         "She might have missed the bus",
@@ -15080,6 +17114,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-11",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I can to speak English",
         "I can speak English",
@@ -15093,6 +17129,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-12",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows strong obligation?",
+      "question_bn": "Which shows strong obligation?",
+      "question_en": "Which shows strong obligation?",
       "options_json": [
         "You should submit the assignment",
         "You must submit the assignment",
@@ -15106,6 +17144,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-13",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "You don't must come",
         "You mustn't come",
@@ -15119,6 +17159,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-14",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows expectation?",
+      "question_bn": "Which shows expectation?",
+      "question_en": "Which shows expectation?",
       "options_json": [
         "The train may arrive soon",
         "The train might arrive soon",
@@ -15132,6 +17174,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-15",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct for past regret?",
+      "question_bn": "Which is correct for past regret?",
+      "question_en": "Which is correct for past regret?",
       "options_json": [
         "I should waste less time",
         "I shouldn't waste time",
@@ -15145,6 +17189,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-16",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows ability?",
+      "question_bn": "Which shows ability?",
+      "question_en": "Which shows ability?",
       "options_json": [
         "She can solve the problem",
         "She must solve the problem",
@@ -15158,6 +17204,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-17",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "You needn't to worry",
         "You needn't worry",
@@ -15171,6 +17219,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-18",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows impossibility in the past?",
+      "question_bn": "Which shows impossibility in the past?",
+      "question_en": "Which shows impossibility in the past?",
       "options_json": [
         "He can't have forgotten",
         "He can't forget",
@@ -15184,6 +17234,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-19",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "I have to must go",
         "I have to go",
@@ -15197,6 +17249,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-20",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows suggestion?",
+      "question_bn": "Which shows suggestion?",
+      "question_en": "Which shows suggestion?",
       "options_json": [
         "You must try this method",
         "You could try this method",
@@ -15210,6 +17264,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-21",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "He managed pass the exam",
         "He managed to pass the exam",
@@ -15223,6 +17279,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-22",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows permission?",
+      "question_bn": "Which shows permission?",
+      "question_en": "Which shows permission?",
       "options_json": [
         "You must use your phone",
         "You may use your phone",
@@ -15236,6 +17294,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-23",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "She ought to study harder",
         "She ought study harder",
@@ -15249,6 +17309,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-24",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows missed opportunity?",
+      "question_bn": "Which shows missed opportunity?",
+      "question_en": "Which shows missed opportunity?",
       "options_json": [
         "You can score better",
         "You could have scored better",
@@ -15262,6 +17324,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-25",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Students are allowed use calculators",
         "Students are allowed to use calculators",
@@ -15275,6 +17339,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-26",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows hypothetical past?",
+      "question_bn": "Which shows hypothetical past?",
+      "question_en": "Which shows hypothetical past?",
       "options_json": [
         "I will help if I know",
         "I would help if I knew",
@@ -15288,6 +17354,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-27",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Need I to come?",
         "Need I come?",
@@ -15301,6 +17369,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-28",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows necessity?",
+      "question_bn": "Which shows necessity?",
+      "question_en": "Which shows necessity?",
       "options_json": [
         "We may prepare better",
         "We might prepare better",
@@ -15314,6 +17384,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-29",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which is correct?",
+      "question_bn": "Which is correct?",
+      "question_en": "Which is correct?",
       "options_json": [
         "Would you like any help?",
         "Would you like some help?",
@@ -15327,6 +17399,8 @@ export const GRAMMAR_MCQS_MAP = {
       "id": "grammar-mcq-grammar-class-11-12-10-modal-verbs-advanced-30",
       "chapter_id": "grammar-class-11-12-10-modal-verbs-advanced",
       "question_text": "Which shows past ability?",
+      "question_bn": "Which shows past ability?",
+      "question_en": "Which shows past ability?",
       "options_json": [
         "I can swim when I was young",
         "I could swim when I was young",

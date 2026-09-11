@@ -135,6 +135,8 @@ for cls_name, topics in classes_order:
                 "id": f"grammar-mcq-{chap_id}-{q_idx+1}",
                 "chapter_id": chap_id,
                 "question_text": q_text,
+                "question_bn": q_text,
+                "question_en": q_text,
                 "options_json": opts,
                 "correct_answer_index": correct_idx,
                 "explanation": f"Correct Answer: {ans}"
