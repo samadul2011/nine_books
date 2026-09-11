@@ -31,13 +31,15 @@ import {
   RotateCcw,
   BookOpenCheck,
   ListOrdered,
-  BarChart3
+  BarChart3,
+  Search
 } from 'lucide-react'
 import LessonAudioPlayer from './components/LessonAudioPlayer'
 import TextSelectionToolbar from './components/TextSelectionToolbar'
 import VocabularyDrawer from './components/VocabularyDrawer'
 import HighlightsDrawer from './components/HighlightsDrawer'
 import InteractiveLessonViewer from './components/InteractiveLessonViewer'
+import SmartSearch from './components/SmartSearch'
 import { studyStorageService } from './services/studyStorageService'
 import { MATH_FALLBACK_CHAPTERS, MATH_CH1_FALLBACK_LESSON, MATH_CH3_FALLBACK_LESSON, MATH_CH4_FALLBACK_LESSON, MATH_CH1_FALLBACK_MCQS } from './data/mathFallbackData'
 import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from './data/financeBankingData'
@@ -74,6 +76,7 @@ export default function App() {
   const [activePlayingChunk, setActivePlayingChunk] = useState(null)
   const [isVocabOpen, setIsVocabOpen] = useState(false)
   const [isHighlightsOpen, setIsHighlightsOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [vocabCount, setVocabCount] = useState(0)
   const [highlightsCount, setHighlightsCount] = useState(0)
   const [userHighlights, setUserHighlights] = useState([])
@@ -338,6 +341,16 @@ export default function App() {
           </div>
 
           <div className="flex items-center space-x-3">
+            {/* Search Answer button */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-violet-500/15 hover:bg-violet-500/25 text-violet-300 border border-violet-500/40 transition"
+              title="পাঠ থেকে উত্তর খুঁজুন"
+            >
+              <Search className="w-3.5 h-3.5 text-violet-400" />
+              <span>উত্তর খুঁজুন</span>
+            </button>
+
             {/* Study Tools Action Buttons: Vocabulary & Highlights */}
             <button
               onClick={() => setIsVocabOpen(true)}
@@ -996,6 +1009,14 @@ export default function App() {
           <span className="text-[10px] font-semibold">প্রগতি</span>
         </button>
       </nav>
+
+      {/* Smart Search Modal */}
+      <SmartSearch
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        lessonText={lessons.map(l => l.content_text).join('\n\n')}
+        chapterTitle={selectedChapter?.title_bn}
+      />
 
       {/* Floating Text Selection Toolbar (Translate, Speak, Highlight, Save) */}
       <TextSelectionToolbar
