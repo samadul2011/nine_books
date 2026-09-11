@@ -1,0 +1,1 @@
+export const TEST = $\frac{1}{2}$;

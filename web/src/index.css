@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom minimalist scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.4);
+}
+
+/* Beautiful Markdown Rendering Styles with Dynamic Zoom */
+.markdown-content {
+  font-size: var(--lesson-font-size, 1.05rem);
+  line-height: 1.9;
+  color: #f1f5f9;
+  width: 100%;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 0.65em;
+  line-height: 1.35;
+}
+
+.markdown-content h1 {
+  font-size: 1.85em;
+  font-weight: 800;
+  color: #2dd4bf;
+  letter-spacing: -0.01em;
+}
+
+.markdown-content h2 {
+  font-size: 1.55em;
+  font-weight: 800;
+  color: #38bdf8;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.25);
+  padding-bottom: 0.35em;
+  margin-top: 1.6em;
+}
+
+.markdown-content h3 {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-top: 1.4em;
+}
+
+.markdown-content h4 {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.topic-header-showcase {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.6), 0 8px 10px -6px rgba(15, 23, 42, 0.6);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.topic-header-showcase:hover {
+  border-left-color: #38bdf8;
+  transform: translateX(2px);
+}
+
+.markdown-content p {
+  margin-bottom: 1.25em;
+  font-size: 1em;
+  line-height: 1.95;
+  color: #e2e8f0;
+}
+
+.markdown-content strong {
+  font-weight: 700;
+  color: #38bdf8; /* sky-400 for contrast and readability */
+}
+
+.markdown-content em {
+  color: #93c5fd;
+  font-style: italic;
+}
+
+.markdown-content hr {
+  border-color: rgba(51, 65, 85, 0.8);
+  margin: 1.5em 0;
+}
+
+.markdown-content blockquote {
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-left: 5px solid #14b8a6; /* teal-500 */
+  background: rgba(15, 23, 42, 0.85);
+  padding: 1.2em 1.5em;
+  margin: 1.2em 0;
+  border-radius: 0.85rem;
+  color: #f8fafc;
+  font-size: 1em;
+  line-height: 1.95;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.markdown-content blockquote p {
+  margin-bottom: 0.5em;
+  color: #f1f5f9;
+}
+
+.markdown-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.35rem;
+}
+
+/* Table styling for Markdown tables */
+.markdown-content .table-wrapper,
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+  background-color: rgba(15, 23, 42, 0.75);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-content table thead {
+  background-color: rgba(30, 41, 59, 0.9);
+  border-bottom: 2px solid #475569;
+}
+
+.markdown-content table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #2dd4bf; /* teal-400 */
+  border: 1px solid #334155;
+  white-space: nowrap;
+}
+
+.markdown-content table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  vertical-align: top;
+}
+
+.markdown-content table tr:nth-child(even) {
+  background-color: rgba(30, 41, 59, 0.4);
+}
+
+.markdown-content table tr:hover {
+  background-color: rgba(45, 212, 191, 0.05);
+}
+
+.markdown-content code {
+  background-color: rgba(30, 41, 59, 0.8);
+  color: #f43f5e;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  font-family: monospace;
+}
+
+.markdown-content pre {
+  background-color: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  color: #38bdf8;
+  padding: 0;
+}
+
+/* Story Title & Author Showcase Hero Card */
+.story-hero-showcase {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.45), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.12);
+}
+
+.story-hero-title {
+  font-size: 2.25em !important;
+  line-height: 1.25 !important;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+/* MCQ Options Responsive Grid & Badges */
+.mcq-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.mcq-question-prompt {
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+
+/* Mathematics Problem & Collapsible Solution Cards */
+.math-problem-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 0 20px rgba(20, 184, 166, 0.08);
+}
+
+.math-solution-body p {
+  margin-bottom: 0.9em;
+  line-height: 1.85;
+}
+
+.math-solution-body strong {
+  color: #2dd4bf; /* teal-400 */
+}
+
+.math-master-toolbar {
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   KaTeX Mathematical Typography for NCTB Textbook Quality Equations
+   ========================================================================== */
+.katex {
+  font-size: 1.12em !important;
+  color: #f1f5f9 !important; /* Bright, clear white text */
+  text-rendering: geometricPrecision;
+}
+
+.katex-display {
+  margin: 0.75em 0 !important;
+}
+
+.katex-html {
+  white-space: normal;
+}
+
+/* Vibrant, prominent fraction division line matching textbook */
+.katex .frac-line {
+  border-bottom-color: #38bdf8 !important; /* sky-400 */
+  border-bottom-width: 1.75px !important;
+}
+
+/* Radical root symbols (square root, cube root, nth root) */
+.katex .sqrt svg {
+  fill: #38bdf8 !important;
+}
+.katex .sqrt-sign {
+  color: #38bdf8 !important;
+}
+
+/* Math variables and operators */
+.katex .mord.mathnormal {
+  color: #7dd3fc !important; /* sky-300 */
+  font-style: italic;
+}
+
+.katex .mbin,
+.katex .mrel {
+  color: #34d399 !important; /* emerald-400 */
+  padding: 0 0.2em;
+}
+
+.katex .mop {
+  color: #fbbf24 !important; /* amber-400 for log, sin, cos, etc. */
+  font-weight: 600;
+}
+
+/* Superscripts and Subscripts */
+.katex .msupsub .vlist-t {
+  font-weight: 500;
+}
+
+.katex-display-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0d9488 #0f172a;
+}
+
