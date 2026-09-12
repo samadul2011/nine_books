@@ -85,7 +85,7 @@ export default function App() {
   const [selectedCompositionTopic, setSelectedCompositionTopic] = useState(null)
   const [isCVModeActive, setIsCVModeActive] = useState(false)
   const [isLevelExamActive, setIsLevelExamActive] = useState(false)
-  const [accountingActiveView, setAccountingActiveView] = useState('creative') // 'creative' | 'short' | 'reading' | 'quiz'
+  const [accountingActiveView, setAccountingActiveView] = useState('reading') // 'reading' | 'short' | 'quiz' | 'creative'
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
     return saved ? parseInt(saved, 10) : 125 // Default to 125% for grand, comfortable reading
@@ -1200,10 +1200,6 @@ export default function App() {
                               <BookOpen className="w-4 h-4 text-teal-400" />
                               {lessons.length}টি পাঠ ও মূল আলোচনা
                             </span>
-                            <span className="flex items-center gap-1.5 text-sky-300 font-medium">
-                              <FileText className="w-4 h-4 text-sky-400" />
-                              {accCreativeList.length}টি সৃজনশীল প্রশ্ন (Creative Qs)
-                            </span>
                             <span className="flex items-center gap-1.5 text-amber-300 font-medium">
                               <HelpCircle className="w-4 h-4 text-amber-400" />
                               {accShortList.length}টি সংক্ষিপ্ত প্রশ্ন (Short Qs)
@@ -1211,6 +1207,10 @@ export default function App() {
                             <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
                               <Sparkles className="w-4 h-4 text-emerald-400" />
                               {questions.length}টি কুইজ প্রশ্ন (MCQs)
+                            </span>
+                            <span className="flex items-center gap-1.5 text-sky-300 font-medium">
+                              <FileText className="w-4 h-4 text-sky-400" />
+                              {accCreativeList.length}টি সৃজনশীল প্রশ্ন (Creative Qs)
                             </span>
                           </>
                         ) : (
@@ -1228,9 +1228,52 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Accounting Navigation Tabs */}
+                    {/* Accounting Navigation Tabs: 1. পাঠ ও মূল আলোচনা, 2. সংক্ষিপ্ত প্রশ্ন ও উত্তর, 3. কুইজ পরীক্ষা, 4. সৃজনশীল প্রশ্ন */}
                     {isAccountingSub && (
                       <div className="flex items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 shadow-lg overflow-x-auto">
+                        {/* 1st: পাঠ ও মূল আলোচনা (Reading) */}
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('reading')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'reading'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <BookOpen className="w-4 h-4" />
+                          <span>পাঠ ও মূল আলোচনা (Reading)</span>
+                        </button>
+
+                        {/* 2nd: সংক্ষিপ্ত প্রশ্ন ও উত্তর */}
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('short')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'short'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <HelpCircle className="w-4 h-4" />
+                          <span>সংক্ষিপ্ত প্রশ্ন ও উত্তর ({accShortList.length}টি)</span>
+                        </button>
+
+                        {/* 3rd: কুইজ পরীক্ষা */}
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('quiz')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'quiz'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <Sparkles className="w-4 h-4" />
+                          <span>কুইজ পরীক্ষা ({questions.length}টি)</span>
+                        </button>
+
+                        {/* 4th: সৃজনশীল প্রশ্ন */}
                         <button
                           type="button"
                           onClick={() => setAccountingActiveView('creative')}
@@ -1245,47 +1288,8 @@ export default function App() {
                           <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-black ${
                             accountingActiveView === 'creative' ? 'bg-slate-950/30 text-slate-950' : 'bg-teal-500/20 text-teal-300'
                           }`}>
-                            বোর্ড স্ট্যান্ডার্ড
+                            বোর্ড মান
                           </span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => setAccountingActiveView('short')}
-                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                            accountingActiveView === 'short'
-                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
-                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
-                          }`}
-                        >
-                          <HelpCircle className="w-4 h-4" />
-                          <span>সংক্ষিপ্ত প্রশ্ন ও উত্তর ({accShortList.length}টি)</span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => setAccountingActiveView('reading')}
-                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                            accountingActiveView === 'reading'
-                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
-                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
-                          }`}
-                        >
-                          <BookOpen className="w-4 h-4" />
-                          <span>পাঠ ও মূল আলোচনা (Reading)</span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => setAccountingActiveView('quiz')}
-                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                            accountingActiveView === 'quiz'
-                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
-                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
-                          }`}
-                        >
-                          <Sparkles className="w-4 h-4" />
-                          <span>কুইজ পরীক্ষা ({questions.length}টি)</span>
                         </button>
                       </div>
                     )}
