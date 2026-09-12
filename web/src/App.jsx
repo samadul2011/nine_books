@@ -33,7 +33,14 @@ import {
   ListOrdered,
   BarChart3,
   Search,
-  ArrowLeft
+  ArrowLeft,
+  Code2,
+  Phone,
+  Mail,
+  Copy,
+  Check,
+  User,
+  ExternalLink
 } from 'lucide-react'
 import LessonAudioPlayer from './components/LessonAudioPlayer'
 import TextSelectionToolbar from './components/TextSelectionToolbar'
@@ -96,6 +103,8 @@ export default function App() {
   const [isVocabOpen, setIsVocabOpen] = useState(false)
   const [isHighlightsOpen, setIsHighlightsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isDevInfoOpen, setIsDevInfoOpen] = useState(false)
+  const [devEmailCopied, setDevEmailCopied] = useState(false)
   const [vocabCount, setVocabCount] = useState(0)
   const [highlightsCount, setHighlightsCount] = useState(0)
   const [userHighlights, setUserHighlights] = useState([])
@@ -506,6 +515,15 @@ export default function App() {
             </div>
 
             <button
+              onClick={() => setIsDevInfoOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-500/40 transition shadow-sm"
+              title="Developer Information (Samadul Hoque)"
+            >
+              <Code2 className="w-3.5 h-3.5 text-teal-400" />
+              <span>Developer</span>
+            </button>
+
+            <button
               onClick={fetchInitialData}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition"
               title="Refresh Data"
@@ -824,6 +842,49 @@ export default function App() {
                         )}
                       </button>
                     ))}
+                  </div>
+                </div>
+
+                {/* Developer Info Sidebar Card */}
+                <div className="bg-slate-900/80 border border-slate-800/90 rounded-2xl p-3.5 shadow-sm space-y-2 mt-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                      <Code2 className="w-3.5 h-3.5 text-teal-400" />
+                      Developer Info
+                    </span>
+                    <button
+                      onClick={() => setIsDevInfoOpen(true)}
+                      className="text-[10px] font-bold text-teal-400 hover:text-teal-300 bg-teal-500/10 px-2 py-0.5 rounded-full border border-teal-500/20 transition"
+                    >
+                      View Profile
+                    </button>
+                  </div>
+                  <div className="flex items-center gap-2.5 pt-1">
+                    <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center font-extrabold text-slate-950 text-xs shadow-sm flex-shrink-0">
+                      SH
+                    </div>
+                    <div className="truncate flex-1">
+                      <div className="text-xs font-bold text-white truncate">Samadul Hoque</div>
+                      <div className="text-[10px] text-teal-400 font-medium truncate">Lead App Developer</div>
+                    </div>
+                  </div>
+                  <div className="pt-1.5 border-t border-slate-800/80 space-y-1 text-[11px]">
+                    <a
+                      href="tel:+96897550832"
+                      className="flex items-center gap-1.5 text-slate-300 hover:text-teal-300 transition truncate"
+                      title="Call Developer"
+                    >
+                      <Phone className="w-3 h-3 text-emerald-400 flex-shrink-0" />
+                      <span>+968-97550832</span>
+                    </a>
+                    <a
+                      href="mailto:samadul2011@gmail.com"
+                      className="flex items-center gap-1.5 text-slate-300 hover:text-teal-300 transition truncate"
+                      title="Email Developer"
+                    >
+                      <Mail className="w-3 h-3 text-sky-400 flex-shrink-0" />
+                      <span className="truncate">samadul2011@gmail.com</span>
+                    </a>
                   </div>
                 </div>
               </aside>
@@ -1294,6 +1355,42 @@ export default function App() {
         )}
       </main>
 
+      {/* Global Application Footer with Developer Information */}
+      <footer className="w-full mt-10 py-6 border-t border-slate-800/80 bg-slate-950/60 text-center text-xs text-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-lg bg-teal-500/20 border border-teal-500/40 flex items-center justify-center font-bold text-teal-300 text-xs">
+              9
+            </div>
+            <span className="font-semibold text-slate-300">NineBooks</span>
+            <span className="text-slate-600">•</span>
+            <span>Digital Curriculum & Progress Monitor</span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs">
+            <span className="text-slate-500">Developer:</span>
+            <span className="font-bold text-white">Samadul Hoque</span>
+            <span className="text-slate-600">•</span>
+            <a href="tel:+96897550832" className="text-slate-300 hover:text-teal-400 transition flex items-center gap-1">
+              <Phone className="w-3 h-3 text-emerald-400" />
+              <span>+968-97550832</span>
+            </a>
+            <span className="text-slate-600">•</span>
+            <a href="mailto:samadul2011@gmail.com" className="text-slate-300 hover:text-teal-400 transition flex items-center gap-1">
+              <Mail className="w-3 h-3 text-sky-400" />
+              <span>samadul2011@gmail.com</span>
+            </a>
+          </div>
+
+          <button
+            onClick={() => setIsDevInfoOpen(true)}
+            className="px-3 py-1 rounded-xl bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold transition"
+          >
+            Developer Info →
+          </button>
+        </div>
+      </footer>
+
       {/* ===== MOBILE BOTTOM NAVIGATION BAR ===== */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-800 flex items-center justify-around px-1 py-1 safe-area-pb">
         {/* বিষয় - Subjects */}
@@ -1394,6 +1491,127 @@ export default function App() {
         isOpen={isHighlightsOpen}
         onClose={() => setIsHighlightsOpen(false)}
       />
+
+      {/* Developer Information Modal */}
+      {isDevInfoOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in">
+          <div className="bg-slate-900 border border-teal-500/40 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl space-y-6 relative animate-in zoom-in-95 duration-200">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center shadow-sm">
+                  <Code2 className="w-5 h-5 text-teal-400" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">Developer Information</h3>
+                  <p className="text-xs text-slate-400">NineBooks Platform Lead</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsDevInfoOpen(false)}
+                className="text-slate-400 hover:text-white text-xs font-bold px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700 transition"
+              >
+                ✕ Close
+              </button>
+            </div>
+
+            {/* Profile Avatar & Info Card */}
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 shadow-inner">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-teal-500 via-emerald-400 to-teal-300 flex items-center justify-center font-black text-slate-950 text-2xl shadow-lg shadow-teal-500/20 flex-shrink-0">
+                SH
+              </div>
+              <div className="min-w-0 flex-1">
+                <h4 className="text-lg font-extrabold text-white truncate">Samadul Hoque</h4>
+                <p className="text-xs font-semibold text-teal-400 mt-0.5">Software & Mobile App Developer</p>
+                <div className="mt-1.5 flex items-center gap-1.5 flex-wrap">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                    Lead Developer
+                  </span>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-700/60 text-slate-300 border border-slate-600">
+                    NineBooks Suite
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Details List */}
+            <div className="space-y-3">
+              {/* Phone / WhatsApp */}
+              <div className="p-3.5 rounded-2xl bg-slate-800/40 border border-slate-800 flex items-center justify-between gap-3 hover:border-slate-700 transition">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-slate-400 font-medium">Mobile & WhatsApp</div>
+                    <a href="tel:+96897550832" className="text-sm font-bold text-white hover:text-emerald-400 transition">
+                      +968-97550832
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <a
+                    href="https://wa.me/96897550832"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-sm flex items-center gap-1"
+                    title="Chat on WhatsApp"
+                  >
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href="tel:+96897550832"
+                    className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs transition"
+                    title="Call directly"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Email Address */}
+              <div className="p-3.5 rounded-2xl bg-slate-800/40 border border-slate-800 flex items-center justify-between gap-3 hover:border-slate-700 transition">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-sky-400" />
+                  </div>
+                  <div className="min-w-0 truncate">
+                    <div className="text-[11px] text-slate-400 font-medium">Email Address</div>
+                    <a href="mailto:samadul2011@gmail.com" className="text-sm font-bold text-white hover:text-sky-400 transition truncate block">
+                      samadul2011@gmail.com
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 flex-shrink-0">
+                  <a
+                    href="mailto:samadul2011@gmail.com"
+                    className="px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition shadow-sm"
+                    title="Send Email"
+                  >
+                    <span>Email</span>
+                  </a>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText('samadul2011@gmail.com')
+                      setDevEmailCopied(true)
+                      setTimeout(() => setDevEmailCopied(false), 2000)
+                    }}
+                    className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs font-semibold flex items-center gap-1 transition"
+                    title="Copy Email Address"
+                  >
+                    {devEmailCopied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Note */}
+            <div className="pt-2 text-center text-xs text-slate-500 border-t border-slate-800/80">
+              NineBooks Educational Platform • Class 6 to HSC Curriculum, Grammar & Composition Suite
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
