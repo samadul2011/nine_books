@@ -4,79 +4,79 @@
 
 export const COMPOSITION_SUBJECT = {
   id: 'composition-subject-id',
-  name_bn: 'কম্পোজিশন ও রাইটিং',
-  name_en: 'Writing & Composition',
+  name_bn: 'Writing & Composition',
+  name_en: 'English Writing & Composition',
   icon_url: 'https://img.icons8.com/color/96/hand-with-pen.png'
 }
 
 export const COMPOSITION_CATEGORIES = [
   {
     "id": "All",
-    "name_bn": "সবগুলো",
-    "name_en": "All Writings",
+    "name_bn": "All Topics",
+    "name_en": "All Topics",
     "icon": "BookOpen",
     "color": "text-teal-400"
   },
   {
     "id": "Paragraph",
-    "name_bn": "অনুচ্ছেদ লিখন",
-    "name_en": "Paragraph Writing",
+    "name_bn": "Paragraph",
+    "name_en": "Paragraph",
     "icon": "FileText",
     "color": "text-emerald-400"
   },
   {
     "id": "Easy",
-    "name_bn": "সহজ রচনা / প্রবন্ধ",
-    "name_en": "Composition & Essays",
+    "name_bn": "Composition",
+    "name_en": "Composition",
     "icon": "Sparkles",
     "color": "text-sky-400"
   },
   {
     "id": "Dialogue",
-    "name_bn": "সংলাপ / ডায়লগ",
-    "name_en": "Dialogue Writing",
+    "name_bn": "Dialogue",
+    "name_en": "Dialogue",
     "icon": "MessagesSquare",
     "color": "text-indigo-400"
   },
   {
     "id": "Short Story",
-    "name_bn": "ছোট গল্প",
-    "name_en": "Short Stories",
+    "name_bn": "Short Story",
+    "name_en": "Short Story",
     "icon": "Bookmark",
     "color": "text-purple-400"
   },
   {
     "id": "Completing Story",
-    "name_bn": "কমপ্লিটিং স্টোরি",
+    "name_bn": "Completing Story",
     "name_en": "Completing Story",
     "icon": "PenTool",
     "color": "text-pink-400"
   },
   {
     "id": "Application",
-    "name_bn": "দরখাস্ত / আবেদন",
-    "name_en": "Application Writing",
+    "name_bn": "Application",
+    "name_en": "Application",
     "icon": "FileCheck2",
     "color": "text-amber-400"
   },
   {
     "id": "Letter",
-    "name_bn": "চিঠিপত্র লিখন",
-    "name_en": "Letter Writing",
+    "name_bn": "Letter",
+    "name_en": "Letter",
     "icon": "Mail",
     "color": "text-orange-400"
   },
   {
     "id": "Email",
-    "name_bn": "ইমেইল লিখন",
-    "name_en": "Email Writing",
+    "name_bn": "Email",
+    "name_en": "Email",
     "icon": "Send",
     "color": "text-cyan-400"
   },
   {
     "id": "CV",
-    "name_bn": "সিভি প্রস্তুতকারক",
-    "name_en": "CV Writing & Builder",
+    "name_bn": "CV Builder",
+    "name_en": "CV Builder",
     "icon": "Award",
     "color": "text-rose-400"
   }

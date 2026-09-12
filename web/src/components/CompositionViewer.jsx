@@ -65,6 +65,22 @@ export default function CompositionViewer({
     }
   }, [])
 
+  const cleanTemplate = (raw = '') => {
+    return raw
+      .replace(/\{ADDRESS\}/g, 'Dhanmondi, Dhaka')
+      .replace(/\{DATE\}/g, '15 October 2024')
+      .replace(/\{SCHOOL_NAME\}/g, 'Ideal School and College, Dhaka')
+      .replace(/\{NAME\}/g, 'Rahim')
+      .replace(/\{FRIEND_NAME\}/g, 'Tanvir')
+      .replace(/\{CLASS\}/g, '9')
+      .replace(/\{SECTION\}/g, 'A')
+      .replace(/\{ROLL_NO\}/g, '01')
+      .replace(/\{EMAIL\}/g, 'student.bangladesh@gmail.com')
+  }
+
+  const rawTemplate = topic?.template || ''
+  const displayTemplate = cleanTemplate(rawTemplate)
+
   const stopAudio = () => {
     ttsService.stop()
     setIsPlaying(false)
@@ -77,7 +93,7 @@ export default function CompositionViewer({
       return
     }
 
-    if (!topic?.template) return
+    if (!displayTemplate) return
 
     setIsPlaying(true)
     ttsService.setListeners({
@@ -95,13 +111,13 @@ export default function CompositionViewer({
         setActiveSentence(null)
       }
     })
-    ttsService.play(topic.template)
+    ttsService.play(displayTemplate)
   }
 
   const handleCopy = () => {
     const textToCopy = isCVMode
       ? generateCvPlainText(cvData)
-      : (topic?.template || '')
+      : displayTemplate
 
     navigator.clipboard.writeText(textToCopy).then(() => {
       setCopied(true)
@@ -114,7 +130,7 @@ export default function CompositionViewer({
   }
 
   // Calculate stats
-  const wordCount = topic?.wordCount || (topic?.template ? topic.template.split(/\s+/).length : 0)
+  const wordCount = topic?.wordCount || (displayTemplate ? displayTemplate.split(/\s+/).length : 0)
   const readingTime = Math.max(1, Math.ceil(wordCount / 120))
   const category = topic?.category || 'Paragraph'
   const tips = EXAM_TIPS[category] || EXAM_TIPS['Paragraph']
@@ -122,8 +138,8 @@ export default function CompositionViewer({
 
   // Dialogue Parser: identify speaker turns
   const isDialogue = category === 'Dialogue' || (topic?.title || '').toLowerCase().includes('dialogue')
-  const dialogueLines = isDialogue && topic?.template
-    ? topic.template.split('\n').filter(l => l.trim().length > 0).map(line => {
+  const dialogueLines = isDialogue && displayTemplate
+    ? displayTemplate.split('\n').filter(l => l.trim().length > 0).map(line => {
         const match = line.match(/^([A-Za-z0-9\s]+):(.*)$/)
         if (match) {
           return { speaker: match[1].trim(), speech: match[2].trim(), isTurn: true }
@@ -207,7 +223,7 @@ ${data.hobbies}
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  প্রিভিউ (Preview)
+                  Preview
                 </button>
                 <button
                   onClick={() => setCvViewMode('edit')}
@@ -217,7 +233,7 @@ ${data.hobbies}
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  সম্পাদনা (Edit Details)
+                  Edit Details
                 </button>
               </div>
 
@@ -227,7 +243,7 @@ ${data.hobbies}
                 title="Copy full CV text"
               >
                 {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                <span>{copied ? 'কপি হয়েছে!' : 'কপি CV'}</span>
+                <span>{copied ? 'Copied!' : 'Copy CV'}</span>
               </button>
 
               <button
@@ -236,7 +252,7 @@ ${data.hobbies}
                 title="Print CV"
               >
                 <Printer className="w-4 h-4" />
-                <span>প্রিন্ট করুন</span>
+                <span>Print</span>
               </button>
             </div>
           </div>
@@ -245,7 +261,7 @@ ${data.hobbies}
           <div className="mt-6 pt-5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-rose-400" />
-              টেমপ্লেট বাছাই করুন (Select Template):
+              Select Template:
             </span>
             <div className="flex gap-2 flex-wrap">
               {CV_TEMPLATES.map((tmpl) => (
@@ -371,7 +387,7 @@ ${data.hobbies}
                 onClick={() => setCvViewMode('preview')}
                 className="px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm shadow-md"
               >
-                প্রিভিউ দেখুন (Done & Preview)
+                Done & Preview
               </button>
             </div>
           </div>
@@ -534,7 +550,7 @@ ${data.hobbies}
               title="Listen to text audio"
             >
               {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-              <span>{isPlaying ? 'অডিও থামান' : 'অডিও শুনুন (TTS)'}</span>
+              <span>{isPlaying ? 'Stop Audio' : 'Play Audio (TTS)'}</span>
             </button>
 
             {/* Exam Tips Button */}
@@ -545,7 +561,7 @@ ${data.hobbies}
                 title="Board Exam Rules and Tips"
               >
                 <Lightbulb className="w-4 h-4 text-amber-400" />
-                <span>পরীক্ষার নিয়ম</span>
+                <span>Exam Tips</span>
               </button>
             )}
 
@@ -557,7 +573,7 @@ ${data.hobbies}
                 title="Format Guide and Structure"
               >
                 <FileCheck2 className="w-4 h-4 text-indigo-400" />
-                <span>ফরম্যাট গাইড</span>
+                <span>Format Guide</span>
               </button>
             )}
 
@@ -573,7 +589,7 @@ ${data.hobbies}
                 title="Toggle Bangla Translation"
               >
                 <Languages className="w-4 h-4" />
-                <span>{showBangla ? 'মূল ইংরেজি' : 'বাংলা অনুবাদ'}</span>
+                <span>{showBangla ? 'English Only' : 'Bangla Translation'}</span>
               </button>
             )}
 
@@ -596,7 +612,7 @@ ${data.hobbies}
           <div className="space-y-4">
             <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-indigo-400"></span>
-              <span>Dialogue Exchange (কথোপকথন):</span>
+              <span>Dialogue Exchange:</span>
             </div>
             {dialogueLines.map((line, idx) => {
               if (!line.isTurn) {
@@ -636,7 +652,7 @@ ${data.hobbies}
           /* Standard Paragraph, Letter, Application, or Essay Content */
           <div className="prose prose-invert max-w-none">
             <div className="text-slate-200 text-base sm:text-lg leading-relaxed whitespace-pre-line space-y-4 font-normal">
-              {topic.template}
+              {displayTemplate}
             </div>
           </div>
         )}
@@ -646,7 +662,7 @@ ${data.hobbies}
           <div className="mt-8 pt-6 border-t border-slate-800">
             <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-2">
               <Mail className="w-4 h-4 text-amber-400" />
-              <span>বাধ্যতামূলক ডাক খাম (Postal Envelope - Board Marking Requirement):</span>
+              <span>Postal Envelope (Board Marking Requirement):</span>
             </div>
             <div className="border-2 border-dashed border-amber-500/50 bg-slate-950/60 rounded-2xl p-5 max-w-lg mx-auto relative shadow-inner">
               {/* Stamp box */}
@@ -693,13 +709,13 @@ ${data.hobbies}
           <div className="flex items-center justify-between pb-3 border-b border-slate-800">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
               <BookOpen className="w-4 h-4 text-teal-400" />
-              <span>গুরুত্বপূর্ণ শব্দার্থ ও ব্যাকরণ (Topic Vocabulary - {topic.vocabulary.length} words)</span>
+              <span>Topic Vocabulary ({topic.vocabulary.length} Words)</span>
             </h3>
             <button
               onClick={() => setShowVocab(!showVocab)}
               className="text-xs text-slate-400 hover:text-white flex items-center gap-1 font-semibold"
             >
-              {showVocab ? 'লুকান' : 'দেখান'}
+              {showVocab ? 'Hide' : 'Show'}
               {showVocab ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>
           </div>
@@ -744,7 +760,7 @@ ${data.hobbies}
                 onClick={() => setShowExamTips(false)}
                 className="text-slate-400 hover:text-white text-xs font-bold px-2.5 py-1 rounded-lg bg-slate-800"
               >
-                ✕ বন্ধ করুন
+                ✕ Close
               </button>
             </div>
 
@@ -762,7 +778,7 @@ ${data.hobbies}
                 onClick={() => setShowExamTips(false)}
                 className="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition"
               >
-                বুঝেছি (Got It)
+                Got It
               </button>
             </div>
           </div>
@@ -782,7 +798,7 @@ ${data.hobbies}
                 onClick={() => setShowFormatGuide(false)}
                 className="text-slate-400 hover:text-white text-xs font-bold px-2.5 py-1 rounded-lg bg-slate-800"
               >
-                ✕ বন্ধ করুন
+                ✕ Close
               </button>
             </div>
 
@@ -799,7 +815,7 @@ ${data.hobbies}
                 onClick={() => setShowFormatGuide(false)}
                 className="px-5 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-extrabold text-xs transition"
               >
-                ঠিক আছে (Close)
+                Close
               </button>
             </div>
           </div>

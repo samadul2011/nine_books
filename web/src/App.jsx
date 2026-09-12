@@ -618,11 +618,11 @@ export default function App() {
                       {selectedSubject?.id === 'grammar-subject-id'
                         ? 'Topics (টপিকসমূহ)'
                         : selectedSubject?.id === 'composition-subject-id'
-                        ? 'Writings (টপিক ও রচনা)'
+                        ? 'Writings & Composition'
                         : 'Chapters (অধ্যায়সমূহ)'}
                     </span>
                     <span className="text-[11px] font-normal text-slate-500">
-                      {chapters.length}টি {selectedSubject?.id === 'grammar-subject-id' || selectedSubject?.id === 'composition-subject-id' ? 'টপিক' : 'অধ্যায়'}
+                      {chapters.length} {selectedSubject?.id === 'composition-subject-id' ? 'Topics' : selectedSubject?.id === 'grammar-subject-id' ? 'টপিক' : 'অধ্যায়'}
                     </span>
                   </h2>
 
@@ -635,7 +635,7 @@ export default function App() {
                           type="text"
                           value={compositionSearchQuery}
                           onChange={(e) => applyCompositionFilter(undefined, undefined, e.target.value)}
-                          placeholder="টপিক খুঁজুন (যেমন: Rainy Day, Letter)..."
+                          placeholder="Search writings (e.g. Rainy Day, Letter)..."
                           className="w-full px-3 py-2 pl-8 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-teal-500"
                         />
                         <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
@@ -665,9 +665,9 @@ export default function App() {
                       >
                         <span className="flex items-center gap-1.5">
                           <Award className="w-3.5 h-3.5 text-rose-400" />
-                          <span>সিভি প্রস্তুতকারক (CV Builder)</span>
+                          <span>CV Builder (Resume Maker)</span>
                         </span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 font-extrabold">
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 font-extrabold">
                           CV
                         </span>
                       </button>
@@ -675,8 +675,8 @@ export default function App() {
                       {/* Category Selector Grid */}
                       <div className="pt-2 border-t border-slate-800/80">
                         <div className="text-[11px] font-semibold text-slate-400 mb-1.5 flex items-center justify-between">
-                          <span>বিভাগ (Categories):</span>
-                          <span className="text-teal-400 text-[10px]">{chapters.length}টি টপিক</span>
+                          <span>Categories</span>
+                          <span className="text-teal-400 text-[10px]">{chapters.length} Topics</span>
                         </div>
                         <div className="grid grid-cols-2 gap-1 max-h-36 overflow-y-auto custom-scrollbar pr-1">
                           {COMPOSITION_CATEGORIES.map(cat => {
@@ -696,7 +696,7 @@ export default function App() {
                                     : 'bg-slate-800/40 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
                                 }`}
                               >
-                                <span className="truncate">{cat.name_bn}</span>
+                                <span className="truncate">{cat.name_en}</span>
                                 <span className="text-[10px] opacity-75 ml-1">{count}</span>
                               </button>
                             )
@@ -717,7 +717,7 @@ export default function App() {
                                 : 'bg-slate-800/40 border-slate-800 text-slate-400 hover:text-slate-200'
                             }`}
                           >
-                            {lvl === 'All' ? 'সব শ্রেণি' : lvl}
+                            {lvl === 'All' ? 'All' : lvl}
                           </button>
                         ))}
                       </div>
