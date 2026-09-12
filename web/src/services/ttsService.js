@@ -431,6 +431,10 @@ export class TTSService {
 
     this.listeners.onStop()
   }
+
+  cancel() {
+    this.stop()
+  }
 }
 
 export const ttsService = new TTSService()

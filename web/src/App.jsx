@@ -47,6 +47,14 @@ import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from
 import { GRAMMAR_SUBJECT, GRAMMAR_CHAPTERS, GRAMMAR_LESSONS_MAP, GRAMMAR_MCQS_MAP } from './data/grammarData'
 import GrammarSectionViewer from './components/GrammarSectionViewer'
 import GrammarLevelExam from './components/GrammarLevelExam'
+import { 
+  COMPOSITION_SUBJECT, 
+  COMPOSITION_CATEGORIES, 
+  COMPOSITION_TOPICS, 
+  filterCompositionTopics, 
+  getCompositionCategoryCount 
+} from './data/compositionData'
+import CompositionViewer from './components/CompositionViewer'
 
 
 export default function App() {
@@ -54,6 +62,11 @@ export default function App() {
   const [mobileView, setMobileView] = useState('subjects') // 'subjects'|'chapters'|'read'|'quiz'|'progress'
   const [isSidebarOpen, setIsSidebarOpen] = useState(true) // Collapsible sidebar for expansive reading
   const [grammarClassFilter, setGrammarClassFilter] = useState('All') // 'All' | 'Class 8' | 'Class 9-10' | 'Class 11-12'
+  const [compositionCategory, setCompositionCategory] = useState('All') // 'All' | 'Paragraph' | 'Easy' | ...
+  const [compositionClassFilter, setCompositionClassFilter] = useState('All') // 'All' | 'Class 6-8' | 'SSC' | 'HSC'
+  const [compositionSearchQuery, setCompositionSearchQuery] = useState('')
+  const [selectedCompositionTopic, setSelectedCompositionTopic] = useState(null)
+  const [isCVModeActive, setIsCVModeActive] = useState(false)
   const [isLevelExamActive, setIsLevelExamActive] = useState(false)
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
@@ -177,6 +190,9 @@ export default function App() {
       if (!allSubs.some((s) => s.id === 'grammar-subject-id' || s.name_bn === 'ইংরেজি ব্যাকরণ' || (s.name_en || '').toLowerCase().includes('grammar'))) {
         allSubs.push(GRAMMAR_SUBJECT)
       }
+      if (!allSubs.some((s) => s.id === 'composition-subject-id' || s.name_bn === 'কম্পোজিশন ও রাইটিং' || (s.name_en || '').toLowerCase().includes('composition'))) {
+        allSubs.push(COMPOSITION_SUBJECT)
+      }
       setSubjects(allSubs)
       if (allSubs && allSubs.length > 0) {
         setSelectedSubject(allSubs[0])
@@ -193,13 +209,49 @@ export default function App() {
     }
   }
 
+  const applyCompositionFilter = (newCat, newClassLvl, newQuery) => {
+    const cat = newCat !== undefined ? newCat : compositionCategory
+    const lvl = newClassLvl !== undefined ? newClassLvl : compositionClassFilter
+    const q = newQuery !== undefined ? newQuery : compositionSearchQuery
+    if (newCat !== undefined) setCompositionCategory(newCat)
+    if (newClassLvl !== undefined) setCompositionClassFilter(newClassLvl)
+    if (newQuery !== undefined) setCompositionSearchQuery(newQuery)
+
+    const filtered = filterCompositionTopics({ category: cat, classLevel: lvl, query: q })
+    const mapped = filtered.map((t, idx) => ({
+      ...t,
+      id: t.id,
+      title_bn: t.title,
+      title_en: t.category,
+      order_index: idx + 1,
+      class_level: t.classLevel
+    }))
+    setChapters(mapped)
+    if (mapped.length > 0) {
+      setSelectedChapter(mapped[0])
+      setSelectedCompositionTopic(mapped[0])
+    } else {
+      setSelectedChapter(null)
+      setSelectedCompositionTopic(null)
+    }
+    setLessons([])
+    setQuestions([])
+  }
+
   async function fetchChapters(subjectId, targetSub = null, classFilter = null) {
     try {
       const activeSub = targetSub || selectedSubject
+      const isComposition = subjectId === 'composition-subject-id' || activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition') || (activeSub?.name_en || '').toLowerCase().includes('writing')
       const isGrammar = subjectId === 'grammar-subject-id' || activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar')
       const isMath = subjectId === 'math-preview-subject-id' || activeSub?.name_bn === 'গণিত'
       const isFinance = subjectId === 'finance-preview-subject-id' || activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance')
       
+      if (isComposition) {
+        setIsLevelExamActive(false)
+        applyCompositionFilter(undefined, classFilter !== null ? classFilter : undefined, undefined)
+        return
+      }
+
       if (isGrammar) {
         const filter = classFilter !== null ? classFilter : grammarClassFilter
         const chaps = filter === 'All'
@@ -245,9 +297,17 @@ export default function App() {
       const activeSub = targetSub || selectedSubject
       const activeChap = targetChapter || selectedChapter || chapters.find(c => c.id === chapterId)
       const chapOrder = activeChap?.order_index || (typeof chapterId === 'string' && chapterId.match(/\d+/)?.[0])
+      const isComposition = activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition')
       const isGrammar = activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar') || (chapterId && String(chapterId).startsWith('grammar-'))
       const isMath = activeSub?.name_bn === 'গণিত' || (chapterId && String(chapterId).startsWith('math-')) || (activeChap?.title_bn && activeChap.title_bn.includes('অধ্যায়') && activeSub?.name_bn === 'গণিত')
       const isFinance = activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance') || (chapterId && String(chapterId).startsWith('finance-'))
+
+      if (isComposition) {
+        setSelectedCompositionTopic(activeChap)
+        setLessons([])
+        setQuestions([])
+        return
+      }
 
       if (isGrammar) {
         const gramLessons = GRAMMAR_LESSONS_MAP[chapterId] || []
@@ -555,12 +615,114 @@ export default function App() {
                   <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
                     <span className="flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-teal-400" />
-                      {selectedSubject?.id === 'grammar-subject-id' ? 'Topics (টপিকসমূহ)' : 'Chapters (অধ্যায়সমূহ)'}
+                      {selectedSubject?.id === 'grammar-subject-id'
+                        ? 'Topics (টপিকসমূহ)'
+                        : selectedSubject?.id === 'composition-subject-id'
+                        ? 'Writings (টপিক ও রচনা)'
+                        : 'Chapters (অধ্যায়সমূহ)'}
                     </span>
                     <span className="text-[11px] font-normal text-slate-500">
-                      {chapters.length}টি {selectedSubject?.id === 'grammar-subject-id' ? 'টপিক' : 'অধ্যায়'}
+                      {chapters.length}টি {selectedSubject?.id === 'grammar-subject-id' || selectedSubject?.id === 'composition-subject-id' ? 'টপিক' : 'অধ্যায়'}
                     </span>
                   </h2>
+
+                  {/* Composition Specific Search, CV Launcher & Category Filter */}
+                  {selectedSubject?.id === 'composition-subject-id' && (
+                    <div className="mb-3 space-y-2.5">
+                      {/* Live Topic Search */}
+                      <div className="relative">
+                        <input
+                          type="text"
+                          value={compositionSearchQuery}
+                          onChange={(e) => applyCompositionFilter(undefined, undefined, e.target.value)}
+                          placeholder="টপিক খুঁজুন (যেমন: Rainy Day, Letter)..."
+                          className="w-full px-3 py-2 pl-8 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-teal-500"
+                        />
+                        <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
+                        {compositionSearchQuery && (
+                          <button
+                            type="button"
+                            onClick={() => applyCompositionFilter(undefined, undefined, '')}
+                            className="absolute right-2.5 top-2 text-slate-400 hover:text-white text-xs"
+                          >
+                            ✕
+                          </button>
+                        )}
+                      </div>
+
+                      {/* CV Builder Banner */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsCVModeActive(true)
+                          setMobileView('read')
+                        }}
+                        className={`w-full p-2.5 rounded-xl border text-xs font-bold transition flex items-center justify-between shadow-sm ${
+                          isCVModeActive
+                            ? 'bg-rose-500/20 border-rose-500 text-rose-300 ring-2 ring-rose-500/40'
+                            : 'bg-gradient-to-r from-slate-900 to-slate-800/90 border-rose-500/40 text-rose-300 hover:border-rose-500/70 hover:bg-slate-800'
+                        }`}
+                      >
+                        <span className="flex items-center gap-1.5">
+                          <Award className="w-3.5 h-3.5 text-rose-400" />
+                          <span>সিভি প্রস্তুতকারক (CV Builder)</span>
+                        </span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 font-extrabold">
+                          CV
+                        </span>
+                      </button>
+
+                      {/* Category Selector Grid */}
+                      <div className="pt-2 border-t border-slate-800/80">
+                        <div className="text-[11px] font-semibold text-slate-400 mb-1.5 flex items-center justify-between">
+                          <span>বিভাগ (Categories):</span>
+                          <span className="text-teal-400 text-[10px]">{chapters.length}টি টপিক</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-1 max-h-36 overflow-y-auto custom-scrollbar pr-1">
+                          {COMPOSITION_CATEGORIES.map(cat => {
+                            const count = getCompositionCategoryCount(cat.id)
+                            const isSelected = compositionCategory === cat.id
+                            return (
+                              <button
+                                key={cat.id}
+                                type="button"
+                                onClick={() => {
+                                  setIsCVModeActive(false)
+                                  applyCompositionFilter(cat.id, undefined, undefined)
+                                }}
+                                className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-between transition border ${
+                                  !isCVModeActive && isSelected
+                                    ? 'bg-teal-500/20 border-teal-500/60 text-teal-300 font-bold shadow-sm'
+                                    : 'bg-slate-800/40 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                                }`}
+                              >
+                                <span className="truncate">{cat.name_bn}</span>
+                                <span className="text-[10px] opacity-75 ml-1">{count}</span>
+                              </button>
+                            )
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Class Filter Tabs */}
+                      <div className="grid grid-cols-4 gap-1 pt-2 border-t border-slate-800/80">
+                        {['All', 'Class 6-8', 'SSC', 'HSC'].map(lvl => (
+                          <button
+                            key={lvl}
+                            type="button"
+                            onClick={() => applyCompositionFilter(undefined, lvl, undefined)}
+                            className={`px-1 py-1 rounded-lg text-[10px] font-semibold text-center transition border ${
+                              compositionClassFilter === lvl
+                                ? 'bg-teal-500/20 border-teal-500 text-teal-300'
+                                : 'bg-slate-800/40 border-slate-800 text-slate-400 hover:text-slate-200'
+                            }`}
+                          >
+                            {lvl === 'All' ? 'সব শ্রেণি' : lvl}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Grammar Level Exam Launcher Banner */}
                   {(selectedSubject?.id === 'grammar-subject-id' || (selectedSubject?.name_en || '').toLowerCase().includes('grammar')) && (
@@ -621,13 +783,18 @@ export default function App() {
                       <button
                         key={ch.id}
                         onClick={() => {
+                          setIsCVModeActive(false)
                           setIsLevelExamActive(false)
                           setSelectedChapter(ch)
-                          fetchChapterDetails(ch.id, selectedSubject, ch)
+                          if (selectedSubject?.id === 'composition-subject-id') {
+                            setSelectedCompositionTopic(ch)
+                          } else {
+                            fetchChapterDetails(ch.id, selectedSubject, ch)
+                          }
                           setMobileView('read') // auto-advance on mobile
                         }}
                         className={`w-full text-left px-2.5 py-2 rounded-xl text-xs transition flex items-center gap-2.5 border ${
-                          !isLevelExamActive && selectedChapter?.id === ch.id
+                          !isLevelExamActive && !isCVModeActive && ((selectedSubject?.id === 'composition-subject-id' && selectedCompositionTopic?.id === ch.id) || selectedChapter?.id === ch.id)
                             ? 'bg-slate-800 border-teal-500/60 text-teal-300 font-medium shadow-sm'
                             : 'border-transparent text-slate-300 hover:bg-slate-800/60'
                         }`}
@@ -645,8 +812,16 @@ export default function App() {
                               </span>
                             )}
                             <span className="truncate">{ch.title_en}</span>
+                            {ch.wordCount && (
+                              <span className="text-slate-500 text-[9px]">({ch.wordCount} words)</span>
+                            )}
                           </div>
                         </div>
+                        {ch.isSuggestion && (
+                          <span className="text-[9px] font-bold px-1 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                            ★
+                          </span>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -669,7 +844,17 @@ export default function App() {
                   </button>
                 </div>
               )}
-              {isLevelExamActive ? (
+              {selectedSubject?.id === 'composition-subject-id' ? (
+                <CompositionViewer
+                  topic={selectedCompositionTopic || selectedChapter}
+                  isCVMode={isCVModeActive}
+                  onSelectTopic={(t) => {
+                    setIsCVModeActive(false)
+                    setSelectedCompositionTopic(t)
+                    setSelectedChapter(t)
+                  }}
+                />
+              ) : isLevelExamActive ? (
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <button
