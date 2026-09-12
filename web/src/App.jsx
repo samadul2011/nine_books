@@ -62,6 +62,16 @@ import {
   getCompositionCategoryCount 
 } from './data/compositionData'
 import CompositionViewer from './components/CompositionViewer'
+import { 
+  ACCOUNTING_SUBJECT, 
+  ACCOUNTING_CHAPTERS, 
+  ACCOUNTING_CREATIVE_QUESTIONS_MAP, 
+  ACCOUNTING_SHORT_QUESTIONS_MAP, 
+  ACCOUNTING_MCQS_MAP, 
+  ACCOUNTING_LESSONS_MAP 
+} from './data/accountingData'
+import CreativeQuestionsViewer from './components/CreativeQuestionsViewer'
+import ShortQuestionsViewer from './components/ShortQuestionsViewer'
 
 
 export default function App() {
@@ -75,6 +85,7 @@ export default function App() {
   const [selectedCompositionTopic, setSelectedCompositionTopic] = useState(null)
   const [isCVModeActive, setIsCVModeActive] = useState(false)
   const [isLevelExamActive, setIsLevelExamActive] = useState(false)
+  const [accountingActiveView, setAccountingActiveView] = useState('creative') // 'creative' | 'short' | 'reading' | 'quiz'
   const [textZoom, setTextZoom] = useState(() => {
     const saved = localStorage.getItem('ninebooks_text_zoom')
     return saved ? parseInt(saved, 10) : 125 // Default to 125% for grand, comfortable reading
@@ -211,6 +222,9 @@ export default function App() {
       if (!allSubs.some((s) => s.id === 'composition-subject-id' || s.name_bn === 'কম্পোজিশন ও রাইটিং' || (s.name_en || '').toLowerCase().includes('composition'))) {
         allSubs.push(COMPOSITION_SUBJECT)
       }
+      if (!allSubs.some((s) => s.id === 'accounting-subject-id' || s.name_bn === 'হিসাববিজ্ঞান' || (s.name_en || '').toLowerCase().includes('accounting'))) {
+        allSubs.unshift(ACCOUNTING_SUBJECT)
+      }
       setSubjects(allSubs)
       if (allSubs && allSubs.length > 0) {
         setSelectedSubject(allSubs[0])
@@ -261,6 +275,7 @@ export default function App() {
       const activeSub = targetSub || selectedSubject
       const isComposition = subjectId === 'composition-subject-id' || activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition') || (activeSub?.name_en || '').toLowerCase().includes('writing')
       const isGrammar = subjectId === 'grammar-subject-id' || activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar')
+      const isAccounting = subjectId === 'accounting-subject-id' || activeSub?.id === 'accounting-subject-id' || activeSub?.name_bn === 'হিসাববিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('accounting')
       const isMath = subjectId === 'math-preview-subject-id' || activeSub?.name_bn === 'গণিত'
       const isFinance = subjectId === 'finance-preview-subject-id' || activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance')
       
@@ -293,12 +308,14 @@ export default function App() {
         .eq('subject_id', subjectId)
         .order('order_index', { ascending: true })
 
-      if (error && !isMath && !isFinance) throw error
-      const chaps = (data && data.length > 0) ? data : (isFinance ? FINANCE_FALLBACK_CHAPTERS : (isMath ? MATH_FALLBACK_CHAPTERS : []))
+      if (error && !isMath && !isFinance && !isAccounting) throw error
+      const chaps = (data && data.length > 0) 
+        ? data 
+        : (isAccounting ? ACCOUNTING_CHAPTERS : (isFinance ? FINANCE_FALLBACK_CHAPTERS : (isMath ? MATH_FALLBACK_CHAPTERS : [])))
       setChapters(chaps)
       if (chaps && chaps.length > 0) {
         setSelectedChapter(chaps[0])
-        fetchChapterDetails(chaps[0].id, activeSub)
+        fetchChapterDetails(chaps[0].id, activeSub, chaps[0])
       } else {
         setSelectedChapter(null)
         setLessons([])
@@ -317,6 +334,7 @@ export default function App() {
       const chapOrder = activeChap?.order_index || (typeof chapterId === 'string' && chapterId.match(/\d+/)?.[0])
       const isComposition = activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition')
       const isGrammar = activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar') || (chapterId && String(chapterId).startsWith('grammar-'))
+      const isAccounting = activeSub?.id === 'accounting-subject-id' || activeSub?.name_bn === 'হিসাববিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('accounting') || (chapterId && String(chapterId).startsWith('acc-'))
       const isMath = activeSub?.name_bn === 'গণিত' || (chapterId && String(chapterId).startsWith('math-')) || (activeChap?.title_bn && activeChap.title_bn.includes('অধ্যায়') && activeSub?.name_bn === 'গণিত')
       const isFinance = activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance') || (chapterId && String(chapterId).startsWith('finance-'))
 
@@ -332,6 +350,14 @@ export default function App() {
         setLessons(gramLessons)
         const gramMcqs = GRAMMAR_MCQS_MAP[chapterId] || []
         setQuestions(gramMcqs)
+        return
+      }
+
+      if (isAccounting) {
+        const accLessons = ACCOUNTING_LESSONS_MAP[chapterId] || ACCOUNTING_LESSONS_MAP[`acc-ch-${chapOrder}`] || ACCOUNTING_LESSONS_MAP['acc-ch-1'] || []
+        setLessons(accLessons)
+        const accMcqs = ACCOUNTING_MCQS_MAP[chapterId] || ACCOUNTING_MCQS_MAP[`acc-ch-${chapOrder}`] || ACCOUNTING_MCQS_MAP['acc-ch-1'] || []
+        setQuestions(accMcqs)
         return
       }
 
@@ -945,168 +971,21 @@ export default function App() {
                     }}
                   />
                 </div>
-              ) : selectedChapter ? (
-                <>
-                  {/* Chapter Header */}
-                  <div className="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-slate-800 rounded-2xl p-6">
-                    <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1 flex-wrap">
-                      <span>{selectedSubject?.name_bn}</span>
-                      <span>•</span>
-                      <span>{selectedSubject?.id === 'grammar-subject-id' ? `টপিক ${selectedChapter.order_index}` : `অধ্যায় ${selectedChapter.order_index}`}</span>
-                      {selectedChapter.class_level && (
-                        <>
-                          <span>•</span>
-                          <span className="px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
-                            {selectedChapter.class_level}
-                          </span>
-                        </>
-                      )}
-                    </div>
-                    <h1 className="text-2xl font-bold text-white">{selectedChapter.title_bn}</h1>
-                    <p className="text-sm text-slate-400 mt-1">{selectedChapter.title_en}</p>
+              ) : selectedChapter ? (() => {
+                const isAccountingSub = selectedSubject?.id === 'accounting-subject-id' || 
+                                       selectedSubject?.name_bn === 'হিসাববিজ্ঞান' || 
+                                       (selectedSubject?.name_en || '').toLowerCase().includes('accounting') || 
+                                       (selectedChapter?.id && String(selectedChapter.id).startsWith('acc-'))
+                const accChOrder = selectedChapter.order_index || (typeof selectedChapter.id === 'string' && selectedChapter.id.match(/\d+/)?.[0]) || 1
+                const accCreativeList = isAccountingSub 
+                  ? (ACCOUNTING_CREATIVE_QUESTIONS_MAP[selectedChapter.id] || ACCOUNTING_CREATIVE_QUESTIONS_MAP[`acc-ch-${accChOrder}`] || [])
+                  : []
+                const accShortList = isAccountingSub
+                  ? (ACCOUNTING_SHORT_QUESTIONS_MAP[selectedChapter.id] || ACCOUNTING_SHORT_QUESTIONS_MAP[`acc-ch-${accChOrder}`] || [])
+                  : []
 
-                    <div className="flex items-center gap-4 mt-4 text-xs text-slate-400 pt-4 border-t border-slate-800 flex-wrap">
-                      {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
-                        <>
-                          <span className="flex items-center gap-1.5 text-teal-300 font-medium">
-                            <BookOpen className="w-4 h-4 text-teal-400" />
-                            {selectedChapter.rules_count || lessons[0]?.rules?.length || 0}টি নিয়ম (Rules)
-                          </span>
-                          <span className="flex items-center gap-1.5 text-amber-300 font-medium">
-                            <Sparkles className="w-4 h-4 text-amber-400" />
-                            {selectedChapter.examples_count || lessons[0]?.examples?.length || 0}টি উদাহরণ (Examples)
-                          </span>
-                          <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
-                            <HelpCircle className="w-4 h-4 text-emerald-400" />
-                            {questions.length}টি কুইজ প্রশ্ন (MCQ Tests)
-                          </span>
-
-                          <button
-                            type="button"
-                            onClick={() => setIsLevelExamActive(true)}
-                            className="ml-auto px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500/20 to-teal-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 shadow-sm"
-                          >
-                            <Award className="w-3.5 h-3.5 text-amber-400" />
-                            <span>লেভেল টেস্ট পরীক্ষা দিন</span>
-                          </button>
-                        </>
-                      ) : (
-                        <>
-                          <span className="flex items-center gap-1.5">
-                            <FileText className="w-4 h-4 text-teal-400" />
-                            {lessons.length} পাঠ (Lessons)
-                          </span>
-                          <span className="flex items-center gap-1.5">
-                            <HelpCircle className="w-4 h-4 text-emerald-400" />
-                            {questions.length} কুইজ প্রশ্ন (Questions)
-                          </span>
-                        </>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Studio Neural Audio Player with Dual Voice Toggle & Live Highlighting */}
-                  {lessons.length > 0 && (
-                    <LessonAudioPlayer 
-                      textToRead={lessons.map(l => l.content_text).join('\n\n')} 
-                      title={selectedChapter.title_bn}
-                      onActiveChunkChange={setActivePlayingChunk}
-                    />
-                  )}
-
-                  {/* Lessons Section with Interactive Highlighting & Reading Material */}
-                  <div 
-                    className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 reading-area relative w-full"
-                    style={{ '--lesson-font-size': `${(textZoom / 100) * 1.05}rem` }}
-                  >
-                    <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800">
-                      <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                        <FileText className="w-5 h-5 text-teal-400" />
-                        <span>
-                          {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-'))
-                            ? 'ব্যাকরণের নিয়ম ও পাঠ (Grammar Rules & Lessons)'
-                            : 'পড়ার বিষয়বস্তু (Reading Material)'}
-                        </span>
-                      </h3>
-
-                      {/* Text Zoom Pill Toolbar */}
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1 bg-slate-950/80 border border-slate-700/80 rounded-xl p-1 shadow-sm">
-                          <span className="text-xs font-semibold text-slate-400 px-1.5 hidden sm:flex items-center gap-1">
-                            <Type className="w-3.5 h-3.5 text-teal-400" />
-                            টেক্সট জুম:
-                          </span>
-                          <button
-                            onClick={zoomOut}
-                            disabled={textZoom <= 85}
-                            className="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 disabled:opacity-30 transition shadow-sm"
-                            title="লেখা ছোট করুন (A-)"
-                          >
-                            A-
-                          </button>
-                          <button
-                            onClick={resetZoom}
-                            className="px-2.5 py-1 text-xs font-bold text-teal-300 hover:text-teal-200 transition min-w-[48px] text-center"
-                            title="রিসেট সাইজ (125%)"
-                          >
-                            {textZoom}%
-                          </button>
-                          <button
-                            onClick={zoomIn}
-                            disabled={textZoom >= 200}
-                            className="px-2.5 py-1 text-xs font-bold rounded-lg bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 border border-teal-500/30 disabled:opacity-30 transition shadow-sm"
-                            title="লেখা বড় করুন (A+)"
-                          >
-                            A+
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    {lessons.length === 0 ? (
-                      <div className="p-8 text-center text-slate-500 border border-dashed border-slate-800 rounded-xl">
-                        এই অধ্যায়ে কোনো পাঠ পাওয়া যায়নি।
-                      </div>
-                    ) : (
-                      <div className="space-y-6 w-full">
-                        {lessons.map((lesson, idx) => (
-                          <div
-                            key={lesson.id || idx}
-                            className="w-full"
-                          >
-                            {lessons.length > 1 && (
-                              <div className="text-xs font-semibold text-teal-400/80 mb-3 uppercase tracking-wider flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-teal-400"></span>
-                                <span>পাঠ ক্রম #{lesson.order_index}</span>
-                              </div>
-                            )}
-                            {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
-                              <GrammarSectionViewer
-                                lesson={lesson}
-                                chapter={selectedChapter}
-                                onJumpToQuiz={() => {
-                                  const qEl = document.getElementById('quiz-section')
-                                  if (qEl) qEl.scrollIntoView({ behavior: 'smooth' })
-                                }}
-                              />
-                            ) : (
-                              <InteractiveLessonViewer
-                                content={lesson.content_text || ''}
-                                userHighlights={userHighlights}
-                                activePlayingChunk={activePlayingChunk}
-                                chapter={selectedChapter}
-                                subject={selectedSubject}
-                              />
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Exam Questions Section (Interactive Self-Test Quiz) */}
+                const quizSectionNode = (
                   <div id="quiz-section" className={`bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl ${
-                    // On mobile, highlight the quiz section when mobileView === 'quiz'
                     mobileView === 'quiz' ? 'ring-2 ring-teal-500/40' : ''
                   }`}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800/80">
@@ -1268,8 +1147,272 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                </>
-              ) : (
+                )
+
+                return (
+                  <>
+                    {/* Chapter Header */}
+                    <div className="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-slate-800 rounded-2xl p-6">
+                      <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1 flex-wrap">
+                        <span>{selectedSubject?.name_bn}</span>
+                        <span>•</span>
+                        <span>{selectedSubject?.id === 'grammar-subject-id' ? `টপিক ${selectedChapter.order_index}` : `অধ্যায় ${selectedChapter.order_index}`}</span>
+                        {selectedChapter.class_level && (
+                          <>
+                            <span>•</span>
+                            <span className="px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
+                              {selectedChapter.class_level}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                      <h1 className="text-2xl font-bold text-white">{selectedChapter.title_bn}</h1>
+                      <p className="text-sm text-slate-400 mt-1">{selectedChapter.title_en}</p>
+
+                      <div className="flex items-center gap-4 mt-4 text-xs text-slate-400 pt-4 border-t border-slate-800 flex-wrap">
+                        {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
+                          <>
+                            <span className="flex items-center gap-1.5 text-teal-300 font-medium">
+                              <BookOpen className="w-4 h-4 text-teal-400" />
+                              {selectedChapter.rules_count || lessons[0]?.rules?.length || 0}টি নিয়ম (Rules)
+                            </span>
+                            <span className="flex items-center gap-1.5 text-amber-300 font-medium">
+                              <Sparkles className="w-4 h-4 text-amber-400" />
+                              {selectedChapter.examples_count || lessons[0]?.examples?.length || 0}টি উদাহরণ (Examples)
+                            </span>
+                            <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
+                              <HelpCircle className="w-4 h-4 text-emerald-400" />
+                              {questions.length}টি কুইজ প্রশ্ন (MCQ Tests)
+                            </span>
+
+                            <button
+                              type="button"
+                              onClick={() => setIsLevelExamActive(true)}
+                              className="ml-auto px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500/20 to-teal-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 shadow-sm"
+                            >
+                              <Award className="w-3.5 h-3.5 text-amber-400" />
+                              <span>লেভেল টেস্ট পরীক্ষা দিন</span>
+                            </button>
+                          </>
+                        ) : isAccountingSub ? (
+                          <>
+                            <span className="flex items-center gap-1.5 text-teal-300 font-medium">
+                              <BookOpen className="w-4 h-4 text-teal-400" />
+                              {lessons.length}টি পাঠ ও মূল আলোচনা
+                            </span>
+                            <span className="flex items-center gap-1.5 text-sky-300 font-medium">
+                              <FileText className="w-4 h-4 text-sky-400" />
+                              {accCreativeList.length}টি সৃজনশীল প্রশ্ন (Creative Qs)
+                            </span>
+                            <span className="flex items-center gap-1.5 text-amber-300 font-medium">
+                              <HelpCircle className="w-4 h-4 text-amber-400" />
+                              {accShortList.length}টি সংক্ষিপ্ত প্রশ্ন (Short Qs)
+                            </span>
+                            <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
+                              <Sparkles className="w-4 h-4 text-emerald-400" />
+                              {questions.length}টি কুইজ প্রশ্ন (MCQs)
+                            </span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="flex items-center gap-1.5">
+                              <FileText className="w-4 h-4 text-teal-400" />
+                              {lessons.length} পাঠ (Lessons)
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                              <HelpCircle className="w-4 h-4 text-emerald-400" />
+                              {questions.length} কুইজ প্রশ্ন (Questions)
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Accounting Navigation Tabs */}
+                    {isAccountingSub && (
+                      <div className="flex items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 shadow-lg overflow-x-auto">
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('creative')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'creative'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <FileText className="w-4 h-4" />
+                          <span>সৃজনশীল প্রশ্ন ({accCreativeList.length}টি)</span>
+                          <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-black ${
+                            accountingActiveView === 'creative' ? 'bg-slate-950/30 text-slate-950' : 'bg-teal-500/20 text-teal-300'
+                          }`}>
+                            বোর্ড স্ট্যান্ডার্ড
+                          </span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('short')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'short'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <HelpCircle className="w-4 h-4" />
+                          <span>সংক্ষিপ্ত প্রশ্ন ও উত্তর ({accShortList.length}টি)</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('reading')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'reading'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <BookOpen className="w-4 h-4" />
+                          <span>পাঠ ও মূল আলোচনা (Reading)</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setAccountingActiveView('quiz')}
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                            accountingActiveView === 'quiz'
+                              ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                          }`}
+                        >
+                          <Sparkles className="w-4 h-4" />
+                          <span>কুইজ পরীক্ষা ({questions.length}টি)</span>
+                        </button>
+                      </div>
+                    )}
+
+                    {/* Dynamic View for Accounting / Standard Subjects */}
+                    {isAccountingSub && accountingActiveView === 'creative' ? (
+                      <CreativeQuestionsViewer 
+                        questions={accCreativeList}
+                        chapterTitle={selectedChapter.title_bn}
+                        chapterIndex={selectedChapter.order_index}
+                      />
+                    ) : isAccountingSub && accountingActiveView === 'short' ? (
+                      <ShortQuestionsViewer 
+                        questions={accShortList}
+                        chapterTitle={selectedChapter.title_bn}
+                        chapterIndex={selectedChapter.order_index}
+                      />
+                    ) : isAccountingSub && accountingActiveView === 'quiz' ? (
+                      quizSectionNode
+                    ) : (
+                      <>
+                        {/* Studio Neural Audio Player with Dual Voice Toggle & Live Highlighting */}
+                        {lessons.length > 0 && (
+                          <LessonAudioPlayer 
+                            textToRead={lessons.map(l => l.content_text).join('\n\n')} 
+                            title={selectedChapter.title_bn}
+                            onActiveChunkChange={setActivePlayingChunk}
+                          />
+                        )}
+
+                        {/* Lessons Section with Interactive Highlighting & Reading Material */}
+                        <div 
+                          className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 reading-area relative w-full"
+                          style={{ '--lesson-font-size': `${(textZoom / 100) * 1.05}rem` }}
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800">
+                            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                              <FileText className="w-5 h-5 text-teal-400" />
+                              <span>
+                                {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-'))
+                                  ? 'ব্যাকরণের নিয়ম ও পাঠ (Grammar Rules & Lessons)'
+                                  : 'পড়ার বিষয়বস্তু (Reading Material)'}
+                              </span>
+                            </h3>
+
+                            {/* Text Zoom Pill Toolbar */}
+                            <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-1 bg-slate-950/80 border border-slate-700/80 rounded-xl p-1 shadow-sm">
+                                <span className="text-xs font-semibold text-slate-400 px-1.5 hidden sm:flex items-center gap-1">
+                                  <Type className="w-3.5 h-3.5 text-teal-400" />
+                                  টেক্সট জুম:
+                                </span>
+                                <button
+                                  onClick={zoomOut}
+                                  disabled={textZoom <= 85}
+                                  className="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 disabled:opacity-30 transition shadow-sm"
+                                  title="লেখা ছোট করুন (A-)"
+                                >
+                                  A-
+                                </button>
+                                <button
+                                  onClick={resetZoom}
+                                  className="px-2.5 py-1 text-xs font-bold text-teal-300 hover:text-teal-200 transition min-w-[48px] text-center"
+                                  title="রিসেট সাইজ (125%)"
+                                >
+                                  {textZoom}%
+                                </button>
+                                <button
+                                  onClick={zoomIn}
+                                  disabled={textZoom >= 200}
+                                  className="px-2.5 py-1 text-xs font-bold rounded-lg bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 border border-teal-500/30 disabled:opacity-30 transition shadow-sm"
+                                  title="লেখা বড় করুন (A+)"
+                                >
+                                  A+
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          {lessons.length === 0 ? (
+                            <div className="p-8 text-center text-slate-500 border border-dashed border-slate-800 rounded-xl">
+                              এই অধ্যায়ে কোনো পাঠ পাওয়া যায়নি।
+                            </div>
+                          ) : (
+                            <div className="space-y-6 w-full">
+                              {lessons.map((lesson, idx) => (
+                                <div
+                                  key={lesson.id || idx}
+                                  className="w-full"
+                                >
+                                  {lessons.length > 1 && (
+                                    <div className="text-xs font-semibold text-teal-400/80 mb-3 uppercase tracking-wider flex items-center gap-2">
+                                      <span className="w-2 h-2 rounded-full bg-teal-400"></span>
+                                      <span>পাঠ ক্রম #{lesson.order_index}</span>
+                                    </div>
+                                  )}
+                                  {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
+                                    <GrammarSectionViewer
+                                      lesson={lesson}
+                                      chapter={selectedChapter}
+                                      onJumpToQuiz={() => {
+                                        const qEl = document.getElementById('quiz-section')
+                                        if (qEl) qEl.scrollIntoView({ behavior: 'smooth' })
+                                      }}
+                                    />
+                                  ) : (
+                                    <InteractiveLessonViewer
+                                      content={lesson.content_text || ''}
+                                      userHighlights={userHighlights}
+                                      activePlayingChunk={activePlayingChunk}
+                                      chapter={selectedChapter}
+                                      subject={selectedSubject}
+                                    />
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* For non-accounting, show quiz below reading */}
+                        {!isAccountingSub && quizSectionNode}
+                      </>
+                    )}
+                  </>
+                )
+              })() : (
                 <div className="h-96 flex items-center justify-center text-slate-500 bg-slate-900/30 border border-slate-800 rounded-2xl">
                   বাম পাশ থেকে একটি অধ্যায় নির্বাচন করুন।
                 </div>
