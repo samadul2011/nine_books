@@ -25,9 +25,11 @@ import {
   Info,
   Clock,
   Type,
-  FileCheck2
+  FileCheck2,
+  Loader2
 } from 'lucide-react'
 import { ttsService } from '../services/ttsService'
+import { translationService } from '../services/translationService'
 import { EXAM_TIPS, FORMAT_GUIDES, CV_TEMPLATES } from '../data/compositionData'
 
 export default function CompositionViewer({
@@ -45,6 +47,8 @@ export default function CompositionViewer({
   const [showFormatGuide, setShowFormatGuide] = useState(false)
   const [showVocab, setShowVocab] = useState(true)
   const [showBangla, setShowBangla] = useState(false)
+  const [isTranslating, setIsTranslating] = useState(false)
+  const [translatedBengali, setTranslatedBengali] = useState('')
   const [copied, setCopied] = useState(false)
 
   // CV Mode State
@@ -52,10 +56,12 @@ export default function CompositionViewer({
   const [cvData, setCvData] = useState({ ...CV_TEMPLATES[0] })
   const [cvViewMode, setCvViewMode] = useState('preview') // 'preview' | 'edit'
 
-  // Reset TTS when topic changes
+  // Reset TTS and Translation when topic changes
   useEffect(() => {
     stopAudio()
     setShowBangla(false)
+    setIsTranslating(false)
+    setTranslatedBengali('')
     setCopied(false)
   }, [topic?.id, isCVMode])
 
@@ -112,6 +118,42 @@ export default function CompositionViewer({
       }
     })
     ttsService.play(displayTemplate)
+  }
+
+  const handleToggleTranslate = async () => {
+    if (showBangla) {
+      setShowBangla(false)
+      return
+    }
+
+    setShowBangla(true)
+
+    // If static translation is already available on the topic
+    if (topic?.banglaTranslation) {
+      setTranslatedBengali(topic.banglaTranslation)
+      return
+    }
+
+    // If already translated and stored in state
+    if (translatedBengali) {
+      return
+    }
+
+    // Otherwise fetch from Google Translate API
+    setIsTranslating(true)
+    try {
+      const res = await translationService.translateToBengali(displayTemplate)
+      if (res && res.translatedText) {
+        setTranslatedBengali(res.translatedText)
+      } else {
+        setTranslatedBengali('অনুবাদ সম্পন্ন করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।')
+      }
+    } catch (err) {
+      console.error('Translation error:', err)
+      setTranslatedBengali('অনুবাদে সমস্যা হয়েছে। অনুগ্রহ করে ইন্টারনেট সংযোগ পরীক্ষা করুন।')
+    } finally {
+      setIsTranslating(false)
+    }
   }
 
   const handleCopy = () => {
@@ -577,21 +619,30 @@ ${data.hobbies}
               </button>
             )}
 
-            {/* Bangla Translation Toggle */}
-            {topic.banglaTranslation && (
-              <button
-                onClick={() => setShowBangla(!showBangla)}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border transition shadow-sm ${
-                  showBangla
-                    ? 'bg-emerald-500 text-slate-950 border-emerald-400'
-                    : 'bg-slate-800 hover:bg-slate-700 text-emerald-400 border-emerald-500/40'
-                }`}
-                title="Toggle Bangla Translation"
-              >
+            {/* Bangla Translation Toggle (Google Translate Powered) */}
+            <button
+              onClick={handleToggleTranslate}
+              disabled={isTranslating}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border transition shadow-sm ${
+                showBangla
+                  ? 'bg-emerald-500 text-slate-950 border-emerald-400 font-extrabold shadow-emerald-950'
+                  : 'bg-slate-800 hover:bg-slate-700 text-emerald-400 border-emerald-500/40'
+              }`}
+              title="Google Translate to Bengali"
+            >
+              {isTranslating ? (
+                <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
+              ) : (
                 <Languages className="w-4 h-4" />
-                <span>{showBangla ? 'English Only' : 'Bangla Translation'}</span>
-              </button>
-            )}
+              )}
+              <span>
+                {isTranslating
+                  ? 'Translating...'
+                  : showBangla
+                  ? 'Hide Translation'
+                  : 'Bangla Translation'}
+              </span>
+            </button>
 
             {/* Copy Button */}
             <button
@@ -606,7 +657,7 @@ ${data.hobbies}
       </div>
 
       {/* Main Text Content Area */}
-      <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-9 shadow-xl relative">
+      <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-9 shadow-xl relative reading-area markdown-content">
         {/* If Dialogue Category: Render formatted conversation bubbles */}
         {isDialogue && dialogueLines ? (
           <div className="space-y-4">
@@ -689,16 +740,52 @@ ${data.hobbies}
           </div>
         )}
 
-        {/* Bangla Translation View (if toggled) */}
-        {showBangla && topic.banglaTranslation && (
-          <div className="mt-8 pt-6 border-t border-emerald-500/30 bg-emerald-950/20 rounded-2xl p-5 border">
-            <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-              <Languages className="w-4 h-4 text-emerald-400" />
-              <span>বাংলা ভাবার্থ ও অনুবাদ (Bangla Translation):</span>
+        {/* Bangla Translation View (Google Translate powered) */}
+        {showBangla && (
+          <div className="mt-8 pt-6 border-t border-slate-800/90 animate-fadeIn">
+            <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-emerald-500/20">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shadow-sm">
+                  <Languages className="w-4 h-4 text-emerald-400" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                    <span>বাংলা অনুবাদ</span>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Google Translate
+                    </span>
+                  </h4>
+                  <p className="text-[11px] text-slate-400">
+                    ইংরেজি লেখার সহজ ও সাবলীল বাংলা ভাবার্থ
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => {
+                  const textToCopy = translatedBengali || topic?.banglaTranslation || ''
+                  if (textToCopy) {
+                    navigator.clipboard.writeText(textToCopy)
+                  }
+                }}
+                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs font-semibold flex items-center gap-1.5 transition shadow-sm"
+                title="Copy Bengali Translation"
+              >
+                <Copy className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Copy Bangla</span>
+              </button>
             </div>
-            <div className="text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-              {topic.banglaTranslation}
-            </div>
+
+            {isTranslating ? (
+              <div className="py-10 flex flex-col items-center justify-center gap-3 text-slate-400">
+                <Loader2 className="w-7 h-7 text-emerald-400 animate-spin" />
+                <span className="text-xs font-medium">গুগল ট্রান্সলেট দিয়ে বাংলায় অনুবাদ করা হচ্ছে...</span>
+              </div>
+            ) : (
+              <div className="p-5 sm:p-7 rounded-2xl bg-emerald-950/20 border border-emerald-500/30 text-emerald-50 leading-relaxed text-sm sm:text-base font-bengali whitespace-pre-line shadow-inner selection:bg-emerald-500/40">
+                {translatedBengali || topic?.banglaTranslation}
+              </div>
+            )}
           </div>
         )}
       </div>

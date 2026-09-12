@@ -249,22 +249,39 @@ export class TTSService {
     this.audioElement = audio
 
     audio.onended = () => {
+      audio.onended = null
+      audio.onerror = null
       if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
-      if (this.isPlaying && !this.isPaused) this.playChunk(index + 1)
+      if (this.audioElement === audio && this.isPlaying && !this.isPaused) {
+        this.playChunk(index + 1)
+      }
     }
 
     audio.onerror = (e) => {
+      audio.onended = null
+      audio.onerror = null
       if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
-      console.warn('Neural audio error, falling back to device TTS:', e)
-      if (this.isPlaying) this.playDeviceChunk(this.chunks[index], index)
+      // ONLY trigger fallback if this audio element is currently active and not obsolete
+      if (this.audioElement === audio && this.isPlaying && !this.isPaused) {
+        this.audioElement = null
+        console.warn('Neural audio error, falling back to device TTS:', e)
+        this.playDeviceChunk(this.chunks[index], index)
+      }
     }
 
     const p = audio.play()
     if (p !== undefined) {
       p.catch(err => {
+        // If aborted by user pause/stop or chunk transition, never fallback
+        if (err && err.name === 'AbortError') return
+        audio.onended = null
+        audio.onerror = null
         if (blobUrl) { URL.revokeObjectURL(blobUrl); this._currentBlobUrl = null }
-        console.warn('Audio play() rejected, falling back to device TTS:', err)
-        if (this.isPlaying) this.playDeviceChunk(this.chunks[index], index)
+        if (this.audioElement === audio && this.isPlaying && !this.isPaused) {
+          this.audioElement = null
+          console.warn('Audio play() rejected, falling back to device TTS:', err)
+          this.playDeviceChunk(this.chunks[index], index)
+        }
       })
     }
   }
@@ -272,9 +289,13 @@ export class TTSService {
   async playNeuralChunk(text, index) {
     try {
       if (this.audioElement) {
-        this.audioElement.pause()
-        this.audioElement.src = ''
+        const oldAudio = this.audioElement
         this.audioElement = null
+        oldAudio.onended = null
+        oldAudio.onerror = null
+        oldAudio.pause()
+        oldAudio.removeAttribute('src')
+        oldAudio.load()
       }
       if (this._currentBlobUrl) {
         URL.revokeObjectURL(this._currentBlobUrl)
@@ -344,24 +365,47 @@ export class TTSService {
       return
     }
 
+    // Stop neural audio so both never run simultaneously
+    if (this.audioElement) {
+      const oldAudio = this.audioElement
+      this.audioElement = null
+      oldAudio.onended = null
+      oldAudio.onerror = null
+      oldAudio.pause()
+      oldAudio.removeAttribute('src')
+      oldAudio.load()
+    }
+
     window.speechSynthesis.cancel()
     window.speechSynthesis.resume() // Unfreeze Chrome speech engine
 
     const utterance = new SpeechSynthesisUtterance(text)
-    utterance.lang = 'bn-BD'
+
+    // Detect language: English vs Bengali
+    const engCount = (text.match(/[a-zA-Z]/g) || []).length
+    const bnCount = (text.match(/[\u0980-\u09FF]/g) || []).length
+    const isEnglish = engCount >= bnCount && engCount > 0
+
+    utterance.lang = isEnglish ? 'en-US' : 'bn-BD'
     utterance.rate = this.speed
 
-    // Find any available Bengali voice
+    // Find language-appropriate voice
     if (this.availableVoices.length === 0) {
       this.loadVoices()
     }
-    const bnVoice = this.availableVoices.find(v => 
-      v.lang.includes('bn') || 
-      v.name.toLowerCase().includes('bengali') || 
-      v.name.toLowerCase().includes('bangla')
-    )
-    if (bnVoice) {
-      utterance.voice = bnVoice
+
+    if (isEnglish) {
+      const enVoice = this.availableVoices.find(v => 
+        v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.default)
+      ) || this.availableVoices.find(v => v.lang.startsWith('en'))
+      if (enVoice) utterance.voice = enVoice
+    } else {
+      const bnVoice = this.availableVoices.find(v => 
+        v.lang.includes('bn') || 
+        v.name.toLowerCase().includes('bengali') || 
+        v.name.toLowerCase().includes('bangla')
+      )
+      if (bnVoice) utterance.voice = bnVoice
     }
 
     utterance.onend = () => {
@@ -413,9 +457,13 @@ export class TTSService {
     this.currentChunkIndex = 0
 
     if (this.audioElement) {
-      this.audioElement.pause()
-      this.audioElement.src = ''
+      const oldAudio = this.audioElement
       this.audioElement = null
+      oldAudio.onended = null
+      oldAudio.onerror = null
+      oldAudio.pause()
+      oldAudio.removeAttribute('src')
+      oldAudio.load()
     }
 
     // Revoke any blob URL to free memory
