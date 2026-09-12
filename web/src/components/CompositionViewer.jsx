@@ -56,13 +56,14 @@ export default function CompositionViewer({
   const [cvData, setCvData] = useState({ ...CV_TEMPLATES[0] })
   const [cvViewMode, setCvViewMode] = useState('preview') // 'preview' | 'edit'
 
-  // Reset TTS and Translation when topic changes
+  // Reset TTS and Translation when topic changes and scroll to top
   useEffect(() => {
     stopAudio()
     setShowBangla(false)
     setIsTranslating(false)
     setTranslatedBengali('')
     setCopied(false)
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [topic?.id, isCVMode])
 
   useEffect(() => {

@@ -152,6 +152,15 @@ export default function App() {
     return studyStorageService.subscribe(refreshStudyData)
   }, [selectedChapter?.id])
 
+  // Always scroll to top (1st page) when selecting any chapter, topic, or subject
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    const mainArea = document.querySelector('main')
+    if (mainArea) {
+      mainArea.scrollTop = 0
+    }
+  }, [selectedChapter?.id, selectedCompositionTopic?.id, selectedSubject?.id])
+
   // Auto-scroll to active sentence when audio is playing
   useEffect(() => {
     if (activePlayingChunk) {
@@ -810,6 +819,7 @@ export default function App() {
                             fetchChapterDetails(ch.id, selectedSubject, ch)
                           }
                           setMobileView('read') // auto-advance on mobile
+                          window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
                         }}
                         className={`w-full text-left px-2.5 py-2 rounded-xl text-xs transition flex items-center gap-2.5 border ${
                           !isLevelExamActive && !isCVModeActive && ((selectedSubject?.id === 'composition-subject-id' && selectedCompositionTopic?.id === ch.id) || selectedChapter?.id === ch.id)

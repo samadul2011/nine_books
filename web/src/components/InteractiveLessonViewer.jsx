@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { marked } from 'marked'
 import katex from 'katex'
 import { Eye, EyeOff, HelpCircle, CheckCircle2, Lightbulb, BookOpen, Sparkles, Award } from 'lucide-react'
@@ -25,6 +25,11 @@ export default function InteractiveLessonViewer({
   const [allCqOpen, setAllCqOpen] = useState(false)
   const [openMathMap, setOpenMathMap] = useState({})
   const [allMathOpen, setAllMathOpen] = useState(false)
+
+  // Scroll to top (1st page) whenever a new chapter is opened
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [chapter?.id])
 
   const toggleAnswer = (id) => {
     setOpenMap((prev) => ({
@@ -157,8 +162,9 @@ function renderMathWithKaTeX(text) {
 function preprocessLessonMarkdown(content, isBangla = true) {
   if (!content) return ''
 
-  // 1. Normalize CRLF to \n
+  // 1. Normalize CRLF to \n and divider lines
   let text = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+  text = text.replace(/^[─━═]{3,}$/gm, '\n---\n')
 
   // 2. Comprehensive Bengali & ICT OCR typo corrections
   text = text
@@ -408,7 +414,7 @@ function preprocessLessonMarkdown(content, isBangla = true) {
       }
     }
 
-    // Format Question prompts in MCQ section (e.g., ১। ২। ৩।)
+    // Format Question prompts in MCQ section ONLY IF immediately followed by MCQ options (ক, খ, গ, ঘ)
     if (/^[১-৯][০-৯]*[।\.]\s+/.test(trimmed)) {
       const qParts = [trimmed]
       let curLineIdx = i + 1
@@ -423,15 +429,21 @@ function preprocessLessonMarkdown(content, isBangla = true) {
         curLineIdx++
       }
 
-      const fullPrompt = qParts.join(' ')
-      const qHtml = `\n<div class="mcq-question-prompt text-base sm:text-lg font-bold text-sky-100 mt-6 mb-2 flex items-start gap-2.5 select-text">\n` +
-        `  <span class="w-6 h-6 rounded-md bg-sky-500/20 text-sky-400 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">?</span>\n` +
-        `  <span class="flex-1 leading-relaxed">${fullPrompt}</span>\n` +
-        `</div>\n`
+      // Check if next non-empty line actually starts with an option (ক, খ, গ, ঘ)
+      const nextLineTrimmed = curLineIdx < lines.length ? lines[curLineIdx].trim() : ''
+      const isActualMcqQuestion = /^[কখগঘ][\.।]\s+/.test(nextLineTrimmed)
 
-      processedLines.push(qHtml)
-      i = curLineIdx - 1
-      continue
+      if (isActualMcqQuestion) {
+        const fullPrompt = qParts.join(' ')
+        const qHtml = `\n\n<div class="mcq-question-prompt text-base sm:text-lg font-bold text-sky-100 mt-6 mb-2 flex items-start gap-2.5 select-text">\n` +
+          `  <span class="w-6 h-6 rounded-md bg-sky-500/20 text-sky-400 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">?</span>\n` +
+          `  <span class="flex-1 leading-relaxed">${fullPrompt}</span>\n` +
+          `</div>\n\n`
+
+        processedLines.push(qHtml)
+        i = curLineIdx - 1
+        continue
+      }
     }
 
     processedLines.push(line)
