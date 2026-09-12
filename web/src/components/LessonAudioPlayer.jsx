@@ -11,6 +11,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
   const [errorMsg, setErrorMsg] = useState(null)
   const [selectedSnippet, setSelectedSnippet] = useState('')
   const [isSelectionMode, setIsSelectionMode] = useState(false)
+  const [isSelectionOnly, setIsSelectionOnly] = useState(false)
 
   // Listen to document selection changes
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
         setIsPaused(false)
         setProgress({ current: 0, total: 0 })
         setIsSelectionMode(false)
+        setIsSelectionOnly(false)
         if (onActiveChunkChange) onActiveChunkChange(null)
       },
       onProgress: (current, total, currentChunkText) => {
@@ -55,6 +57,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
         setErrorMsg(msg)
         setIsPlaying(false)
         setIsPaused(false)
+        setIsSelectionOnly(false)
         if (onActiveChunkChange) onActiveChunkChange(null)
       }
     })
@@ -83,6 +86,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
 
   function handlePlayAll() {
     setIsSelectionMode(false)
+    setIsSelectionOnly(false)
     if (!isPlaying) {
       ttsService.setMode(mode)
       ttsService.setSpeed(speed)
@@ -94,6 +98,21 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
     }
   }
 
+  function handlePlayOnlySelection(snippetOverride) {
+    const textToUse = snippetOverride || selectedSnippet || window.getSelection()?.toString().trim()
+    if (!textToUse) {
+      setErrorMsg('অনুগ্রহ করে নিচের পড়ার অংশ থেকে যেকোনো শব্দ বা বাক্য সিলেক্ট করুন (মাউস দিয়ে ড্র্যাগ করে হাইলাইট করুন)।')
+      return
+    }
+
+    setErrorMsg(null)
+    setIsSelectionOnly(true)
+    setIsSelectionMode(false)
+    ttsService.setMode(mode)
+    ttsService.setSpeed(speed)
+    ttsService.playOnlySelection(textToUse)
+  }
+
   function handlePlayFromSelection(snippetOverride) {
     const textToUse = snippetOverride || selectedSnippet || window.getSelection()?.toString().trim()
     if (!textToUse) {
@@ -102,6 +121,7 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
     }
 
     setIsSelectionMode(true)
+    setIsSelectionOnly(false)
     ttsService.setMode(mode)
     ttsService.setSpeed(speed)
     ttsService.playFromSelection(textToRead, textToUse)
@@ -171,12 +191,12 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
           <button
             onClick={handlePlayAll}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl shadow-lg transition-all active:scale-95 font-semibold text-xs md:text-sm ${
-              isPlaying && !isPaused && !isSelectionMode
+              isPlaying && !isPaused && !isSelectionMode && !isSelectionOnly
                 ? 'bg-amber-500 hover:bg-amber-400 text-black shadow-amber-500/20'
                 : 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-emerald-500/30'
             }`}
           >
-            {isPlaying && !isPaused && !isSelectionMode ? (
+            {isPlaying && !isPaused && !isSelectionMode && !isSelectionOnly ? (
               <>
                 <Pause className="w-4 h-4 fill-current" />
                 <span>পজ করুন</span>
@@ -189,21 +209,23 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
             )}
           </button>
 
-          {/* Play from Selection Button */}
+          {/* Play ONLY Selected Section Button (Stops when finished) */}
           <button
-            onClick={() => handlePlayFromSelection()}
+            onClick={() => handlePlayOnlySelection()}
             className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl border text-xs md:text-sm font-semibold transition-all active:scale-95 ${
-              selectedSnippet
-                ? 'bg-teal-500/20 hover:bg-teal-500/30 border-teal-400 text-teal-200 shadow-md animate-pulse'
+              isPlaying && isSelectionOnly
+                ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 border-cyan-300 font-bold shadow-md animate-pulse ring-2 ring-cyan-400/50'
+                : selectedSnippet
+                ? 'bg-teal-500/25 hover:bg-teal-500/35 border-teal-400 text-teal-200 shadow-md ring-1 ring-teal-400/40 animate-pulse'
                 : 'bg-white/5 hover:bg-white/10 border-white/10 text-white/70'
             }`}
-            title="মাউস দিয়ে যেকোনো টেক্সট সিলেক্ট করে এই বাটনে চাপলে সেই স্থান থেকে পড়া শুরু হবে"
+            title="মাউস দিয়ে যেটুকু শব্দ বা বাক্য সিলেক্ট করবেন শুধুমাত্র সেটুকুই পড়বে এবং পড়া শেষ হলে সাথে সাথে থেমে যাবে"
           >
-            <MousePointerClick className="w-4 h-4 text-teal-300" />
+            <MousePointerClick className="w-4 h-4 text-cyan-300" />
             <span>
               {selectedSnippet 
-                ? 'সিলেক্টেড অংশ থেকে শুনুন' 
-                : 'সিলেক্টেড অংশ শুনুন'}
+                ? 'শুধুমাত্র সিলেক্টেড অংশ শুনুন (পড়া শেষে থামবে)' 
+                : 'সিলেক্টেড অংশ শুনুন (Only Selection)'}
             </span>
           </button>
 
@@ -211,8 +233,8 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
           {isPlaying && (
             <button
               onClick={handleStop}
-              className="flex items-center justify-center w-10 h-10 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all"
-              title="বন্ধ করুন"
+              className="flex items-center justify-center w-10 h-10 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all shadow-sm"
+              title="বন্ধ করুন (Stop Audio)"
             >
               <Square className="w-4 h-4 fill-current" />
             </button>
@@ -224,8 +246,13 @@ export default function LessonAudioPlayer({ textToRead, title, onActiveChunkChan
               <div className="flex items-center gap-2">
                 <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                 <span>
-                  {isSelectionMode ? 'সিলেকশন থেকে পড়ছে: ' : 'পড়ছে: '}
+                  {isSelectionOnly 
+                    ? 'শুধুমাত্র সিলেকশন পড়ছে: ' 
+                    : isSelectionMode 
+                    ? 'সিলেকশন থেকে পড়ছে: ' 
+                    : 'পড়ছে: '}
                   {progress.current} / {progress.total} বাক্য
+                  {isSelectionOnly && ' (পড়া শেষে থামবে)'}
                 </span>
               </div>
             ) : selectedSnippet ? (

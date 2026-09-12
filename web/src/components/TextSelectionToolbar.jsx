@@ -85,7 +85,7 @@ export default function TextSelectionToolbar({ chapterTitle = '', lessonId = '' 
   function handlePronounce(textToSpeak) {
     const text = textToSpeak || selectionInfo?.text
     if (text) {
-      ttsService.play(text)
+      ttsService.playOnlySelection(text)
     }
   }
 
@@ -148,10 +148,11 @@ export default function TextSelectionToolbar({ chapterTitle = '', lessonId = '' 
 
           <button
             onClick={() => handlePronounce()}
-            className="p-1.5 text-xs rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition"
-            title="উচ্চারণ শুনুন"
+            className="flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-lg hover:bg-slate-800 text-cyan-300 hover:text-white transition"
+            title="শুধুমাত্র এই সিলেক্টেড অংশ শুনুন (পড়া শেষে থামবে)"
           >
             <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
+            <span>শুনুন</span>
           </button>
 
           <button

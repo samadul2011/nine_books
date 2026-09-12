@@ -224,6 +224,32 @@ export class TTSService {
     this.playChunk(0)
   }
 
+  /**
+   * Play ONLY the selected text (words, phrases, or sentences) and STOP immediately when finished.
+   */
+  playOnlySelection(selectedSnippet) {
+    this.stop()
+    if (!selectedSnippet || !selectedSnippet.trim()) {
+      this.listeners.onError('অনুগ্রহ করে পড়ার অংশ থেকে যেকোনো শব্দ বা বাক্য সিলেক্ট করুন।')
+      return
+    }
+
+    const cleanSelected = this.cleanTextForSpeech(selectedSnippet)
+    if (!cleanSelected) {
+      this.listeners.onError('সিলেক্টেড অংশে পড়ার মতো কোনো লেখা পাওয়া যায়নি।')
+      return
+    }
+
+    // Chunks consist ONLY of the selected snippet!
+    this.chunks = this.splitIntoChunks(cleanSelected)
+    this.currentChunkIndex = 0
+    this.isPlaying = true
+    this.isPaused = false
+    this.listeners.onPlay()
+
+    this.playChunk(0)
+  }
+
   playChunk(index) {
     if (!this.isPlaying) return
     if (index >= this.chunks.length) {
