@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Open Book Base Silhouette -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,42 L28,47 C26.3,47.3 25,48.8 25,50.5 L25,73.5 C25,75.2 26.6,76.4 28.2,76.0 L54,70 L79.8,76.0 C81.4,76.4 83,75.2 83,73.5 L83,50.5 C83,48.8 81.7,47.3 80,47 L54,42 Z" />
+
+    <!-- Inner Book Pages Cutout -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M54,44 L30,48.5 C28.8,48.8 28,49.8 28,51 L28,71 L54,66 L80,71 L80,51 C80,49.8 79.2,48.8 78,48.5 L54,44 Z" />
+
+    <!-- Open Book Inner White Pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,37 C43,40.5 32.5,41 29.5,43 C28.5,43.5 28.5,69 29.5,69 C32.5,68 43,64 54,64 C65,64 75.5,68 78.5,69 C79.5,69 79.5,43.5 78.5,43 C75.5,41 65,40.5 54,37 Z" />
+
+    <!-- Golden Ribbon Bookmark Silhouette Cutout -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M51.5,37 L56.5,37 L56.5,70 L54,67.5 L51.5,70 Z" />
+
+    <!-- Top Badge Emblem Circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,27 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <!-- Badge Inner Cutout -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M54,27 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0" />
+
+    <!-- Numeral 9 Emblem -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55.2,22.5 C53.3,22.5 51.8,23.6 51.8,25.3 C51.8,27.0 53.0,27.8 54.4,27.8 C55.3,27.8 55.8,27.4 55.8,27.4 L55.8,29.8 C55.8,30.8 55.0,31.4 53.7,31.4 C52.9,31.4 52.2,31.0 51.9,30.6 L51.0,31.7 C51.7,32.3 52.7,32.8 54.0,32.8 C56.1,32.8 57.3,31.6 57.3,29.6 L57.3,25.3 C57.3,23.6 56.4,22.5 55.2,22.5 Z M54.8,23.7 C55.6,23.7 55.8,24.3 55.8,25.1 C55.8,25.9 55.4,26.4 54.5,26.4 C53.7,26.4 53.2,25.9 53.2,25.1 C53.2,24.3 53.7,23.7 54.8,23.7 Z" />
+</vector>

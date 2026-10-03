@@ -131,6 +131,13 @@ for cls_name, topics in classes_order:
             if correct_idx == -1:
                 correct_idx = 0
                 
+            if len(opts) > 1 and correct_idx != -1:
+                # Deterministically shuffle options so they are evenly mixed across A, B, C, D
+                correct_val = opts[correct_idx]
+                rng = random.Random(f"{chap_id}-{q_idx}-shuffle")
+                rng.shuffle(opts)
+                correct_idx = opts.index(correct_val)
+                
             mcqs.append({
                 "id": f"grammar-mcq-{chap_id}-{q_idx+1}",
                 "chapter_id": chap_id,

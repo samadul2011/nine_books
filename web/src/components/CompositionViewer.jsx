@@ -30,13 +30,23 @@ import {
 } from 'lucide-react'
 import { ttsService } from '../services/ttsService'
 import { translationService } from '../services/translationService'
-import { EXAM_TIPS, FORMAT_GUIDES, CV_TEMPLATES } from '../data/compositionData'
 
 export default function CompositionViewer({
   topic,
   isCVMode = false,
   onSelectTopic
 }) {
+  const [compositionModule, setCompositionModule] = useState(null)
+  useEffect(() => {
+    import('../data/compositionData').then(m => {
+      setCompositionModule(m)
+      if (m.CV_TEMPLATES && m.CV_TEMPLATES.length > 0) {
+        setSelectedCvTemplate(m.CV_TEMPLATES[0])
+        setCvData({ ...m.CV_TEMPLATES[0] })
+      }
+    }).catch(() => {})
+  }, [])
+
   // TTS State
   const [isPlaying, setIsPlaying] = useState(false)
   const [activeSentence, setActiveSentence] = useState(null)
@@ -52,9 +62,10 @@ export default function CompositionViewer({
   const [copied, setCopied] = useState(false)
 
   // CV Mode State
-  const [selectedCvTemplate, setSelectedCvTemplate] = useState(CV_TEMPLATES[0])
-  const [cvData, setCvData] = useState({ ...CV_TEMPLATES[0] })
+  const [selectedCvTemplate, setSelectedCvTemplate] = useState(null)
+  const [cvData, setCvData] = useState({})
   const [cvViewMode, setCvViewMode] = useState('preview') // 'preview' | 'edit'
+
 
   // Reset TTS and Translation when topic changes and scroll to top
   useEffect(() => {
@@ -176,8 +187,9 @@ export default function CompositionViewer({
   const wordCount = topic?.wordCount || (displayTemplate ? displayTemplate.split(/\s+/).length : 0)
   const readingTime = Math.max(1, Math.ceil(wordCount / 120))
   const category = topic?.category || 'Paragraph'
-  const tips = EXAM_TIPS[category] || EXAM_TIPS['Paragraph']
-  const formatGuide = FORMAT_GUIDES[category] || (category.toLowerCase().includes('story') ? FORMAT_GUIDES['Story'] : null)
+  const tips = compositionModule?.EXAM_TIPS ? (compositionModule.EXAM_TIPS[category] || compositionModule.EXAM_TIPS['Paragraph']) : null
+  const formatGuide = compositionModule?.FORMAT_GUIDES ? (compositionModule.FORMAT_GUIDES[category] || (category.toLowerCase().includes('story') ? compositionModule.FORMAT_GUIDES['Story'] : null)) : null
+
 
   // Dialogue Parser: identify speaker turns
   const isDialogue = category === 'Dialogue' || (topic?.title || '').toLowerCase().includes('dialogue')
@@ -307,8 +319,9 @@ ${data.hobbies}
               Select Template:
             </span>
             <div className="flex gap-2 flex-wrap">
-              {CV_TEMPLATES.map((tmpl) => (
+              {(compositionModule?.CV_TEMPLATES || []).map((tmpl) => (
                 <button
+
                   key={tmpl.id}
                   onClick={() => {
                     setSelectedCvTemplate(tmpl)

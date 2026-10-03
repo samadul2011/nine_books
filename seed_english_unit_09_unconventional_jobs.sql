@@ -146,8 +146,6 @@ There are hundreds of such jobs to take if you want to travel the less taken
 
 ways of life. You have to decide on several questions:
 
-f"-)
-
 What companies will recruit/hire me?
 
 Do I actually get a paycheck?

@@ -18,3 +18,10 @@ local.properties
 web/node_modules/
 web/dist/
 web/.env
+
+# Temporary and local scratch files
+scratch/
+.idea/
+*.traineddata
+*.png
+

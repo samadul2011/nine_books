@@ -3009,12 +3009,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to present continuous: She plays the piano.",
       "question_en": "Change to present continuous: She plays the piano.",
       "options_json": [
-        "She is playing the piano.",
-        "She was playing the piano.",
         "She has played the piano.",
+        "She was playing the piano.",
+        "She is playing the piano.",
         "She will play the piano."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: She is playing the piano."
     },
     {
@@ -3024,12 +3024,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to simple past: They eat dinner at 7 pm.",
       "question_en": "Change to simple past: They eat dinner at 7 pm.",
       "options_json": [
-        "They ate dinner at 7 pm.",
         "They have eaten dinner at 7 pm.",
+        "They were eating dinner at 7 pm.",
         "They are eating dinner at 7 pm.",
-        "They were eating dinner at 7 pm."
+        "They ate dinner at 7 pm."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: They ate dinner at 7 pm."
     },
     {
@@ -3039,12 +3039,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to present perfect: I finish my project.",
       "question_en": "Change to present perfect: I finish my project.",
       "options_json": [
-        "I have finished my project.",
         "I finished my project.",
-        "I am finishing my project.",
-        "I will finish my project."
+        "I have finished my project.",
+        "I will finish my project.",
+        "I am finishing my project."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: I have finished my project."
     },
     {
@@ -3056,8 +3056,8 @@ export const GRAMMAR_MCQS_MAP = {
       "options_json": [
         "You will finish the work tomorrow.",
         "You finished the work tomorrow.",
-        "You are finishing the work tomorrow.",
-        "You have finished the work tomorrow."
+        "You have finished the work tomorrow.",
+        "You are finishing the work tomorrow."
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: You will finish the work tomorrow."
@@ -3069,12 +3069,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to simple present: She is reading a book right now.",
       "question_en": "Change to simple present: She is reading a book right now.",
       "options_json": [
-        "She reads books.",
-        "She read books.",
+        "She was reading books.",
         "She has read books.",
-        "She was reading books."
+        "She read books.",
+        "She reads books."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: She reads books."
     },
     {
@@ -3084,12 +3084,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to past continuous: When I arrived, he slept.",
       "question_en": "Change to past continuous: When I arrived, he slept.",
       "options_json": [
-        "When I arrived, he was sleeping.",
         "When I arrived, he is sleeping.",
-        "When I arrived, he has slept.",
-        "When I arrived, he sleeps."
+        "When I arrived, he sleeps.",
+        "When I arrived, he was sleeping.",
+        "When I arrived, he has slept."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: When I arrived, he was sleeping."
     },
     {
@@ -3099,12 +3099,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to past perfect: After she left, I realized my mistake.",
       "question_en": "Change to past perfect: After she left, I realized my mistake.",
       "options_json": [
-        "After she had left, I realized my mistake.",
-        "After she has left, I realized my mistake.",
         "After she leaves, I realized my mistake.",
-        "After she was leaving, I realized my mistake."
+        "After she had left, I realized my mistake.",
+        "After she was leaving, I realized my mistake.",
+        "After she has left, I realized my mistake."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: After she had left, I realized my mistake."
     },
     {
@@ -3115,9 +3115,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Change to present continuous: He watches TV every evening.",
       "options_json": [
         "He is watching TV.",
-        "He was watching TV.",
+        "He watched TV.",
         "He has watched TV.",
-        "He watched TV."
+        "He was watching TV."
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: He is watching TV."
@@ -3129,12 +3129,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to future continuous: At this time tomorrow, we travel to Nizwa.",
       "question_en": "Change to future continuous: At this time tomorrow, we travel to Nizwa.",
       "options_json": [
-        "At this time tomorrow, we will be travelling to Nizwa.",
         "At this time tomorrow, we are travelling to Nizwa.",
-        "At this time tomorrow, we travelled to Nizwa.",
-        "At this time tomorrow, we have travelled to Nizwa."
+        "At this time tomorrow, we have travelled to Nizwa.",
+        "At this time tomorrow, we will be travelling to Nizwa.",
+        "At this time tomorrow, we travelled to Nizwa."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: At this time tomorrow, we will be travelling to Nizwa."
     },
     {
@@ -3144,12 +3144,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to simple past: She writes three emails this morning.",
       "question_en": "Change to simple past: She writes three emails this morning.",
       "options_json": [
-        "She wrote three emails this morning.",
-        "She is writing three emails this morning.",
         "She has written three emails this morning.",
-        "She was writing three emails this morning."
+        "She wrote three emails this morning.",
+        "She was writing three emails this morning.",
+        "She is writing three emails this morning."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: She wrote three emails this morning."
     },
     {
@@ -3160,9 +3160,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Change to present perfect: We see that movie twice already.",
       "options_json": [
         "We have seen that movie twice already.",
+        "We will see that movie twice already.",
         "We saw that movie twice already.",
-        "We are seeing that movie twice already.",
-        "We will see that movie twice already."
+        "We are seeing that movie twice already."
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: We have seen that movie twice already."
@@ -3174,12 +3174,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Change to simple present: Water is boiling at 100 degrees.",
       "question_en": "Change to simple present: Water is boiling at 100 degrees.",
       "options_json": [
-        "Water boils at 100 degrees.",
-        "Water boiled at 100 degrees.",
         "Water has boiled at 100 degrees.",
-        "Water was boiling at 100 degrees."
+        "Water boiled at 100 degrees.",
+        "Water was boiling at 100 degrees.",
+        "Water boils at 100 degrees."
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: Water boils at 100 degrees."
     }
   ],
@@ -8161,12 +8161,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the simple present: She ___ to school every day.",
       "question_en": "Choose the simple present: She ___ to school every day.",
       "options_json": [
-        "goes",
         "is going",
         "has gone",
-        "went"
+        "went",
+        "goes"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: goes"
     },
     {
@@ -8176,12 +8176,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Pick the simple past: They ___ the match yesterday.",
       "question_en": "Pick the simple past: They ___ the match yesterday.",
       "options_json": [
+        "have won",
         "won",
-        "win",
         "are winning",
-        "have won"
+        "win"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: won"
     },
     {
@@ -8191,12 +8191,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Select the simple future: I ___ you later.",
       "question_en": "Select the simple future: I ___ you later.",
       "options_json": [
-        "will call",
         "called",
-        "am calling",
-        "have called"
+        "have called",
+        "will call",
+        "am calling"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will call"
     },
     {
@@ -8207,9 +8207,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the present continuous: He reads a book now.",
       "options_json": [
         "He is reading a book now",
-        "He read a book now",
+        "He was reading a book now",
         "He has read a book now",
-        "He was reading a book now"
+        "He read a book now"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: He is reading a book now"
@@ -8221,12 +8221,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Pick the past continuous: They ___ (play) at 5 p.m.",
       "question_en": "Pick the past continuous: They ___ (play) at 5 p.m.",
       "options_json": [
-        "were playing",
-        "are playing",
         "played",
+        "are playing",
+        "were playing",
         "have played"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: were playing"
     },
     {
@@ -8236,12 +8236,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Select the future continuous: She ___ at 8 p.m.",
       "question_en": "Select the future continuous: She ___ at 8 p.m.",
       "options_json": [
-        "will be studying",
+        "has studied",
         "studied",
         "is studying",
-        "has studied"
+        "will be studying"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: will be studying"
     },
     {
@@ -8251,12 +8251,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the present perfect: I ___ my homework.",
       "question_en": "Choose the present perfect: I ___ my homework.",
       "options_json": [
-        "have finished",
-        "am finishing",
         "finished",
-        "was finishing"
+        "have finished",
+        "was finishing",
+        "am finishing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have finished"
     },
     {
@@ -8267,8 +8267,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Pick the past perfect: The bus ___ before we arrived.",
       "options_json": [
         "had left",
-        "left",
         "has left",
+        "left",
         "was leaving"
       ],
       "correct_answer_index": 0,
@@ -8281,12 +8281,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Identify the tense: He has been working since morning.",
       "question_en": "Identify the tense: He has been working since morning.",
       "options_json": [
-        "Present perfect continuous",
         "Present continuous",
-        "Past perfect",
-        "Past continuous"
+        "Present perfect continuous",
+        "Past continuous",
+        "Past perfect"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: Present perfect continuous"
     },
     {
@@ -8296,12 +8296,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (wait) when I called.",
       "question_en": "Choose the correct form: She ___ (wait) when I called.",
       "options_json": [
-        "was waiting",
-        "is waiting",
         "has waited",
-        "waited"
+        "waited",
+        "is waiting",
+        "was waiting"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: was waiting"
     },
     {
@@ -8311,12 +8311,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Select the present perfect continuous: They ___ for two hours.",
       "question_en": "Select the present perfect continuous: They ___ for two hours.",
       "options_json": [
-        "have been studying",
         "are studying",
+        "have been studying",
         "studied",
         "were studying"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have been studying"
     },
     {
@@ -8327,9 +8327,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the past perfect continuous: He ___ for an hour before the bus came.",
       "options_json": [
         "had been waiting",
-        "has been waiting",
+        "waited",
         "was waiting",
-        "waited"
+        "has been waiting"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: had been waiting"
@@ -8341,12 +8341,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Pick the correct tense: I ___ (see) that movie already.",
       "question_en": "Pick the correct tense: I ___ (see) that movie already.",
       "options_json": [
-        "have seen",
+        "was seeing",
         "am seeing",
         "saw",
-        "was seeing"
+        "have seen"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: have seen"
     },
     {
@@ -8356,12 +8356,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct sentence:",
       "question_en": "Choose the correct sentence:",
       "options_json": [
+        "She has cooked when the phone rang",
         "She was cooking when the phone rang",
         "She cooked when the phone was ringing",
-        "She has cooked when the phone rang",
         "She is cooking when the phone rang"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: She was cooking when the phone rang"
     },
     {
@@ -8373,8 +8373,8 @@ export const GRAMMAR_MCQS_MAP = {
       "options_json": [
         "had moved",
         "have moved",
-        "are moving",
-        "were moving"
+        "were moving",
+        "are moving"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: had moved"
@@ -8387,8 +8387,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Identify the tense: They have been playing since 6 a.m.",
       "options_json": [
         "Present perfect continuous",
-        "Present perfect",
         "Past continuous",
+        "Present perfect",
         "Simple present"
       ],
       "correct_answer_index": 0,
@@ -8401,12 +8401,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the past perfect continuous: He ___ for two hours before the class started.",
       "question_en": "Choose the past perfect continuous: He ___ for two hours before the class started.",
       "options_json": [
-        "had been studying",
-        "has been studying",
+        "studied",
         "was studying",
-        "studied"
+        "had been studying",
+        "has been studying"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: had been studying"
     },
     {
@@ -8417,8 +8417,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the simple present: She ___ tea every morning.",
       "options_json": [
         "drinks",
-        "is drinking",
         "drank",
+        "is drinking",
         "has drunk"
       ],
       "correct_answer_index": 0,
@@ -8431,12 +8431,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the simple past: We ___ to the market yesterday.",
       "question_en": "Choose the simple past: We ___ to the market yesterday.",
       "options_json": [
+        "are going",
         "went",
         "go",
-        "are going",
         "have gone"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: went"
     },
     {
@@ -8446,12 +8446,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the simple future: They ___ the match tomorrow.",
       "question_en": "Choose the simple future: They ___ the match tomorrow.",
       "options_json": [
-        "will play",
         "played",
-        "are playing",
-        "have played"
+        "will play",
+        "have played",
+        "are playing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: will play"
     },
     {
@@ -8461,12 +8461,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Pick the present continuous: He ___ right now.",
       "question_en": "Pick the present continuous: He ___ right now.",
       "options_json": [
-        "is sleeping",
-        "slept",
         "has slept",
-        "sleeps"
+        "sleeps",
+        "slept",
+        "is sleeping"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: is sleeping"
     },
     {
@@ -8476,12 +8476,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Pick the past continuous: They ___ when it started to rain.",
       "question_en": "Pick the past continuous: They ___ when it started to rain.",
       "options_json": [
-        "were playing",
-        "play",
+        "have played",
         "played",
-        "have played"
+        "play",
+        "were playing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: were playing"
     },
     {
@@ -8492,9 +8492,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Pick the future continuous: I ___ at 10 a.m. tomorrow.",
       "options_json": [
         "will be studying",
-        "study",
+        "have studied",
         "studied",
-        "have studied"
+        "study"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: will be studying"
@@ -8506,12 +8506,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the present perfect: She ___ her homework already.",
       "question_en": "Choose the present perfect: She ___ her homework already.",
       "options_json": [
-        "has finished",
-        "is finishing",
+        "was finishing",
         "finished",
-        "was finishing"
+        "has finished",
+        "is finishing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: has finished"
     },
     {
@@ -8521,12 +8521,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the past perfect: He ___ the bus before I reached the stop.",
       "question_en": "Choose the past perfect: He ___ the bus before I reached the stop.",
       "options_json": [
-        "had caught",
         "caught",
+        "was catching",
         "has caught",
-        "was catching"
+        "had caught"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: had caught"
     },
     {
@@ -8537,8 +8537,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the present perfect continuous: They ___ for two hours.",
       "options_json": [
         "have been waiting",
-        "are waiting",
         "waited",
+        "are waiting",
         "were waiting"
       ],
       "correct_answer_index": 0,
@@ -8551,12 +8551,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the past perfect continuous: She ___ for an hour before the class started.",
       "question_en": "Choose the past perfect continuous: She ___ for an hour before the class started.",
       "options_json": [
-        "had been studying",
         "has been studying",
         "was studying",
-        "studied"
+        "studied",
+        "had been studying"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: had been studying"
     },
     {
@@ -8566,12 +8566,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Identify the tense: I write letters on Sundays.",
       "question_en": "Identify the tense: I write letters on Sundays.",
       "options_json": [
-        "Simple present",
         "Present continuous",
-        "Present perfect",
-        "Past simple"
+        "Past simple",
+        "Simple present",
+        "Present perfect"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: Simple present"
     },
     {
@@ -8581,12 +8581,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Identify the tense: She was cooking when I arrived.",
       "question_en": "Identify the tense: She was cooking when I arrived.",
       "options_json": [
+        "Future continuous",
         "Past continuous",
-        "Simple past",
         "Present perfect",
-        "Future continuous"
+        "Simple past"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: Past continuous"
     },
     {
@@ -8596,12 +8596,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Identify the tense: They have lived here for years.",
       "question_en": "Identify the tense: They have lived here for years.",
       "options_json": [
-        "Present perfect",
         "Present perfect continuous",
-        "Simple past",
-        "Past perfect"
+        "Present perfect",
+        "Past perfect",
+        "Simple past"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: Present perfect"
     },
     {
@@ -8612,9 +8612,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Identify the tense: I will be traveling next week.",
       "options_json": [
         "Future continuous",
-        "Simple future",
+        "Past continuous",
         "Present continuous",
-        "Past continuous"
+        "Simple future"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: Future continuous"
@@ -8626,12 +8626,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (work) in the bank now.",
       "question_en": "Choose the correct form: He ___ (work) in the bank now.",
       "options_json": [
-        "is working",
         "works",
-        "worked",
-        "has worked"
+        "is working",
+        "has worked",
+        "worked"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: is working"
     },
     {
@@ -8641,12 +8641,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (finish) the project last week.",
       "question_en": "Choose the correct form: They ___ (finish) the project last week.",
       "options_json": [
+        "have finished",
         "finished",
         "finish",
-        "are finishing",
-        "have finished"
+        "are finishing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: finished"
     },
     {
@@ -8657,9 +8657,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: I ___ (visit) Cox's Bazar in 2022.",
       "options_json": [
         "visited",
-        "visit",
         "am visiting",
-        "have visited"
+        "have visited",
+        "visit"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: visited"
@@ -8686,12 +8686,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (wait) for you since 6 p.m.",
       "question_en": "Choose the correct form: We ___ (wait) for you since 6 p.m.",
       "options_json": [
+        "were waiting",
         "have been waiting",
         "wait",
-        "waited",
-        "were waiting"
+        "waited"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have been waiting"
     },
     {
@@ -8702,9 +8702,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: By the time we arrived, the train ___ (leave).",
       "options_json": [
         "had left",
-        "left",
+        "was leaving",
         "has left",
-        "was leaving"
+        "left"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: had left"
@@ -8716,12 +8716,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (play) when the power went out.",
       "question_en": "Choose the correct form: They ___ (play) when the power went out.",
       "options_json": [
-        "were playing",
+        "have played",
         "play",
         "played",
-        "have played"
+        "were playing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: were playing"
     },
     {
@@ -8731,12 +8731,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (call) you tonight.",
       "question_en": "Choose the correct form: I ___ (call) you tonight.",
       "options_json": [
-        "will call",
-        "called",
         "am calling now",
-        "have called"
+        "will call",
+        "have called",
+        "called"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: will call"
     },
     {
@@ -8747,9 +8747,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: She ___ (read) at 9 p.m. yesterday.",
       "options_json": [
         "was reading",
-        "reads",
         "read",
-        "has read"
+        "has read",
+        "reads"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: was reading"
@@ -8761,12 +8761,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (study) for two hours before dinner.",
       "question_en": "Choose the correct form: He ___ (study) for two hours before dinner.",
       "options_json": [
-        "had been studying",
-        "has been studying",
+        "studied",
         "was studying",
-        "studied"
+        "had been studying",
+        "has been studying"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: had been studying"
     },
     {
@@ -8776,12 +8776,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (know) him since childhood.",
       "question_en": "Choose the correct form: I ___ (know) him since childhood.",
       "options_json": [
-        "have known",
         "know",
-        "knew",
-        "am knowing"
+        "have known",
+        "am knowing",
+        "knew"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have known"
     },
     {
@@ -8791,12 +8791,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: The students ___ (write) now.",
       "question_en": "Choose the correct form: The students ___ (write) now.",
       "options_json": [
-        "are writing",
-        "write",
         "wrote",
-        "have written"
+        "have written",
+        "write",
+        "are writing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: are writing"
     },
     {
@@ -8807,8 +8807,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: She ___ (go) to school every day.",
       "options_json": [
         "goes",
-        "is going",
         "went",
+        "is going",
         "has gone"
       ],
       "correct_answer_index": 0,
@@ -8821,12 +8821,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (be) at the library yesterday.",
       "question_en": "Choose the correct form: We ___ (be) at the library yesterday.",
       "options_json": [
-        "were",
-        "are",
         "have been",
-        "will be"
+        "will be",
+        "were",
+        "are"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: were"
     },
     {
@@ -8836,12 +8836,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (be) at home now.",
       "question_en": "Choose the correct form: He ___ (be) at home now.",
       "options_json": [
-        "is",
-        "was",
         "has been",
-        "will be"
+        "was",
+        "will be",
+        "is"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: is"
     },
     {
@@ -8851,12 +8851,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (be) in class at 10 a.m. tomorrow.",
       "question_en": "Choose the correct form: They ___ (be) in class at 10 a.m. tomorrow.",
       "options_json": [
-        "will be",
-        "are",
+        "have been",
         "were",
-        "have been"
+        "will be",
+        "are"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will be"
     },
     {
@@ -8866,12 +8866,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (not/finish) my homework yet.",
       "question_en": "Choose the correct form: I ___ (not/finish) my homework yet.",
       "options_json": [
-        "have not finished",
+        "was not finishing",
         "did not finish",
-        "do not finish",
-        "was not finishing"
+        "have not finished",
+        "do not finish"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: have not finished"
     },
     {
@@ -8881,12 +8881,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (live) in Dhaka since 2015.",
       "question_en": "Choose the correct form: She ___ (live) in Dhaka since 2015.",
       "options_json": [
-        "has lived",
         "lived",
+        "was living",
         "is living",
-        "was living"
+        "has lived"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: has lived"
     },
     {
@@ -8896,12 +8896,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: The match ___ (start) at 4 p.m. every day.",
       "question_en": "Choose the correct form: The match ___ (start) at 4 p.m. every day.",
       "options_json": [
-        "starts",
+        "has started",
         "is starting",
-        "started",
-        "has started"
+        "starts",
+        "started"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: starts"
     },
     {
@@ -8911,12 +8911,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (see) him last night.",
       "question_en": "Choose the correct form: I ___ (see) him last night.",
       "options_json": [
-        "saw",
         "see",
-        "am seeing",
-        "have seen"
+        "have seen",
+        "saw",
+        "am seeing"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: saw"
     },
     {
@@ -8926,12 +8926,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (study) when her mother called.",
       "question_en": "Choose the correct form: She ___ (study) when her mother called.",
       "options_json": [
+        "studied",
         "was studying",
         "studies",
-        "studied",
         "has studied"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: was studying"
     },
     {
@@ -8941,12 +8941,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (finish) the work by next week.",
       "question_en": "Choose the correct form: They ___ (finish) the work by next week.",
       "options_json": [
-        "will have finished",
         "finish",
+        "will have finished",
         "are finishing",
         "finished"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: will have finished"
     },
     {
@@ -8956,12 +8956,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (wait) for her for two hours yesterday.",
       "question_en": "Choose the correct form: He ___ (wait) for her for two hours yesterday.",
       "options_json": [
-        "was waiting",
-        "waits",
         "waited",
-        "has waited"
+        "waits",
+        "has waited",
+        "was waiting"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: was waiting"
     },
     {
@@ -8971,12 +8971,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (travel) to Chittagong this time tomorrow.",
       "question_en": "Choose the correct form: We ___ (travel) to Chittagong this time tomorrow.",
       "options_json": [
-        "will be traveling",
-        "travel",
         "traveled",
-        "have traveled"
+        "have traveled",
+        "will be traveling",
+        "travel"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will be traveling"
     },
     {
@@ -8986,12 +8986,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (cook) dinner when I reached home.",
       "question_en": "Choose the correct form: She ___ (cook) dinner when I reached home.",
       "options_json": [
-        "was cooking",
+        "has cooked",
         "cooks",
         "cooked",
-        "has cooked"
+        "was cooking"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: was cooking"
     },
     {
@@ -9002,8 +9002,8 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: They ___ (play) football every Friday.",
       "options_json": [
         "play",
-        "are playing",
         "played",
+        "are playing",
         "have played"
       ],
       "correct_answer_index": 0,
@@ -9016,12 +9016,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (read) this book already.",
       "question_en": "Choose the correct form: I ___ (read) this book already.",
       "options_json": [
+        "was reading",
         "have read",
         "read",
-        "am reading",
-        "was reading"
+        "am reading"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have read"
     },
     {
@@ -9032,9 +9032,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: He ___ (buy) a new phone last month.",
       "options_json": [
         "bought",
-        "buys",
         "is buying",
-        "has bought"
+        "has bought",
+        "buys"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: bought"
@@ -9046,12 +9046,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (not/see) him since Eid.",
       "question_en": "Choose the correct form: We ___ (not/see) him since Eid.",
       "options_json": [
-        "have not seen",
-        "did not see",
         "do not see",
-        "were not seeing"
+        "have not seen",
+        "were not seeing",
+        "did not see"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: have not seen"
     },
     {
@@ -9076,12 +9076,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: By the time the bell rang, the teacher ___ (finish) the lesson.",
       "question_en": "Choose the correct form: By the time the bell rang, the teacher ___ (finish) the lesson.",
       "options_json": [
-        "had finished",
+        "was finishing",
         "finished",
         "has finished",
-        "was finishing"
+        "had finished"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: had finished"
     },
     {
@@ -9091,12 +9091,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: The children ___ (sleep) when the storm began.",
       "question_en": "Choose the correct form: The children ___ (sleep) when the storm began.",
       "options_json": [
-        "were sleeping",
         "sleep",
+        "were sleeping",
         "slept",
         "have slept"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: were sleeping"
     },
     {
@@ -9121,12 +9121,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (be) here an hour ago.",
       "question_en": "Choose the correct form: He ___ (be) here an hour ago.",
       "options_json": [
-        "was",
-        "is",
         "has been",
-        "will be"
+        "will be",
+        "is",
+        "was"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: was"
     },
     {
@@ -9136,12 +9136,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (be) at the meeting tomorrow.",
       "question_en": "Choose the correct form: We ___ (be) at the meeting tomorrow.",
       "options_json": [
-        "will be",
-        "are",
+        "have been",
         "were",
-        "have been"
+        "will be",
+        "are"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will be"
     },
     {
@@ -9151,12 +9151,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (teach) here for five years.",
       "question_en": "Choose the correct form: She ___ (teach) here for five years.",
       "options_json": [
-        "has taught",
-        "taught",
         "is teaching",
-        "was teaching"
+        "was teaching",
+        "taught",
+        "has taught"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: has taught"
     },
     {
@@ -9166,12 +9166,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (wait) for him when he arrived.",
       "question_en": "Choose the correct form: I ___ (wait) for him when he arrived.",
       "options_json": [
-        "was waiting",
-        "wait",
         "waited",
+        "wait",
+        "was waiting",
         "have waited"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: was waiting"
     },
     {
@@ -9181,12 +9181,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (build) the bridge next year.",
       "question_en": "Choose the correct form: They ___ (build) the bridge next year.",
       "options_json": [
-        "will build",
-        "built",
+        "have built",
         "are building now",
-        "have built"
+        "built",
+        "will build"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: will build"
     },
     {
@@ -9196,12 +9196,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: By 5 p.m., we ___ (complete) the task.",
       "question_en": "Choose the correct form: By 5 p.m., we ___ (complete) the task.",
       "options_json": [
-        "will have completed",
-        "complete",
+        "completed",
         "are completing",
-        "completed"
+        "will have completed",
+        "complete"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will have completed"
     },
     {
@@ -9211,12 +9211,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (write) a letter now.",
       "question_en": "Choose the correct form: She ___ (write) a letter now.",
       "options_json": [
-        "is writing",
+        "has written",
         "writes",
-        "wrote",
-        "has written"
+        "is writing",
+        "wrote"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: is writing"
     },
     {
@@ -9226,12 +9226,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: He ___ (sleep) at 11 p.m. last night.",
       "question_en": "Choose the correct form: He ___ (sleep) at 11 p.m. last night.",
       "options_json": [
+        "has slept",
         "was sleeping",
-        "slept",
         "sleeps",
-        "has slept"
+        "slept"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 1,
       "explanation": "Correct Answer: was sleeping"
     },
     {
@@ -9241,12 +9241,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: We ___ (study) for the test these days.",
       "question_en": "Choose the correct form: We ___ (study) for the test these days.",
       "options_json": [
-        "are studying",
         "study",
-        "studied",
-        "have studied"
+        "have studied",
+        "are studying",
+        "studied"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: are studying"
     },
     {
@@ -9256,12 +9256,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (have) a new bag last week.",
       "question_en": "Choose the correct form: She ___ (have) a new bag last week.",
       "options_json": [
-        "had",
-        "has",
+        "will have",
         "is having",
-        "will have"
+        "has",
+        "had"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: had"
     },
     {
@@ -9272,9 +9272,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: I ___ (have) a test tomorrow.",
       "options_json": [
         "will have",
-        "have",
         "had",
-        "am having"
+        "am having",
+        "have"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: will have"
@@ -9286,12 +9286,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (play) since 6 a.m.",
       "question_en": "Choose the correct form: They ___ (play) since 6 a.m.",
       "options_json": [
-        "have been playing",
-        "play",
         "played",
-        "were playing"
+        "were playing",
+        "have been playing",
+        "play"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: have been playing"
     },
     {
@@ -9302,9 +9302,9 @@ export const GRAMMAR_MCQS_MAP = {
       "question_en": "Choose the correct form: By the time I reached, she ___ (leave).",
       "options_json": [
         "had left",
+        "was leaving",
         "left",
-        "has left",
-        "was leaving"
+        "has left"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: had left"
@@ -9316,12 +9316,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: I ___ (call) you after class.",
       "question_en": "Choose the correct form: I ___ (call) you after class.",
       "options_json": [
-        "will call",
         "call",
-        "called",
-        "have called"
+        "have called",
+        "will call",
+        "called"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will call"
     },
     {
@@ -9333,8 +9333,8 @@ export const GRAMMAR_MCQS_MAP = {
       "options_json": [
         "has been working",
         "works",
-        "worked",
-        "was working"
+        "was working",
+        "worked"
       ],
       "correct_answer_index": 0,
       "explanation": "Correct Answer: has been working"
@@ -9346,12 +9346,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: She ___ (read) the book when I entered.",
       "question_en": "Choose the correct form: She ___ (read) the book when I entered.",
       "options_json": [
-        "was reading",
-        "reads",
         "read",
-        "has read"
+        "reads",
+        "has read",
+        "was reading"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 3,
       "explanation": "Correct Answer: was reading"
     },
     {
@@ -9361,12 +9361,12 @@ export const GRAMMAR_MCQS_MAP = {
       "question_bn": "Choose the correct form: They ___ (visit) us next month.",
       "question_en": "Choose the correct form: They ___ (visit) us next month.",
       "options_json": [
-        "will visit",
-        "visited",
         "are visiting now",
+        "visited",
+        "will visit",
         "have visited"
       ],
-      "correct_answer_index": 0,
+      "correct_answer_index": 2,
       "explanation": "Correct Answer: will visit"
     }
   ],

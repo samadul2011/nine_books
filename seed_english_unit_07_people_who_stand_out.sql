@@ -64,7 +64,7 @@ He played a vital role in the art movement in Bangladesh and was the founding Pr
 
 Abedin was born in Kishoregonj on 29 December, 1914. He spent most of his childhood near the scenic banks of the Brahmaputra River. The river and the open nature inspired him from his early life. The Brahmaputra later appeared in
 
-\c, many of his paintings and remained a great source of inspiration throughout his f"-) career. As his tribute to the river Brahmaputra, he drew a series of water colour
+many of his paintings and remained a great source of inspiration throughout his career. As his tribute to the river Brahmaputra, he drew a series of water colour
 
 paintings in this regard. This helped him earn Governor's Gold Medal in all India Exhibition in 1938. This was the first time when he came under spotlight and this award gave Abedin the confidence to create his own visual style.
 

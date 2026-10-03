@@ -16,10 +16,15 @@ import {
   TrendingUp,
   AlertCircle
 } from 'lucide-react'
-import { GRAMMAR_MCQS_MAP, GRAMMAR_CHAPTERS } from '../data/grammarData'
 
 export default function GrammarLevelExam({ onClose, onSelectChapter }) {
+  const [grammarData, setGrammarData] = useState(null)
+  useEffect(() => {
+    import('../data/grammarData').then(m => setGrammarData(m)).catch(() => {})
+  }, [])
+
   const [selectedExamType, setSelectedExamType] = useState('ssc') // 'class8' | 'ssc' | 'hsc' | 'all'
+
   const [examState, setExamState] = useState('intro') // 'intro' | 'running' | 'result'
   const [examQuestions, setExamQuestions] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -83,14 +88,17 @@ export default function GrammarLevelExam({ onClose, onSelectChapter }) {
 
   const startExam = (type = selectedExamType) => {
     const config = examConfigs[type]
+    const allChaps = grammarData?.GRAMMAR_CHAPTERS || []
+    const allMcqs = grammarData?.GRAMMAR_MCQS_MAP || {}
     const targetChapters = config.classFilter 
-      ? GRAMMAR_CHAPTERS.filter(c => c.class_level === config.classFilter)
-      : GRAMMAR_CHAPTERS
+      ? allChaps.filter(c => c.class_level === config.classFilter)
+      : allChaps
 
     // Gather all questions from target chapters
     let allPool = []
     targetChapters.forEach(ch => {
-      const qList = GRAMMAR_MCQS_MAP[ch.id] || []
+      const qList = allMcqs[ch.id] || []
+
       qList.forEach(q => {
         allPool.push({
           ...q,

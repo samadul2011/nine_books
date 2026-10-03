@@ -425,8 +425,6 @@ $tag_u11_l06$, 6);
 
 This time Rosamond was really disappointed as her mother wanted nothing. However, while they were passing by a chemist's shop, she saw some jars---blue, green, red, yellow and purple---and she seemed to have a fascination for a purple jar. But her mother answered as before, "Of what use would they be to me, Rosamond?"
 
-f"-)
-
 "Oh, Mamma, I would use it for a flower pot."
 
 "But you have a flower pot and the jar you are dying for buying• 1s not a flower pot."
@@ -694,8 +692,6 @@ How many people attempted to choose the right casket? What was the result?
 Who succeeded to marry Portia? Why/How?
 
 Why did the joyous mood at Belmont tum sad?
-
-\c,
 
 ---
 

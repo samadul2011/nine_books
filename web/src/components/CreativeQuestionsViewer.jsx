@@ -39,7 +39,11 @@ export default function CreativeQuestionsViewer({ questions = [], chapterTitle =
   }
 
   const handleCopyQuestion = (q) => {
-    const text = `${q.title}\n\nউদ্দীপক:\n${q.stem}\n\nক. ${q.ka}\nখ. ${q.kha}\nগ. ${q.ga}`
+    const ka = q.ka || q.a_q || q.a || ''
+    const kha = q.kha || q.b_q || q.b || ''
+    const ga = q.ga || q.c_q || q.c || ''
+    const gha = q.gha || q.d_q || q.d || ''
+    const text = `${q.title}\n\nউদ্দীপক:\n${q.stem}\n\nক. ${ka}\nখ. ${kha}\nগ. ${ga}${gha ? `\nঘ. ${gha}` : ''}`
     navigator.clipboard.writeText(text)
     setCopiedId(q.id)
     setTimeout(() => setCopiedId(null), 2000)
@@ -145,6 +149,17 @@ export default function CreativeQuestionsViewer({ questions = [], chapterTitle =
           const isCopied = copiedId === q.id
           const qNum = q.question_no || idx + 1
 
+          const ka = q.ka || q.a_q || q.a || ''
+          const kha = q.kha || q.b_q || q.b || ''
+          const ga = q.ga || q.c_q || q.c || ''
+          const gha = q.gha || q.d_q || q.d || ''
+
+          const solKa = q.solution?.ka || q.a_ans || q.solution?.a || q.ka_ans || ''
+          const solKha = q.solution?.kha || q.b_ans || q.solution?.b || q.kha_ans || ''
+          const solGa = q.solution?.ga || q.c_ans || q.solution?.c || q.ga_ans || ''
+          const solGha = q.solution?.gha || q.d_ans || q.solution?.d || q.gha_ans || ''
+          const hasSolution = Boolean(solKa || solKha || solGa || solGha || q.solution)
+
           return (
             <div
               key={q.id || idx}
@@ -197,50 +212,71 @@ export default function CreativeQuestionsViewer({ questions = [], chapterTitle =
                 </div>
               </div>
 
-              {/* Sub-Questions (ক, খ, গ) */}
+              {/* Sub-Questions (ক, খ, গ, ঘ) */}
               <div className="space-y-3 mb-5">
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
                   প্রশ্নসমূহ (Questions):
                 </div>
 
                 {/* ক */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
-                  <span className="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-black shrink-0">
-                    ক
-                  </span>
-                  <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
-                    {q.ka}
+                {ka && (
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
+                    <span className="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-black shrink-0">
+                      ক
+                    </span>
+                    <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
+                      {ka}
+                    </div>
+                    <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
+                      {gha ? '১ নম্বর' : '২ নম্বর'}
+                    </span>
                   </div>
-                  <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
-                    ২ নম্বর
-                  </span>
-                </div>
+                )}
 
                 {/* খ */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
-                  <span className="px-2.5 py-1 rounded-lg bg-teal-500/20 text-teal-300 text-xs font-black shrink-0">
-                    খ
-                  </span>
-                  <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
-                    {q.kha}
+                {kha && (
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
+                    <span className="px-2.5 py-1 rounded-lg bg-teal-500/20 text-teal-300 text-xs font-black shrink-0">
+                      খ
+                    </span>
+                    <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
+                      {kha}
+                    </div>
+                    <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
+                      {gha ? '২ নম্বর' : '৪ নম্বর'}
+                    </span>
                   </div>
-                  <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
-                    ৪ নম্বর
-                  </span>
-                </div>
+                )}
 
                 {/* গ */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
-                  <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-black shrink-0">
-                    গ
-                  </span>
-                  <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
-                    {q.ga}
+                {ga && (
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
+                    <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-black shrink-0">
+                      গ
+                    </span>
+                    <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
+                      {ga}
+                    </div>
+                    <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
+                      {gha ? '৩ নম্বর' : '৪ নম্বর'}
+                    </span>
                   </div>
-                  <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
-                    ৪ নম্বর
-                  </span>
-                </div>
+                )}
+
+                {/* ঘ */}
+                {gha && (
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/40 border border-slate-800/80">
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-black shrink-0">
+                      ঘ
+                    </span>
+                    <div className="flex-1 text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
+                      {gha}
+                    </div>
+                    <span className="text-xs font-semibold text-slate-400 bg-slate-800/70 px-2 py-0.5 rounded-md shrink-0">
+                      ৪ নম্বর
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Solution Toggle & Content */}
@@ -264,7 +300,7 @@ export default function CreativeQuestionsViewer({ questions = [], chapterTitle =
                   )}
                 </button>
 
-                {isExpanded && q.solution && (
+                {isExpanded && hasSolution && (
                   <div className="mt-4 p-5 rounded-2xl bg-teal-950/20 border border-teal-500/30 space-y-4 animate-in fade-in zoom-in-98 duration-200">
                     <div className="flex items-center gap-2 text-xs font-bold text-teal-400 uppercase tracking-wider">
                       <Award className="w-4 h-4 text-amber-400" />
@@ -272,40 +308,53 @@ export default function CreativeQuestionsViewer({ questions = [], chapterTitle =
                     </div>
 
                     {/* ক সমাধান */}
-                    {q.solution.ka && (
+                    {solKa && (
                       <div className="bg-slate-950/60 rounded-xl p-4 border border-teal-500/20">
                         <div className="text-xs font-bold text-cyan-300 mb-1.5 flex items-center gap-1.5">
                           <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
                           <span>'ক' অংশের সমাধান:</span>
                         </div>
                         <div className="text-slate-200 text-sm leading-relaxed whitespace-pre-line">
-                          {q.solution.ka}
+                          {solKa}
                         </div>
                       </div>
                     )}
 
                     {/* খ সমাধান */}
-                    {q.solution.kha && (
+                    {solKha && (
                       <div className="bg-slate-950/60 rounded-xl p-4 border border-teal-500/20">
                         <div className="text-xs font-bold text-teal-300 mb-1.5 flex items-center gap-1.5">
                           <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
                           <span>'খ' অংশের সমাধান:</span>
                         </div>
                         <div className="text-slate-200 text-sm leading-relaxed whitespace-pre-line">
-                          {q.solution.kha}
+                          {solKha}
                         </div>
                       </div>
                     )}
 
                     {/* গ সমাধান */}
-                    {q.solution.ga && (
+                    {solGa && (
                       <div className="bg-slate-950/60 rounded-xl p-4 border border-teal-500/20">
                         <div className="text-xs font-bold text-emerald-300 mb-1.5 flex items-center gap-1.5">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                           <span>'গ' অংশের সমাধান:</span>
                         </div>
                         <div className="text-slate-200 text-sm leading-relaxed whitespace-pre-line">
-                          {q.solution.ga}
+                          {solGa}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ঘ সমাধান */}
+                    {solGha && (
+                      <div className="bg-slate-950/60 rounded-xl p-4 border border-teal-500/20">
+                        <div className="text-xs font-bold text-amber-300 mb-1.5 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
+                          <span>'ঘ' অংশের সমাধান (উচ্চতর দক্ষতা):</span>
+                        </div>
+                        <div className="text-slate-200 text-sm leading-relaxed whitespace-pre-line">
+                          {solGha}
                         </div>
                       </div>
                     )}

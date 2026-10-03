@@ -40,38 +40,29 @@ import {
   Copy,
   Check,
   User,
-  ExternalLink
+  ExternalLink,
+  Calculator,
+  Bookmark,
+  BookmarkCheck
 } from 'lucide-react'
 import LessonAudioPlayer from './components/LessonAudioPlayer'
 import TextSelectionToolbar from './components/TextSelectionToolbar'
 import VocabularyDrawer from './components/VocabularyDrawer'
 import HighlightsDrawer from './components/HighlightsDrawer'
+import BookmarksDrawer from './components/BookmarksDrawer'
+import ContinueReadingCard from './components/ContinueReadingCard'
 import InteractiveLessonViewer from './components/InteractiveLessonViewer'
 import SmartSearch from './components/SmartSearch'
 import { studyStorageService } from './services/studyStorageService'
-import { MATH_FALLBACK_CHAPTERS, MATH_CH1_FALLBACK_LESSON, MATH_CH3_FALLBACK_LESSON, MATH_CH4_FALLBACK_LESSON, MATH_CH1_FALLBACK_MCQS } from './data/mathFallbackData'
-import { FINANCE_FALLBACK_CHAPTERS, FINANCE_LESSONS_MAP, FINANCE_MCQS_MAP } from './data/financeBankingData'
-import { GRAMMAR_SUBJECT, GRAMMAR_CHAPTERS, GRAMMAR_LESSONS_MAP, GRAMMAR_MCQS_MAP } from './data/grammarData'
+import { STATIC_LOCAL_SUBJECTS, loadSubjectData } from './services/subjectDataLoader'
 import GrammarSectionViewer from './components/GrammarSectionViewer'
 import GrammarLevelExam from './components/GrammarLevelExam'
-import { 
-  COMPOSITION_SUBJECT, 
-  COMPOSITION_CATEGORIES, 
-  COMPOSITION_TOPICS, 
-  filterCompositionTopics, 
-  getCompositionCategoryCount 
-} from './data/compositionData'
 import CompositionViewer from './components/CompositionViewer'
-import { 
-  ACCOUNTING_SUBJECT, 
-  ACCOUNTING_CHAPTERS, 
-  ACCOUNTING_CREATIVE_QUESTIONS_MAP, 
-  ACCOUNTING_SHORT_QUESTIONS_MAP, 
-  ACCOUNTING_MCQS_MAP, 
-  ACCOUNTING_LESSONS_MAP 
-} from './data/accountingData'
 import CreativeQuestionsViewer from './components/CreativeQuestionsViewer'
 import ShortQuestionsViewer from './components/ShortQuestionsViewer'
+import WorkedExamplesViewer from './components/WorkedExamplesViewer'
+import { enrichEnglishLesson, flipEnglishBengaliTitle, extractEnglishAndBengaliParts } from './data/englishData'
+
 
 
 export default function App() {
@@ -113,12 +104,16 @@ export default function App() {
   const [activePlayingChunk, setActivePlayingChunk] = useState(null)
   const [isVocabOpen, setIsVocabOpen] = useState(false)
   const [isHighlightsOpen, setIsHighlightsOpen] = useState(false)
+  const [isBookmarksOpen, setIsBookmarksOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isDevInfoOpen, setIsDevInfoOpen] = useState(false)
   const [devEmailCopied, setDevEmailCopied] = useState(false)
   const [vocabCount, setVocabCount] = useState(0)
   const [highlightsCount, setHighlightsCount] = useState(0)
+  const [bookmarksCount, setBookmarksCount] = useState(0)
   const [userHighlights, setUserHighlights] = useState([])
+  const [loadedSubjectData, setLoadedSubjectData] = useState(null)
+  const [isSubjectLoading, setIsSubjectLoading] = useState(false)
 
   // Interactive MCQ Quiz state: correct answers hidden by default
   const [selectedAnswers, setSelectedAnswers] = useState({})
@@ -149,19 +144,40 @@ export default function App() {
     setShowAllAnswers(false)
   }
 
-  // Subscribe to persistent vocabulary and highlights
+  // Subscribe to persistent vocabulary, highlights, and bookmarks
   useEffect(() => {
     function refreshStudyData() {
       const vocab = studyStorageService.getVocabulary()
       const hl = studyStorageService.getHighlights(selectedChapter?.id)
+      const bm = studyStorageService.getBookmarks()
       setVocabCount(vocab.length)
       setHighlightsCount(studyStorageService.getHighlights().length)
+      setBookmarksCount(bm.length)
       setUserHighlights(hl)
     }
 
     refreshStudyData()
     return studyStorageService.subscribe(refreshStudyData)
   }, [selectedChapter?.id])
+
+  // Persist Last Read position after user has spent at least 2.5 seconds reading a chapter
+  useEffect(() => {
+    if (!selectedChapter?.id || !selectedSubject?.id) return
+    const timer = setTimeout(() => {
+      studyStorageService.saveLastRead({
+        subjectId: selectedSubject.id,
+        chapterId: selectedChapter.id,
+        subjectNameBn: selectedSubject.name_bn,
+        subjectNameEn: selectedSubject.name_en,
+        chapterTitleBn: selectedChapter.title_bn,
+        chapterTitleEn: selectedChapter.title_en,
+        activeView: accountingActiveView
+      })
+    }, 2500)
+    return () => clearTimeout(timer)
+  }, [selectedChapter?.id, selectedSubject?.id, accountingActiveView])
+
+
 
   // Always scroll to top (1st page) when selecting any chapter, topic, or subject
   useEffect(() => {
@@ -191,7 +207,7 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      // 1. Fetch Subjects
+      // 1. Fetch Subjects from Supabase
       const { data: subData, error: subError } = await supabase
         .from('subjects')
         .select('*')
@@ -200,35 +216,26 @@ export default function App() {
       if (subError) throw subError
       
       const allSubs = [...(subData || [])]
-      if (!allSubs.some((s) => s.name_bn === 'গণিত' || (s.name_en || '').toLowerCase() === 'mathematics')) {
-        allSubs.push({
-          id: 'math-preview-subject-id',
-          name_bn: 'গণিত',
-          name_en: 'Mathematics',
-          icon_url: 'https://img.icons8.com/color/96/calculator.png'
-        })
-      }
-      if (!allSubs.some((s) => s.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (s.name_en || '').toLowerCase().includes('finance'))) {
-        allSubs.push({
-          id: 'finance-preview-subject-id',
-          name_bn: 'ফিন্যান্স ও ব্যাংকিং',
-          name_en: 'Finance and Banking',
-          icon_url: 'https://img.icons8.com/color/96/bank-building.png'
-        })
-      }
-      if (!allSubs.some((s) => s.id === 'grammar-subject-id' || s.name_bn === 'ইংরেজি ব্যাকরণ' || (s.name_en || '').toLowerCase().includes('grammar'))) {
-        allSubs.push(GRAMMAR_SUBJECT)
-      }
-      if (!allSubs.some((s) => s.id === 'composition-subject-id' || s.name_bn === 'কম্পোজিশন ও রাইটিং' || (s.name_en || '').toLowerCase().includes('composition'))) {
-        allSubs.push(COMPOSITION_SUBJECT)
-      }
-      if (!allSubs.some((s) => s.id === 'accounting-subject-id' || s.name_bn === 'হিসাববিজ্ঞান' || (s.name_en || '').toLowerCase().includes('accounting'))) {
-        allSubs.unshift(ACCOUNTING_SUBJECT)
-      }
+      
+      STATIC_LOCAL_SUBJECTS.forEach((statSub) => {
+        const exists = allSubs.some((s) => 
+          s.id === statSub.id || 
+          s.name_bn === statSub.name_bn || 
+          (s.name_en && statSub.name_en && s.name_en.toLowerCase() === statSub.name_en.toLowerCase())
+        )
+        if (!exists) {
+          if (statSub.id === 'accounting-subject-id') {
+            allSubs.unshift(statSub)
+          } else {
+            allSubs.push(statSub)
+          }
+        }
+      })
+
       setSubjects(allSubs)
       if (allSubs && allSubs.length > 0) {
         setSelectedSubject(allSubs[0])
-        fetchChapters(allSubs[0].id)
+        fetchChapters(allSubs[0].id, allSubs[0])
       }
 
       // 2. Fetch Progress
@@ -241,7 +248,7 @@ export default function App() {
     }
   }
 
-  const applyCompositionFilter = (newCat, newClassLvl, newQuery) => {
+  const applyCompositionFilter = (newCat, newClassLvl, newQuery, subData = null) => {
     const cat = newCat !== undefined ? newCat : compositionCategory
     const lvl = newClassLvl !== undefined ? newClassLvl : compositionClassFilter
     const q = newQuery !== undefined ? newQuery : compositionSearchQuery
@@ -249,7 +256,9 @@ export default function App() {
     if (newClassLvl !== undefined) setCompositionClassFilter(newClassLvl)
     if (newQuery !== undefined) setCompositionSearchQuery(newQuery)
 
-    const filtered = filterCompositionTopics({ category: cat, classLevel: lvl, query: q })
+    const cData = subData || loadedSubjectData
+    const filterFn = cData?.filterCompositionTopics
+    const filtered = filterFn ? filterFn({ category: cat, classLevel: lvl, query: q }) : []
     const mapped = filtered.map((t, idx) => ({
       ...t,
       id: t.id,
@@ -270,35 +279,49 @@ export default function App() {
     setQuestions([])
   }
 
-  async function fetchChapters(subjectId, targetSub = null, classFilter = null) {
+  async function fetchChapters(subjectId, targetSub = null, classFilter = null, targetChapterId = null) {
     try {
+      setIsSubjectLoading(true)
       const activeSub = targetSub || selectedSubject
       const isComposition = subjectId === 'composition-subject-id' || activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition') || (activeSub?.name_en || '').toLowerCase().includes('writing')
       const isGrammar = subjectId === 'grammar-subject-id' || activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar')
       const isAccounting = subjectId === 'accounting-subject-id' || activeSub?.id === 'accounting-subject-id' || activeSub?.name_bn === 'হিসাববিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('accounting')
+      const isIct = subjectId === 'ict-subject-id' || activeSub?.id === 'ict-subject-id' || activeSub?.name_bn === 'তথ্য ও যোগাযোগ প্রযুক্তি' || (activeSub?.name_en || '').toLowerCase().includes('ict')
+      const isScience = subjectId === 'science-subject-id' || activeSub?.id === 'science-subject-id' || activeSub?.name_bn === 'সাধারণ বিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('science')
+      const isBusiness = subjectId === 'business-subject-id' || activeSub?.id === 'business-subject-id' || activeSub?.name_bn === 'ব্যবসায় উদ্যোগ' || (activeSub?.name_en || '').toLowerCase().includes('business') || (activeSub?.name_en || '').toLowerCase().includes('entrepreneurship')
       const isMath = subjectId === 'math-preview-subject-id' || activeSub?.name_bn === 'গণিত'
       const isFinance = subjectId === 'finance-preview-subject-id' || activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance')
+
+      // Lazy load subject data
+      const subData = await loadSubjectData(activeSub || subjectId)
+      if (subData) {
+        setLoadedSubjectData(subData)
+      }
       
       if (isComposition) {
         setIsLevelExamActive(false)
-        applyCompositionFilter(undefined, classFilter !== null ? classFilter : undefined, undefined)
+        applyCompositionFilter(undefined, classFilter !== null ? classFilter : undefined, undefined, subData)
+        setIsSubjectLoading(false)
         return
       }
 
       if (isGrammar) {
         const filter = classFilter !== null ? classFilter : grammarClassFilter
+        const allGrammarChaps = subData?.chapters || []
         const chaps = filter === 'All'
-          ? GRAMMAR_CHAPTERS
-          : GRAMMAR_CHAPTERS.filter(c => c.class_level === filter)
+          ? allGrammarChaps
+          : allGrammarChaps.filter(c => c.class_level === filter)
         setChapters(chaps)
         if (chaps && chaps.length > 0) {
-          setSelectedChapter(chaps[0])
-          fetchChapterDetails(chaps[0].id, activeSub, chaps[0])
+          const initChap = targetChapterId ? (chaps.find(c => String(c.id) === String(targetChapterId)) || chaps[0]) : chaps[0]
+          setSelectedChapter(initChap)
+          fetchChapterDetails(initChap.id, activeSub, initChap, subData)
         } else {
           setSelectedChapter(null)
           setLessons([])
           setQuestions([])
         }
+        setIsSubjectLoading(false)
         return
       }
 
@@ -308,14 +331,15 @@ export default function App() {
         .eq('subject_id', subjectId)
         .order('order_index', { ascending: true })
 
-      if (error && !isMath && !isFinance && !isAccounting) throw error
+      if (error && !isMath && !isFinance && !isAccounting && !isScience && !isBusiness && !isIct) throw error
       const chaps = (data && data.length > 0) 
         ? data 
-        : (isAccounting ? ACCOUNTING_CHAPTERS : (isFinance ? FINANCE_FALLBACK_CHAPTERS : (isMath ? MATH_FALLBACK_CHAPTERS : [])))
+        : (subData?.chapters || [])
       setChapters(chaps)
       if (chaps && chaps.length > 0) {
-        setSelectedChapter(chaps[0])
-        fetchChapterDetails(chaps[0].id, activeSub, chaps[0])
+        const initChap = targetChapterId ? (chaps.find(c => String(c.id) === String(targetChapterId)) || chaps[0]) : chaps[0]
+        setSelectedChapter(initChap)
+        fetchChapterDetails(initChap.id, activeSub, initChap, subData)
       } else {
         setSelectedChapter(null)
         setLessons([])
@@ -323,20 +347,33 @@ export default function App() {
       }
     } catch (err) {
       console.error(err)
+    } finally {
+      setIsSubjectLoading(false)
     }
   }
 
-  async function fetchChapterDetails(chapterId, targetSub = null, targetChapter = null) {
+  async function fetchChapterDetails(chapterId, targetSub = null, targetChapter = null, providedSubData = null) {
     try {
       resetQuiz()
       const activeSub = targetSub || selectedSubject
       const activeChap = targetChapter || selectedChapter || chapters.find(c => c.id === chapterId)
-      const chapOrder = activeChap?.order_index || (typeof chapterId === 'string' && chapterId.match(/\d+/)?.[0])
+      const chapOrder = activeChap?.order_index || (typeof chapterId === 'string' && chapterId.match(/\d+/)?.[0]) || 1
       const isComposition = activeSub?.id === 'composition-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('composition')
       const isGrammar = activeSub?.id === 'grammar-subject-id' || (activeSub?.name_en || '').toLowerCase().includes('grammar') || (chapterId && String(chapterId).startsWith('grammar-'))
       const isAccounting = activeSub?.id === 'accounting-subject-id' || activeSub?.name_bn === 'হিসাববিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('accounting') || (chapterId && String(chapterId).startsWith('acc-'))
+      const isIct = activeSub?.id === 'ict-subject-id' || activeSub?.name_bn === 'তথ্য ও যোগাযোগ প্রযুক্তি' || (activeSub?.name_en || '').toLowerCase().includes('ict') || (chapterId && String(chapterId).startsWith('ict-'))
+      const isScience = activeSub?.id === 'science-subject-id' || activeSub?.name_bn === 'সাধারণ বিজ্ঞান' || (activeSub?.name_en || '').toLowerCase().includes('science') || (chapterId && String(chapterId).startsWith('sci-'))
+      const isBusiness = activeSub?.id === 'business-subject-id' || activeSub?.name_bn === 'ব্যবসায় উদ্যোগ' || (activeSub?.name_en || '').toLowerCase().includes('business') || (activeSub?.name_en || '').toLowerCase().includes('entrepreneurship') || (chapterId && String(chapterId).startsWith('bus-'))
       const isMath = activeSub?.name_bn === 'গণিত' || (chapterId && String(chapterId).startsWith('math-')) || (activeChap?.title_bn && activeChap.title_bn.includes('অধ্যায়') && activeSub?.name_bn === 'গণিত')
       const isFinance = activeSub?.name_bn === 'ফিন্যান্স ও ব্যাংকিং' || (activeSub?.name_en || '').toLowerCase().includes('finance') || (chapterId && String(chapterId).startsWith('finance-'))
+
+      const subData = providedSubData || loadedSubjectData || await loadSubjectData(activeSub || chapterId)
+      if (subData && !loadedSubjectData) {
+        setLoadedSubjectData(subData)
+      }
+
+      // SubData loaded
+
 
       if (isComposition) {
         setSelectedCompositionTopic(activeChap)
@@ -346,22 +383,46 @@ export default function App() {
       }
 
       if (isGrammar) {
-        const gramLessons = GRAMMAR_LESSONS_MAP[chapterId] || []
+        const gramLessons = subData?.lessonsMap?.[chapterId] || []
         setLessons(gramLessons)
-        const gramMcqs = GRAMMAR_MCQS_MAP[chapterId] || []
+        const gramMcqs = subData?.mcqsMap?.[chapterId] || []
         setQuestions(gramMcqs)
         return
       }
 
       if (isAccounting) {
-        const accLessons = ACCOUNTING_LESSONS_MAP[chapterId] || ACCOUNTING_LESSONS_MAP[`acc-ch-${chapOrder}`] || ACCOUNTING_LESSONS_MAP['acc-ch-1'] || []
+        const accLessons = subData?.lessonsMap?.[chapterId] || subData?.lessonsMap?.[`acc-ch-${chapOrder}`] || subData?.lessonsMap?.['acc-ch-1'] || []
         setLessons(accLessons)
-        const accMcqs = ACCOUNTING_MCQS_MAP[chapterId] || ACCOUNTING_MCQS_MAP[`acc-ch-${chapOrder}`] || ACCOUNTING_MCQS_MAP['acc-ch-1'] || []
+        const accMcqs = subData?.mcqsMap?.[chapterId] || subData?.mcqsMap?.[`acc-ch-${chapOrder}`] || subData?.mcqsMap?.['acc-ch-1'] || []
         setQuestions(accMcqs)
         return
       }
 
-      // Fetch Lessons
+      if (isIct) {
+        const ictLessons = subData?.lessonsMap?.[chapterId] || subData?.lessonsMap?.[`ict-ch-${chapOrder}`] || subData?.lessonsMap?.['ict-ch-1'] || []
+        setLessons(ictLessons)
+        const ictMcqs = subData?.mcqsMap?.[chapterId] || subData?.mcqsMap?.[`ict-ch-${chapOrder}`] || subData?.mcqsMap?.['ict-ch-1'] || []
+        setQuestions(ictMcqs)
+        return
+      }
+
+      if (isScience) {
+        const sciLessons = subData?.lessonsMap?.[chapterId] || subData?.lessonsMap?.[`sci-ch-${chapOrder}`] || subData?.lessonsMap?.['sci-ch-1'] || []
+        setLessons(sciLessons)
+        const sciMcqs = subData?.mcqsMap?.[chapterId] || subData?.mcqsMap?.[`sci-ch-${chapOrder}`] || subData?.mcqsMap?.['sci-ch-1'] || []
+        setQuestions(sciMcqs)
+        return
+      }
+
+      if (isBusiness) {
+        const busLessons = subData?.lessonsMap?.[chapterId] || subData?.lessonsMap?.[`bus-ch-${chapOrder}`] || subData?.lessonsMap?.['bus-ch-1'] || []
+        setLessons(busLessons)
+        const busMcqs = subData?.mcqsMap?.[chapterId] || subData?.mcqsMap?.[`bus-ch-${chapOrder}`] || subData?.mcqsMap?.['bus-ch-1'] || []
+        setQuestions(busMcqs)
+        return
+      }
+
+      // Fetch Lessons from Supabase
       const { data: lessonData } = await supabase
         .from('lessons')
         .select('*')
@@ -369,30 +430,35 @@ export default function App() {
         .order('order_index', { ascending: true })
 
       if (isFinance) {
-        const finLessons = FINANCE_LESSONS_MAP[chapterId] || FINANCE_LESSONS_MAP[`finance-ch-${chapOrder}`] || FINANCE_LESSONS_MAP['finance-ch-1'] || []
+        const finLessons = subData?.lessonsMap?.[chapterId] || subData?.lessonsMap?.[`finance-ch-${chapOrder}`] || subData?.lessonsMap?.['finance-ch-1'] || []
         setLessons(finLessons)
       } else if (isMath) {
         const isCh3 = chapterId === 'math-ch-3' || Number(chapOrder) === 3 || (activeChap?.title_bn && activeChap.title_bn.includes('বীজগাণিতিক'))
         const isCh4 = chapterId === 'math-ch-4' || Number(chapOrder) === 4 || (activeChap?.title_bn && (activeChap.title_bn.includes('সূচক') || activeChap.title_bn.includes('লগারিদম')))
         const dbLesson = lessonData && lessonData.length > 0 ? lessonData[0] : null
-        // If DB has the older truncated lesson (< 30000 chars), display the rich, comprehensive complete lesson
         if (isCh4) {
           if (!dbLesson || (dbLesson.content_text && dbLesson.content_text.length < 30000)) {
-            setLessons([{ id: `math-preview-lesson-${chapterId}`, content_text: MATH_CH4_FALLBACK_LESSON, order_index: 1 }])
+            setLessons([{ id: `math-preview-lesson-${chapterId}`, content_text: subData?.ch4Lesson || '', order_index: 1 }])
           } else {
             setLessons(lessonData)
           }
         } else if (isCh3) {
           if (!dbLesson || (dbLesson.content_text && dbLesson.content_text.length < 30000)) {
-            setLessons([{ id: `math-preview-lesson-${chapterId}`, content_text: MATH_CH3_FALLBACK_LESSON, order_index: 1 }])
+            setLessons([{ id: `math-preview-lesson-${chapterId}`, content_text: subData?.ch3Lesson || '', order_index: 1 }])
           } else {
             setLessons(lessonData)
           }
         } else {
-          setLessons(lessonData && lessonData.length > 0 ? lessonData : [{ id: `math-preview-lesson-${chapterId}`, content_text: MATH_CH1_FALLBACK_LESSON, order_index: 1 }])
+          setLessons(lessonData && lessonData.length > 0 ? lessonData : [{ id: `math-preview-lesson-${chapterId}`, content_text: subData?.ch1Lesson || '', order_index: 1 }])
         }
       } else if (lessonData && lessonData.length > 0) {
-        setLessons(lessonData)
+        const isEnglish = activeSub?.name_bn?.includes('ইংরেজি') || (activeSub?.name_en || '').toLowerCase().includes('english')
+        if (isEnglish) {
+          const enriched = lessonData.map((l) => enrichEnglishLesson(l, chapterId, chapOrder))
+          setLessons(enriched)
+        } else {
+          setLessons(lessonData)
+        }
       } else {
         setLessons([])
       }
@@ -406,10 +472,10 @@ export default function App() {
       if (qData && qData.length > 0) {
         setQuestions(qData)
       } else if (isFinance) {
-        const finMcqs = FINANCE_MCQS_MAP[chapterId] || FINANCE_MCQS_MAP[`finance-ch-${selectedChapter?.order_index}`] || FINANCE_MCQS_MAP['finance-ch-1'] || []
+        const finMcqs = subData?.mcqsMap?.[chapterId] || subData?.mcqsMap?.[`finance-ch-${selectedChapter?.order_index}`] || subData?.mcqsMap?.['finance-ch-1'] || []
         setQuestions(finMcqs)
       } else if (isMath) {
-        setQuestions(MATH_CH1_FALLBACK_MCQS)
+        setQuestions(subData?.ch1Mcqs || [])
       } else {
         setQuestions([])
       }
@@ -417,6 +483,33 @@ export default function App() {
       console.error(err)
     }
   }
+
+  const handleResumeReading = async (entry) => {
+    if (!entry) return
+    const targetSub = subjects.find(s => s.id === entry.subjectId) || {
+      id: entry.subjectId,
+      name_bn: entry.subjectNameBn,
+      name_en: entry.subjectNameEn
+    }
+    setSelectedSubject(targetSub)
+    if (entry.activeView) {
+      setAccountingActiveView(entry.activeView)
+    }
+    await fetchChapters(entry.subjectId, targetSub, null, entry.chapterId)
+    setMobileView('read')
+  }
+
+  const handleSelectBookmark = async ({ subjectId, chapterId }) => {
+    const targetSub = subjects.find(s => s.id === subjectId) || {
+      id: subjectId,
+      name_bn: '',
+      name_en: ''
+    }
+    setSelectedSubject(targetSub)
+    await fetchChapters(subjectId, targetSub, null, chapterId)
+    setMobileView('read')
+  }
+
 
   async function fetchProgress() {
     try {
@@ -522,6 +615,21 @@ export default function App() {
               )}
             </button>
 
+            <button
+              onClick={() => setIsBookmarksOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-500/40 transition"
+              title="সংরক্ষিত বুকমার্কস (Bookmarks)"
+            >
+              <Bookmark className="w-3.5 h-3.5 text-teal-400 fill-teal-400/20" />
+              <span>বুকমার্কস</span>
+              {bookmarksCount > 0 && (
+                <span className="ml-0.5 px-1.5 py-0.2 rounded-full bg-teal-500/30 text-[10px] text-white font-bold">
+                  {bookmarksCount}
+                </span>
+              )}
+            </button>
+
+
             {/* Quick Text Zoom Controls */}
             <div className="flex items-center bg-slate-800/90 rounded-xl p-0.5 border border-slate-700/80 shadow-sm" title="টেক্সট সাইজ জুম (Text Zoom)">
               <button
@@ -600,7 +708,16 @@ export default function App() {
 
       {/* Main Content Area - Full Page Width */}
       <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 py-5 pb-24 lg:pb-5">
+        {/* Continue Reading Quick Resume Card */}
+        {activeTab === 'curriculum' && (
+          <ContinueReadingCard 
+            currentChapterId={selectedChapter?.id}
+            onResume={handleResumeReading}
+          />
+        )}
+
         {error && (
+
           <div className="mb-6 p-4 rounded-xl bg-red-950/50 border border-red-800 text-red-300 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-red-400" />
             <div>
@@ -639,6 +756,7 @@ export default function App() {
                         key={sub.id}
                         onClick={() => {
                           setSelectedSubject(sub)
+                          setAccountingActiveView('reading')
                           fetchChapters(sub.id, sub)
                           setMobileView('chapters') // auto-advance on mobile
                         }}
@@ -672,10 +790,12 @@ export default function App() {
                         ? 'Topics (টপিকসমূহ)'
                         : selectedSubject?.id === 'composition-subject-id'
                         ? 'Writings & Composition'
+                        : (selectedSubject?.name_en === 'English For Today' || (selectedSubject?.name_bn?.includes('ইংরেজি') && !selectedSubject?.name_bn?.includes('ব্যাকরণ')))
+                        ? 'Units & Chapters (অধ্যায়সমূহ)'
                         : 'Chapters (অধ্যায়সমূহ)'}
                     </span>
                     <span className="text-[11px] font-normal text-slate-500">
-                      {chapters.length} {selectedSubject?.id === 'composition-subject-id' ? 'Topics' : selectedSubject?.id === 'grammar-subject-id' ? 'টপিক' : 'অধ্যায়'}
+                      {chapters.length} {(selectedSubject?.name_en === 'English For Today' || (selectedSubject?.name_bn?.includes('ইংরেজি') && !selectedSubject?.name_bn?.includes('ব্যাকরণ'))) ? 'Units' : selectedSubject?.id === 'composition-subject-id' ? 'Topics' : selectedSubject?.id === 'grammar-subject-id' ? 'টপিক' : 'অধ্যায়'}
                     </span>
                   </h2>
 
@@ -732,8 +852,16 @@ export default function App() {
                           <span className="text-teal-400 text-[10px]">{chapters.length} Topics</span>
                         </div>
                         <div className="grid grid-cols-2 gap-1 max-h-36 overflow-y-auto custom-scrollbar pr-1">
-                          {COMPOSITION_CATEGORIES.map(cat => {
-                            const count = getCompositionCategoryCount(cat.id)
+                          {(loadedSubjectData?.categories || [
+                            { id: 'All', name_en: 'All Topics' },
+                            { id: 'Paragraph', name_en: 'Paragraph' },
+                            { id: 'Easy', name_en: 'Composition' },
+                            { id: 'Dialogue', name_en: 'Dialogue' },
+                            { id: 'Short Story', name_en: 'Short Story' },
+                            { id: 'Completing Story', name_en: 'Completing Story' },
+                            { id: 'Application', name_en: 'Application' }
+                          ]).map(cat => {
+                            const count = loadedSubjectData?.getCompositionCategoryCount ? loadedSubjectData.getCompositionCategoryCount(cat.id) : 0
                             const isSelected = compositionCategory === cat.id
                             return (
                               <button
@@ -755,6 +883,7 @@ export default function App() {
                             )
                           })}
                         </div>
+
                       </div>
 
                       {/* Class Filter Tabs */}
@@ -832,12 +961,19 @@ export default function App() {
                   )}
 
                   <div className="space-y-1 max-h-[calc(100vh-22rem)] overflow-y-auto pr-1 custom-scrollbar">
-                    {chapters.map((ch) => (
+                    {chapters.map((ch) => {
+                      const isEng = selectedSubject?.name_en === 'English For Today' || (selectedSubject?.name_bn?.includes('ইংরেজি') && !selectedSubject?.name_bn?.includes('ব্যাকরণ'))
+                      const chDisplayTitle = isEng ? flipEnglishBengaliTitle(ch.title_bn) : ch.title_bn
+                      const chParts = isEng ? extractEnglishAndBengaliParts(ch.title_bn) : null
+                      const chDisplaySubtitle = isEng ? (chParts?.bengali || ch.title_en) : ch.title_en
+
+                      return (
                       <button
                         key={ch.id}
                         onClick={() => {
                           setIsCVModeActive(false)
                           setIsLevelExamActive(false)
+                          setAccountingActiveView('reading')
                           setSelectedChapter(ch)
                           if (selectedSubject?.id === 'composition-subject-id') {
                             setSelectedCompositionTopic(ch)
@@ -852,20 +988,20 @@ export default function App() {
                             ? 'bg-slate-800 border-teal-500/60 text-teal-300 font-medium shadow-sm'
                             : 'border-transparent text-slate-300 hover:bg-slate-800/60'
                         }`}
-                        title={`${ch.title_bn} (${ch.title_en})`}
+                        title={isEng ? chDisplayTitle : `${ch.title_bn} (${ch.title_en})`}
                       >
                         <span className="w-5 h-5 rounded-md bg-slate-800 text-slate-400 flex items-center justify-center text-[10px] font-semibold flex-shrink-0">
                           {ch.order_index}
                         </span>
                         <div className="truncate flex-1">
-                          <div className="truncate font-medium">{ch.title_bn}</div>
+                          <div className="truncate font-medium">{chDisplayTitle}</div>
                           <div className="text-[10px] text-slate-500 truncate flex items-center gap-1.5">
                             {ch.class_level && (
                               <span className="text-[9px] px-1 rounded bg-slate-800/90 text-teal-400 font-medium">
                                 {ch.class_level}
                               </span>
                             )}
-                            <span className="truncate">{ch.title_en}</span>
+                            <span className="truncate">{chDisplaySubtitle}</span>
                             {ch.wordCount && (
                               <span className="text-slate-500 text-[9px]">({ch.wordCount} words)</span>
                             )}
@@ -877,7 +1013,7 @@ export default function App() {
                           </span>
                         )}
                       </button>
-                    ))}
+                    )})}
                   </div>
                 </div>
 
@@ -976,13 +1112,65 @@ export default function App() {
                                        selectedSubject?.name_bn === 'হিসাববিজ্ঞান' || 
                                        (selectedSubject?.name_en || '').toLowerCase().includes('accounting') || 
                                        (selectedChapter?.id && String(selectedChapter.id).startsWith('acc-'))
-                const accChOrder = selectedChapter.order_index || (typeof selectedChapter.id === 'string' && selectedChapter.id.match(/\d+/)?.[0]) || 1
+                const isIctSub = selectedSubject?.id === 'ict-subject-id' || 
+                                 selectedSubject?.name_bn === 'তথ্য ও যোগাযোগ প্রযুক্তি' || 
+                                 (selectedSubject?.name_en || '').toLowerCase().includes('ict') || 
+                                 (selectedChapter?.id && String(selectedChapter.id).startsWith('ict-'))
+                const isScienceSub = selectedSubject?.id === 'science-subject-id' || 
+                                     selectedSubject?.name_bn === 'সাধারণ বিজ্ঞান' || 
+                                     (selectedSubject?.name_en || '').toLowerCase().includes('science') || 
+                                     (selectedChapter?.id && String(selectedChapter.id).startsWith('sci-'))
+                const isBusinessSub = selectedSubject?.id === 'business-subject-id' || 
+                                      selectedSubject?.name_bn === 'ব্যবসায় উদ্যোগ' || 
+                                      (selectedSubject?.name_en || '').toLowerCase().includes('business') || 
+                                      (selectedSubject?.name_en || '').toLowerCase().includes('entrepreneurship') || 
+                                      (selectedChapter?.id && String(selectedChapter.id).startsWith('bus-'))
+                const isEnglishSub = selectedSubject?.name_en === 'English For Today' || 
+                                     (selectedSubject?.name_bn?.includes('ইংরেজি') && !selectedSubject?.name_bn?.includes('ব্যাকরণ'))
+                const engParts = isEnglishSub ? extractEnglishAndBengaliParts(selectedChapter.title_bn) : null
+                const chapterDisplayTitle = isEnglishSub ? flipEnglishBengaliTitle(selectedChapter.title_bn) : selectedChapter.title_bn
+                const chapterDisplaySubtitle = isEnglishSub 
+                  ? (engParts?.bengali ? `${engParts.bengali} • Class 9 (NCTB 2026 Curriculum)` : selectedChapter.title_en)
+                  : selectedChapter.title_en
+
+                const chOrder = selectedChapter.order_index || (typeof selectedChapter.id === 'string' && selectedChapter.id.match(/\d+/)?.[0]) || 1
+                
                 const accCreativeList = isAccountingSub 
-                  ? (ACCOUNTING_CREATIVE_QUESTIONS_MAP[selectedChapter.id] || ACCOUNTING_CREATIVE_QUESTIONS_MAP[`acc-ch-${accChOrder}`] || [])
+                  ? (loadedSubjectData?.creativeQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.creativeQuestionsMap?.[`acc-ch-${chOrder}`] || [])
                   : []
                 const accShortList = isAccountingSub
-                  ? (ACCOUNTING_SHORT_QUESTIONS_MAP[selectedChapter.id] || ACCOUNTING_SHORT_QUESTIONS_MAP[`acc-ch-${accChOrder}`] || [])
+                  ? (loadedSubjectData?.shortQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.shortQuestionsMap?.[`acc-ch-${chOrder}`] || [])
                   : []
+                const accWorkedExamplesList = isAccountingSub
+                  ? (loadedSubjectData?.workedExamplesMap?.[selectedChapter.id] || loadedSubjectData?.workedExamplesMap?.[`acc-ch-${chOrder}`] || [])
+                  : []
+
+                const ictCreativeList = isIctSub 
+                  ? (loadedSubjectData?.creativeQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.creativeQuestionsMap?.[`ict-ch-${chOrder}`] || [])
+                  : []
+                const ictShortList = isIctSub 
+                  ? (loadedSubjectData?.shortQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.shortQuestionsMap?.[`ict-ch-${chOrder}`] || [])
+                  : []
+
+                const sciCreativeList = isScienceSub 
+                  ? (loadedSubjectData?.creativeQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.creativeQuestionsMap?.[`sci-ch-${chOrder}`] || [])
+                  : []
+                const sciShortList = isScienceSub 
+                  ? (loadedSubjectData?.shortQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.shortQuestionsMap?.[`sci-ch-${chOrder}`] || [])
+                  : []
+
+                const busCreativeList = isBusinessSub 
+                  ? (loadedSubjectData?.creativeQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.creativeQuestionsMap?.[`bus-ch-${chOrder}`] || [])
+                  : []
+                const busShortList = isBusinessSub 
+                  ? (loadedSubjectData?.shortQuestionsMap?.[selectedChapter.id] || loadedSubjectData?.shortQuestionsMap?.[`bus-ch-${chOrder}`] || [])
+                  : []
+
+                const isTabbedSub = isAccountingSub || isIctSub || isScienceSub || isBusinessSub
+                const currentCreativeList = isIctSub ? ictCreativeList : (isBusinessSub ? busCreativeList : (isScienceSub ? sciCreativeList : accCreativeList))
+                const currentShortList = isIctSub ? ictShortList : (isBusinessSub ? busShortList : (isScienceSub ? sciShortList : accShortList))
+                const currentWorkedExamplesList = accWorkedExamplesList
+
 
                 const quizSectionNode = (
                   <div id="quiz-section" className={`bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl ${
@@ -1003,7 +1191,7 @@ export default function App() {
                         <div className="flex items-center gap-2 flex-wrap">
                           {Object.keys(selectedAnswers).length > 0 && (
                             <span className="text-xs font-semibold px-3 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-sky-300">
-                              স্কোর: {questions.filter((q, idx) => selectedAnswers[q.id || `q-${idx}`] === q.correct_answer_index).length}/{questions.length} সঠিক
+                              স্কোর: {questions.filter((q, idx) => selectedAnswers[q.id || `q-${idx}`] === (q.correct_answer_index !== undefined ? q.correct_answer_index : q.correct_index)).length}/{questions.length} সঠিক
                             </span>
                           )}
                           <button
@@ -1048,10 +1236,11 @@ export default function App() {
                           const qKey = q.id || `q-${qIndex}`
                           const options = Array.isArray(q.options_json)
                             ? q.options_json
-                            : JSON.parse(q.options_json || '[]')
+                            : (Array.isArray(q.options) ? q.options : JSON.parse(q.options_json || '[]'))
 
                           const selectedOpt = selectedAnswers[qKey]
                           const isRevealed = showAllAnswers || revealedQuestions[qKey] || selectedOpt !== undefined
+                          const correctIdx = q.correct_answer_index !== undefined ? q.correct_answer_index : q.correct_index
 
                           return (
                             <div
@@ -1066,9 +1255,9 @@ export default function App() {
                                   </span>
                                   <div>
                                     <div className="text-sm sm:text-base font-semibold text-slate-100 leading-snug">
-                                      {q.question_bn || q.question_text || q.question_en}
+                                      {q.question_bn || q.question_text || q.question || q.question_en}
                                     </div>
-                                    {q.question_en && q.question_en !== (q.question_bn || q.question_text) && (
+                                    {q.question_en && q.question_en !== (q.question_bn || q.question_text || q.question) && (
                                       <div className="text-xs text-slate-400 font-normal mt-0.5">
                                         {q.question_en}
                                       </div>
@@ -1103,7 +1292,7 @@ export default function App() {
                               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3">
                                 {options.map((opt, optIndex) => {
                                   const isSelected = selectedOpt === optIndex
-                                  const isThisCorrect = optIndex === q.correct_answer_index
+                                  const isThisCorrect = optIndex === correctIdx
 
                                   let cardStyle = 'bg-slate-900/60 border-slate-800 text-slate-300 hover:border-sky-500/50 hover:bg-slate-800/60'
                                   let badge = null
@@ -1141,6 +1330,13 @@ export default function App() {
                                   )
                                 })}
                               </div>
+
+                              {isRevealed && q.explanation && (
+                                <div className="mt-3 p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 leading-relaxed">
+                                  <span className="font-semibold text-teal-400">ব্যাখ্যা: </span>
+                                  {q.explanation}
+                                </div>
+                              )}
                             </div>
                           )
                         })}
@@ -1153,21 +1349,51 @@ export default function App() {
                   <>
                     {/* Chapter Header */}
                     <div className="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-slate-800 rounded-2xl p-6">
-                      <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1 flex-wrap">
-                        <span>{selectedSubject?.name_bn}</span>
-                        <span>•</span>
-                        <span>{selectedSubject?.id === 'grammar-subject-id' ? `টপিক ${selectedChapter.order_index}` : `অধ্যায় ${selectedChapter.order_index}`}</span>
-                        {selectedChapter.class_level && (
-                          <>
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-1 flex-wrap">
+                            <span>{isEnglishSub ? (selectedSubject?.name_en || 'English For Today') : selectedSubject?.name_bn}</span>
                             <span>•</span>
-                            <span className="px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
-                              {selectedChapter.class_level}
-                            </span>
-                          </>
-                        )}
+                            <span>{isEnglishSub ? `Unit ${selectedChapter.order_index}` : (selectedSubject?.id === 'grammar-subject-id' ? `টপিক ${selectedChapter.order_index}` : `অধ্যায় ${selectedChapter.order_index}`)}</span>
+                            {selectedChapter.class_level && (
+                              <>
+                                <span>•</span>
+                                <span className="px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
+                                  {selectedChapter.class_level}
+                                </span>
+                              </>
+                            )}
+                          </div>
+                          <h1 className="text-2xl font-bold text-white">{chapterDisplayTitle}</h1>
+                          <p className="text-sm text-slate-400 mt-1">{chapterDisplaySubtitle}</p>
+                        </div>
+
+                        {/* Bookmark Chapter Toggle Button */}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            studyStorageService.toggleBookmark({
+                              chapterId: selectedChapter.id,
+                              chapterTitle: chapterDisplayTitle || selectedChapter.title_bn,
+                              subjectId: selectedSubject?.id,
+                              subjectName: selectedSubject?.name_bn || selectedSubject?.name_en,
+                              orderIndex: selectedChapter.order_index || 1
+                            })
+                          }}
+                          className={`px-3 py-2 rounded-xl border transition flex items-center gap-1.5 text-xs font-semibold flex-shrink-0 shadow-sm ${
+                            studyStorageService.isBookmarked(selectedChapter.id)
+                              ? 'bg-teal-500/20 border-teal-500 text-teal-300'
+                              : 'bg-slate-800/80 border-slate-700 text-slate-400 hover:text-white hover:bg-slate-700'
+                          }`}
+                          title={studyStorageService.isBookmarked(selectedChapter.id) ? "বুকমার্ক থেকে সরান" : "বুকমার্ক সংরক্ষণ করুন"}
+                        >
+                          <Bookmark className={`w-4 h-4 ${studyStorageService.isBookmarked(selectedChapter.id) ? 'fill-teal-400 text-teal-400' : ''}`} />
+                          <span className="hidden sm:inline">
+                            {studyStorageService.isBookmarked(selectedChapter.id) ? 'সংরক্ষিত' : 'বুকমার্ক'}
+                          </span>
+                        </button>
                       </div>
-                      <h1 className="text-2xl font-bold text-white">{selectedChapter.title_bn}</h1>
-                      <p className="text-sm text-slate-400 mt-1">{selectedChapter.title_en}</p>
+
 
                       <div className="flex items-center gap-4 mt-4 text-xs text-slate-400 pt-4 border-t border-slate-800 flex-wrap">
                         {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
@@ -1194,15 +1420,21 @@ export default function App() {
                               <span>লেভেল টেস্ট পরীক্ষা দিন</span>
                             </button>
                           </>
-                        ) : isAccountingSub ? (
+                        ) : isTabbedSub ? (
                           <>
                             <span className="flex items-center gap-1.5 text-teal-300 font-medium">
                               <BookOpen className="w-4 h-4 text-teal-400" />
                               {lessons.length}টি পাঠ ও মূল আলোচনা
                             </span>
+                            {currentWorkedExamplesList.length > 0 && (
+                              <span className="flex items-center gap-1.5 text-cyan-300 font-medium">
+                                <Calculator className="w-4 h-4 text-cyan-400" />
+                                {currentWorkedExamplesList.length}টি গণিত ও সমাধান
+                              </span>
+                            )}
                             <span className="flex items-center gap-1.5 text-amber-300 font-medium">
                               <HelpCircle className="w-4 h-4 text-amber-400" />
-                              {accShortList.length}টি সংক্ষিপ্ত প্রশ্ন (Short Qs)
+                              {currentShortList.length}টি সংক্ষিপ্ত প্রশ্ন (Short Qs)
                             </span>
                             <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
                               <Sparkles className="w-4 h-4 text-emerald-400" />
@@ -1210,7 +1442,7 @@ export default function App() {
                             </span>
                             <span className="flex items-center gap-1.5 text-sky-300 font-medium">
                               <FileText className="w-4 h-4 text-sky-400" />
-                              {accCreativeList.length}টি সৃজনশীল প্রশ্ন (Creative Qs)
+                              {currentCreativeList.length}টি সৃজনশীল প্রশ্ন (Creative Qs)
                             </span>
                           </>
                         ) : (
@@ -1228,8 +1460,8 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Accounting Navigation Tabs: 1. পাঠ ও মূল আলোচনা, 2. সংক্ষিপ্ত প্রশ্ন ও উত্তর, 3. কুইজ পরীক্ষা, 4. সৃজনশীল প্রশ্ন */}
-                    {isAccountingSub && (
+                    {/* Tabbed Subjects Navigation Tabs: 1. পাঠ ও মূল আলোচনা, 2. বইয়ের উদাহরণ ও গণিত, 3. সংক্ষিপ্ত প্রশ্ন ও উত্তর, 4. কুইজ পরীক্ষা, 5. সৃজনশীল প্রশ্ন */}
+                    {isTabbedSub && (
                       <div className="flex items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 shadow-lg overflow-x-auto">
                         {/* 1st: পাঠ ও মূল আলোচনা (Reading) */}
                         <button
@@ -1245,7 +1477,28 @@ export default function App() {
                           <span>পাঠ ও মূল আলোচনা (Reading)</span>
                         </button>
 
-                        {/* 2nd: সংক্ষিপ্ত প্রশ্ন ও উত্তর */}
+                        {/* 2nd: বইয়ের উদাহরণ ও গণিত (Worked Math Examples) */}
+                        {currentWorkedExamplesList.length > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setAccountingActiveView('examples')}
+                            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                              accountingActiveView === 'examples'
+                                ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 shadow-md font-black'
+                                : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                            }`}
+                          >
+                            <Calculator className="w-4 h-4" />
+                            <span>বইয়ের উদাহরণ ও গণিত ({currentWorkedExamplesList.length}টি)</span>
+                            <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-black ${
+                              accountingActiveView === 'examples' ? 'bg-slate-950/30 text-slate-950' : 'bg-emerald-500/20 text-emerald-300'
+                            }`}>
+                              ছকসহ
+                            </span>
+                          </button>
+                        )}
+
+                        {/* 3rd: সংক্ষিপ্ত প্রশ্ন ও উত্তর */}
                         <button
                           type="button"
                           onClick={() => setAccountingActiveView('short')}
@@ -1256,10 +1509,10 @@ export default function App() {
                           }`}
                         >
                           <HelpCircle className="w-4 h-4" />
-                          <span>সংক্ষিপ্ত প্রশ্ন ও উত্তর ({accShortList.length}টি)</span>
+                          <span>সংক্ষিপ্ত প্রশ্ন ও উত্তর ({currentShortList.length}টি)</span>
                         </button>
 
-                        {/* 3rd: কুইজ পরীক্ষা */}
+                        {/* 4th: কুইজ পরীক্ষা */}
                         <button
                           type="button"
                           onClick={() => setAccountingActiveView('quiz')}
@@ -1273,7 +1526,7 @@ export default function App() {
                           <span>কুইজ পরীক্ষা ({questions.length}টি)</span>
                         </button>
 
-                        {/* 4th: সৃজনশীল প্রশ্ন */}
+                        {/* 5th: সৃজনশীল প্রশ্ন */}
                         <button
                           type="button"
                           onClick={() => setAccountingActiveView('creative')}
@@ -1284,7 +1537,7 @@ export default function App() {
                           }`}
                         >
                           <FileText className="w-4 h-4" />
-                          <span>সৃজনশীল প্রশ্ন ({accCreativeList.length}টি)</span>
+                          <span>সৃজনশীল প্রশ্ন ({currentCreativeList.length}টি)</span>
                           <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-black ${
                             accountingActiveView === 'creative' ? 'bg-slate-950/30 text-slate-950' : 'bg-teal-500/20 text-teal-300'
                           }`}>
@@ -1294,28 +1547,34 @@ export default function App() {
                       </div>
                     )}
 
-                    {/* Dynamic View for Accounting / Standard Subjects */}
-                    {isAccountingSub && accountingActiveView === 'creative' ? (
+                    {/* Dynamic View for Tabbed Subjects / Standard Subjects */}
+                    {isTabbedSub && accountingActiveView === 'creative' ? (
                       <CreativeQuestionsViewer 
-                        questions={accCreativeList}
+                        questions={currentCreativeList}
                         chapterTitle={selectedChapter.title_bn}
                         chapterIndex={selectedChapter.order_index}
                       />
-                    ) : isAccountingSub && accountingActiveView === 'short' ? (
+                    ) : isTabbedSub && accountingActiveView === 'short' ? (
                       <ShortQuestionsViewer 
-                        questions={accShortList}
+                        questions={currentShortList}
                         chapterTitle={selectedChapter.title_bn}
                         chapterIndex={selectedChapter.order_index}
                       />
-                    ) : isAccountingSub && accountingActiveView === 'quiz' ? (
+                    ) : isTabbedSub && accountingActiveView === 'quiz' ? (
                       quizSectionNode
+                    ) : isTabbedSub && accountingActiveView === 'examples' && currentWorkedExamplesList.length > 0 ? (
+                      <WorkedExamplesViewer 
+                        examples={currentWorkedExamplesList}
+                        chapterTitle={selectedChapter.title_bn}
+                        chapterIndex={selectedChapter.order_index}
+                      />
                     ) : (
                       <>
                         {/* Studio Neural Audio Player with Dual Voice Toggle & Live Highlighting */}
                         {lessons.length > 0 && (
                           <LessonAudioPlayer 
-                            textToRead={lessons.map(l => l.content_text).join('\n\n')} 
-                            title={selectedChapter.title_bn}
+                            textToRead={lessons.map(l => l.content_text || l.content || '').join('\n\n')} 
+                            title={chapterDisplayTitle}
                             onActiveChunkChange={setActivePlayingChunk}
                           />
                         )}
@@ -1331,6 +1590,8 @@ export default function App() {
                               <span>
                                 {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-'))
                                   ? 'ব্যাকরণের নিয়ম ও পাঠ (Grammar Rules & Lessons)'
+                                  : isEnglishSub
+                                  ? 'Reading Material (পড়ার বিষয়বস্তু)'
                                   : 'পড়ার বিষয়বস্তু (Reading Material)'}
                               </span>
                             </h3>
@@ -1340,7 +1601,7 @@ export default function App() {
                               <div className="flex items-center gap-1 bg-slate-950/80 border border-slate-700/80 rounded-xl p-1 shadow-sm">
                                 <span className="text-xs font-semibold text-slate-400 px-1.5 hidden sm:flex items-center gap-1">
                                   <Type className="w-3.5 h-3.5 text-teal-400" />
-                                  টেক্সট জুম:
+                                  {isEnglishSub ? 'Text Zoom:' : 'টেক্সট জুম:'}
                                 </span>
                                 <button
                                   onClick={zoomOut}
@@ -1383,7 +1644,7 @@ export default function App() {
                                   {lessons.length > 1 && (
                                     <div className="text-xs font-semibold text-teal-400/80 mb-3 uppercase tracking-wider flex items-center gap-2">
                                       <span className="w-2 h-2 rounded-full bg-teal-400"></span>
-                                      <span>পাঠ ক্রম #{lesson.order_index}</span>
+                                      <span>পাঠ ক্রম #{lesson.order_index || idx + 1}{lesson.title_bn ? ` • ${lesson.title_bn}` : (lesson.title ? ` • ${lesson.title}` : '')}</span>
                                     </div>
                                   )}
                                   {selectedSubject?.id === 'grammar-subject-id' || (selectedChapter?.id && String(selectedChapter.id).startsWith('grammar-')) ? (
@@ -1397,7 +1658,7 @@ export default function App() {
                                     />
                                   ) : (
                                     <InteractiveLessonViewer
-                                      content={lesson.content_text || ''}
+                                      content={lesson.content_text || lesson.content || ''}
                                       userHighlights={userHighlights}
                                       activePlayingChunk={activePlayingChunk}
                                       chapter={selectedChapter}
@@ -1410,8 +1671,8 @@ export default function App() {
                           )}
                         </div>
 
-                        {/* For non-accounting, show quiz below reading */}
-                        {!isAccountingSub && quizSectionNode}
+                        {/* For non-tabbed subjects, show quiz below reading */}
+                        {!isTabbedSub && quizSectionNode}
                       </>
                     )}
                   </>
@@ -1627,13 +1888,13 @@ export default function App() {
       <SmartSearch
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
-        lessonText={lessons.map(l => l.content_text).join('\n\n')}
-        chapterTitle={selectedChapter?.title_bn}
+        lessonText={lessons.map(l => l.content_text || l.content || '').join('\n\n')}
+        chapterTitle={flipEnglishBengaliTitle(selectedChapter?.title_bn)}
       />
 
       {/* Floating Text Selection Toolbar (Translate, Speak, Highlight, Save) */}
       <TextSelectionToolbar
-        chapterTitle={selectedChapter?.title_bn || ''}
+        chapterTitle={flipEnglishBengaliTitle(selectedChapter?.title_bn) || ''}
         lessonId={selectedChapter?.id || ''}
       />
 
@@ -1648,6 +1909,14 @@ export default function App() {
         isOpen={isHighlightsOpen}
         onClose={() => setIsHighlightsOpen(false)}
       />
+
+      {/* Bookmarked Chapters Drawer */}
+      <BookmarksDrawer
+        isOpen={isBookmarksOpen}
+        onClose={() => setIsBookmarksOpen(false)}
+        onSelectBookmark={handleSelectBookmark}
+      />
+
 
       {/* Developer Information Modal */}
       {isDevInfoOpen && (

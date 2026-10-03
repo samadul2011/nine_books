@@ -196,9 +196,9 @@ The sun's heat drives the wind and this wind energy can be captured with wind tu
 
 Along with the rain and snow, sunlight causes plants to grow. Plants produce
 
-\c, biomass which again can be turned into fuels such as firewood, alcohol, etc.
+biomass which again can be turned into fuels such as firewood, alcohol, etc.
 
-f"-) that are called bioenergy.
+that are called bioenergy.
 
 Scientists have identified Hydrogen as another form of renewable energy source. It is the most abundant element in nature. But it does not exist separately as a gas. It is always combined with other elements, such as with oxygen to make water. Hydrogen, separated from another element, can be burned as a fuel to produce electricity.
 

@@ -145,9 +145,10 @@
   margin-bottom: 0.35rem;
 }
 
-/* Table styling for Markdown tables */
+/* Table styling for Markdown tables & Accounting Math Solutions */
 .markdown-content .table-wrapper,
-.markdown-content table {
+.markdown-content table,
+.accounting-math-solution table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.25rem 0;
@@ -160,12 +161,14 @@
   overflow-x: auto;
 }
 
-.markdown-content table thead {
-  background-color: rgba(30, 41, 59, 0.9);
+.markdown-content table thead,
+.accounting-math-solution table thead {
+  background-color: rgba(30, 41, 59, 0.95);
   border-bottom: 2px solid #475569;
 }
 
-.markdown-content table th {
+.markdown-content table th,
+.accounting-math-solution table th {
   padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 600;
@@ -174,19 +177,42 @@
   white-space: nowrap;
 }
 
-.markdown-content table td {
+.markdown-content table td,
+.accounting-math-solution table td {
   padding: 0.75rem 1rem;
   border: 1px solid #334155;
   color: #e2e8f0;
   vertical-align: top;
 }
 
-.markdown-content table tr:nth-child(even) {
+.markdown-content table tr:nth-child(even),
+.accounting-math-solution table tr:nth-child(even) {
   background-color: rgba(30, 41, 59, 0.4);
 }
 
-.markdown-content table tr:hover {
+.markdown-content table tr:hover,
+.accounting-math-solution table tr:hover {
   background-color: rgba(45, 212, 191, 0.05);
+}
+
+.accounting-math-solution h1,
+.accounting-math-solution h2,
+.accounting-math-solution h3,
+.accounting-math-solution h4 {
+  color: #2dd4bf;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.accounting-math-solution h3 {
+  font-size: 1.15rem;
+  color: #38bdf8;
+}
+
+.accounting-math-solution h4 {
+  font-size: 1rem;
+  color: #a5b4fc;
 }
 
 .markdown-content code {
@@ -314,5 +340,119 @@
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #0d9488 #0f172a;
+}
+
+/* ==========================================================================
+   English Textbook Book-Page Reading Style
+   Makes English For Today prose look like a printed textbook page
+   ========================================================================== */
+
+/* English prose wrapper — only affects paragraph-level content */
+.english-prose {
+  /* No background on wrapper — background is on individual p elements */
+}
+
+/* English prose typography — tighter, book-like paragraphs with parchment bg */
+.english-prose > p {
+  font-size: var(--lesson-font-size, 1.05rem);
+  line-height: 1.75 !important;
+  margin-bottom: 0.85em !important;
+  color: #e8dfc8 !important;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-align: justify;
+  hyphens: auto;
+  letter-spacing: 0.01em;
+  background: linear-gradient(135deg, rgba(26, 22, 15, 0.85), rgba(20, 18, 12, 0.9));
+  border-left: 3px solid rgba(180, 140, 70, 0.25);
+  padding: 0.85em 1.2em;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.english-prose > p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* English prose headings */
+.english-prose h1,
+.english-prose h2 {
+  font-family: 'Georgia', serif;
+  color: #f5e6c8 !important;
+  letter-spacing: -0.01em;
+  text-align: center;
+  border-bottom: 1px solid rgba(180, 140, 70, 0.3) !important;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em !important;
+}
+
+.english-prose h3 {
+  color: #f0d898 !important;
+  font-size: 1.15em !important;
+  margin-top: 1.2em !important;
+  letter-spacing: 0.01em;
+  font-family: 'Georgia', serif;
+}
+
+/* Poem / special formatting inside English prose */
+.english-prose em {
+  color: #e0c890 !important;
+  font-style: italic;
+}
+
+.english-prose strong {
+  color: #f0d898 !important;
+  font-weight: 700;
+}
+
+.english-prose > blockquote {
+  background: rgba(180, 140, 70, 0.08) !important;
+  border-left: 4px solid rgba(180, 140, 70, 0.5) !important;
+  border-color: rgba(180, 140, 70, 0.3) !important;
+  color: #e8dfc8 !important;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.english-prose > blockquote p {
+  color: #e8dfc8 !important;
+  text-align: left;
+  background: none !important;
+  border-left: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.english-prose > hr {
+  border-color: rgba(180, 140, 70, 0.25) !important;
+  margin: 1.2rem 0 !important;
+}
+
+/* Decorative center dividers (❖ ❖ ❖) */
+.english-prose > p:has(> strong:only-child),
+.english-prose > p:has(> em:only-child) {
+  text-align: center;
+  background: transparent !important;
+  border-left: none !important;
+  padding: 0.3em 0 !important;
+  border-radius: 0 !important;
+  color: rgba(180, 140, 70, 0.7) !important;
+}
+
+/* Small responsive adjustment */
+@media (max-width: 640px) {
+  .english-prose > p {
+    line-height: 1.7 !important;
+    text-align: left;
+    padding: 0.65em 0.9em;
+  }
+}
+
+/* English Instruction Card - amber gold callout */
+.english-instruction-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.english-instruction-card:hover {
+  box-shadow: 0 4px 20px -4px rgba(245, 158, 11, 0.2);
+  border-left-color: #f59e0b;
 }
 

@@ -5,6 +5,8 @@
 
 const VOCAB_KEY = 'ninebooks_saved_vocabulary_v1'
 const HIGHLIGHTS_KEY = 'ninebooks_saved_highlights_v1'
+const BOOKMARKS_KEY = 'ninebooks_saved_bookmarks_v1'
+const LAST_READ_KEY = 'ninebooks_last_read_v1'
 
 class StudyStorageService {
   constructor() {
@@ -169,6 +171,117 @@ class StudyStorageService {
       console.error('Failed to remove highlight by text', e)
     }
   }
+
+  // ----------------------------------------------------------------------------
+  // BOOKMARKS / বুকমার্কস
+  // ----------------------------------------------------------------------------
+
+  getBookmarks() {
+    try {
+      const raw = localStorage.getItem(BOOKMARKS_KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch (e) {
+      console.error('Failed to read bookmarks from localStorage', e)
+      return []
+    }
+  }
+
+  isBookmarked(chapterId) {
+    if (!chapterId) return false
+    const list = this.getBookmarks()
+    return list.some(b => String(b.chapterId) === String(chapterId))
+  }
+
+  toggleBookmark({ chapterId, chapterTitle, subjectId, subjectName, orderIndex = 1 }) {
+    if (!chapterId) return false
+    const list = this.getBookmarks()
+    const existingIndex = list.findIndex(b => String(b.chapterId) === String(chapterId))
+
+    if (existingIndex !== -1) {
+      list.splice(existingIndex, 1)
+      try {
+        localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(list))
+        this.notify()
+      } catch (e) {
+        console.error('Failed to update bookmarks', e)
+      }
+      return false // unbookmarked
+    } else {
+      const newBookmark = {
+        id: 'bm_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+        chapterId: String(chapterId),
+        chapterTitle: chapterTitle || 'অধ্যায়',
+        subjectId: subjectId || '',
+        subjectName: subjectName || 'বিষয়',
+        orderIndex,
+        timestamp: Date.now()
+      }
+      list.unshift(newBookmark)
+      try {
+        localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(list))
+        this.notify()
+      } catch (e) {
+        console.error('Failed to save bookmark', e)
+      }
+      return true // bookmarked
+    }
+  }
+
+  removeBookmark(chapterId) {
+    const list = this.getBookmarks().filter(b => String(b.chapterId) !== String(chapterId) && b.id !== chapterId)
+    try {
+      localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(list))
+      this.notify()
+    } catch (e) {
+      console.error('Failed to remove bookmark', e)
+    }
+  }
+
+  // ----------------------------------------------------------------------------
+  // CONTINUE READING / পড়া চালিয়ে যান
+  // ----------------------------------------------------------------------------
+
+  getLastRead() {
+    try {
+      const raw = localStorage.getItem(LAST_READ_KEY)
+      return raw ? JSON.parse(raw) : null
+    } catch (e) {
+      console.error('Failed to read last-read from localStorage', e)
+      return null
+    }
+  }
+
+  saveLastRead({ subjectId, chapterId, subjectNameBn, subjectNameEn, chapterTitleBn, chapterTitleEn, activeView = 'reading' }) {
+    if (!subjectId || !chapterId) return null
+    const entry = {
+      subjectId,
+      chapterId: String(chapterId),
+      subjectNameBn: subjectNameBn || '',
+      subjectNameEn: subjectNameEn || '',
+      chapterTitleBn: chapterTitleBn || '',
+      chapterTitleEn: chapterTitleEn || '',
+      activeView: activeView || 'reading',
+      timestamp: Date.now()
+    }
+    try {
+      localStorage.setItem(LAST_READ_KEY, JSON.stringify(entry))
+      this.notify()
+      return entry
+    } catch (e) {
+      console.error('Failed to save last-read', e)
+      return null
+    }
+  }
+
+  clearLastRead() {
+    try {
+      localStorage.removeItem(LAST_READ_KEY)
+      this.notify()
+    } catch (e) {
+      console.error('Failed to clear last-read', e)
+    }
+  }
 }
 
 export const studyStorageService = new StudyStorageService()
+

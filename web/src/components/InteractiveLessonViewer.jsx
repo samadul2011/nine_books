@@ -3,7 +3,6 @@ import { marked } from 'marked'
 import katex from 'katex'
 import { Eye, EyeOff, HelpCircle, CheckCircle2, Lightbulb, BookOpen, Sparkles, Award } from 'lucide-react'
 import { getChapterStudyGuide } from '../data/banglaStudyGuide'
-import { FINANCE_CQS_MAP } from '../data/financeBankingData'
 
 /**
  * InteractiveLessonViewer:
@@ -20,6 +19,7 @@ export default function InteractiveLessonViewer({
 }) {
   // Track open/closed state for each Q&A item
   const [openMap, setOpenMap] = useState({})
+  const [allQaOpen, setAllQaOpen] = useState(false)
   const [openCqMap, setOpenCqMap] = useState({})
   const [activeCqIndex, setActiveCqIndex] = useState(0)
   const [allCqOpen, setAllCqOpen] = useState(false)
@@ -29,6 +29,8 @@ export default function InteractiveLessonViewer({
   // Scroll to top (1st page) whenever a new chapter is opened
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    setOpenMap({})
+    setAllQaOpen(false)
   }, [chapter?.id])
 
   const toggleAnswer = (id) => {
@@ -36,6 +38,16 @@ export default function InteractiveLessonViewer({
       ...prev,
       [id]: !prev[id]
     }))
+  }
+
+  const toggleAllQaAnswers = (qaIds) => {
+    const nextState = !allQaOpen
+    setAllQaOpen(nextState)
+    const newMap = {}
+    qaIds.forEach((id) => {
+      newMap[id] = nextState
+    })
+    setOpenMap(newMap)
   }
 
   const toggleCqAnswer = (key) => {
@@ -92,13 +104,35 @@ export default function InteractiveLessonViewer({
     return subBn.includes('ফিন্যান্স') || subEn.includes('finance') || chapBn.includes('অর্থায়ন') || chapBn.includes('ব্যাংক')
   }, [subject, chapter])
 
+  // Determine if subject is English For Today (ইংরেজি)
+  const isEnglishSubject = useMemo(() => {
+    const subBn = (subject?.name_bn || '')
+    const subEn = (subject?.name_en || '').toLowerCase()
+    const chapBn = (chapter?.title_bn || '')
+    const chapEn = (chapter?.title_en || '').toLowerCase()
+    // Match "English For Today" or ইংরেজি (but NOT Grammar/ব্যাকরণ)
+    if (subBn.includes('ইংরেজি') && !subBn.includes('ব্যাকরণ')) return true
+    if (subEn.includes('english') && !subEn.includes('grammar') && !subEn.includes('composition')) return true
+    if (chapBn.includes('ইংরেজি') && !chapBn.includes('ব্যাকরণ')) return true
+    if (chapEn.includes('unit') || chapEn.includes('sense of self') || chapEn.includes('climate change')) return true
+    return false
+  }, [subject, chapter])
+
+  // Lazy-load Finance CQs when on Finance subject
+  const [financeCqsMap, setFinanceCqsMap] = useState(null)
+  useEffect(() => {
+    if (isFinanceSubject && !financeCqsMap) {
+      import('../data/financeBankingData').then(m => setFinanceCqsMap(m.FINANCE_CQS_MAP)).catch(() => {})
+    }
+  }, [isFinanceSubject, financeCqsMap])
+
   // Get study guide (summary & creative questions) for Bangla or Finance chapters
   const studyGuide = useMemo(() => {
     if (isBanglaLiterature && chapter) {
       return getChapterStudyGuide(chapter.order_index, chapter.title_bn || '')
     }
     if (isFinanceSubject && chapter) {
-      const cqs = FINANCE_CQS_MAP[chapter.id] || FINANCE_CQS_MAP[`finance-ch-${chapter.order_index}`]
+      const cqs = financeCqsMap ? (financeCqsMap[chapter.id] || financeCqsMap[`finance-ch-${chapter.order_index}`]) : null
       if (cqs) {
         const cqList = Array.isArray(cqs) ? cqs : [cqs]
         const currentCq = cqList[activeCqIndex] || cqList[0]
@@ -109,7 +143,8 @@ export default function InteractiveLessonViewer({
       }
     }
     return null
-  }, [chapter, isBanglaLiterature, isFinanceSubject, activeCqIndex])
+  }, [chapter, isBanglaLiterature, isFinanceSubject, activeCqIndex, financeCqsMap])
+
 
 /**
  * KaTeX Mathematical & Financial Formula Typesetting
@@ -214,6 +249,20 @@ function preprocessLessonMarkdown(content, isBangla = true) {
     .replace(/পাপ্ডিত্য/g, 'পাণ্ডিত্য')
     .replace(/পঞ্তিত/g, 'পণ্ডিত')
     .replace(/সঙ্ভো/g, 'সঙ্গে')
+    // English & ICT script artifact cleaning
+    .replace(/\\c,\s*f"-\)/g, '')
+    .replace(/f"-\)\s*/g, '')
+    .replace(/\\c,\s*/g, '')
+    .replace(/this is how to throw\s*back a fish/g, 'this is how to throw back a fish')
+    .replace(/inspiration throughout his\s*career/g, 'inspiration throughout his career')
+    .replace(/bioenergy\s*\.\s*f"-\)/g, 'bioenergy.')
+    .replace(/membership site\s*\.\s*f"-\)/g, 'membership site.')
+
+  // English book heading flip: English 1st, Bengali Meaning latter
+  // e.g. "# ৫ম অধ্যায়: চারপাশের সমস্যা (Unit 5: Problems Around Us)" -> "# Unit 5: Problems Around Us (৫ম অধ্যায়: চারপাশের সমস্যা)"
+  text = text.replace(/(^|\n)(#{1,3}\s*)([^(]+?)\s*\((Unit\s+\d+:[^)]+|Sample[^)]+)\)/gi, (match, prefix, hashes, bangla, english) => {
+    return `${prefix}${hashes}${english.trim()} (${bangla.trim()})`
+  })
 
   // 2.5 KaTeX Mathematical & Financial formula typesetting (True textbook quality equations)
   text = renderMathWithKaTeX(text)
@@ -244,6 +293,22 @@ function preprocessLessonMarkdown(content, isBangla = true) {
       return match
     })
   }
+
+  // 3.1 English Lesson Header Showcase: "## 📖 Lesson X: [Title] by [Author]"
+  text = text.replace(/(?:^|\n)##\s+📖\s+Lesson\s+(\d+)[:\s]+["“]?([^"”\n]+)["”]?\s+by\s+([^\n]+)/gi, (match, num, title, author) => {
+    return `\n\n<div class="english-hero-showcase my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-900 border border-sky-500/35 text-center shadow-2xl relative overflow-hidden select-text">\n` +
+      `  <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase mb-3">\n` +
+      `    <span>📖</span> English For Today • Lesson ${num}\n` +
+      `  </div>\n` +
+      `  <h1 class="english-hero-title text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-indigo-200 tracking-wide drop-shadow-md py-1 mb-3">\n` +
+      `    "${title.trim()}"\n` +
+      `  </h1>\n` +
+      `  <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-xl bg-slate-800/80 border border-emerald-500/40 text-emerald-300 text-base sm:text-lg font-semibold shadow-inner mt-1">\n` +
+      `    <span class="text-emerald-400 font-bold">✍️ Author:</span>\n` +
+      `    <span class="text-white font-bold tracking-wide">${author.trim()}</span>\n` +
+      `  </div>\n` +
+      `</div>\n\n`
+  })
 
   // 4. Topic Header Showcase: Make subjects/topics larger, colorful & prominent
   text = text.replace(/(?:^|\n)###\s+(🔹\s*বিষয়[^\n]*|👤[^\n]*|🎯\s*এ\s*অধ্যায়\s*শেষে[^\n]*|⚙️\s*ব্যবহারিক\s*গাইড[^\n]*|💡\s*বিষয়[^\n]*|📌[^\n]*)/g, (match, headingText) => {
@@ -364,6 +429,32 @@ function preprocessLessonMarkdown(content, isBangla = true) {
         `  <h3 class="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-indigo-200 m-0 p-0 leading-tight tracking-wide drop-shadow-sm">\n` +
         `    ${matchedTopic.title}\n` +
         `  </h3>\n` +
+        `</div>\n`
+      )
+      continue
+    }
+
+    // 3.5 Instruction Callout Card formatting (English & Bengali textbook activity/reading directions)
+    const isInstruction =
+      /^(?:Let's|Lets)\s+(?:read|listen|discuss|look|talk|write|practice|learn|explore)\b/i.test(trimmed) ||
+      /^(?:Read|Look at|Listen to|Discuss|Work in|Think about|Complete the|Fill in the|Match the|Choose the|Write a|Answer the)\s+(?:the\s+)?(?:following|picture|pictures|story|poem|passage|text|dialogue|questions|pairs|groups|grid|table|blanks|gaps|sentences|words)\b/i.test(trimmed) ||
+      /^\*\*(?:Group work|Pair work|Individual work|Activity|Task|Project|Instructions?|Note):\*\*/i.test(trimmed) ||
+      /^###\s+(?:Section\s+[A-Z]|Activity|Task)\b/i.test(trimmed)
+
+    if (isInstruction && trimmed.length < 350 && !trimmed.startsWith('### ❓')) {
+      const cleanInstructionText = trimmed
+        .replace(/^###\s+/, '')
+        .replace(/^\*\*(?:Group work|Pair work|Individual work|Activity|Task|Project|Instructions?|Note):\*\*\s*/i, (m) => `<strong>${m.replace(/\*/g, '')}</strong> `)
+
+      processedLines.push(
+        `\n<div class="english-instruction-card my-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-500/10 to-amber-950/20 border-l-4 border-amber-400 border-y border-r border-amber-500/30 shadow-lg select-text">\n` +
+        `  <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-amber-400/20 border border-amber-400/30 text-amber-300 text-xs font-black tracking-wider uppercase mb-2">\n` +
+        `    <span>📋</span>\n` +
+        `    <span>Instruction / নির্দেশনা</span>\n` +
+        `  </div>\n` +
+        `  <div class="text-lg sm:text-xl font-bold text-amber-100 leading-relaxed drop-shadow-sm">\n` +
+        `    ${cleanInstructionText}\n` +
+        `  </div>\n` +
         `</div>\n`
       )
       continue
@@ -619,18 +710,47 @@ function preprocessLessonMarkdown(content, isBangla = true) {
             nextTrimmed.startsWith('উত্তর:')
 
           if (isAnswer) {
-            answerText = nextTrimmed
-              .replace(/^>\s*💡?\s*\*\*Answer[:.]?\s*/i, '')
-              .replace(/^>\s*💡?\s*\*\*A[:.]?\s*/i, '')
-              .replace(/^\*\*Answer[:.]?\s*/i, '')
-              .replace(/^\*\*A[:.]?\s*/i, '')
+            const firstLine = nextTrimmed
+              .replace(/^>\s*💡?\s*\*\*Answer[:.]?\*{0,2}\s*/i, '')
+              .replace(/^>\s*💡?\s*\*\*A[:.]?\*{0,2}\s*/i, '')
+              .replace(/^\*\*Answer[:.]?\*{0,2}\s*/i, '')
+              .replace(/^\*\*A[:.]?\*{0,2}\s*/i, '')
               .replace(/^Answer[:.]?\s*/i, '')
-              .replace(/^>\s*💡?\s*\*\*উত্তর[:.]?\s*/i, '')
-              .replace(/^>\s*\*\*উত্তর[:.]?\s*/i, '')
-              .replace(/^\*\*উত্তর[:.]?\s*/i, '')
+              .replace(/^>\s*💡?\s*\*\*উত্তর[:.]?\*{0,2}\s*/i, '')
+              .replace(/^>\s*\*\*উত্তর[:.]?\*{0,2}\s*/i, '')
+              .replace(/^\*\*উত্তর[:.]?\*{0,2}\s*/i, '')
               .replace(/^উত্তর[:.]?\s*/i, '')
+              .replace(/^\*\*\s*/, '')
               .replace(/\*\*$/, '')
               .trim()
+
+            const answerLines = firstLine ? [firstLine] : []
+            let k = nextIdx + 1
+            while (k < lines.length) {
+              const followLine = lines[k]
+              const followTrim = followLine.trim()
+              if (
+                followTrim.startsWith('> ❓') ||
+                followTrim.startsWith('**Q') ||
+                followTrim.startsWith('**Question') ||
+                followTrim.startsWith('> ❓ **প্রশ্ন') ||
+                followTrim.startsWith('**প্রশ্ন') ||
+                followTrim.startsWith('###') ||
+                followTrim.startsWith('## ') ||
+                followTrim.startsWith('# ') ||
+                followTrim.startsWith('> 🔢') ||
+                followTrim.startsWith('🔢') ||
+                followTrim === '---'
+              ) {
+                break
+              }
+              if (followTrim) {
+                answerLines.push(followTrim.replace(/^>\s*/, ''))
+              }
+              k++
+            }
+            answerText = answerLines.join('\n')
+            nextIdx = k - 1
             break
           } else {
             break
@@ -648,10 +768,15 @@ function preprocessLessonMarkdown(content, isBangla = true) {
           }
 
           const questionText = trimmed
-            .replace(/^>\s*❓?\s*\*\*Q\d*[:.]?\s*/i, '')
-            .replace(/^>\s*\*\*Question\d*[:.]?\s*/i, '')
-            .replace(/^\*\*Q\d*[:.]?\s*/i, '')
-            .replace(/^\*\*Question\d*[:.]?\s*/i, '')
+            .replace(/^>\s*❓?\s*\*\*Q\d*[:.]?\*{0,2}\s*/i, '')
+            .replace(/^>\s*\*\*Question\d*[:.]?\*{0,2}\s*/i, '')
+            .replace(/^\*\*Q\d*[:.]?\*{0,2}\s*/i, '')
+            .replace(/^\*\*Question\d*[:.]?\*{0,2}\s*/i, '')
+            .replace(/^>\s*❓?\s*\*\*প্রশ্ন[:.]?\*{0,2}\s*/i, '')
+            .replace(/^>\s*\*\*প্রশ্ন[:.]?\*{0,2}\s*/i, '')
+            .replace(/^\*\*প্রশ্ন[:.]?\*{0,2}\s*/i, '')
+            .replace(/^প্রশ্ন[:.]?\s*/i, '')
+            .replace(/^\*\*\s*/, '')
             .replace(/\*\*$/, '')
             .trim()
 
@@ -805,14 +930,61 @@ function preprocessLessonMarkdown(content, isBangla = true) {
         </div>
       )}
 
+      {/* Q&A Master Toolbar (Quick toggle all answers) */}
+      {blocks.filter((b) => b.type === 'qa').length > 1 && (
+        <div className="qa-master-toolbar p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-sky-950/50 via-slate-900 to-indigo-950/40 border border-sky-500/35 flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 shadow-xl select-text mb-6">
+          <div className="flex items-center gap-3">
+            <span className="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center font-bold text-base shadow-sm border border-sky-500/30">
+              ❓
+            </span>
+            <div>
+              <div className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                <span>{isEnglishSubject ? 'Questions & Answers (পাঠভিত্তিক প্রশ্নাবলি ও উত্তর)' : 'পাঠভিত্তিক প্রশ্নাবলি ও উত্তর (Questions & Answers)'}</span>
+                <span className="text-xs px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-semibold">
+                  {blocks.filter((b) => b.type === 'qa').length} {isEnglishSubject ? 'Questions' : 'টি প্রশ্ন'}
+                </span>
+              </div>
+              <div className="text-xs text-sky-300/80 font-medium mt-0.5">
+                {isEnglishSubject
+                  ? 'Try answering the question yourself first, then click "Show Answer" to verify.'
+                  : 'নিজে উত্তর মনে করার চেষ্টা করুন, এরপর "উত্তর দেখুন" বাটনে ক্লিক করে উত্তর মিলিয়ে নিন'}
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => toggleAllQaAnswers(blocks.filter((b) => b.type === 'qa').map((b) => b.id))}
+            className="text-xs sm:text-sm px-4 py-2 rounded-xl font-bold bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-sky-500/50 text-slate-100 flex items-center gap-2 transition-all shadow-sm self-end sm:self-auto"
+          >
+            {allQaOpen ? (
+              <>
+                <EyeOff className="w-3.5 h-3.5 text-amber-400" />
+                <span>{isEnglishSubject ? 'Hide All Answers (সব উত্তর লুকান)' : 'সব উত্তর লুকান (Hide All)'}</span>
+              </>
+            ) : (
+              <>
+                <Lightbulb className="w-3.5 h-3.5 text-sky-400 animate-pulse" />
+                <span>{isEnglishSubject ? 'Show All Answers (সব উত্তর দেখুন)' : 'সব উত্তর দেখুন (Show All)'}</span>
+              </>
+            )}
+          </button>
+        </div>
+      )}
+
       {/* 2. Main Textbook Content & Blocks */}
       {blocks.map((block, idx) => {
         if (block.type === 'markdown') {
           const html = formatHtml(block.text)
+          // Apply English book-page typography to blocks that have English prose content.
+          // We apply the class if the subject is English and the block has substantial English text.
+          // The CSS only styles p/em/strong/blockquote/hr, not div widgets (which have their own styles).
+          const blockHasEnglishProse = isEnglishSubject &&
+            block.text.trim().length > 100 &&
+            /[A-Za-z]{4,}/.test(block.text.slice(0, 500))
           return (
             <div
               key={`md-${idx}`}
-              className="markdown-content text-slate-100 select-text w-full"
+              className={`markdown-content text-slate-100 select-text w-full${blockHasEnglishProse ? ' english-prose' : ''}`}
               dangerouslySetInnerHTML={{ __html: html }}
             />
           )
@@ -820,22 +992,23 @@ function preprocessLessonMarkdown(content, isBangla = true) {
 
         if (block.type === 'qa') {
           const isOpen = !!openMap[block.id]
+          const answerHtml = formatHtml(block.answer)
           return (
             <div
               key={block.id}
               style={{ fontSize: 'var(--lesson-font-size, 1.05rem)' }}
-              className={`rounded-2xl border transition-all duration-200 p-4 sm:p-5 select-text w-full ${
+              className={`qa-item-card rounded-2xl border transition-all duration-200 p-4 sm:p-5 select-text w-full my-4 ${
                 isOpen
                   ? 'bg-slate-900/90 border-sky-500/40 shadow-lg shadow-sky-950/30'
                   : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
               }`}
             >
               {/* Question Row */}
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-7 h-7 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 font-bold text-xs flex items-center justify-center shadow-sm">
-                  Q
+              <div className="flex items-start gap-3.5">
+                <span className="flex-shrink-0 w-8 h-8 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 font-bold text-sm flex items-center justify-center shadow-sm mt-0.5">
+                  ❓
                 </span>
-                <div className="flex-1 font-semibold text-slate-100 leading-snug pt-0.5">
+                <div className="flex-1 font-bold text-slate-100 leading-snug pt-0.5 text-base sm:text-lg">
                   {block.question}
                 </div>
               </div>
@@ -845,7 +1018,7 @@ function preprocessLessonMarkdown(content, isBangla = true) {
                 <button
                   type="button"
                   onClick={() => toggleAnswer(block.id)}
-                  className={`text-xs px-3.5 py-1.5 rounded-xl font-bold flex items-center gap-1.5 border transition-all duration-150 ${
+                  className={`text-xs sm:text-sm px-4 py-2 rounded-xl font-bold flex items-center gap-2 border transition-all duration-150 ${
                     isOpen
                       ? 'bg-emerald-950/40 border-emerald-500/50 text-emerald-300 hover:bg-emerald-950/60 shadow-sm'
                       : 'bg-sky-950/30 border-sky-500/30 text-sky-300 hover:bg-sky-900/40'
@@ -854,12 +1027,12 @@ function preprocessLessonMarkdown(content, isBangla = true) {
                   {isOpen ? (
                     <>
                       <EyeOff className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>উত্তর লুকান (Hide Answer)</span>
+                      <span>{isEnglishSubject ? 'Hide Answer (উত্তর লুকান)' : 'উত্তর লুকান (Hide Answer)'}</span>
                     </>
                   ) : (
                     <>
                       <Eye className="w-3.5 h-3.5 text-sky-400" />
-                      <span>উত্তর দেখুন (Show Answer)</span>
+                      <span>{isEnglishSubject ? 'Show Answer (উত্তর দেখুন)' : 'উত্তর দেখুন (Show Answer)'}</span>
                     </>
                   )}
                 </button>
@@ -868,13 +1041,14 @@ function preprocessLessonMarkdown(content, isBangla = true) {
               {/* Expandable Answer Box */}
               {isOpen && (
                 <div className="mt-4 pt-3.5 border-t border-slate-800/80 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="flex items-start gap-3 bg-emerald-950/30 border border-emerald-500/30 rounded-xl p-3.5 sm:p-4">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold text-xs flex items-center justify-center">
-                      A
+                  <div className="flex items-start gap-3 bg-emerald-950/30 border border-emerald-500/30 rounded-2xl p-4 sm:p-5">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold text-xs flex items-center justify-center mt-0.5">
+                      💡
                     </span>
-                    <div className="flex-1 text-emerald-100/90 text-sm leading-relaxed font-medium">
-                      {block.answer}
-                    </div>
+                    <div 
+                      className="flex-1 text-emerald-100/90 text-sm sm:text-base leading-relaxed font-medium space-y-2 select-text"
+                      dangerouslySetInnerHTML={{ __html: answerHtml }}
+                    />
                   </div>
                 </div>
               )}

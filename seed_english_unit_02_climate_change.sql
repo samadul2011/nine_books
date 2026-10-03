@@ -403,7 +403,7 @@ LET'S SAVE OUR PLANET!
 
 Everyone must play a part in protecting the environment. There are many things you can do on your own every day to help save the planet. Here are some suggestions.
 
-\c, f"-)
+
 
 REDUCE!
 

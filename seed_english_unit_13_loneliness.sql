@@ -70,9 +70,9 @@ Loneliness vs Being Alone
 
 Although loneliness and being alone are commonly confused, being alone doesn't necessarily mean someone is lonely. "Loneliness is a feeling, while being alone is a situation or state of being, which is not inherently negative," says Nina Vasan, M.D., psychiatrist and professor at Stanford University School
 
-\c, of Medicine and chief medical officer at Real, an online mental wellness
+of Medicine and chief medical officer at Real, an online mental wellness
 
-f"-) membership site.
+membership site.
 
 "You can feel lonely even when you're surrounded by other people-such as a partner, family, co-workers or friends," continues Dr. Vasan.
 

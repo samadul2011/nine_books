@@ -114,8 +114,6 @@ Arrange a debate on the motion:
 
 "Man is known by his work, not by his looks."
 
-\c,
-
 ---
 
 ### ❓ Questions & Answers (পাঠভিত্তিক প্রশ্ন ও উত্তর)
@@ -143,35 +141,35 @@ $tag_u01_l01$, 1);
 
 Let's read the following story and answer the following questions.
 
-Wash the white clothes on Monday and put them on the stone heap; wash the color clothes on Tuesday and put them on the clothesline to dry; don't walk barehead in the hot sun; cook pumpkin fritters in very hot sweet oil; soak your little cloths right after you take them off; when buying cotton to make yourself a nice blouse, be sure that it doesn't have gum in it, because that way it won't hold up well after a wash; soak salt fish overnight before you cook it; is it true that you sing benna in Sunday school?; always eat your food in such a way that it won't tum someone else's stomach; on Sundays try to walk like a lady and not like the slut you are so bent on becoming; don't sing benna in Sunday school; you mustn't speak to wharf-rat boys, not even to give directions; don't eat fruits on the street-flies will follow you; but I don 't sing henna on Sundays at all and never in Sunday school; this is how to sew on a button; this is how to make a buttonhole for the button you have just sewed on; this is how to hem a dress when you see the hem coming down and so to prevent yourself from looking like the slut I know you are so bent on becoming; this is how you iron your father's khaki shirt so that it doesn't have a crease; this is how you iron your father's khaki pants so that they don't have a crease; this is how you grow okra-far from the house, because okra tree harbors red ants; when you are growing dasheen, make sure it gets plenty of water or else it makes your throat itch when you are eating it; this is how you sweep a comer; this is how you sweep a whole house; this is how you sweep a yard; this is how you smile to someone you don't like too much; this is how you smile to someone you don't like at all; this is how you smile to someone you like completely; this is how you set a table for tea; this is how you set a table for dinner; this is how you set a table for dinner with an important guest; this is how you set a table for lunch; this is how you set a table for breakfast; this is how to behave in the presence of men who don't know you very well, and this way they won't recognize immediately the slut I have warned you against becoming; be sure to wash every day, even if it is with your own spit; don't squat down to play marbles-you are not a boy, you know; don't pick people's flowers-you might catch something; don't throw stones at blackbirds, because it might not be a blackbird at all; this is how to make a bread pudding; this is how to make doukona; this is how to make pepper pot; this is how to make
+Wash the white clothes on Monday and put them on the stone heap; wash the color clothes on Tuesday and put them on the clothesline to dry; don't walk barehead in the hot sun; cook pumpkin fritters in very hot sweet oil; soak your little cloths right after you take them off; when buying cotton to make yourself a nice blouse, be sure that it doesn't have gum in it, because that way it won't hold up well after a wash; soak salt fish overnight before you cook it; is it true that you sing benna in Sunday school?; always eat your food in such a way that it won't turn someone else's stomach; on Sundays try to walk like a lady and not like the slut you are so bent on becoming; don't sing benna in Sunday school; you mustn't speak to wharf-rat boys, not even to give directions; don't eat fruits on the street-flies will follow you; but I don't sing benna on Sundays at all and never in Sunday school; this is how to sew on a button; this is how to make a buttonhole for the button you have just sewed on; this is how to hem a dress when you see the hem coming down and so to prevent yourself from looking like the slut I know you are so bent on becoming; this is how you iron your father's khaki shirt so that it doesn't have a crease; this is how you iron your father's khaki pants so that they don't have a crease; this is how you grow okra-far from the house, because okra tree harbors red ants; when you are growing dasheen, make sure it gets plenty of water or else it makes your throat itch when you are eating it; this is how you sweep a corner; this is how you sweep a whole house; this is how you sweep a yard; this is how you smile to someone you don't like too much; this is how you smile to someone you don't like at all; this is how you smile to someone you like completely; this is how you set a table for tea; this is how you set a table for dinner; this is how you set a table for dinner with an important guest; this is how you set a table for lunch; this is how you set a table for breakfast; this is how to behave in the presence of men who don't know you very well, and this way they won't recognize immediately the slut I have warned you against becoming; be sure to wash every day, even if it is with your own spit; don't squat down to play marbles-you are not a boy, you know; don't pick people's flowers-you might catch something; don't throw stones at blackbirds, because it might not be a blackbird at all; this is how to make a bread pudding; this is how to make doukona; this is how to make pepper pot; this is how to make
 
-a good medicine for a cold; this is how to catch a fish; this is how to throw
+a good medicine for a cold; this is how to catch a fish; this is how to throw back a fish you don't like, and that way something bad won't fall on you; this is how to bully a man; this is how a man bullies you; this is how to love a man, and if this doesn't work there are other ways, and if they don't work don't feel too bad about giving up; this is how to spit up in the air if you feel like it, and this is how to move quick so that it doesn't fall on you; this is how to make ends meet; always squeeze bread to make sure it's fresh; but what if the baker won't let me feel the bread?; you mean to say that after all you are really going to be the kind of woman who the baker won't let near the bread?
 
-f"-)
+### ❓ Questions & Comprehensive Model Answers (পাঠভিত্তিক প্রশ্ন ও পূর্ণাঙ্গ উত্তর)
 
-back a fish you don't like, and that way something bad won't fall on you; this is how to bully a man; this is how a man bullies you; this is how to love a man, and if this doesn't work there are other ways, and if they don't work don't feel too bad about giving up; this is how to spit up in the air if you feel like it, and this is how to move quick so that it doesn't fall on you; this is how to make ends meet; always squeeze bread to make sure it's fresh; but what if the baker won't let me feel the bread?; you mean to say that after all you are really going to be the kind of woman who the baker won't let near the bread?
+> ❓ **Q1: Is it a story about a mother and daughter? Do you find the mother and daughter familiar to you?**
+> 💡 **Answer:** Yes, 'Girl' by Jamaica Kincaid depicts a mother giving an intense, continuous monologue of domestic advice, social etiquette, and moral warnings to her young daughter. The dynamic feels very familiar because in many traditional societies, including Bangladesh, mothers closely advise and instruct their growing daughters on household chores, social decorum, and protecting family reputation.
 
-### ❓ Answer the following questions:
+> ❓ **Q2: What is the cultural identity of the speaker and listener?**
+> 💡 **Answer:** The speaker and listener belong to a working-class Afro-Caribbean community in Antigua (the author's birthplace). Their cultural identity is reflected in their language, food (such as pumpkin fritters, salt fish, dasheen, doukona, and pepper pot), local customs (washing on stone heaps, growing okra), and cultural practices like singing 'benna' and attending Sunday school.
 
-Is it a story about a mother and daughter? Do you find the mother and daughter familiar to you?
+> ❓ **Q3: What is benna (referred to as henna in some editions)?**
+> 💡 **Answer:** 'Benna' is an indigenous Antiguan folk musical genre, famous for its rhythmic tempo and gossipy, scandalous, call-and-response lyrics about everyday community scandals. The mother forbids her daughter from singing benna in Sunday school because it is considered rebellious, secular, and unbecoming of a respectable young Christian lady.
 
-What is the cultural identity of the speaker and listener?
+> ❓ **Q4: What is the importance of gender in the story? If the girl in 'Girl' were a boy, would the mother be telling him the same things?**
+> 💡 **Answer:** Gender is the foundational theme of the story. The mother's entire monologue is an aggressive socialization process intended to mold the girl into a subservient, industrious, and sexually modest woman. If the child were a boy, the mother would never instruct him on washing clothes, hemming dresses, setting tea tables, or avoiding squatting like a boy. A boy would likely be taught manual labor, farming outside, or financial provision.
 
-What is henna?
+> ❓ **Q5: If the father were talking instead of the mother, would he say the same?**
+> 💡 **Answer:** No, a father in this socio-cultural context would not give the same advice. Domestic chores like cooking pepper pot, ironing clothes without creases, and sewing buttonholes were traditionally passed from mother to daughter. A father would likely focus on trade, authority, discipline, or earning a livelihood.
 
-What is the importance of gender in the story? If the girl in "Girl" were a boy, would the mother be telling him the same things?
+> ❓ **Q6: Group work: Make a list of foreign or unfamiliar objects mentioned in the story and make short notes on them.**
+> 💡 **Answer:** • **Stone heap:** Flat river rocks used to beat and scrub white clothes while laundering outdoors. • **Benna:** Antiguan folk calypso music with scandalous community gossip. • **Wharf-rat boys:** Rough, delinquent youths loitering around harbor docks. • **Dasheen:** A tropical root vegetable (taro) that must be cooked thoroughly to prevent throat itch. • **Doukona (Ducana):** A Caribbean sweet dumpling made from grated sweet potato, coconut, and spices, boiled in banana leaves. • **Pepper pot:** A rich, spicy Antiguan meat and vegetable stew seasoned with hot peppers.
 
-If the father were talking instead of the mother, would he say the same?
+> ❓ **Q7: 'One is not born a woman, one becomes a woman.' — Simone de Beauvoir. Does the story give you a sense of that kind? Write your thoughts.**
+> 💡 **Answer:** Yes, Jamaica Kincaid's 'Girl' is a vivid literary demonstration of Simone de Beauvoir's famous feminist statement. The young girl is not biologically born with feminine domestic servitude; rather, society—acting through the anxious voice of her mother—constructs her gender identity by dictating how she must walk, smile, sweep, cook, and interact with men to avoid societal disgrace.
 
-**Group work:** Make a list of foreign or unfamiliar objects mentioned in the story and make short notes on them in small groups. Present the notes in the class.
-
-One is not born a woman, one becomes a woman. This is a comment by a famous gender theorist. Does the story give you a sense of that kind? Write ten sentences on your thoughts.
-
-Biological attributes make a person act as a man or a woman in society. This creates gender identity and gender discrimination. In the following table, complete the list of activities that you find marked in our society as man's job and woman's job:
-
-| Man's job | Woman's job |
-| --- | --- |
-| Driving a car Athletics Scuba diving | Cooking Nursing |
+> ❓ **Q8: Complete the list of activities marked in our society as man's job and woman's job:**
+> 💡 **Answer:** • **Traditional Man's Job:** Heavy physical labor, driving public buses/trucks, masonry, field plowing, electrical repair, corporate leadership. • **Traditional Woman's Job:** Cooking daily meals, dishwashing and laundry, childcare, sewing and tailoring, nursing, caring for the elderly. • **Progressive Perspective:** In modern society, gender discrimination is diminishing, and both men and women pursue equal careers in aviation, engineering, medicine, and leadership, sharing household duties equally.
 
 ---
 

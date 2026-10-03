@@ -1,1 +1,10 @@
+cd web
 npm run dev
+
+npm --prefix web run dev
+
+git add .
+git commit -m "your message"
+git push
+
+
