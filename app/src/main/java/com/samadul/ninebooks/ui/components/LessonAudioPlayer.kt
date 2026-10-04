@@ -294,11 +294,9 @@ fun LessonAudioPlayer(
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
                             text = if (state.isPlaying && state.isSelectionOnly)
-                                "সিলেকশন পড়ছে"
-                            else if (hasSelection)
-                                "সিলেক্টেড শুনুন"
+                                "পড়া হচ্ছে..."
                             else
-                                "সিলেকশন শুনুন",
+                                "এখান থেকে পড়",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold
                         )

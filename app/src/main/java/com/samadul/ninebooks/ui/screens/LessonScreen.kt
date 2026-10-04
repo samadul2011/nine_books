@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.samadul.ninebooks.MainActivity
 import com.samadul.ninebooks.audio.AudioNarratorManager
 import com.samadul.ninebooks.data.SavedHighlight
 import com.samadul.ninebooks.data.SavedWord
@@ -65,18 +66,13 @@ fun cleanSingleWord(raw: String): String {
     // If it's a phrase or sentence (contains spaces or newlines)
     if (cleaned.contains(" ") || cleaned.contains("\n")) {
         return cleaned
-            .removeSurrounding("**")
-            .removeSurrounding("*")
-            .removeSurrounding("\"")
-            .removeSurrounding("“", "”")
-            .removeSurrounding("‘", "’")
-            .removeSurrounding("`")
+            .trim('"', '\'', '*', '`', '“', '”', '‘', '’', '—', '-', '#')
             .trim()
     }
 
     // If it's a single word, strip surrounding punctuation so dictionary lookup works
     return cleaned
-        .trim('"', '\'', '.', ',', '!', '?', ';', ':', '(', ')', '[', ']', '{', '}', '“', '”', '‘', '’', '—', '-', '/', '\\', '`')
+        .trim('"', '\'', '.', ',', '!', '?', ';', ':', '(', ')', '[', ']', '{', '}', '“', '”', '‘', '’', '—', '-', '/', '\\', '`', '*')
         .filter { it.isLetterOrDigit() || it == '-' || it == '\'' }
 }
 
@@ -254,6 +250,29 @@ fun LessonScreen(
                 }
             }
         )
+    }
+
+    DisposableEffect(customTextToolbar) {
+        MainActivity.onReadFromHereRequested = {
+            customTextToolbar.lastCopyRequested?.invoke()
+            val candidate = activeSelectedText.ifBlank {
+                capturedSelectionText.ifBlank {
+                    clipboardCopiedText.ifBlank {
+                        composeClipboard.getText()?.text ?: ""
+                    }
+                }
+            }
+            val textToRead = cleanSingleWord(candidate)
+            if (textToRead.isNotBlank()) {
+                narratorManager.playSelection(textToRead)
+                Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(context, "পড়ার জন্য কোনো লেখা সিলেক্ট করা হয়নি", Toast.LENGTH_SHORT).show()
+            }
+        }
+        onDispose {
+            MainActivity.onReadFromHereRequested = null
+        }
     }
 
     val savedHighlightTexts = remember(savedHighlights) {
@@ -513,38 +532,42 @@ fun LessonScreen(
         // FLOATING TRANSLATE CHIP (Appears after user copies text)
         // This is the PRIMARY translate mechanism - works on ALL devices
         // ═══════════════════════════════════════════════════════════
+        val displaySelectionText = activeSelectedText.ifBlank {
+            if (showClipboardChip) clipboardCopiedText else ""
+        }
+
         AnimatedVisibility(
-            visible = showClipboardChip && clipboardCopiedText.isNotBlank(),
+            visible = displaySelectionText.isNotBlank(),
             enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
             exit = slideOutVertically(targetOffsetY = { it }) + fadeOut(),
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 80.dp) // Above the "Take Exam" bottom bar
+                .padding(bottom = 78.dp) // Above the "Take Exam" bottom bar
         ) {
             Surface(
                 shape = RoundedCornerShape(20.dp),
                 color = Color(0xFF0F172A),
-                border = BorderStroke(1.dp, Color(0xFF0284C7).copy(alpha = 0.5f)),
-                tonalElevation = 12.dp,
-                shadowElevation = 16.dp,
-                modifier = Modifier.padding(horizontal = 16.dp)
+                border = BorderStroke(1.2.dp, Color(0xFF10B981).copy(alpha = 0.8f)), // Emerald green border
+                tonalElevation = 14.dp,
+                shadowElevation = 18.dp,
+                modifier = Modifier.padding(horizontal = 14.dp)
             ) {
                 Row(
                     modifier = Modifier.padding(start = 14.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Preview of copied text
+                    // Preview of selected text
                     Column(
                         modifier = Modifier.weight(1f)
                     ) {
                         Text(
-                            text = "কপি হয়েছে:",
+                            text = if (activeSelectedText.isNotBlank()) "সিলেক্টেড অংশ:" else "কপি হয়েছে:",
                             fontSize = 10.sp,
                             color = Color(0xFF94A3B8),
                             fontWeight = FontWeight.Medium
                         )
                         Text(
-                            text = clipboardCopiedText.take(50) + if (clipboardCopiedText.length > 50) "..." else "",
+                            text = displaySelectionText.take(45) + if (displaySelectionText.length > 45) "..." else "",
                             fontSize = 13.sp,
                             color = Color.White,
                             fontWeight = FontWeight.SemiBold,
@@ -554,10 +577,35 @@ fun LessonScreen(
                     }
                     Spacer(modifier = Modifier.width(8.dp))
 
+                    // "এখান থেকে পড়" button (prominent emerald green)
+                    Button(
+                        onClick = {
+                            narratorManager.playSelection(displaySelectionText)
+                            Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
+                        },
+                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF0D9488), // Teal Emerald
+                            contentColor = Color.White
+                        ),
+                        modifier = Modifier.height(34.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                            contentDescription = null,
+                            modifier = Modifier.size(15.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text("এখান থেকে পড়", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    }
+
+                    Spacer(modifier = Modifier.width(4.dp))
+
                     // Translate button
                     Button(
-                        onClick = { translatePopup(clipboardCopiedText) },
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
+                        onClick = { translatePopup(displaySelectionText) },
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
                         shape = RoundedCornerShape(14.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(0xFF0284C7),
@@ -570,38 +618,18 @@ fun LessonScreen(
                             contentDescription = null,
                             modifier = Modifier.size(14.dp)
                         )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("অনুবাদ", fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                    }
-
-                    Spacer(modifier = Modifier.width(6.dp))
-
-                    // Read Selection button
-                    Button(
-                        onClick = {
-                            narratorManager.playSelection(clipboardCopiedText)
-                            showClipboardChip = false
-                        },
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF0D9488),
-                            contentColor = Color.White
-                        ),
-                        modifier = Modifier.height(34.dp)
-                    ) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                            contentDescription = null,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("শুনুন", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                        Spacer(modifier = Modifier.width(3.dp))
+                        Text("অনুবাদ", fontSize = 11.sp, fontWeight = FontWeight.Bold)
                     }
 
                     // Dismiss button
                     IconButton(
-                        onClick = { showClipboardChip = false },
+                        onClick = {
+                            activeSelectedText = ""
+                            clipboardCopiedText = ""
+                            showClipboardChip = false
+                            customTextToolbar.hide()
+                        },
                         modifier = Modifier.size(28.dp)
                     ) {
                         Icon(

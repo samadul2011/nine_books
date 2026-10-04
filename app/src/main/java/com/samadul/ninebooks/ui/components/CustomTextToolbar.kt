@@ -47,6 +47,9 @@ class CustomTextToolbar(
 
     var currentSelectedText by mutableStateOf("")
 
+    var lastCopyRequested: (() -> Unit)? = null
+        private set
+
     data class MenuData(
         val rect: Rect,
         val onCopyRequested: (() -> Unit)?
@@ -55,7 +58,7 @@ class CustomTextToolbar(
     override fun hide() {
         status = TextToolbarStatus.Hidden
         menuData = null
-        currentSelectedText = ""
+        // Keep currentSelectedText preserved so user action buttons can still access the selection
     }
 
     fun clearSelectedText() {
@@ -71,6 +74,11 @@ class CustomTextToolbar(
     ) {
         status = TextToolbarStatus.Shown
         menuData = MenuData(rect, onCopyRequested)
+        lastCopyRequested = onCopyRequested
+        // Immediately invoke onCopyRequested so Compose captures selection into ClipboardManager and activeSelectedText!
+        try {
+            onCopyRequested?.invoke()
+        } catch (_: Exception) {}
     }
 }
 
@@ -86,7 +94,7 @@ fun CustomSelectionPopup(toolbar: CustomTextToolbar) {
 
     val screenWidthPx = with(density) { configuration.screenWidthDp.dp.toPx() }
     val screenHeightPx = with(density) { configuration.screenHeightDp.dp.toPx() }
-    val popupEstimatedWidthPx = with(density) { 315.dp.toPx() }
+    val popupEstimatedWidthPx = with(density) { 345.dp.toPx() }
     val popupEstimatedHeightPx = with(density) { 44.dp.toPx() }
 
     val centerX = data.rect.left + (data.rect.width / 2)
@@ -149,7 +157,7 @@ fun CustomSelectionPopup(toolbar: CustomTextToolbar) {
                     Text("অনুবাদ", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }
 
-                // 2. Read Selection Button (Prominent & Clear)
+                // 2. Read Selection Button ("এখান থেকে পড়")
                 Button(
                     onClick = {
                         toolbar.onActionTriggered(SelectionAction.SPEAK, data.onCopyRequested)
@@ -169,7 +177,7 @@ fun CustomSelectionPopup(toolbar: CustomTextToolbar) {
                         modifier = Modifier.size(15.dp)
                     )
                     Spacer(modifier = Modifier.width(4.dp))
-                    Text("শুনুন", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    Text("এখান থেকে পড়", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }
 
                 // 3. Highlight Button

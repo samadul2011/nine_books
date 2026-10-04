@@ -1,6 +1,9 @@
 package com.samadul.ninebooks
 
 import android.os.Bundle
+import android.view.ActionMode
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +29,12 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+        var onReadFromHereRequested: (() -> Unit)? = null
+        var activeActionMode: ActionMode? = null
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +47,32 @@ class MainActivity : ComponentActivity() {
                     NineBooksApp()
                 }
             }
+        }
+    }
+
+    override fun onActionModeStarted(mode: ActionMode?) {
+        super.onActionModeStarted(mode)
+        activeActionMode = mode
+        val menu = mode?.menu ?: return
+
+        val itemId = 99991
+        if (menu.findItem(itemId) == null) {
+            val item = menu.add(Menu.NONE, itemId, 0, "এখান থেকে পড়")
+            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+            item.setOnMenuItemClickListener {
+                onReadFromHereRequested?.invoke()
+                try {
+                    mode.finish()
+                } catch (_: Exception) {}
+                true
+            }
+        }
+    }
+
+    override fun onActionModeFinished(mode: ActionMode?) {
+        super.onActionModeFinished(mode)
+        if (activeActionMode == mode) {
+            activeActionMode = null
         }
     }
 }
