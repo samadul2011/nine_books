@@ -228,25 +228,38 @@ fun LessonScreen(
     }
 
     DisposableEffect(delegatingToolbar) {
-        MainActivity.onReadFromHereRequested = {
-            // 1. Invoke Compose copy callback so selected text is captured into clipboard synchronously
-            lastSelectionCopyCallback?.invoke()
+        MainActivity.onReadFromHereRequested = onRead@{
+            // Compose copies selection asynchronously (suspend Clipboard API), so trigger
+            // the copy and then poll the system clipboard shortly after.
+            try {
+                lastSelectionCopyCallback?.invoke()
+            } catch (_: Exception) {}
 
-            // 2. Read captured selection text, activeSelectedText, or clipboard
-            val candidate = capturedSelectionText.ifBlank {
-                activeSelectedText.ifBlank {
-                    clipboardCopiedText.ifBlank {
-                        composeClipboard.getText()?.text ?: ""
-                    }
+            scope.launch {
+                var textToRead = ""
+                var attempts = 0
+                while (attempts < 8 && textToRead.isBlank()) {
+                    delay(120)
+                    val sysClip = try {
+                        androidClipboard.primaryClip?.getItemAt(0)?.text?.toString() ?: ""
+                    } catch (_: Exception) { "" }
+                    textToRead = cleanSingleWord(sysClip)
+                    attempts++
                 }
-            }
-            val textToRead = cleanSingleWord(candidate)
-            if (textToRead.isNotBlank()) {
-                activeSelectedText = textToRead
-                narratorManager.playSelection(textToRead)
-                Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(context, "পড়ার জন্য কোনো লেখা সিলেক্ট করা হয়নি", Toast.LENGTH_SHORT).show()
+                if (textToRead.isBlank()) {
+                    textToRead = cleanSingleWord(
+                        capturedSelectionText.ifBlank {
+                            activeSelectedText.ifBlank { clipboardCopiedText }
+                        }
+                    )
+                }
+                if (textToRead.isNotBlank()) {
+                    activeSelectedText = textToRead
+                    narratorManager.playSelection(textToRead)
+                    Toast.makeText(context, "Reading selection...", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "No text selected", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         onDispose {
