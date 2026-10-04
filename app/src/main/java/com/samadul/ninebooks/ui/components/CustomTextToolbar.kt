@@ -35,6 +35,36 @@ enum class SelectionAction {
     COPY
 }
 
+/**
+ * Wraps the platform's TextToolbar (AndroidTextToolbar).
+ * Forwards calls to start the native Android floating ActionMode,
+ * while capturing onCopyRequested and notifying listeners that text is selected.
+ */
+class DelegatingTextToolbar(
+    private val delegate: TextToolbar,
+    private val onMenuShown: (Rect, onCopy: (() -> Unit)?) -> Unit,
+    private val onMenuHidden: () -> Unit
+) : TextToolbar {
+    override val status: TextToolbarStatus
+        get() = delegate.status
+
+    override fun showMenu(
+        rect: Rect,
+        onCopyRequested: (() -> Unit)?,
+        onPasteRequested: (() -> Unit)?,
+        onCutRequested: (() -> Unit)?,
+        onSelectAllRequested: (() -> Unit)?
+    ) {
+        onMenuShown(rect, onCopyRequested)
+        delegate.showMenu(rect, onCopyRequested, onPasteRequested, onCutRequested, onSelectAllRequested)
+    }
+
+    override fun hide() {
+        onMenuHidden()
+        delegate.hide()
+    }
+}
+
 class CustomTextToolbar(
     val onActionTriggered: (action: SelectionAction, onCopy: (() -> Unit)?) -> Unit
 ) : TextToolbar {

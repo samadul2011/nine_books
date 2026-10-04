@@ -29,6 +29,8 @@ fun LessonAudioPlayer(
     narratorManager: AudioNarratorManager,
     textToRead: String,
     selectedText: String = "",
+    isSelectionActive: Boolean = false,
+    onReadSelection: (() -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
     val state by narratorManager.state.collectAsState()
@@ -257,11 +259,13 @@ fun LessonAudioPlayer(
 
                     Spacer(modifier = Modifier.width(6.dp))
 
-                    // Option: Read Only Selected Section
-                    val hasSelection = selectedText.isNotBlank()
+                    // Option: Read Only Selected Section ("এখান থেকে পড়")
+                    val hasSelection = isSelectionActive || selectedText.isNotBlank()
                     Button(
                         onClick = {
-                            if (hasSelection) {
+                            if (onReadSelection != null) {
+                                onReadSelection.invoke()
+                            } else if (hasSelection && selectedText.isNotBlank()) {
                                 narratorManager.playSelection(selectedText)
                             }
                         },

@@ -521,6 +521,7 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
             }
         }
 
-        return chunksList.filter { it.isNotBlank() }
+        val finalChunks = chunksList.filter { it.isNotBlank() }
+        return if (finalChunks.isEmpty() && text.isNotBlank()) listOf(text.trim()) else finalChunks
     }
 }

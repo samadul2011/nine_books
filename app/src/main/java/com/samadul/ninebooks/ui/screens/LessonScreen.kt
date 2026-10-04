@@ -48,8 +48,8 @@ import com.samadul.ninebooks.data.SavedHighlight
 import com.samadul.ninebooks.data.SavedWord
 import com.samadul.ninebooks.data.StudyStorageManager
 import com.samadul.ninebooks.data.TranslationManager
-import com.samadul.ninebooks.ui.components.CustomSelectionPopup
 import com.samadul.ninebooks.ui.components.CustomTextToolbar
+import com.samadul.ninebooks.ui.components.DelegatingTextToolbar
 import com.samadul.ninebooks.ui.components.LessonAudioPlayer
 import com.samadul.ninebooks.ui.components.MathProblemCard
 import com.samadul.ninebooks.ui.components.MathTextFormatter
@@ -204,59 +204,37 @@ fun LessonScreen(
         }
     }
 
-    // Custom selection toolbar: Triggers when user explicitly taps an action on the floating bar!
-    val customTextToolbar = remember {
-        CustomTextToolbar(
-            onActionTriggered = { action, onCopy ->
-                capturedSelectionText = ""
-                onCopy?.invoke()
+    val platformToolbar = LocalTextToolbar.current
+    var isSelectionActive by remember { mutableStateOf(false) }
+    var lastSelectionCopyCallback by remember { mutableStateOf<(() -> Unit)?>(null) }
 
-                val text = cleanSingleWord(
-                    capturedSelectionText.ifBlank {
-                        activeSelectedText.ifBlank {
-                            clipboardCopiedText.ifBlank {
-                                composeClipboard.getText()?.text ?: ""
-                            }
-                        }
-                    }
-                )
+    fun clearSelectedText() {
+        activeSelectedText = ""
+        isSelectionActive = false
+        lastSelectionCopyCallback = null
+    }
 
-                if (text.isNotBlank()) {
-                    activeSelectedText = text
-                    when (action) {
-                        SelectionAction.TRANSLATE -> translatePopup(text)
-                        SelectionAction.SPEAK -> {
-                            narratorManager.playSelection(text)
-                            Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
-                        }
-                        SelectionAction.HIGHLIGHT -> {
-                            studyStorage.saveHighlight(text, chapterTitle)
-                            Toast.makeText(context, "হাইলাইট ও সেভ করা হয়েছে!", Toast.LENGTH_SHORT).show()
-                        }
-                        SelectionAction.SAVE_WORD -> {
-                            scope.launch {
-                                val res = TranslationManager.translateToBengali(text)
-                                val tr = res.getOrDefault("")
-                                studyStorage.saveWord(text, tr, chapterTitle)
-                                Toast.makeText(context, "'$text' শব্দভাণ্ডারে সেভ হয়েছে!", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                        SelectionAction.COPY -> {
-                            val clip = ClipData.newPlainText("Copied Text", text)
-                            androidClipboard.setPrimaryClip(clip)
-                            Toast.makeText(context, "ক্লিপবোর্ডে কপি করা হয়েছে", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
+    val delegatingToolbar = remember(platformToolbar) {
+        DelegatingTextToolbar(
+            delegate = platformToolbar,
+            onMenuShown = { _, onCopy ->
+                isSelectionActive = true
+                lastSelectionCopyCallback = onCopy
+            },
+            onMenuHidden = {
+                isSelectionActive = false
             }
         )
     }
 
-    DisposableEffect(customTextToolbar) {
+    DisposableEffect(delegatingToolbar) {
         MainActivity.onReadFromHereRequested = {
-            customTextToolbar.lastCopyRequested?.invoke()
-            val candidate = activeSelectedText.ifBlank {
-                capturedSelectionText.ifBlank {
+            // 1. Invoke Compose copy callback so selected text is captured into clipboard synchronously
+            lastSelectionCopyCallback?.invoke()
+
+            // 2. Read captured selection text, activeSelectedText, or clipboard
+            val candidate = capturedSelectionText.ifBlank {
+                activeSelectedText.ifBlank {
                     clipboardCopiedText.ifBlank {
                         composeClipboard.getText()?.text ?: ""
                     }
@@ -264,6 +242,7 @@ fun LessonScreen(
             }
             val textToRead = cleanSingleWord(candidate)
             if (textToRead.isNotBlank()) {
+                activeSelectedText = textToRead
                 narratorManager.playSelection(textToRead)
                 Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
             } else {
@@ -280,7 +259,7 @@ fun LessonScreen(
     }
 
     CompositionLocalProvider(
-        LocalTextToolbar provides customTextToolbar,
+        LocalTextToolbar provides delegatingToolbar,
         LocalClipboardManager provides interceptingClipboardManager
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
@@ -304,17 +283,18 @@ fun LessonScreen(
                         actions = {
                             // Quick Translate Tool Button (Takes active selection, clipboard text or opens search)
                             IconButton(onClick = {
-                                val activeCopy = customTextToolbar.menuData?.onCopyRequested
+                                val activeCopy = lastSelectionCopyCallback
                                 if (activeCopy != null) {
                                     capturedSelectionText = ""
                                     activeCopy.invoke()
-                                    customTextToolbar.hide()
                                 }
 
                                 val candidate = cleanSingleWord(
                                     capturedSelectionText.ifBlank {
-                                        clipboardCopiedText.ifBlank {
-                                            androidClipboard.primaryClip?.getItemAt(0)?.text?.toString() ?: ""
+                                        activeSelectedText.ifBlank {
+                                            clipboardCopiedText.ifBlank {
+                                                androidClipboard.primaryClip?.getItemAt(0)?.text?.toString() ?: ""
+                                            }
                                         }
                                     }
                                 )
@@ -327,7 +307,7 @@ fun LessonScreen(
                                     showTranslateSheet = true
                                 }
                             }) {
-                                val hasCandidate = customTextToolbar.menuData != null ||
+                                val hasCandidate = isSelectionActive || activeSelectedText.isNotBlank() || clipboardCopiedText.isNotBlank()
                                         capturedSelectionText.isNotBlank() ||
                                         clipboardCopiedText.isNotBlank() ||
                                         (androidClipboard.primaryClip?.getItemAt(0)?.text?.isNotBlank() == true)
@@ -501,7 +481,11 @@ fun LessonScreen(
                                 LessonAudioPlayer(
                                     narratorManager = narratorManager,
                                     textToRead = fullChapterText,
-                                    selectedText = activeSelectedText
+                                    selectedText = activeSelectedText,
+                                    isSelectionActive = isSelectionActive || activeSelectedText.isNotBlank(),
+                                    onReadSelection = {
+                                        MainActivity.onReadFromHereRequested?.invoke()
+                                    }
                                 )
 
                                 // Full continuous passage inside SelectionContainer (Natural reading, NO auto-open!)
@@ -525,19 +509,17 @@ fun LessonScreen(
             } // Box inner padding
         } // Scaffold
 
-        // Floating Selection Toolbar (fallback for devices where Compose toolbar works)
-        CustomSelectionPopup(toolbar = customTextToolbar)
-
         // ═══════════════════════════════════════════════════════════
-        // FLOATING TRANSLATE CHIP (Appears after user copies text)
-        // This is the PRIMARY translate mechanism - works on ALL devices
+        // FLOATING SELECTION & TRANSLATE CARD
+        // Active whenever user selects text or copies text
         // ═══════════════════════════════════════════════════════════
         val displaySelectionText = activeSelectedText.ifBlank {
             if (showClipboardChip) clipboardCopiedText else ""
         }
+        val showSelectionCard = isSelectionActive || displaySelectionText.isNotBlank()
 
         AnimatedVisibility(
-            visible = displaySelectionText.isNotBlank(),
+            visible = showSelectionCard,
             enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
             exit = slideOutVertically(targetOffsetY = { it }) + fadeOut(),
             modifier = Modifier
@@ -561,13 +543,17 @@ fun LessonScreen(
                         modifier = Modifier.weight(1f)
                     ) {
                         Text(
-                            text = if (activeSelectedText.isNotBlank()) "সিলেক্টেড অংশ:" else "কপি হয়েছে:",
+                            text = if (displaySelectionText.isNotBlank()) "সিলেক্টেড অংশ:" else "টেক্সট সিলেক্টেড",
                             fontSize = 10.sp,
                             color = Color(0xFF94A3B8),
                             fontWeight = FontWeight.Medium
                         )
                         Text(
-                            text = displaySelectionText.take(45) + if (displaySelectionText.length > 45) "..." else "",
+                            text = if (displaySelectionText.isNotBlank()) {
+                                displaySelectionText.take(45) + if (displaySelectionText.length > 45) "..." else ""
+                            } else {
+                                "পড়তে বাটন চাপুন"
+                            },
                             fontSize = 13.sp,
                             color = Color.White,
                             fontWeight = FontWeight.SemiBold,
@@ -580,8 +566,7 @@ fun LessonScreen(
                     // "এখান থেকে পড়" button (prominent emerald green)
                     Button(
                         onClick = {
-                            narratorManager.playSelection(displaySelectionText)
-                            Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
+                            MainActivity.onReadFromHereRequested?.invoke()
                         },
                         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
                         shape = RoundedCornerShape(14.dp),
@@ -604,7 +589,21 @@ fun LessonScreen(
 
                     // Translate button
                     Button(
-                        onClick = { translatePopup(displaySelectionText) },
+                        onClick = {
+                            lastSelectionCopyCallback?.invoke()
+                            val textToTranslate = activeSelectedText.ifBlank {
+                                capturedSelectionText.ifBlank {
+                                    clipboardCopiedText.ifBlank {
+                                        composeClipboard.getText()?.text ?: ""
+                                    }
+                                }
+                            }
+                            if (textToTranslate.isNotBlank()) {
+                                translatePopup(textToTranslate)
+                            } else {
+                                Toast.makeText(context, "অনুবাদ করতে লেখা সিলেক্ট করুন", Toast.LENGTH_SHORT).show()
+                            }
+                        },
                         contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
                         shape = RoundedCornerShape(14.dp),
                         colors = ButtonDefaults.buttonColors(
@@ -625,10 +624,10 @@ fun LessonScreen(
                     // Dismiss button
                     IconButton(
                         onClick = {
+                            isSelectionActive = false
                             activeSelectedText = ""
                             clipboardCopiedText = ""
                             showClipboardChip = false
-                            customTextToolbar.hide()
                         },
                         modifier = Modifier.size(28.dp)
                     ) {
@@ -636,7 +635,7 @@ fun LessonScreen(
                             imageVector = Icons.Default.Close,
                             contentDescription = "Dismiss",
                             tint = Color(0xFF64748B),
-                            modifier = Modifier.size(14.dp)
+                            modifier = Modifier.size(16.dp)
                         )
                     }
                 }
@@ -649,7 +648,7 @@ fun LessonScreen(
             ModalBottomSheet(
                 onDismissRequest = {
                     showTranslateSheet = false
-                    customTextToolbar.clearSelectedText()
+                    clearSelectedText()
                 },
                 sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
                 containerColor = MaterialTheme.colorScheme.surface,
@@ -898,7 +897,7 @@ fun LessonScreen(
                     showTranslatePopup = false
                     clipboardCopiedText = ""
                     capturedSelectionText = ""
-                    customTextToolbar.clearSelectedText()
+                    clearSelectedText()
                 },
                 properties = DialogProperties(usePlatformDefaultWidth = false)
             ) {
@@ -940,7 +939,7 @@ fun LessonScreen(
                                     showTranslatePopup = false
                                     clipboardCopiedText = ""
                                     capturedSelectionText = ""
-                                    customTextToolbar.clearSelectedText()
+                                    clearSelectedText()
                                 },
                                 modifier = Modifier.size(32.dp)
                             ) {
@@ -1054,7 +1053,7 @@ fun LessonScreen(
                                     showTranslatePopup = false
                                     clipboardCopiedText = ""
                                     capturedSelectionText = ""
-                                    customTextToolbar.clearSelectedText()
+                                    clearSelectedText()
                                 },
                                 enabled = !isPopupTranslating,
                                 shape = RoundedCornerShape(12.dp),
@@ -1073,7 +1072,7 @@ fun LessonScreen(
                                     showTranslatePopup = false
                                     clipboardCopiedText = ""
                                     capturedSelectionText = ""
-                                    customTextToolbar.clearSelectedText()
+                                    clearSelectedText()
                                 },
                                 enabled = !isPopupTranslating,
                                 shape = RoundedCornerShape(12.dp),
