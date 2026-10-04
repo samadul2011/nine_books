@@ -114,9 +114,9 @@ fun LessonAudioPlayer(
                         }
                         Text(
                             text = if (state.mode == VoiceMode.STUDIO_NEURAL)
-                                "🌟 আল্ট্রা-রিয়্যালিস্টিক নিউরাল এআই (স্টুডিও ভয়েস)"
+                                "🌸 আল্ট্রা-রিয়্যালিস্টিক নিউরাল এআই (ফিমেল ভয়েস)"
                             else
-                                "📱 ডিভাইস সিস্টেম ভয়েস (অফলাইন)",
+                                "📱 ডিভাইস ফিমেল ভয়েস (অফলাইন)",
                             fontSize = 12.sp,
                             color = Color(0xFFA7F3D0).copy(alpha = 0.85f)
                         )
@@ -159,7 +159,7 @@ fun LessonAudioPlayer(
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = "স্টুডিও নিউরাল এআই",
+                            text = "স্টুডিও এআই ফিমেল",
                             fontSize = 12.sp,
                             fontWeight = if (state.mode == VoiceMode.STUDIO_NEURAL) FontWeight.Bold else FontWeight.Normal,
                             color = if (state.mode == VoiceMode.STUDIO_NEURAL) Color.White else Color.White.copy(alpha = 0.65f)
@@ -191,7 +191,7 @@ fun LessonAudioPlayer(
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = "ডিভাইস ভয়েস",
+                            text = "ডিভাইস ফিমেল",
                             fontSize = 12.sp,
                             fontWeight = if (state.mode == VoiceMode.DEVICE_VOICE) FontWeight.Bold else FontWeight.Normal,
                             color = if (state.mode == VoiceMode.DEVICE_VOICE) Color.White else Color.White.copy(alpha = 0.65f)

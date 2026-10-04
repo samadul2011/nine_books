@@ -113,7 +113,7 @@ export default function CompositionViewer({
             <React.Fragment key={idx}>
               {part}
               {idx < parts.length - 1 && (
-                <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                <mark className="active-audio-highlight bg-amber-400/20 text-amber-200 font-semibold px-1.5 py-0.5 rounded border-b border-amber-400/50 transition-colors duration-200 inline">
                   {chunk}
                 </mark>
               )}
@@ -132,7 +132,7 @@ export default function CompositionViewer({
             <React.Fragment key={idx}>
               {part}
               {idx < parts.length - 1 && (
-                <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                <mark className="active-audio-highlight bg-amber-400/20 text-amber-200 font-semibold px-1.5 py-0.5 rounded border-b border-amber-400/50 transition-colors duration-200 inline">
                   {prefix}
                 </mark>
               )}
@@ -743,7 +743,7 @@ ${data.hobbies}
                   key={idx}
                   className={`flex flex-col sm:flex-row sm:items-start gap-3 p-3.5 rounded-2xl border transition ${
                     isSpeakingThis
-                      ? 'bg-yellow-400/15 border-yellow-400 ring-2 ring-yellow-400/50'
+                      ? 'bg-amber-400/15 border-amber-400/40 ring-1 ring-amber-400/30'
                       : isFirstSpeaker
                         ? 'bg-slate-800/60 border-slate-700/80'
                         : 'bg-indigo-950/30 border-indigo-500/30'
@@ -752,7 +752,7 @@ ${data.hobbies}
                   <span
                     className={`px-3 py-1 rounded-xl text-xs font-extrabold uppercase tracking-wide flex-shrink-0 self-start ${
                       isSpeakingThis
-                        ? 'bg-yellow-400 text-slate-950 font-black'
+                        ? 'bg-amber-400/25 text-amber-200 border border-amber-400/40'
                         : isFirstSpeaker
                           ? 'bg-teal-500/20 text-teal-300 border border-teal-500/40'
                           : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
@@ -760,9 +760,9 @@ ${data.hobbies}
                   >
                     {line.speaker}
                   </span>
-                  <p className={`text-base leading-relaxed flex-1 ${isSpeakingThis ? 'text-yellow-200 font-semibold' : 'text-slate-200'}`}>
+                  <p className={`text-base leading-relaxed flex-1 ${isSpeakingThis ? 'text-amber-200 font-semibold' : 'text-slate-200'}`}>
                     {isSpeakingThis ? (
-                      <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                      <mark className="active-audio-highlight bg-amber-400/20 text-amber-200 font-semibold px-1.5 py-0.5 rounded border-b border-amber-400/50 inline">
                         {line.speech}
                       </mark>
                     ) : (

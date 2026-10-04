@@ -225,9 +225,34 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
         }
 
         try {
-            val targetLocale = if (isBengali(text)) Locale("bn", "BD") else Locale.US
+            val isBn = isBengali(text)
+            val targetLocale = if (isBn) Locale("bn", "BD") else Locale.US
             textToSpeech?.language = targetLocale
             textToSpeech?.setSpeechRate(_state.value.speed)
+            textToSpeech?.setPitch(if (isBn) 1.05f else 1.08f)
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                try {
+                    val voices = textToSpeech?.voices
+                    if (!voices.isNullOrEmpty()) {
+                        val langCode = if (isBn) "bn" else "en"
+                        val femaleVoice = voices.firstOrNull { v ->
+                            val n = v.name.lowercase(Locale.ROOT)
+                            v.locale.language == langCode &&
+                                    (n.contains("female") || n.contains("woman") || n.contains("en-us-x-sfg") || n.contains("en-us-x-tpd") || n.contains("network")) &&
+                                    !n.contains("male")
+                        } ?: voices.firstOrNull { v ->
+                            v.locale.language == langCode && !v.name.lowercase(Locale.ROOT).contains("male")
+                        }
+                        if (femaleVoice != null) {
+                            textToSpeech?.voice = femaleVoice
+                        }
+                    }
+                } catch (e: Exception) {
+                    Log.w(tag, "Failed to apply female voice: ${e.message}")
+                }
+            }
+
             val params = android.os.Bundle()
             textToSpeech?.speak(text, TextToSpeech.QUEUE_FLUSH, params, "chunk_$index")
             _state.value = _state.value.copy(isLoading = false, isPaused = false)
@@ -238,11 +263,12 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     /**
-     * Pronounces a single word or short phrase immediately.
+     * Pronounces a single word or short phrase immediately with AI female voice.
      */
     fun speakSingleText(text: String) {
         if (text.isBlank()) return
-        val lang = if (isBengali(text)) "bn" else "en"
+        val isBn = isBengali(text)
+        val lang = if (isBn) "bn" else "en"
         if (_state.value.mode == VoiceMode.STUDIO_NEURAL) {
             scope.launch(Dispatchers.IO) {
                 try {
@@ -264,15 +290,37 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
                     }
                 } catch (e: Exception) {
                     withContext(Dispatchers.Main) {
-                        textToSpeech?.language = if (lang == "bn") Locale("bn", "BD") else Locale.US
-                        textToSpeech?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "single_word")
+                        applyDeviceVoice(text, isBn)
                     }
                 }
             }
         } else {
-            textToSpeech?.language = if (lang == "bn") Locale("bn", "BD") else Locale.US
-            textToSpeech?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "single_word")
+            applyDeviceVoice(text, isBn)
         }
+    }
+
+    private fun applyDeviceVoice(text: String, isBn: Boolean) {
+        textToSpeech?.language = if (isBn) Locale("bn", "BD") else Locale.US
+        textToSpeech?.setSpeechRate(_state.value.speed)
+        textToSpeech?.setPitch(if (isBn) 1.05f else 1.08f)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            try {
+                val voices = textToSpeech?.voices
+                if (!voices.isNullOrEmpty()) {
+                    val langCode = if (isBn) "bn" else "en"
+                    val femaleVoice = voices.firstOrNull { v ->
+                        val n = v.name.lowercase(Locale.ROOT)
+                        v.locale.language == langCode &&
+                                (n.contains("female") || n.contains("woman") || n.contains("en-us-x-sfg") || n.contains("en-us-x-tpd")) &&
+                                !n.contains("male")
+                    } ?: voices.firstOrNull { v ->
+                        v.locale.language == langCode && !v.name.lowercase(Locale.ROOT).contains("male")
+                    }
+                    if (femaleVoice != null) textToSpeech?.voice = femaleVoice
+                }
+            } catch (ignored: Exception) {}
+        }
+        textToSpeech?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "single_word")
     }
 
     private fun applyMediaPlayerSpeed(speed: Float) {
@@ -387,50 +435,58 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     /**
-     * Splits long text into natural sentence chunks of up to ~180 characters each.
+     * Splits long text into natural single-sentence chunks for exact reading-time highlighting.
      */
     private fun splitIntoChunks(text: String): List<String> {
-        val sentenceDelimiters = Regex("[।?!.]")
-        val rawSentences = text.split(sentenceDelimiters)
+        val sentenceRegex = Regex("""[^।?!.\n]+[।?!.]?""")
+        val matches = sentenceRegex.findAll(text)
+            .map { it.value.trim() }
+            .filter { it.isNotBlank() }
+            .toList()
+
         val chunksList = mutableListOf<String>()
-        var currentChunk = StringBuilder()
 
-        for (s in rawSentences) {
-            val trimmed = s.trim()
-            if (trimmed.isEmpty()) continue
-
-            val isBn = isBengali(trimmed)
-            val punct = if (isBn) "।" else "."
-
-            if (currentChunk.length + trimmed.length + 2 <= 180) {
-                if (currentChunk.isNotEmpty()) currentChunk.append(" ")
-                currentChunk.append(trimmed).append(punct)
+        for (sentence in matches) {
+            if (sentence.length <= 160) {
+                chunksList.add(sentence)
             } else {
-                if (currentChunk.isNotEmpty()) {
-                    chunksList.add(currentChunk.toString().trim())
-                    currentChunk = StringBuilder()
-                }
-                if (trimmed.length > 180) {
-                    val words = trimmed.split(" ")
-                    var subChunk = StringBuilder()
-                    for (w in words) {
-                        if (subChunk.length + w.length + 1 <= 160) {
-                            if (subChunk.isNotEmpty()) subChunk.append(" ")
-                            subChunk.append(w)
+                // If a single sentence is very long, split at clauses (commas, semicolons, dashes)
+                val clauses = sentence.split(Regex("(?<=[,;:—])\\s+"))
+                var current = StringBuilder()
+                for (clause in clauses) {
+                    val trimmed = clause.trim()
+                    if (trimmed.isEmpty()) continue
+                    if (current.length + trimmed.length + 1 <= 150) {
+                        if (current.isNotEmpty()) current.append(" ")
+                        current.append(trimmed)
+                    } else {
+                        if (current.isNotEmpty()) {
+                            chunksList.add(current.toString().trim())
+                            current = StringBuilder()
+                        }
+                        if (trimmed.length > 150) {
+                            // Split by words
+                            val words = trimmed.split(" ")
+                            var wordChunk = StringBuilder()
+                            for (w in words) {
+                                if (wordChunk.length + w.length + 1 <= 140) {
+                                    if (wordChunk.isNotEmpty()) wordChunk.append(" ")
+                                    wordChunk.append(w)
+                                } else {
+                                    if (wordChunk.isNotEmpty()) chunksList.add(wordChunk.toString().trim())
+                                    wordChunk = StringBuilder(w)
+                                }
+                            }
+                            if (wordChunk.isNotEmpty()) chunksList.add(wordChunk.toString().trim())
                         } else {
-                            if (subChunk.isNotEmpty()) chunksList.add(subChunk.toString().trim())
-                            subChunk = StringBuilder(w)
+                            current.append(trimmed)
                         }
                     }
-                    if (subChunk.isNotEmpty()) chunksList.add(subChunk.toString().trim())
-                } else {
-                    currentChunk.append(trimmed).append(punct)
+                }
+                if (current.isNotEmpty()) {
+                    chunksList.add(current.toString().trim())
                 }
             }
-        }
-
-        if (currentChunk.isNotEmpty()) {
-            chunksList.add(currentChunk.toString().trim())
         }
 
         return chunksList.filter { it.isNotBlank() }

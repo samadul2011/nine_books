@@ -457,23 +457,24 @@
 }
 
 /* ==============================================================================
-   BRIGHT YELLOW READING TIME & TEXT SELECTION STYLING
+/* ==============================================================================
+   SOFT WARM READING TIME & TEXT SELECTION STYLING (Comfortable, Eye-Friendly)
    ============================================================================== */
 
 /* 1. Global Browser Text Selection Highlight (Mouse / Cursor Drag Selection) */
 ::selection {
-  background-color: #fde047 !important; /* Bright Yellow (Tailwind yellow-300) */
-  color: #020617 !important;            /* High contrast crisp dark slate text */
+  background-color: rgba(245, 158, 11, 0.35) !important; /* Soft warm honey amber */
+  color: #ffffff !important;
   text-shadow: none !important;
 }
 
 ::-moz-selection {
-  background-color: #fde047 !important;
-  color: #020617 !important;
+  background-color: rgba(245, 158, 11, 0.35) !important;
+  color: #ffffff !important;
   text-shadow: none !important;
 }
 
-/* Ensure bright yellow selection across reading containers */
+/* Ensure soft warm selection across reading containers */
 .markdown-content ::selection,
 .reading-area ::selection,
 .prose ::selection,
@@ -483,32 +484,32 @@ article ::selection,
 p ::selection,
 span ::selection,
 div ::selection {
-  background-color: #fde047 !important;
-  color: #020617 !important;
+  background-color: rgba(245, 158, 11, 0.35) !important;
+  color: #ffffff !important;
   text-shadow: none !important;
 }
 
-/* 2. Reading Time Karaoke Active Audio Highlight */
+/* 2. Reading Time Karaoke Active Audio Highlight (Soft Warm Honey-Gold Glow) */
 .active-audio-highlight,
 mark.active-audio-highlight {
-  background-color: #fde047 !important; /* Radiant Bright Yellow */
-  color: #020617 !important;            /* Pitch Black / Dark Slate */
-  font-weight: 700 !important;
-  border-bottom: 3px solid #ca8a04 !important; /* Rich amber-yellow underline */
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.75), 0 2px 6px rgba(0, 0, 0, 0.3) !important;
-  border-radius: 6px !important;
-  padding: 2px 6px !important;
+  background-color: rgba(245, 158, 11, 0.24) !important; /* Soft warm translucent amber */
+  color: #fef08a !important;                              /* Soft cream gold */
+  font-weight: 600 !important;
+  border-bottom: 2px solid rgba(245, 158, 11, 0.6) !important; /* Elegant subtle underline */
+  box-shadow: 0 1px 6px rgba(245, 158, 11, 0.15) !important;   /* Gentle soft warmth */
+  border-radius: 4px !important;
+  padding: 1px 5px !important;
   display: inline !important;
   line-height: inherit !important;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
 }
 
-/* User-saved highlights in warm bright yellow */
+/* User-saved highlights in warm soft amber */
 .saved-user-highlight,
 mark.saved-user-highlight {
-  background-color: rgba(253, 224, 71, 0.35) !important;
-  color: #fef08a !important;
-  border-bottom: 2px solid #eab308 !important;
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  color: #fef3c7 !important;
+  border-bottom: 1.5px solid rgba(245, 158, 11, 0.45) !important;
   border-radius: 4px !important;
   padding: 1px 4px !important;
 }

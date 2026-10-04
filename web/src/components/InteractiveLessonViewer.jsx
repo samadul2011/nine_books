@@ -822,16 +822,16 @@ function preprocessLessonMarkdown(content, isBangla = true) {
       })
     }
 
-    // Apply active audio karaoke highlight in bright yellow
+    // Apply active audio karaoke highlight in soft warm amber
     if (activePlayingChunk && activePlayingChunk.trim()) {
       const chunk = activePlayingChunk.trim()
       if (html.includes(chunk)) {
-        const activeMark = `<mark class="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">${chunk}</mark>`
+        const activeMark = `<mark class="active-audio-highlight bg-amber-400/20 text-amber-200 font-semibold px-1.5 py-0.5 rounded border-b border-amber-400/50 transition-colors duration-200 inline">${chunk}</mark>`
         html = html.split(chunk).join(activeMark)
       } else {
         const prefix = chunk.slice(0, Math.min(25, chunk.length)).trim()
         if (prefix && html.includes(prefix)) {
-          const activeMark = `<mark class="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">${prefix}</mark>`
+          const activeMark = `<mark class="active-audio-highlight bg-amber-400/20 text-amber-200 font-semibold px-1.5 py-0.5 rounded border-b border-amber-400/50 transition-colors duration-200 inline">${prefix}</mark>`
           html = html.replace(prefix, activeMark)
         }
       }

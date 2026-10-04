@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalTextToolbar
@@ -1697,34 +1698,85 @@ private fun AnnotatedString.Builder.appendPassageSegment(
 ) {
     if (text.isEmpty()) return
 
-    // 1. Real-time Audio Karaoke Sentence Highlight
+    // Soft warm colors that adapt smoothly to theme
+    val isDark = baseColor.luminance() > 0.5f
+    val softKaraokeBg = if (isDark) Color(0xFFF59E0B).copy(alpha = 0.28f) else Color(0xFFFEF08A)
+    val softKaraokeText = if (isDark) Color(0xFFFEF08A) else Color(0xFF78350F)
+
+    // 1. Real-time Audio Karaoke Sentence Highlight (Soft Warm Color)
     val cleanChunk = activeChunk.trim().trimEnd('.', '।', '?', '!')
-    val activeIdx = if (cleanChunk.length >= 4) text.indexOf(cleanChunk, ignoreCase = true) else -1
+    if (cleanChunk.length >= 3) {
+        val trimmedText = text.trim()
+        val trimmedTextClean = trimmedText.trimEnd('.', '।', '?', '!')
 
-    if (activeIdx >= 0) {
-        val before = text.substring(0, activeIdx)
-        val match = text.substring(activeIdx, activeIdx + cleanChunk.length)
-        val after = text.substring(activeIdx + cleanChunk.length)
+        // Case A: Exact substring inside text (e.g. text contains the spoken sentence)
+        val activeIdx = text.indexOf(cleanChunk, ignoreCase = true)
+        if (activeIdx >= 0) {
+            val before = text.substring(0, activeIdx)
+            val match = text.substring(activeIdx, activeIdx + cleanChunk.length)
+            val after = text.substring(activeIdx + cleanChunk.length)
 
-        if (before.isNotEmpty()) {
-            appendPassageSegment(before, baseColor, isBold, "", savedHighlights)
+            if (before.isNotEmpty()) {
+                appendPassageSegment(before, baseColor, isBold, "", savedHighlights)
+            }
+            withStyle(
+                SpanStyle(
+                    background = softKaraokeBg,
+                    color = softKaraokeText,
+                    fontWeight = FontWeight.Bold
+                )
+            ) {
+                append(match)
+            }
+            if (after.isNotEmpty()) {
+                appendPassageSegment(after, baseColor, isBold, activeChunk, savedHighlights)
+            }
+            return
         }
-        withStyle(
-            SpanStyle(
-                background = Color(0xFFFDE047), // Vivid yellow karaoke highlight
-                color = Color(0xFF713F12),
-                fontWeight = FontWeight.Bold
-            )
-        ) {
-            append(match)
+
+        // Case B: Prefix match (first 25 characters of chunk are found in text)
+        val prefix = cleanChunk.take(25).trimEnd('.', '।', '?', '!')
+        val prefixIdx = if (prefix.length >= 8) text.indexOf(prefix, ignoreCase = true) else -1
+        if (prefixIdx >= 0) {
+            val before = text.substring(0, prefixIdx)
+            val matchLen = minOf(cleanChunk.length, text.length - prefixIdx)
+            val match = text.substring(prefixIdx, prefixIdx + matchLen)
+            val after = text.substring(prefixIdx + matchLen)
+
+            if (before.isNotEmpty()) {
+                appendPassageSegment(before, baseColor, isBold, "", savedHighlights)
+            }
+            withStyle(
+                SpanStyle(
+                    background = softKaraokeBg,
+                    color = softKaraokeText,
+                    fontWeight = FontWeight.Bold
+                )
+            ) {
+                append(match)
+            }
+            if (after.isNotEmpty()) {
+                appendPassageSegment(after, baseColor, isBold, activeChunk, savedHighlights)
+            }
+            return
         }
-        if (after.isNotEmpty()) {
-            appendPassageSegment(after, baseColor, isBold, activeChunk, savedHighlights)
+
+        // Case C: The current segment is part of the spoken sentence (e.g. bold word or clause inside chunk)
+        if (trimmedTextClean.length >= 3 && cleanChunk.contains(trimmedTextClean, ignoreCase = true)) {
+            withStyle(
+                SpanStyle(
+                    background = softKaraokeBg,
+                    color = softKaraokeText,
+                    fontWeight = FontWeight.Bold
+                )
+            ) {
+                append(text)
+            }
+            return
         }
-        return
     }
 
-    // 2. Saved user highlight
+    // 2. Saved user highlight (Soft warm amber)
     val matchedHighlight = savedHighlights.firstOrNull { hl ->
         val cleanHl = hl.trim()
         cleanHl.length >= 3 && text.contains(cleanHl, ignoreCase = true)
@@ -1743,15 +1795,15 @@ private fun AnnotatedString.Builder.appendPassageSegment(
             }
             withStyle(
                 SpanStyle(
-                    background = Color(0xFFFEF08A), // Soft warm yellow highlight
-                    color = Color(0xFF854D0E),
+                    background = if (isDark) Color(0xFFD97706).copy(alpha = 0.25f) else Color(0xFFFEF3C7),
+                    color = if (isDark) Color(0xFFFDE68A) else Color(0xFF92400E),
                     fontWeight = if (isBold) FontWeight.Bold else FontWeight.Medium
                 )
             ) {
                 append(match)
             }
             if (after.isNotEmpty()) {
-                appendPassageSegment(after, baseColor, isBold, "", savedHighlights)
+                appendPassageSegment(after, baseColor, isBold, activeChunk, savedHighlights.filter { it != matchedHighlight })
             }
             return
         }
