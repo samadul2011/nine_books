@@ -816,22 +816,22 @@ function preprocessLessonMarkdown(content, isBangla = true) {
     if (userHighlights && userHighlights.length > 0) {
       userHighlights.forEach((h) => {
         if (h.text && html.includes(h.text)) {
-          const markTag = `<mark class="bg-amber-500/25 text-amber-200 px-1 py-0.5 rounded border-b border-amber-500/50" title="সংরক্ষিত হাইলাইট">${h.text}</mark>`
+          const markTag = `<mark class="saved-user-highlight bg-yellow-400/30 text-yellow-200 px-1 py-0.5 rounded border-b border-yellow-400/60" title="সংরক্ষিত হাইলাইট">${h.text}</mark>`
           html = html.split(h.text).join(markTag)
         }
       })
     }
 
-    // Apply active audio karaoke highlight
+    // Apply active audio karaoke highlight in bright yellow
     if (activePlayingChunk && activePlayingChunk.trim()) {
       const chunk = activePlayingChunk.trim()
       if (html.includes(chunk)) {
-        const activeMark = `<mark class="active-audio-highlight bg-cyan-500/35 text-white font-medium px-1.5 py-0.5 rounded-md border-b-2 border-cyan-400 shadow-sm shadow-cyan-500/20 transition-all duration-300">${chunk}</mark>`
+        const activeMark = `<mark class="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">${chunk}</mark>`
         html = html.split(chunk).join(activeMark)
       } else {
         const prefix = chunk.slice(0, Math.min(25, chunk.length)).trim()
         if (prefix && html.includes(prefix)) {
-          const activeMark = `<mark class="active-audio-highlight bg-cyan-500/35 text-white font-medium px-1.5 py-0.5 rounded-md border-b-2 border-cyan-400 shadow-sm shadow-cyan-500/20 transition-all duration-300">${prefix}</mark>`
+          const activeMark = `<mark class="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">${prefix}</mark>`
           html = html.replace(prefix, activeMark)
         }
       }

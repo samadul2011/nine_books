@@ -99,6 +99,52 @@ export default function CompositionViewer({
   const rawTemplate = topic?.template || ''
   const displayTemplate = cleanTemplate(rawTemplate)
 
+  const renderCompositionContent = () => {
+    if (!isPlaying || !activeSentence || !activeSentence.trim()) {
+      return displayTemplate
+    }
+
+    const chunk = activeSentence.trim()
+    if (displayTemplate.includes(chunk)) {
+      const parts = displayTemplate.split(chunk)
+      return (
+        <>
+          {parts.map((part, idx) => (
+            <React.Fragment key={idx}>
+              {part}
+              {idx < parts.length - 1 && (
+                <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                  {chunk}
+                </mark>
+              )}
+            </React.Fragment>
+          ))}
+        </>
+      )
+    }
+
+    const prefix = chunk.slice(0, Math.min(30, chunk.length)).trim()
+    if (prefix && displayTemplate.includes(prefix)) {
+      const parts = displayTemplate.split(prefix)
+      return (
+        <>
+          {parts.map((part, idx) => (
+            <React.Fragment key={idx}>
+              {part}
+              {idx < parts.length - 1 && (
+                <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                  {prefix}
+                </mark>
+              )}
+            </React.Fragment>
+          ))}
+        </>
+      )
+    }
+
+    return displayTemplate
+  }
+
   const stopAudio = () => {
     ttsService.stop()
     setIsPlaying(false)
@@ -606,7 +652,7 @@ ${data.hobbies}
               title="Listen to text audio"
             >
               {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-              <span>{isPlaying ? 'Stop Audio' : 'Play Audio (TTS)'}</span>
+              <span>{isPlaying ? 'Stop Audio' : 'Play Audio (AI Voice)'}</span>
             </button>
 
             {/* Exam Tips Button */}
@@ -688,26 +734,40 @@ ${data.hobbies}
                 )
               }
               const isFirstSpeaker = idx % 2 === 0
+              const isSpeakingThis = isPlaying && activeSentence && (
+                line.speech.includes(activeSentence.trim()) || 
+                activeSentence.includes(line.speech.slice(0, Math.min(25, line.speech.length)).trim())
+              )
               return (
                 <div
                   key={idx}
                   className={`flex flex-col sm:flex-row sm:items-start gap-3 p-3.5 rounded-2xl border transition ${
-                    isFirstSpeaker
-                      ? 'bg-slate-800/60 border-slate-700/80'
-                      : 'bg-indigo-950/30 border-indigo-500/30'
+                    isSpeakingThis
+                      ? 'bg-yellow-400/15 border-yellow-400 ring-2 ring-yellow-400/50'
+                      : isFirstSpeaker
+                        ? 'bg-slate-800/60 border-slate-700/80'
+                        : 'bg-indigo-950/30 border-indigo-500/30'
                   }`}
                 >
                   <span
                     className={`px-3 py-1 rounded-xl text-xs font-extrabold uppercase tracking-wide flex-shrink-0 self-start ${
-                      isFirstSpeaker
-                        ? 'bg-teal-500/20 text-teal-300 border border-teal-500/40'
-                        : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
+                      isSpeakingThis
+                        ? 'bg-yellow-400 text-slate-950 font-black'
+                        : isFirstSpeaker
+                          ? 'bg-teal-500/20 text-teal-300 border border-teal-500/40'
+                          : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
                     }`}
                   >
                     {line.speaker}
                   </span>
-                  <p className="text-slate-200 text-base leading-relaxed flex-1">
-                    {line.speech}
+                  <p className={`text-base leading-relaxed flex-1 ${isSpeakingThis ? 'text-yellow-200 font-semibold' : 'text-slate-200'}`}>
+                    {isSpeakingThis ? (
+                      <mark className="active-audio-highlight bg-yellow-300 text-slate-950 font-bold px-2 py-0.5 rounded-md border-b-2 border-yellow-500 shadow-lg shadow-yellow-400/50 ring-2 ring-yellow-400/80 transition-all duration-200 inline-block">
+                        {line.speech}
+                      </mark>
+                    ) : (
+                      line.speech
+                    )}
                   </p>
                 </div>
               )
@@ -717,7 +777,7 @@ ${data.hobbies}
           /* Standard Paragraph, Letter, Application, or Essay Content */
           <div className="prose prose-invert max-w-none">
             <div className="text-slate-200 text-base sm:text-lg leading-relaxed whitespace-pre-line space-y-4 font-normal">
-              {displayTemplate}
+              {renderCompositionContent()}
             </div>
           </div>
         )}

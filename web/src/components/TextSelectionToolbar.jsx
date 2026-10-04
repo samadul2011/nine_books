@@ -156,15 +156,15 @@ export default function TextSelectionToolbar({ chapterTitle = '', lessonId = '' 
           </button>
 
           <button
-            onClick={() => handleHighlight('amber')}
+            onClick={() => handleHighlight('yellow')}
             className={`flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-lg transition ${
               highlightSuccess 
-                ? 'bg-amber-500/30 text-amber-300' 
-                : 'hover:bg-slate-800 text-slate-300 hover:text-amber-300'
+                ? 'bg-yellow-500/30 text-yellow-300' 
+                : 'hover:bg-slate-800 text-slate-300 hover:text-yellow-300'
             }`}
-            title="গুরুত্বপূর্ণ বাক্য হাইলাইট করুন"
+            title="গুরুত্বপূর্ণ অংশ উজ্জ্বল হলুদ হাইলাইট করুন"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 shadow-sm shadow-yellow-400/80"></span>
             <span>{highlightSuccess ? 'হাইলাইটেড!' : 'হাইলাইট'}</span>
           </button>
 
