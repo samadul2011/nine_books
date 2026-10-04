@@ -103,6 +103,7 @@ fun LessonScreen(
 
     // Holds the text synchronously intercepted from Compose selection
     var capturedSelectionText by remember { mutableStateOf("") }
+    var activeSelectedText by remember { mutableStateOf("") }
 
     val interceptingClipboardManager = remember(composeClipboard) {
         object : androidx.compose.ui.platform.ClipboardManager {
@@ -110,6 +111,10 @@ fun LessonScreen(
             override fun hasText(): Boolean = composeClipboard.hasText()
             override fun setText(annotatedString: AnnotatedString) {
                 capturedSelectionText = annotatedString.text
+                val cleaned = cleanSingleWord(annotatedString.text)
+                if (cleaned.isNotBlank()) {
+                    activeSelectedText = cleaned
+                }
                 composeClipboard.setText(annotatedString)
             }
         }
@@ -134,6 +139,7 @@ fun LessonScreen(
             val cleaned = cleanSingleWord(raw)
             if (cleaned.isNotBlank()) {
                 clipboardCopiedText = cleaned
+                activeSelectedText = cleaned
                 showClipboardChip = true
             }
         }
@@ -211,14 +217,22 @@ fun LessonScreen(
 
                 val text = cleanSingleWord(
                     capturedSelectionText.ifBlank {
-                        composeClipboard.getText()?.text ?: ""
+                        activeSelectedText.ifBlank {
+                            clipboardCopiedText.ifBlank {
+                                composeClipboard.getText()?.text ?: ""
+                            }
+                        }
                     }
                 )
 
                 if (text.isNotBlank()) {
+                    activeSelectedText = text
                     when (action) {
                         SelectionAction.TRANSLATE -> translatePopup(text)
-                        SelectionAction.SPEAK -> narratorManager.speakSingleText(text)
+                        SelectionAction.SPEAK -> {
+                            narratorManager.playSelection(text)
+                            Toast.makeText(context, "সিলেক্টেড অংশ পড়া হচ্ছে...", Toast.LENGTH_SHORT).show()
+                        }
                         SelectionAction.HIGHLIGHT -> {
                             studyStorage.saveHighlight(text, chapterTitle)
                             Toast.makeText(context, "হাইলাইট ও সেভ করা হয়েছে!", Toast.LENGTH_SHORT).show()
@@ -467,7 +481,8 @@ fun LessonScreen(
                                 // Audio Player at Top
                                 LessonAudioPlayer(
                                     narratorManager = narratorManager,
-                                    textToRead = fullChapterText
+                                    textToRead = fullChapterText,
+                                    selectedText = activeSelectedText
                                 )
 
                                 // Full continuous passage inside SelectionContainer (Natural reading, NO auto-open!)
@@ -542,7 +557,7 @@ fun LessonScreen(
                     // Translate button
                     Button(
                         onClick = { translatePopup(clipboardCopiedText) },
-                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
                         shape = RoundedCornerShape(14.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(0xFF0284C7),
@@ -557,6 +572,31 @@ fun LessonScreen(
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text("অনুবাদ", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    }
+
+                    Spacer(modifier = Modifier.width(6.dp))
+
+                    // Read Selection button
+                    Button(
+                        onClick = {
+                            narratorManager.playSelection(clipboardCopiedText)
+                            showClipboardChip = false
+                        },
+                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF0D9488),
+                            contentColor = Color.White
+                        ),
+                        modifier = Modifier.height(34.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text("শুনুন", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                     }
 
                     // Dismiss button

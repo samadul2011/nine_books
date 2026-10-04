@@ -24,6 +24,7 @@ data class AudioNarratorState(
     val isPlaying: Boolean = false,
     val isPaused: Boolean = false,
     val isLoading: Boolean = false,
+    val isSelectionOnly: Boolean = false,
     val mode: VoiceMode = VoiceMode.STUDIO_NEURAL,
     val speed: Float = 1.0f,
     val currentChunk: Int = 0,
@@ -127,6 +128,36 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
             isPlaying = true,
             isPaused = false,
             isLoading = true,
+            isSelectionOnly = false,
+            currentChunk = 1,
+            totalChunks = chunks.size,
+            currentChunkText = chunks[0],
+            errorMessage = null
+        )
+
+        playChunk(0)
+    }
+
+    /**
+     * Reads ONLY the selected section sentence by sentence with real-time highlighting.
+     */
+    fun playSelection(selectedText: String) {
+        stop()
+        val cleanedText = cleanTextForSpeech(selectedText)
+        if (cleanedText.isBlank()) {
+            _state.value = _state.value.copy(errorMessage = "সিলেক্টেড অংশে পড়ার মতো কোনো লেখা নেই।")
+            return
+        }
+
+        chunks = splitIntoChunks(cleanedText)
+        if (chunks.isEmpty()) return
+
+        currentChunkIndex = 0
+        _state.value = _state.value.copy(
+            isPlaying = true,
+            isPaused = false,
+            isLoading = true,
+            isSelectionOnly = true,
             currentChunk = 1,
             totalChunks = chunks.size,
             currentChunkText = chunks[0],
@@ -364,6 +395,7 @@ class AudioNarratorManager(private val context: Context) : TextToSpeech.OnInitLi
             isPlaying = false,
             isPaused = false,
             isLoading = false,
+            isSelectionOnly = false,
             currentChunk = 0,
             currentChunkText = ""
         )

@@ -86,7 +86,7 @@ fun CustomSelectionPopup(toolbar: CustomTextToolbar) {
 
     val screenWidthPx = with(density) { configuration.screenWidthDp.dp.toPx() }
     val screenHeightPx = with(density) { configuration.screenHeightDp.dp.toPx() }
-    val popupEstimatedWidthPx = with(density) { 260.dp.toPx() }
+    val popupEstimatedWidthPx = with(density) { 315.dp.toPx() }
     val popupEstimatedHeightPx = with(density) { 44.dp.toPx() }
 
     val centerX = data.rect.left + (data.rect.width / 2)
@@ -149,20 +149,27 @@ fun CustomSelectionPopup(toolbar: CustomTextToolbar) {
                     Text("অনুবাদ", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }
 
-                // 2. Pronounce Button
-                IconButton(
+                // 2. Read Selection Button (Prominent & Clear)
+                Button(
                     onClick = {
                         toolbar.onActionTriggered(SelectionAction.SPEAK, data.onCopyRequested)
                         toolbar.hide()
                     },
-                    modifier = Modifier.size(34.dp)
+                    contentPadding = PaddingValues(horizontal = 9.dp, vertical = 4.dp),
+                    shape = RoundedCornerShape(14.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF0D9488), // Teal Emerald
+                        contentColor = Color.White
+                    ),
+                    modifier = Modifier.height(34.dp)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                        contentDescription = "Speak",
-                        tint = Color(0xFFE2E8F0),
-                        modifier = Modifier.size(17.dp)
+                        contentDescription = null,
+                        modifier = Modifier.size(15.dp)
                     )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text("শুনুন", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }
 
                 // 3. Highlight Button

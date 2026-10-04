@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -27,6 +28,7 @@ import com.samadul.ninebooks.audio.VoiceMode
 fun LessonAudioPlayer(
     narratorManager: AudioNarratorManager,
     textToRead: String,
+    selectedText: String = "",
     modifier: Modifier = Modifier
 ) {
     val state by narratorManager.state.collectAsState()
@@ -224,19 +226,19 @@ fun LessonAudioPlayer(
                             .size(44.dp)
                             .clip(CircleShape)
                             .background(
-                                if (state.isPlaying && !state.isPaused)
+                                if (state.isPlaying && !state.isPaused && !state.isSelectionOnly)
                                     Color(0xFFF59E0B) // Amber pause
                                 else
                                     Color(0xFF10B981) // Emerald play
                             )
                     ) {
-                        if (state.isLoading) {
+                        if (state.isLoading && !state.isSelectionOnly) {
                             CircularProgressIndicator(
                                 modifier = Modifier.size(20.dp),
                                 color = Color.White,
                                 strokeWidth = 2.dp
                             )
-                        } else if (state.isPlaying && !state.isPaused) {
+                        } else if (state.isPlaying && !state.isPaused && !state.isSelectionOnly) {
                             Icon(
                                 imageVector = Icons.Default.Pause,
                                 contentDescription = "পজ",
@@ -253,8 +255,57 @@ fun LessonAudioPlayer(
                         }
                     }
 
+                    Spacer(modifier = Modifier.width(6.dp))
+
+                    // Option: Read Only Selected Section
+                    val hasSelection = selectedText.isNotBlank()
+                    Button(
+                        onClick = {
+                            if (hasSelection) {
+                                narratorManager.playSelection(selectedText)
+                            }
+                        },
+                        enabled = hasSelection || (state.isPlaying && state.isSelectionOnly),
+                        shape = RoundedCornerShape(12.dp),
+                        contentPadding = PaddingValues(horizontal = 9.dp, vertical = 4.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (state.isPlaying && state.isSelectionOnly)
+                                Color(0xFFF59E0B)
+                            else if (hasSelection)
+                                Color(0xFF0D9488)
+                            else
+                                Color.White.copy(alpha = 0.12f),
+                            contentColor = if (state.isPlaying && state.isSelectionOnly)
+                                Color.Black
+                            else if (hasSelection)
+                                Color.White
+                            else
+                                Color.White.copy(alpha = 0.5f),
+                            disabledContainerColor = Color.White.copy(alpha = 0.08f),
+                            disabledContentColor = Color.White.copy(alpha = 0.35f)
+                        ),
+                        modifier = Modifier.height(36.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                            contentDescription = null,
+                            modifier = Modifier.size(15.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = if (state.isPlaying && state.isSelectionOnly)
+                                "সিলেকশন পড়ছে"
+                            else if (hasSelection)
+                                "সিলেক্টেড শুনুন"
+                            else
+                                "সিলেকশন শুনুন",
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
                     if (state.isPlaying) {
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
                         IconButton(
                             onClick = { narratorManager.stop() },
                             modifier = Modifier
@@ -271,20 +322,29 @@ fun LessonAudioPlayer(
                         }
                     }
 
-                    Spacer(modifier = Modifier.width(10.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
 
                     // Status / Sentence counter
                     if (state.isPlaying) {
                         Text(
-                            text = "পড়ছে: ${state.currentChunk} / ${state.totalChunks} বাক্য",
-                            fontSize = 12.sp,
+                            text = if (state.isSelectionOnly)
+                                "সিলেকশন: ${state.currentChunk}/${state.totalChunks}"
+                            else
+                                "পড়ছে: ${state.currentChunk}/${state.totalChunks}",
+                            fontSize = 11.sp,
                             fontWeight = FontWeight.Medium,
                             color = Color(0xFFA7F3D0)
                         )
+                    } else if (hasSelection) {
+                        Text(
+                            text = "সিলেকশন রেডি",
+                            fontSize = 11.sp,
+                            color = Color(0xFFA7F3D0).copy(alpha = 0.9f)
+                        )
                     } else {
                         Text(
-                            text = "শুনতে প্লে বাটনে চাপুন",
-                            fontSize = 12.sp,
+                            text = "প্লে করুন",
+                            fontSize = 11.sp,
                             color = Color.White.copy(alpha = 0.7f)
                         )
                     }
